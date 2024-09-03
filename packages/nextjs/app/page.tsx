@@ -9,6 +9,7 @@ const Home: NextPage = () => {
             <span className="block text-2xl mb-2">Welcome to</span>
             <span className="block text-4xl font-bold">BuidlGuidl CTF - Devcon SEA 2024</span>
           </h1>
+          <p>............text............</p>
         </div>
       </div>
     </>

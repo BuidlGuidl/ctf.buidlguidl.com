@@ -7,13 +7,17 @@ interface INFTContract {
 
 contract Challenge1 {
 	address public nftContract;
+	mapping(address => string) public builderNames;
+
+	event BuilderInit(address indexed player, string name);
 
 	constructor(address _nftContract) {
 		nftContract = _nftContract;
 	}
 
-	// ToDo. set name (save + emit event so we can index)
-	function initializeGame() public {
+	function registerMe(string memory _name) public {
+		builderNames[msg.sender] = _name;
+		emit BuilderInit(msg.sender, _name);
 		INFTContract(nftContract).mint(msg.sender, 1);
 	}
 }
