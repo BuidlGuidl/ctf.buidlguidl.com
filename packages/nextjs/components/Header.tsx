@@ -21,8 +21,8 @@ export const menuLinks: HeaderMenuLink[] = [
   },
   // TODO: We want a dropdown menu for challenges (they should render automatically from the data/challenges folder)
   {
-    label: "Challenge 0",
-    href: "/challenge/0",
+    label: "Challenge 1",
+    href: "/challenge/1",
     icon: <BellAlertIcon className="h-4 w-4" />,
   },
   {
