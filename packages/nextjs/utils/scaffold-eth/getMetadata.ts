@@ -3,11 +3,12 @@ import type { Metadata } from "next";
 const baseUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
   ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
   : `http://localhost:${process.env.PORT || 3000}`;
-const titleTemplate = "%s | Scaffold-ETH 2";
+const titleTemplate = "%s | BuidlGuidl CTF - Devcon SEA 2024";
 
 export const getMetadata = ({
   title,
   description,
+  // TODO: Add image
   imageRelativePath = "/thumbnail.jpg",
 }: {
   title: string;
