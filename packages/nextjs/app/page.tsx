@@ -1,4 +1,10 @@
 import type { NextPage } from "next";
+import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
+
+export const metadata = getMetadata({
+  title: "BuidlGuidl CTF",
+  description: "Devcon SEA 2024",
+});
 
 const Home: NextPage = () => {
   return (

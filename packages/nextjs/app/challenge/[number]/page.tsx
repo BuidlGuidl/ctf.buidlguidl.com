@@ -2,11 +2,19 @@ import { notFound } from "next/navigation";
 import fs from "fs";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import path from "path";
+import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
 interface ChallengePageProps {
   params: {
     number: string;
   };
+}
+
+export async function generateMetadata({ params }: ChallengePageProps) {
+  return getMetadata({
+    title: `Challenge #${params.number}`,
+    description: "Devcon SEA 2024",
+  });
 }
 
 export default async function ChallengePage({ params }: ChallengePageProps) {
