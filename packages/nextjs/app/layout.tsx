@@ -1,6 +1,7 @@
 import { Fira_Code } from "next/font/google";
 import "@rainbow-me/rainbowkit/styles.css";
-import { ScaffoldEthAppWithProviders } from "~~/components/ScaffoldEthAppWithProviders";
+import { ScaffoldEthApp } from "~~/components/ScaffoldEthApp";
+import { ScaffoldEthAppProviders } from "~~/components/ScaffoldEthAppProviders";
 import { ThemeProvider } from "~~/components/ThemeProvider";
 import "~~/styles/globals.css";
 
@@ -9,16 +10,18 @@ const firaCode = Fira_Code({
   display: "swap",
 });
 
-const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html suppressHydrationWarning className={firaCode.className}>
       <body>
         <ThemeProvider enableSystem>
-          <ScaffoldEthAppWithProviders>{children}</ScaffoldEthAppWithProviders>
+          <ScaffoldEthAppProviders>
+            <ScaffoldEthApp>{children}</ScaffoldEthApp>
+          </ScaffoldEthAppProviders>
         </ThemeProvider>
       </body>
     </html>
   );
 };
 
-export default ScaffoldEthApp;
+export default Layout;
