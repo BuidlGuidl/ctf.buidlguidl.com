@@ -32,7 +32,13 @@
     "test": "yarn hardhat:test",
     "vercel": "yarn workspace @se-2/nextjs vercel",
     "vercel:yolo": "yarn workspace @se-2/nextjs vercel:yolo",
-    "verify": "yarn workspace @se-2/hardhat verify"
+    "verify": "yarn workspace @se-2/hardhat verify",
+    "ponder:dev": "yarn workspace @se-2/ponder dev",
+    "ponder:start": "yarn workspace @se-2/ponder start",
+    "ponder:codegen": "yarn workspace @se-2/ponder codegen",
+    "ponder:serve": "yarn workspace @se-2/ponder serve",
+    "ponder:lint": "yarn workspace @se-2/ponder lint",
+    "ponder:typecheck": "yarn workspace @se-2/ponder typecheck"
   },
   "devDependencies": {
     "husky": "~8.0.3",

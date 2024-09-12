@@ -30,7 +30,25 @@ cd ctf-devcon
 yarn install
 ```
 
-4. Start your NextJS app:
+2. Run a local network:
+
+```
+yarn chain
+```
+
+3. Deploy the contracts:
+
+```
+yarn deploy
+```
+
+4. Start Ponder:
+
+```
+yarn ponder:dev
+```
+
+5. Start your NextJS app:
 
 ```
 yarn start
