@@ -45,3 +45,23 @@ Visit your app on: `http://localhost:3000`.
 - scaffold.config.ts: .....
 - externalContracts.ts: .....
 - ....
+
+### Scripts
+
+You can use `packages/scripts` directory to interact with challenges contract. This package comes pre-installed with [viem](https://viem.sh/) which helps you inteface with blockchain using typescirpt scripts. Checkout `packages/scripts/src/example.ts` for an basic example.
+
+To run scripts first cd into `packages/scripts`:
+
+```shell
+cd packages/scripts
+```
+
+Then run:
+
+```shell
+yarn tsx <path-to-script>
+```
+
+eg: `yarn tsx src/example.ts`
+
+> TIP: Whenever you run `yarn deploy` it will `packages/scripts/contracts/deployedContracts.ts` file which contains the deployed contract addresses and abi.

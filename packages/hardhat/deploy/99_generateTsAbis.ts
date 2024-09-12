@@ -100,18 +100,24 @@ function getContractDataFromDeployments() {
  * This script should be run last.
  */
 const generateTsAbis: DeployFunction = async function () {
-  const TARGET_DIR = "../nextjs/contracts/";
+  const NEXTJS_TARGET_DIR = "../nextjs/contracts/";
+  const SCRIPTS_TARGET_DIR = "../scripts/contracts/";
   const allContractsData = getContractDataFromDeployments();
 
   const fileContent = Object.entries(allContractsData).reduce((content, [chainId, chainConfig]) => {
     return `${content}${parseInt(chainId).toFixed(0)}:${JSON.stringify(chainConfig, null, 2)},`;
   }, "");
 
-  if (!fs.existsSync(TARGET_DIR)) {
-    fs.mkdirSync(TARGET_DIR);
+  if (!fs.existsSync(NEXTJS_TARGET_DIR)) {
+    fs.mkdirSync(NEXTJS_TARGET_DIR);
   }
+
+  if (!fs.existsSync(SCRIPTS_TARGET_DIR)) {
+    fs.mkdirSync(SCRIPTS_TARGET_DIR);
+  }
+
   fs.writeFileSync(
-    `${TARGET_DIR}deployedContracts.ts`,
+    `${NEXTJS_TARGET_DIR}deployedContracts.ts`,
     prettier.format(
       `${generatedContractComment} import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract"; \n\n
  const deployedContracts = {${fileContent}} as const; \n\n export default deployedContracts satisfies GenericContractsDeclaration`,
@@ -121,7 +127,19 @@ const generateTsAbis: DeployFunction = async function () {
     ),
   );
 
-  console.log(`📝 Updated TypeScript contract definition file on ${TARGET_DIR}deployedContracts.ts`);
+  fs.writeFileSync(
+    `${SCRIPTS_TARGET_DIR}deployedContracts.ts`,
+    prettier.format(
+      `${generatedContractComment} import { GenericContractsDeclaration } from "./types"; \n\n
+ const deployedContracts = {${fileContent}} as const; \n\n export default deployedContracts satisfies GenericContractsDeclaration`,
+      {
+        parser: "typescript",
+      },
+    ),
+  );
+
+  console.log(`📝 Updated TypeScript contract definition file on ${NEXTJS_TARGET_DIR}deployedContracts.ts`);
+  console.log(`📝 Updated TypeScript contract definition file on ${SCRIPTS_TARGET_DIR}deployedContracts.ts`);
 };
 
 export default generateTsAbis;
