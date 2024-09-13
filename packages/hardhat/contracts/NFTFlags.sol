@@ -7,6 +7,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Base64.sol";
 
 // TODO: Think if ERC1155 is a better choice
+// TODO: Check if the user have registered to the ctf before minting (Challenge1)?
 contract NFTFlags is ERC721, Ownable {
     using Strings for uint256;
 
