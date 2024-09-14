@@ -21,6 +21,7 @@ contract NFTFlags is ERC721, Ownable {
         transferOwnership(_initialOwner);
     }
 
+    // TODO: Only allow 1 mint per address / challenge
     function mint(address _recipient, uint256 _challengeId) external {
         require(allowedMinters[msg.sender], "Not allowed to mint");
         tokenIdCounter++;
