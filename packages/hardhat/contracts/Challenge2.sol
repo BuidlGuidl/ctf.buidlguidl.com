@@ -1,10 +1,7 @@
 //SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
-// TODO: Move to a file so we can import.
-interface INFTContract {
-	function mint(address _recipient, uint256 _challengeId) external;
-}
+import "./INFTFlags.sol";
 
 contract Challenge2 {
 	address public nftContract;
@@ -15,6 +12,6 @@ contract Challenge2 {
 
 	function justCallMe() public {
 		require(msg.sender != tx.origin, "Not allowed");
-		INFTContract(nftContract).mint(tx.origin, 2);
+		INFTFlags(nftContract).mint(tx.origin, 2);
 	}
 }
