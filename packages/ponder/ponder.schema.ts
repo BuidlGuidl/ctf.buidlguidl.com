@@ -13,6 +13,7 @@ export default createSchema((p) => ({
     id: p.bigint(),
     challengeId: p.bigint(),
     tokenURI: p.string(),
+    points: p.int(),
     timestamp: p.int(),
     ownerId: p.hex().references("User.id"),
 

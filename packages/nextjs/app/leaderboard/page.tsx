@@ -7,25 +7,8 @@ import { gql, request } from "graphql-request";
 import type { NextPage } from "next";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Address } from "~~/components/scaffold-eth";
+import { User, UserChallenge, UserChallengesData, UsersData } from "~~/types/utils";
 import { getFormattedDateTime } from "~~/utils/date";
-
-type User = {
-  id: string;
-  name: string;
-  points: number;
-  updated: number;
-};
-
-type UsersData = { users: { items: User[] } };
-
-type UserChallenge = {
-  id: string;
-  challengeId: number;
-  tokenURI: string;
-  timestamp: number;
-};
-
-type UserChallengesData = { challenges: { items: UserChallenge[] } };
 
 const Leaderboard: NextPage = () => {
   const [isUserChallengesModalOpen, setIsUserChallengesModalOpen] = useState(false);
@@ -57,6 +40,7 @@ const Leaderboard: NextPage = () => {
             challengeId
             tokenURI
             timestamp
+            points
           }
         }
       }
@@ -136,10 +120,11 @@ const Leaderboard: NextPage = () => {
           <div className="flex flex-col items-center space-y-8">
             {userChallengesData?.challenges.items.map((challenge: UserChallenge) => (
               <div key={challenge.id} className="flex flex-col items-center">
-                <p>
+                <p className="m-2">
                   Challenge{challenge.challengeId} minted at{" "}
                   {getFormattedDateTime(new Date(challenge.timestamp * 1000))}
                 </p>
+                <p className="mb-2 mt-0">({challenge.points} points)</p>
                 <Image
                   src={JSON.parse(atob(challenge.tokenURI.substring(29))).image}
                   alt={`Challenge ${challenge.challengeId.toString()}`}

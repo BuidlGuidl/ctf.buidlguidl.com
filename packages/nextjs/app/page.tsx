@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import { UserData } from "~~/components/UserData";
 import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
 export const metadata = getMetadata({
@@ -38,6 +39,8 @@ const Home: NextPage = () => {
             </ul>
           </div>
         </div>
+
+        <UserData />
       </div>
     </>
   );

@@ -18,7 +18,9 @@ ponder.on("NFTFlags:FlagMinted", async ({ event, context }) => {
     id: event.args.minter,
     data: ({ current }) => ({
       points: current.points + pointsPerChallenge,
-      sortOrder: 100000000000n * BigInt(current.points + pointsPerChallenge) - BigInt(event.block.timestamp),
+      sortOrder:
+        100000000000n * BigInt(current.points + pointsPerChallenge) -
+        BigInt(event.block.timestamp),
       updated: Number(event.block.timestamp),
     }),
   });
@@ -31,6 +33,7 @@ ponder.on("NFTFlags:FlagMinted", async ({ event, context }) => {
       tokenURI: tokenUri,
       timestamp: Number(event.block.timestamp),
       ownerId: event.args.minter,
+      points: pointsPerChallenge,
     },
   });
 });
