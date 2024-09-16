@@ -1,5 +1,6 @@
-import { Fira_Code } from "next/font/google";
+import { DotGothic16, Fira_Code } from "next/font/google";
 import "@rainbow-me/rainbowkit/styles.css";
+import clsx from "clsx";
 import { ScaffoldEthApp } from "~~/components/ScaffoldEthApp";
 import { ScaffoldEthAppProviders } from "~~/components/ScaffoldEthAppProviders";
 import { ThemeProvider } from "~~/components/ThemeProvider";
@@ -10,9 +11,15 @@ const firaCode = Fira_Code({
   display: "swap",
 });
 
+const dotGothic = DotGothic16({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-dot-gothic",
+});
+
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html suppressHydrationWarning className={firaCode.className}>
+    <html suppressHydrationWarning className={clsx(firaCode.className, dotGothic.variable)}>
       <body>
         <ThemeProvider enableSystem>
           <ScaffoldEthAppProviders>

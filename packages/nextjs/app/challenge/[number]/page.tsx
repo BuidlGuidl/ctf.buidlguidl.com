@@ -31,7 +31,7 @@ export default async function ChallengePage({ params }: ChallengePageProps) {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-4">Challenge {number}</h1>
+      <h1 className="mb-4 text-3xl md:text-4xl font-bold font-dotGothic tracking-wide">Challenge {number}</h1>
       <div className="prose prose-invert">
         <div className="mb-6">
           {/* TODO: fetch the contract address (some challenges might not have one (e.g. offchain backend challenges)) */}
