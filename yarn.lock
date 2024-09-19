@@ -3004,8 +3004,8 @@ __metadata:
     graphql-request: ^7.1.0
     next: ~14.0.4
     next-mdx-remote: ^5.0.0
+    next-nprogress-bar: ^2.3.13
     next-themes: ~0.2.1
-    nprogress: ~0.2.0
     postcss: ~8.4.16
     prettier: ~2.8.4
     qrcode.react: ~3.1.0
@@ -12846,6 +12846,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"next-nprogress-bar@npm:^2.3.13":
+  version: 2.3.13
+  resolution: "next-nprogress-bar@npm:2.3.13"
+  dependencies:
+    nprogress: ^0.2.0
+  checksum: be217d4a28a4b8681f647b1baebae040949bb38824ae93ca83f11f037bc3e34c3ddae18a123878ebfda2eb6b7e42d9ae25468b23c2a80980aec6564101921d4d
+  languageName: node
+  linkType: hard
+
 "next-themes@npm:~0.2.1":
   version: 0.2.1
   resolution: "next-themes@npm:0.2.1"
@@ -13136,7 +13145,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nprogress@npm:~0.2.0":
+"nprogress@npm:^0.2.0":
   version: 0.2.0
   resolution: "nprogress@npm:0.2.0"
   checksum: 66b7bec5d563ecf2d1c3d2815e6d5eb74ed815eee8563e0afa63d3f185ab1b9cf2ddd97e1ded263b9995c5019d26d600320e849e50f3747984daa033744619dc
