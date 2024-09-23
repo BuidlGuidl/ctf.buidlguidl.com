@@ -74,6 +74,15 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
 
   console.log("🚩 Challenge #5 deployed");
 
+  await deploy("Challenge6", {
+    from: deployer,
+    args: [await nftFlags.getAddress(), hre.ethers.randomBytes(32)],
+    log: true,
+    autoMine: true,
+  });
+
+  console.log("🚩 Challenge #6 deployed");
+
   // Set addAllowedMinterMultiple in NFTFlags
   const challengeAddresses = [
     await (await hre.ethers.getContract<Contract>("Challenge1", deployer)).getAddress(),
@@ -81,6 +90,7 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
     await (await hre.ethers.getContract<Contract>("Challenge3", deployer)).getAddress(),
     await (await hre.ethers.getContract<Contract>("Challenge4", deployer)).getAddress(),
     await (await hre.ethers.getContract<Contract>("Challenge5", deployer)).getAddress(),
+    await (await hre.ethers.getContract<Contract>("Challenge6", deployer)).getAddress(),
   ];
 
   const tx = await nftFlags.addAllowedMinterMultiple(challengeAddresses);
