@@ -36,7 +36,7 @@ export default async function ChallengePage({ params }: ChallengePageProps) {
     <div className="py-20 px-6 min-h-screen bg-[url(/dot-texture.svg)]">
       <div className="max-w-3xl mx-auto bg-base-100 border-2 border-t-4 border-l-4 border-green-700 border-t-green-600 border-l-green-500">
         <div className="px-6 py-2 bg-green-600/30 border-b border-green-600">
-          <h1 className="mt-[3px] text-xl leading-none font-bold font-dotGothic tracking-wide">
+          <h1 className="mt-[3px] text-white text-xl leading-none font-bold font-dotGothic tracking-wide">
             &gt; Challenge #{number}
             <span className="ml-1 animate-pulse">_</span>
           </h1>
@@ -53,7 +53,7 @@ export default async function ChallengePage({ params }: ChallengePageProps) {
           </div>
 
           {/* Format the Markdown (bold, titles, etc) */}
-          <div className="prose prose-headings:font-dotGothic prose-headings:tracking-wide prose-h1:text-3xl">
+          <div className="prose text-gray-50 prose-headings:font-dotGothic prose-headings:tracking-wide prose-h1:text-3xl">
             <MDXRemote source={content} />
           </div>
         </div>

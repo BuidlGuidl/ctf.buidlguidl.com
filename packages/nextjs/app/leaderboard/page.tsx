@@ -75,49 +75,87 @@ const Leaderboard: NextPage = () => {
   if (!usersData.users.items.length) {
     return (
       <div className="flex items-center flex-col flex-grow pt-20">
-        <h1 className="text-center text-4xl font-bold">No players found</h1>
+        <h1 className="text-3xl font-dotGothic tracking-wide md:text-4xl">No Players Found</h1>
       </div>
     );
   }
 
   return (
-    <>
-      <div className="flex items-center flex-col flex-grow pt-20">
-        <h1 className="text-center text-4xl font-bold">Leaderboard</h1>
-        <div className="flex flex-col">
-          {usersData.users.items.map((user: User) => (
-            <div key={user.id} className="flex items-center space-x-2">
-              <p className="my-2 font-medium">{user.name}</p>
-              <p>
-                <Address address={user.id} />
-              </p>
-              <p className="my-2 font-medium">- {user.points} points -</p>
-              <p className="my-2 font-medium">{getFormattedDateTime(new Date(user.updated * 1000))}</p>
-              <button
-                className="btn btn-sm btn-circle"
-                onClick={() => {
-                  setSelectedUser(user);
-                  setIsUserChallengesModalOpen(true);
-                }}
-              >
-                <MagnifyingGlassIcon className="w-4 h-4" />
-              </button>
+    <div className="py-20 px-6 min-h-screen bg-[url(/dot-texture.svg)]">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-3xl font-dotGothic tracking-wide md:text-4xl">Leaderboard</h1>
+        <div className="mt-8 flow-root">
+          <div className="overflow-x-auto">
+            <div className="inline-block min-w-full py-2 align-middle">
+              <div className="overflow-hidden bg-base-100 border-2 border-t-4 border-l-4 border-green-700 border-t-green-600 border-l-green-500">
+                <table className="min-w-full divide-y divide-green-600">
+                  <thead className="bg-green-600/30 font-dotGothic tracking-wide text-left text-gray-50 md:text-xl">
+                    <tr>
+                      <th scope="col" className="py-3.5 pl-4 pr-3 sm:pl-6">
+                        Rank
+                      </th>
+                      <th scope="col" className="px-3 py-3.5">
+                        Player Name
+                      </th>
+                      <th scope="col" className="px-3 py-3.5">
+                        Address
+                      </th>
+                      <th scope="col" className="px-3 py-3.5">
+                        Points
+                      </th>
+                      <th scope="col" className="px-3 py-3.5">
+                        Updated
+                      </th>
+                      <th scope="col" className="relative py-3.5 pl-3 pr-4 sm:pr-6">
+                        <span className="sr-only">View Details</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-700 bg-base-100 md:text-lg">
+                    {usersData.users.items.map((user: User, index: number) => (
+                      <tr key={user.id}>
+                        <td className="whitespace-nowrap py-4 pl-4 pr-3 sm:pl-6">{index + 1}</td>
+                        <td className="whitespace-nowrap px-3 py-4">{user.name}</td>
+                        <td className="whitespace-nowrap px-3 py-4">
+                          <Address address={user.id} />
+                        </td>
+                        <td className="whitespace-nowrap px-3 py-4">{user.points}</td>
+                        <td className="whitespace-nowrap px-3 py-4">
+                          {getFormattedDateTime(new Date(user.updated * 1000))}
+                        </td>
+                        <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right sm:pr-6">
+                          <button
+                            className="btn btn-sm btn-circle btn-ghost"
+                            onClick={() => {
+                              setSelectedUser(user);
+                              setIsUserChallengesModalOpen(true);
+                            }}
+                          >
+                            <MagnifyingGlassIcon className="w-4 h-4" />
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
-      <dialog id="user_challenges_modal" className="modal" open={isUserChallengesModalOpen}>
-        <div className="modal-box border-2">
-          <form method="dialog">
+      <dialog id="user_challenges_modal" className="modal bg-black/65" open={isUserChallengesModalOpen}>
+        <div className="modal-box pt-0 px-0 border border-gray-400 rounded-none">
+          <form method="dialog" className="flex items-center justify-between border-b border-gray-400">
+            <h3 className="mb-1 ml-4 py-1 font-dotGothic tracking-wide text-2xl text-center">{selectedUser?.name}</h3>
+
             <button
-              className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+              className="ml-auto px-4 py-2 h-full border-l border-gray-400 rounded-none font-dotGothic text-xl text-gray-400 hover:text-white"
               onClick={() => setIsUserChallengesModalOpen(false)}
             >
-              ✕
+              X
             </button>
           </form>
-          <h3 className="font-bold text-xl text-center">{selectedUser?.name}</h3>
-          <div className="flex flex-col items-center space-y-8">
+          <div className="mt-6 flex flex-col items-center space-y-8">
             {userChallengesData?.challenges.items.map((challenge: UserChallenge) => (
               <div key={challenge.id} className="flex flex-col items-center">
                 <p className="m-2">
@@ -137,7 +175,7 @@ const Leaderboard: NextPage = () => {
           </div>
         </div>
       </dialog>
-    </>
+    </div>
   );
 };
 

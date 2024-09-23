@@ -67,9 +67,7 @@ const Home: NextPage = () => {
       <div id="rules" className="bg-green-600 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-3xl font-bold font-dotGothic tracking-wide text-white md:text-4xl">
-              Choose Your Own Adventure
-            </h2>
+            <h2 className="text-3xl font-dotGothic tracking-wide text-white md:text-4xl">Choose Your Own Adventure</h2>
             <p className="mt-6 leading-relaxed text-gray-100 md:leading-8 md:text-lg">
               Challenges will become more difficult as you progress. Beginners are encouraged to use this Scaffold ETH 2
               repository to solve the challenges. Advanced players may use any means necessary to progress.
