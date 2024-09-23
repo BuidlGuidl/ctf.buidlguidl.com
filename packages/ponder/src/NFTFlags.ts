@@ -14,9 +14,16 @@ ponder.on("NFTFlags:FlagMinted", async ({ event, context }) => {
     args: [event.args.tokenId],
   });
 
-  await User.update({
+  await User.upsert({
     id: event.args.minter,
-    data: ({ current }) => ({
+    create: {
+      points: pointsPerChallenge,
+      sortOrder:
+        100000000000n * BigInt(pointsPerChallenge) -
+        BigInt(event.block.timestamp),
+      updated: Number(event.block.timestamp),
+    },
+    update: ({ current }) => ({
       points: current.points + pointsPerChallenge,
       sortOrder:
         100000000000n * BigInt(current.points + pointsPerChallenge) -
