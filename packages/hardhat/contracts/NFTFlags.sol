@@ -14,6 +14,7 @@ contract NFTFlags is ERC721, Ownable {
     mapping(address => bool) public allowedMinters;
     uint256 public tokenIdCounter;
     mapping(uint256 => uint256) public tokenIdToChallengeId; 
+    mapping(address => mapping(uint256 => bool)) public hasMinted;
 
     event FlagMinted(address indexed minter, uint256 indexed tokenId, uint256 indexed challengeId);
 
@@ -21,13 +22,15 @@ contract NFTFlags is ERC721, Ownable {
         transferOwnership(_initialOwner);
     }
 
-    // TODO: Only allow 1 mint per address / challenge
     function mint(address _recipient, uint256 _challengeId) external {
         require(allowedMinters[msg.sender], "Not allowed to mint");
+        require(!hasMinted[_recipient][_challengeId], "Address has already minted for this challenge");
+
         tokenIdCounter++;
         uint256 newTokenId = tokenIdCounter;
         _safeMint(_recipient, newTokenId);
         tokenIdToChallengeId[newTokenId] = _challengeId;
+        hasMinted[_recipient][_challengeId] = true;
         emit FlagMinted(_recipient, newTokenId, _challengeId);
     }
 
