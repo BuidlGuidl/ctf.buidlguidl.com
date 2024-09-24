@@ -3,12 +3,46 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useQuery } from "@tanstack/react-query";
+import clsx from "clsx";
 import { gql, request } from "graphql-request";
 import type { NextPage } from "next";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import { FlagIcon } from "~~/components/FlagIcon";
 import { Address } from "~~/components/scaffold-eth";
 import { User, UserChallenge, UserChallengesData, UsersData } from "~~/types/utils";
 import { getFormattedDateTime } from "~~/utils/date";
+
+const thStyles = "whitespace-nowrap px-3 py-3.5";
+const tdStyles = "whitespace-nowrap px-3 py-4";
+
+interface FlagColors {
+  [key: number]: string;
+}
+
+const FLAG_COLORS: FlagColors = {
+  1: "text-red-600",
+  2: "text-orange-600",
+  3: "text-amber-600",
+  4: "text-yellow-600",
+  5: "text-lime-600",
+  6: "text-green-600",
+  7: "text-emerald-600",
+  8: "text-teal-600",
+  9: "text-cyan-600",
+  10: "text-sky-600",
+  11: "text-blue-600",
+  12: "text-indigo-600",
+  13: "text-violet-600",
+  14: "text-purple-600",
+  15: "text-fuchsia-600",
+};
+
+function getFlagColor(challengeId: number) {
+  if (FLAG_COLORS[challengeId]) {
+    return FLAG_COLORS[challengeId];
+  }
+  return FLAG_COLORS[1];
+}
 
 const Leaderboard: NextPage = () => {
   const [isUserChallengesModalOpen, setIsUserChallengesModalOpen] = useState(false);
@@ -22,7 +56,13 @@ const Leaderboard: NextPage = () => {
             id
             name
             points
-            updated
+            challenges {
+              items {
+                id
+                challengeId
+                timestamp
+              }
+            }
           }
         }
       }
@@ -91,48 +131,62 @@ const Leaderboard: NextPage = () => {
                 <table className="min-w-full divide-y divide-green-600">
                   <thead className="bg-green-600/30 font-dotGothic tracking-wide text-left text-gray-50 md:text-xl">
                     <tr>
-                      <th scope="col" className="py-3.5 pl-4 pr-3 sm:pl-6">
+                      <th scope="col" className={thStyles}>
                         Rank
                       </th>
-                      <th scope="col" className="px-3 py-3.5">
+                      <th scope="col" className={thStyles}>
                         Player Name
                       </th>
-                      <th scope="col" className="px-3 py-3.5">
+                      <th scope="col" className={thStyles}>
                         Address
                       </th>
-                      <th scope="col" className="px-3 py-3.5">
+                      <th scope="col" className={thStyles}>
                         Points
                       </th>
-                      <th scope="col" className="px-3 py-3.5">
-                        Updated
-                      </th>
-                      <th scope="col" className="relative py-3.5 pl-3 pr-4 sm:pr-6">
-                        <span className="sr-only">View Details</span>
+                      <th scope="col" className={thStyles}>
+                        Flags Captured
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-gray-700 bg-base-100 md:text-lg">
+                  <tbody className="divide-y divide-gray-700 bg-base-100 md:text-xl">
                     {usersData.users.items.map((user: User, index: number) => (
                       <tr key={user.id}>
-                        <td className="whitespace-nowrap py-4 pl-4 pr-3 sm:pl-6">{index + 1}</td>
-                        <td className="whitespace-nowrap px-3 py-4">{user.name}</td>
-                        <td className="whitespace-nowrap px-3 py-4">
-                          <Address address={user.id} />
-                        </td>
-                        <td className="whitespace-nowrap px-3 py-4">{user.points}</td>
-                        <td className="whitespace-nowrap px-3 py-4">
-                          {getFormattedDateTime(new Date(user.updated * 1000))}
-                        </td>
-                        <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right sm:pr-6">
+                        <td className={tdStyles}>{index + 1}</td>
+                        <td className={tdStyles}>
                           <button
-                            className="btn btn-sm btn-circle btn-ghost"
+                            className="hover:text-gray-50"
                             onClick={() => {
                               setSelectedUser(user);
                               setIsUserChallengesModalOpen(true);
                             }}
                           >
-                            <MagnifyingGlassIcon className="w-4 h-4" />
+                            {user.name}
+                            <ArrowTopRightOnSquareIcon
+                              className="ml-2 mb-[2px] inline-block h-4 w-4"
+                              aria-hidden="true"
+                            />
                           </button>
+                        </td>
+                        <td className={tdStyles}>
+                          <Address address={user.id} size="lg" />
+                        </td>
+                        <td className={tdStyles}>{user.points}</td>
+                        <td className={tdStyles}>
+                          <div className="flex item-center gap-2">
+                            {user.challenges?.items &&
+                              user.challenges.items.map((challenge: UserChallenge) => (
+                                <div
+                                  key={challenge.id}
+                                  className="relative tooltip"
+                                  data-tip={getFormattedDateTime(new Date(challenge.timestamp * 1000))}
+                                >
+                                  <FlagIcon className={clsx("w-8 h-8", getFlagColor(challenge.challengeId))} />
+                                  <p className="absolute top-[5px] left-[6px] m-0 p-0 leading-none text-xs text-white font-semibold [text-shadow:_1px_1px_1px_rgb(0_0_0_/_40%)]">
+                                    {challenge.challengeId}
+                                  </p>
+                                </div>
+                              ))}
+                          </div>
                         </td>
                       </tr>
                     ))}
