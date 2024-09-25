@@ -2,7 +2,6 @@ import Link from "next/link";
 import type { NextPage } from "next";
 import { ClockIcon, FlagIcon, RocketLaunchIcon } from "@heroicons/react/24/outline";
 import { FlagArt } from "~~/components/FlagArt";
-import { UserData } from "~~/components/UserData";
 import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
 const rules = [
@@ -90,7 +89,6 @@ const Home: NextPage = () => {
               ))}
             </dl>
           </div>
-          <UserData />
         </div>
       </div>
     </>

@@ -1,17 +1,33 @@
 "use client";
 
-import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { SubMenu } from "./SubMenu";
 import { MenuLink } from "./types";
+import { useAccount } from "wagmi";
+import { UserIcon } from "@heroicons/react/24/outline";
 
 export const HeaderMenuLinksClient = ({ menuLinks }: { menuLinks: MenuLink[] }) => {
   const pathname = usePathname();
+  const { address: connectedAddress } = useAccount();
+
+  const finalMenuLinks = [
+    ...menuLinks,
+    // Add profile link if there is a connected address
+    ...(connectedAddress
+      ? [
+          {
+            label: "Profile",
+            href: `/profile/${connectedAddress}`,
+            icon: <UserIcon className="h-4 w-4" />,
+          },
+        ]
+      : []),
+  ] as MenuLink[];
 
   return (
     <>
-      {menuLinks.map(({ label, href, icon, sublinks }) => {
+      {finalMenuLinks.map(({ label, href, icon, sublinks }) => {
         const isActive = pathname === href || (sublinks && sublinks.some(sublink => pathname === sublink.href));
         const hasSublinks = sublinks && sublinks.length > 0;
 

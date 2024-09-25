@@ -1,17 +1,15 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useQuery } from "@tanstack/react-query";
 import { gql, request } from "graphql-request";
-import { useAccount } from "wagmi";
+import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 import { Address } from "~~/components/scaffold-eth";
 import { UsersData } from "~~/types/utils";
 import { getFormattedDateTime } from "~~/utils/date";
 
-export const UserData: React.FC = () => {
-  const { address: connectedAddress } = useAccount();
-
+export const UserData = ({ address }: { address: string }) => {
   const fetchUser = async (userId: string) => {
     const UserQuery = gql`
       query Users($userId: String!) {
@@ -41,41 +39,56 @@ export const UserData: React.FC = () => {
   };
 
   const { data: usersData } = useQuery<UsersData>({
-    queryKey: ["user", connectedAddress],
-    queryFn: () => fetchUser(connectedAddress || ""),
-    enabled: !!connectedAddress,
+    queryKey: ["user", address],
+    queryFn: () => fetchUser(address || ""),
+    enabled: !!address,
   });
+
+  if (usersData?.users.items.length === 0) {
+    return (
+      <div role="alert" className="md:p-6 alert border border-green-600 rounded-none">
+        <ExclamationTriangleIcon className="w-6 h-6" />
+        <span className="text-lg md:text-xl">No Flags Captured</span>
+        <div>
+          <Link href="/challenge/1" className="btn btn-sm btn-primary rounded-md">
+            Start Challenges →
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>
-      {connectedAddress && usersData?.users.items[0] && (
-        <div className="mt-8 p-6 bg-base-200 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-semibold mb-4">Your Profile</h2>
-          <div className="grid grid-cols-2 gap-4">
+      {address && usersData?.users.items[0] && (
+        <div>
+          <div className="mt-8 grid md:grid-cols-2 gap-6">
             <div>
-              <p className="font-bold">Address:</p>
-              <Address address={connectedAddress} />
+              <p className="mb-1 md:mb-3 font-dotGothic tracking-wide">Address:</p>
+              <Address address={address} size="xl" />
             </div>
             <div>
-              <p className="font-bold">Name:</p>
-              <p>{usersData.users.items[0].name}</p>
+              <p className="mb-1 md:mb-3 font-dotGothic tracking-wide">Name:</p>
+              <p className="mt-0 mb-0 text-xl md:text-2xl">{usersData.users.items[0].name}</p>
             </div>
             <div>
-              <p className="font-bold">Points:</p>
-              <p>{usersData.users.items[0].points}</p>
+              <p className="mb-1 md:mb-3 font-dotGothic tracking-wide">Points:</p>
+              <p className="mt-0 mb-0 text-xl md:text-2xl">{usersData.users.items[0].points}</p>
             </div>
             <div>
-              <p className="font-bold">Last Updated:</p>
-              <p>{getFormattedDateTime(new Date(usersData.users.items[0].updated * 1000))}</p>
+              <p className="mb-1 md:mb-3 font-dotGothic tracking-wide">Last Updated:</p>
+              <p className="mt-0 mb-0 text-xl md:text-2xl">
+                {getFormattedDateTime(new Date(usersData.users.items[0].updated * 1000))}
+              </p>
             </div>
           </div>
-          <div className="mt-6">
-            <h3 className="text-xl font-semibold mb-3">Your Challenges</h3>
+          <div className="mt-12">
+            <h3 className="font-dotGothic text-xl md:text-2xl tracking-wide">Flags Captured</h3>
             {usersData.users.items[0].challenges?.items && usersData.users.items[0].challenges?.items?.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {usersData.users.items[0].challenges?.items.map(challenge => (
-                  <div key={challenge.id} className="bg-base-100 p-4 rounded-md shadow">
-                    <p className="font-bold">Challenge {challenge.challengeId}</p>
+                  <div key={challenge.id} className="bg-gray-800 p-6">
+                    <p className="mt-0 font-bold">Challenge {challenge.challengeId}</p>
                     <p>Points: {challenge.points}</p>
                     <p>Minted: {getFormattedDateTime(new Date(challenge.timestamp * 1000))}</p>
                     <Image
