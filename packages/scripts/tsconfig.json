@@ -4,6 +4,7 @@
     "moduleDetection": "force",
     "module": "Preserve",
     "resolveJsonModule": true,
+    "target": "esnext",
     "allowJs": true,
     "esModuleInterop": true,
     "isolatedModules": true
