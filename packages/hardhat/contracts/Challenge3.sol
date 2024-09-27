@@ -12,6 +12,10 @@ contract Challenge3 {
 		nftContract = _nftContract;
 	}
 
+	function resetPoints() public {
+		points[tx.origin] = 0;
+	}
+
 	function claimPoints() public {
 		require(points[tx.origin] == 0, "Already claimed points");
 		(bool success, ) = msg.sender.call("");
