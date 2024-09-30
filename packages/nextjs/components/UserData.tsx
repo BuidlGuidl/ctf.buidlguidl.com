@@ -85,19 +85,20 @@ export const UserData = ({ address }: { address: string }) => {
           <div className="mt-12">
             <h3 className="font-dotGothic text-xl md:text-2xl tracking-wide">Flags Captured</h3>
             {usersData.users.items[0].challenges?.items && usersData.users.items[0].challenges?.items?.length > 0 ? (
-              <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4">
                 {usersData.users.items[0].challenges?.items.map(challenge => (
-                  <div key={challenge.id} className="bg-gray-800 p-6">
-                    <p className="mt-0 font-bold">Challenge {challenge.challengeId}</p>
-                    <p>Points: {challenge.points}</p>
-                    <p>Minted: {getFormattedDateTime(new Date(challenge.timestamp * 1000))}</p>
-                    <Image
-                      src={JSON.parse(atob(challenge.tokenURI.substring(29))).image}
-                      alt={`Challenge ${challenge.challengeId}`}
-                      width="300"
-                      height="300"
-                      className="mt-2 w-full h-auto rounded"
-                    />
+                  <div key={challenge.id}>
+                    <div className="h-64 p-8 flex bg-gray-100 border-4 border-green-600">
+                      <Image
+                        src={JSON.parse(atob(challenge.tokenURI.substring(29))).image}
+                        alt={`Challenge ${challenge.challengeId}`}
+                        width={461}
+                        height={573}
+                      />
+                    </div>
+                    <p className="m-0 py-3 bg-green-600/30 border-4 border-t-0 border-green-600 text-gray-200 text-sm text-center">
+                      {challenge.points} points @ {getFormattedDateTime(new Date(challenge.timestamp * 1000))}
+                    </p>
                   </div>
                 ))}
               </div>
