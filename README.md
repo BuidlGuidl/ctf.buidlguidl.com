@@ -2,13 +2,14 @@
 
 Welcome to the BuidlGuidl CTF - Devcon SEA 2024!
 
-This is build with [Scaffold-ETH 2](https://github.com/scaffold-eth/scaffold-eth-2), and it contains everything you need to play the CTF (More about this in Repo structure / Key files)
+This repository was built with [Scaffold-ETH 2](https://github.com/scaffold-eth/scaffold-eth-2) and it contains 2 things:
 
-If you want to play with your own stack, you can also go directly to the challenges in 'packages/nextjs/data/challenges'.
+- The website with the challenges, which is live at https://ctf-devcon.buidlguidl.com/
+- All the tools that you need to play (& win!) the CTF.
 
-## Local set up
+If you want to play with your own stack, you can skip this and directly go to https://ctf-devcon.buidlguidl.com/ and start hacking.
 
-If you want to set up the local environment, follow the steps below:
+## Setting up the environment
 
 ### Requirements
 
@@ -18,9 +19,9 @@ Before you begin, you need to install the following tools:
 - Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
 - [Git](https://git-scm.com/downloads)
 
-### Quickstart
+### Set the live site in your local environment
 
-To get started with Scaffold-ETH 2, follow the steps below:
+First, we'll set up the live site in your local environment.
 
 1. Clone the repository and install dependencies:
 
@@ -30,43 +31,63 @@ cd ctf-devcon
 yarn install
 ```
 
-2. Run a local network:
-
-```
-yarn chain
-```
-
-3. Deploy the contracts:
-
-```
-yarn deploy
-```
-
-4. Start Ponder:
-
-```
-yarn ponder:dev
-```
-
-5. Start your NextJS app:
+2. Start the frontend:
 
 ```
 yarn start
 ```
 
-Visit your app on: `http://localhost:3000`.
+You can visit the website at http://localhost:3000.
 
-### Repo structure / Key files
+This will just be a copy of the live site (pointing at the live contracts) running on your computer. If you want (you should!) to hack & test the challenges locally, follow the steps below.
 
-- Monorepo
-- packages: hardhat / foundry / scripts / nextjs
-- scaffold.config.ts: .....
-- externalContracts.ts: .....
-- ....
+### Set up your local testing environment
 
-### Scripts
+1. Run a local blockchain:
 
-You can use `packages/scripts` directory to interact with challenges contract. This package comes pre-installed with [viem](https://viem.sh/) which helps you inteface with blockchain using typescirpt scripts. Checkout `packages/scripts/src/example.ts` for an basic example.
+```
+yarn chain
+```
+
+2. Deploy the contracts locally:
+
+```
+yarn deploy
+```
+
+> TIP: This command will update the `deployedContracts.ts` file (in the `scripts` and `nextjs` packages), which contains the deployed contracts addresses and ABIs.
+
+3. Start Ponder (event indexer):
+
+```
+yarn ponder:dev
+```
+
+4. Start your NextJS app:
+
+First, go to `scaffold.config.ts` and set `targetNetworks` to use `[chains.hardhat]`. And then run:
+
+```
+yarn start
+```
+
+Now your app on `http://localhost:3000` is running entirely locally. You can break things without any consequences :)
+
+## Repo structure / Key files
+
+This is a monorepo with different packages:
+
+### hardhat / foundry
+
+TODO
+
+### nextjs
+
+This is the frontend of the game
+
+### scripts
+
+You can use `packages/scripts` directory to interact with challenges contracts. This package comes pre-installed with [viem](https://viem.sh/) which helps you interface with the Blockchain using typescript scripts. Checkout `packages/scripts/src/example.ts` for a basic example.
 
 To run scripts first cd into `packages/scripts`:
 
@@ -82,4 +103,6 @@ yarn tsx <path-to-script>
 
 eg: `yarn tsx src/example.ts`
 
-> TIP: Whenever you run `yarn deploy` it will `packages/scripts/contracts/deployedContracts.ts` file which contains the deployed contract addresses and abi.
+### ponder
+
+No need to take a look here, since it's not part of the game. Just the indexer we use to keep track of all the contract events happening
