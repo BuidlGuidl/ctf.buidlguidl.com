@@ -1,5 +1,7 @@
 # 🚩 BuidlGuidl CTF - Devcon SEA 2024
 
+![BuidlGuidl CTF - Devcon](./packages/nextjs/public/readme-image.jpg?raw=true)
+
 Welcome to the BuidlGuidl CTF - Devcon SEA 2024!
 
 This repository was built with [Scaffold-ETH 2](https://github.com/scaffold-eth/scaffold-eth-2) and it contains 2 things:
