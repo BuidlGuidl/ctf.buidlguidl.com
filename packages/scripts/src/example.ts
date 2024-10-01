@@ -8,14 +8,22 @@ import { privateKeyToAccount } from "viem/accounts";
 import { hardhat } from "viem/chains";
 import deployedContracts from "../contracts/deployedContracts";
 
-// Hardhat's last account private key (for testing purposes)
-const HARDHAT_LAST_ACCOUNT_PK =
-  "0xdf57089febbacf7ba0bc227dafbffa9fc08a93fdc68e1e42411a14efcf23656e";
-const hardhatLastAccount = privateKeyToAccount(HARDHAT_LAST_ACCOUNT_PK);
+import path from "path";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+import * as dotenv from "dotenv";
+// TODO: Use root .env or scripts/.env
+dotenv.config({ path: path.join(__dirname, "../../hardhat/.env") });
+
+// We use the private key of account generated via `yarn generate`, if not present we use default hardhat last account
+const MY_WALLET_PK = (process.env.DEPLOYER_PRIVATE_KEY ??
+  "0xdf57089febbacf7ba0bc227dafbffa9fc08a93fdc68e1e42411a14efcf23656e") as `0x${string}`;
+const myWalletAccount = privateKeyToAccount(MY_WALLET_PK);
 
 // We need wallet client to do write operations/send transactions
 const walletClient = createWalletClient({
-  account: hardhatLastAccount,
+  account: myWalletAccount,
   chain: hardhat,
   transport: http(),
 });
@@ -40,12 +48,12 @@ async function main() {
   // Writing to a contract
   const txHash = await challenge1Contract.write.registerMe(["Bob"]);
   console.log(
-    `📝 Called 'registerMe' function with address ${hardhatLastAccount.address} and name 'Bob', txHash: ${txHash}`,
+    `📝 Called 'registerMe' function with address ${myWalletAccount.address} and name 'Bob', txHash: ${txHash}`,
   );
 
   // Reading from a contract
   const builderName = await challenge1Contract.read.builderNames([
-    hardhatLastAccount.address,
+    myWalletAccount.address,
   ]);
   console.log("👷 Builder name is:", builderName);
 
