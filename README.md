@@ -1,15 +1,35 @@
-# 🚩 BuidlGuidl CTF - Devcon SEA 2024
-
 ![BuidlGuidl CTF - Devcon](./packages/nextjs/public/readme-image.jpg?raw=true)
 
 Welcome to the BuidlGuidl CTF - Devcon SEA 2024!
+
+**The goal of this CTF game is to mint as many NFT flags as possible from the `NFTFlags.sol` contract, which is deployed** [here](https://TODO-add-basescan-url-to-contract/). Each flag gives you 100 points. We only track NFT minters, not NFT holders (i.e. transfers are not computed into the score).
 
 This repository was built with [Scaffold-ETH 2](https://github.com/scaffold-eth/scaffold-eth-2) and it contains 2 things:
 
 - The website with the challenges, which is live at https://ctf-devcon.buidlguidl.com/
 - All the tools that you need to play (& win!) the CTF.
 
-If you want to play with your own stack, you can skip this and directly go to https://ctf-devcon.buidlguidl.com/ and start hacking.
+You can choose to hack with your own stack, or use this repo as your hacking environment.
+
+### Hack with your own stack
+
+Go directly to https://ctf-devcon.buidlguidl.com/ and start hacking.
+
+You can also find:
+
+1. Challenge details in the [`packages/nextjs/data/challenges`](./packages/nextjs/data/challenges) directory.
+2. Explore the smart contracts in either Foundry or Hardhat:
+   - Foundry: [`packages/foundry/contracts/`](./packages/foundry/contracts/)
+   - Hardhat: [`packages/hardhat/contracts/`](./packages/hardhat/contracts/)
+
+### Hack using this repo
+
+In this repo we provide a full set of tools to help you with the challenges, including:
+
+- A user-friendly frontend to interact with the contracts (_"Debug"_ page)
+- Simplified workflow for [deploying new contracts](https://docs.scaffoldeth.io/deploying/deploy-smart-contracts)
+- A local blockchain and a block explorer for testing
+- [Example scripts](./packages/scripts/src/example.ts) to interact with smart contracts
 
 ## Setting up the environment
 
