@@ -21,6 +21,9 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   const nftFlags = await hre.ethers.getContract<Contract>("NFTFlags", deployer);
   console.log("🚩 NFT Flag contract deployed");
 
+  // Enable minting
+  await nftFlags.enable();
+
   // Challenges
   await deploy("Challenge1", {
     from: deployer,

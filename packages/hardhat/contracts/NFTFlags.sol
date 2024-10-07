@@ -9,13 +9,17 @@ import "@openzeppelin/contracts/utils/Base64.sol";
 
 // TODO: Think if ERC1155 is a better choice
 // TODO: Check if the user have registered to the ctf before minting (Challenge1)?
-contract NFTFlags is ERC721, IERC721Receiver , Ownable {
+contract NFTFlags is ERC721, IERC721Receiver, Ownable {
     using Strings for uint256;
+
+    event Enabled(address indexed caller);
+    event Disabled(address indexed caller);
 
     mapping(address => bool) public allowedMinters;
     uint256 public tokenIdCounter;
-    mapping(uint256 => uint256) public tokenIdToChallengeId; 
+    mapping(uint256 => uint256) public tokenIdToChallengeId;
     mapping(address => mapping(uint256 => bool)) public hasMinted;
+    bool public enabled = false;
 
     string[15] public flagColors = [
         "#4b5563", // Default Gray
@@ -47,7 +51,11 @@ contract NFTFlags is ERC721, IERC721Receiver , Ownable {
     }
 
     function _mintToken(address _recipient, uint256 _challengeId) internal {
-        require(!hasMinted[_recipient][_challengeId], "Address has already minted for this challenge");
+        require(enabled, "Minting is not enabled");
+        require(
+            !hasMinted[_recipient][_challengeId],
+            "Address has already minted for this challenge"
+        );
 
         tokenIdCounter++;
         uint256 newTokenId = tokenIdCounter;
@@ -111,6 +119,18 @@ contract NFTFlags is ERC721, IERC721Receiver , Ownable {
 
     function removeAllowedMinter(address minter) external onlyOwner {
         allowedMinters[minter] = false;
+    }
+
+    function enable() external onlyOwner {
+        enabled = true;
+
+        emit Enabled(msg.sender);
+    }
+
+    function disable() external onlyOwner {
+        enabled = false;
+
+        emit Disabled(msg.sender);
     }
 
     // https://github.com/GNSPS/solidity-bytes-utils/blob/master/contracts/BytesLib.sol#L374
