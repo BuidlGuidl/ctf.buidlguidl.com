@@ -38,7 +38,7 @@ export const SubMenu: React.FC<SubMenuProps> = ({ label, icon, sublinks, isActiv
         onClick={handleDropdownToggle}
         className={`${
           isActive ? "bg-secondary shadow-md" : ""
-        } max-lg:hidden btn btn-sm w-full lg:w-auto max-lg:justify-start hover:bg-secondary hover:shadow-md focus:!bg-secondary py-1 px-3 text-sm rounded-full h-full gap-2 border-0`}
+        } max-lg:hidden btn btn-sm w-full bg-base-100 lg:w-auto max-lg:justify-start hover:bg-secondary hover:shadow-md focus:!bg-secondary py-1 px-3 text-sm rounded-md h-full gap-2 border-0`}
       >
         {icon}
         <span>{label}</span>
@@ -47,13 +47,13 @@ export const SubMenu: React.FC<SubMenuProps> = ({ label, icon, sublinks, isActiv
       <ul
         className={`${
           isOpen ? "dropdown-content" : "lg:hidden"
-        } lg:absolute dropdown-end ml-0 menu lg:w-40 z-[2] px-0 py-0 lg:p-2 lg:mt-2 lg:shadow-center lg:shadow-accent bg-base-200 lg:rounded-box gap-1`}
+        } lg:absolute dropdown-end ml-0 menu lg:w-40 z-[2] px-0 py-0 lg:p-2 lg:mt-2 bg-base-200 lg:rounded-md gap-1 lg:border lg:border-secondary`}
       >
         {sublinks.map(sublink => (
           <li key={sublink.href} className="ml-0">
             <Link
               href={sublink.href}
-              className={`block px-3 lg:px-4 py-1.5 text-sm hover:bg-secondary focus:!bg-secondary ${
+              className={`block px-3 lg:px-4 py-1.5 text-sm rounded-md hover:bg-secondary focus:!bg-secondary ${
                 pathname === sublink.href ? "bg-secondary" : ""
               }`}
               onClick={handleLinkClick}

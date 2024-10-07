@@ -9,9 +9,9 @@ module.exports = {
         light: {
           primary: "#00ff00",
           "primary-content": "#000000",
-          secondary: "#0066ff",
-          "secondary-content": "#ff00ff",
-          accent: "#ff00ff",
+          secondary: "#19362D",
+          "secondary-content": "#1EB854",
+          accent: "#1DB8AB",
           "accent-content": "#000000",
           neutral: "#1a1a1a",
           "neutral-content": "#00ff00",
@@ -21,8 +21,8 @@ module.exports = {
           "base-content": "#00ff00",
           info: "#00ffff",
           success: "#00ff00",
-          warning: "#ffff00",
-          error: "#ff0000",
+          warning: "#FFBE00",
+          error: "#FF5861",
 
           "--rounded-btn": "9999rem",
           ".tooltip": {

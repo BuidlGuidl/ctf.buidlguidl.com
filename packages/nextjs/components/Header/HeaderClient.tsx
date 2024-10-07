@@ -34,7 +34,7 @@ export const HeaderClient = ({ menuLinks }: { menuLinks: ReactNode }) => {
           {isDrawerOpen && (
             <ul
               tabIndex={0}
-              className="menu menu-compact gap-1 dropdown-content mt-3 p-2 shadow-center shadow-accent bg-base-100 rounded-box w-52"
+              className="menu menu-compact gap-1 dropdown-content mt-3 p-2 bg-base-100 rounded-md w-52 border border-secondary"
               onClick={() => {
                 setIsDrawerOpen(false);
               }}

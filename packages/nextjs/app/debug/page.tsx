@@ -13,7 +13,7 @@ const Debug: NextPage = () => {
       <DebugContracts />
       <div className="text-center mt-8 bg-secondary p-10">
         <h1 className="text-4xl my-0">Debug Contracts</h1>
-        <p className="text-neutral">You can debug & interact with your deployed contracts here.</p>
+        <p className="mb-2">You can debug & interact with your deployed contracts here.</p>
       </div>
     </>
   );
