@@ -104,6 +104,15 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
 
   console.log("🚩 Challenge #9 deployed");
 
+  await deploy("Challenge11", {
+    from: deployer,
+    args: [await nftFlags.getAddress()],
+    log: true,
+    autoMine: true,
+  });
+
+  console.log("🚩 Challenge #11 deployed");
+
   // Set addAllowedMinterMultiple in NFTFlags
   const challengeAddresses = [
     await (await hre.ethers.getContract<Contract>("Challenge1", deployer)).getAddress(),
