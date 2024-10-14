@@ -123,6 +123,7 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
     await (await hre.ethers.getContract<Contract>("Challenge6", deployer)).getAddress(),
     await (await hre.ethers.getContract<Contract>("Challenge8", deployer)).getAddress(),
     await (await hre.ethers.getContract<Contract>("Challenge9", deployer)).getAddress(),
+    await (await hre.ethers.getContract<Contract>("Challenge11", deployer)).getAddress(),
   ];
 
   const tx = await nftFlags.addAllowedMinterMultiple(challengeAddresses);
