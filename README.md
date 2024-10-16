@@ -26,7 +26,7 @@ You can also find:
 
 In this repo we provide a full set of tools to help you with the challenges, including:
 
-- A user-friendly frontend to interact with the contracts (_"Debug"_ page)
+- A user-friendly frontend to interact with the contracts (_"Debug Contracts"_ page)
 - Simplified workflow for [deploying new contracts](https://docs.scaffoldeth.io/deploying/deploy-smart-contracts)
 - A local blockchain and a block explorer for testing
 - [Example scripts](./packages/scripts/src/example.ts) to interact with smart contracts
@@ -97,33 +97,113 @@ Now your app on `http://localhost:3000` is running entirely locally. You can bre
 
 ## Repo structure / Key files
 
-This is a monorepo with different packages:
+This is a [yarn](https://yarnpkg.com/features/workspaces) monorepo with different packages:
 
-### hardhat / foundry
+```
+ctf-devcon/
+└── packages/
+    ├── hardhat/
+    ├── foundry/
+    ├── nextjs/
+    ├── scripts/
+    └── ponder/
+```
 
-TODO
+### hardhat
+
+Comes preconfigured with [hardhat](https://hardhat.org/) and contains the smart contracts and deployment scripts for the CTF challenges.
+
+It uses hardhat-deploy to deploy the contracts.
+
+#### Key files in hardhat
+
+- `contracts/`: The source directory where all your smart contracts should be. It already contains all the challenge contracts and the NFT Flag minter contract.
+- `deploy/`: This directory contains all your deployments scripts. When you run `yarn deploy` all the scripts present in this directory will be executed in numbered order.
+
+<details>
+<summary>Example (How to deploy your solution contracts)</summary>
+
+1. Create a smart contract:
+
+   - Add your new contract file (e.g., `Challenge3Solution.sol`) in the `contracts/` directory.
+
+2. Create a deployment script:
+
+   - Add a new file (e.g., `01_deploy_solutions.ts`) in the `deploy/` directory.
+   - Write your deployment script, you can use `00_deploy_your_contract.ts` to guide you.
+
+3. Deploy your contract:
+   - Run `yarn deploy` to deploy your contract.
+
+For more details on deployment, including configuring deployer accounts or the network you want to deploy to, see the [Scaffold-ETH 2 deployment docs](https://docs.scaffoldeth.io/deploying/deploy-smart-contracts).
+
+</details>
+
+### foundry
+
+Comes preconfigured with [Foundry](https://book.getfoundry.sh/) development environment and contains the smart contracts and deployment scripts for the CTF challenges.
+
+#### Key files in foundry
+
+- `contracts/`: The source directory where all your smart contracts should be. It already contains all the challenge contracts and the NFT Flag minter contract.
+- `script/`: Deployment scripts for the contracts.
+
+<details>
+<summary>Example (How to deploy your solution contracts)</summary>
+
+1. Create a deployment script:
+
+   - Add a new file (e.g., `ChallengesSolutions.s.sol`) in the `script/` directory.
+   - Write your deployment script, following examples in `DeployChallenges.s.sol`.
+
+2. Update the main deployment script:
+
+   - Open `Deploy.s.sol` in the `script/` directory.
+   - Import your `ChallengesSolutions.s.sol`.
+   - Add the deployment of your solutions in the `run()` function.
+
+3. Deploy your contracts:
+   - Run `yarn deploy` to deploy your contracts.
+
+For more details on deployment, including configuring deployer accounts or the network you want to deploy to, see the [Scaffold-ETH 2 deployment docs](https://docs.scaffoldeth.io/deploying/deploy-smart-contracts).
+
+</details>
 
 ### nextjs
 
-This is the frontend of the game
+This is the frontend of the game. Main pages:
+
+- _"Challenges"_ shows the Challenges descriptions, Goals and Hints.
+- _"Leaderboard"_ shows the current top players in the game.
+- _"Debug Contracts"_ lists all the deployed contracts and allows you to interact with them.
+- _"Profile"_ shows your player profile and the flags you have minted.
+
+Key folders and files:
+
+- `app/`: Contains the Next.js pages and components (uses [app router](https://nextjs.org/docs/app)).
+- `contracts/`: Contains deployed contracts ABIs and addresses.
+- `package.json`: Dependencies and scripts for the Next.js app.
+- `scaffold.config.ts`: Configuration file, you can check the different settings in our [docs](https://docs.scaffoldeth.io/deploying/deploy-nextjs-app#scaffold-app-configuration)
 
 ### scripts
 
-You can use `packages/scripts` directory to interact with challenges contracts. This package comes pre-installed with [viem](https://viem.sh/) which helps you interface with the Blockchain using typescript scripts. Checkout `packages/scripts/src/example.ts` for a basic example.
+Contains scripts to interact with the deployed contracts. This package comes pre-installed with [viem](https://viem.sh/)
+which helps you interface with the Blockchain using Typescript scripts.
 
-To run scripts first cd into `packages/scripts`:
+#### Key files and directories:
+
+- `src/`: Contains the script files.
+  - `example.ts`: A basic example script demonstrating how to interact with contracts.
+- `contracts/`: Contains deployed contracts ABIs and addresses.
+
+To run scripts, navigate to the scripts package and run the script using `yarn tsx`:
 
 ```shell
 cd packages/scripts
+yarn tsx src/example.ts
 ```
 
-Then run:
-
-```shell
-yarn tsx <path-to-script>
-```
-
-eg: `yarn tsx src/example.ts`
+You can create your own scripts in the `src/` directory to interact with specific challenge contracts or perform custom operations.
 
 ### ponder
 
