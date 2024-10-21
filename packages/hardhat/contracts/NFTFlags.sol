@@ -41,8 +41,7 @@ contract NFTFlags is ERC721, IERC721Receiver, Ownable {
 
     event FlagMinted(address indexed minter, uint256 indexed tokenId, uint256 indexed challengeId);
 
-    constructor(address _initialOwner) ERC721("BG-CTF", "CTF") {
-        transferOwnership(_initialOwner);
+    constructor(address _initialOwner) Ownable(_initialOwner) ERC721("BG-CTF", "CTF") {
     }
 
     function mint(address _recipient, uint256 _challengeId) external {
@@ -66,7 +65,7 @@ contract NFTFlags is ERC721, IERC721Receiver, Ownable {
     }
 
     function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
-        require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
+        require(ownerOf(tokenId) != address(0), "ERC721Metadata: URI query for nonexistent token");
 
         string memory svg = generateSVG(tokenId);
         string memory json = Base64.encode(
