@@ -1,6 +1,7 @@
-import { HardhatRuntimeEnvironment } from "hardhat/types";
+import { HardhatNetworkHDAccountsConfig, HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
-import { Contract } from "ethers";
+import { HDNodeWallet } from "ethers";
+import { Contract, Mnemonic } from "ethers";
 
 /**
  * Deploys all the needd CTF contracts
@@ -113,6 +114,23 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
 
   console.log("🚩 Challenge #11 deployed");
 
+  await deploy("Challenge12", {
+    from: deployer,
+    args: [await nftFlags.getAddress()],
+    log: true,
+    autoMine: true,
+  });
+
+  console.log("🚩 Challenge #12 deployed");
+
+  // Set allowed minter for Challenge 12
+  const challenge12Contract = await hre.ethers.getContract<Contract>("Challenge12", deployer);
+  const hAccounts = hre.config.networks.hardhat.accounts as HardhatNetworkHDAccountsConfig;
+  const derivationPath = "m/44'/60'/0'/0/12";
+  const challenge12Account = HDNodeWallet.fromMnemonic(Mnemonic.fromPhrase(hAccounts.mnemonic), derivationPath);
+
+  await challenge12Contract.addMinter(challenge12Account.address);
+
   await deploy("Challenge13", {
     from: deployer,
     args: [await nftFlags.getAddress()],
@@ -133,6 +151,7 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
     await (await hre.ethers.getContract<Contract>("Challenge8", deployer)).getAddress(),
     await (await hre.ethers.getContract<Contract>("Challenge9", deployer)).getAddress(),
     await (await hre.ethers.getContract<Contract>("Challenge11", deployer)).getAddress(),
+    await challenge12Contract.getAddress(),
     await (await hre.ethers.getContract<Contract>("Challenge13", deployer)).getAddress(),
   ];
 
