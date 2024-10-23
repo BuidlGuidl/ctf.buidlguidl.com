@@ -1,49 +1,54 @@
 //SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol";
-import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
+import "./RLPReader.sol";
 import "./INFTFlags.sol";
 
-contract Challenge12 is Ownable {
-    using ECDSA for bytes32;
-    using MessageHashUtils for bytes32;
+contract Challenge12 {
+	using RLPReader for RLPReader.RLPItem;
+	using RLPReader for bytes;
 
-    event MinterAdded(address indexed minter);
-    event MinterRemoved(address indexed minter);
+	address public nftContract;
+	mapping(address => uint256) public blockNumber;
+	mapping(uint256 => bool) public blocks;
 
-    address public nftContract;
-    mapping(address => bool) public isMinter;
+	uint256 public constant futureBlocks = 2;
 
-    constructor(address _nftContract) Ownable(msg.sender) {
-        nftContract = _nftContract;
-    }
+	constructor(address _nftContract) {
+		nftContract = _nftContract;
+	}
 
-    function addMinter(address _minter) public onlyOwner {
-        isMinter[_minter] = true;
+	function preMintFlag() public {
+		require(blocks[block.number] == false, "Block already used");
+		blocks[block.number] = true;
+		blockNumber[msg.sender] = block.number;
+	}
 
-        emit MinterAdded(_minter);
-    }
+	function mintFlag(bytes memory rlpBytes) public {
+		require(blockNumber[msg.sender] != 0, "PreMintFlag first");
+		require(
+			block.number >= blockNumber[msg.sender] + futureBlocks,
+			"Future block not reached."
+		);
+		require(
+			block.number < blockNumber[msg.sender] + futureBlocks + 256,
+			"You miss the window. PreMintFlag again."
+		);
 
-    function removeMinter(address _minter) public onlyOwner {
-        isMinter[_minter] = false;
+		RLPReader.RLPItem[] memory ls = rlpBytes.toRlpItem().toList();
 
-        emit MinterRemoved(_minter);
-    }
+		uint256 blockNumberFromHeader = ls[8].toUint();
 
-    function mintFlag(address _minter, bytes memory signature) public {
-        require(isMinter[_minter], "Not a minter");
+		require(
+			blockNumberFromHeader == blockNumber[msg.sender] + futureBlocks,
+			"Wrong block"
+		);
 
-        bytes32 message = keccak256(
-            abi.encode("BG CTF Challenge 12", msg.sender)
-        );
-        bytes32 hash = message.toEthSignedMessageHash();
+		require(
+			blockhash(blockNumberFromHeader) == keccak256(rlpBytes),
+			"Wrong block header"
+		);
 
-        address recoveredSigner = hash.recover(signature);
-
-        require(recoveredSigner == _minter, "Invalid signature");
-
-        INFTFlags(nftContract).mint(msg.sender, 12);
-    }
+		INFTFlags(nftContract).mint(msg.sender, 12);
+	}
 }

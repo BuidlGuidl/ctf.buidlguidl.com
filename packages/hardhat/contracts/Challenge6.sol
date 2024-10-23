@@ -5,19 +5,28 @@ import "./INFTFlags.sol";
 
 contract Challenge6 {
 	address public nftContract;
-	bytes32 private password;
-	uint256 private count;
+	mapping(address => uint256) public points;
+	uint256 public constant POINTS_TO_MINT = 10;
 
-	constructor(address _nftContract, bytes32 _password) {
+	constructor(address _nftContract) {
 		nftContract = _nftContract;
-		password = _password;
 	}
 
-	function mintFlag(bytes32 _password) public {
-		bytes32 mask = ~(bytes32(uint256(0xFF) << ((31 - (count % 32)) * 8)));
-		bytes32 newPassword = password & mask;
-		require(newPassword == _password, "Wrong password");
-		count += 1;
-		INFTFlags(nftContract).mint(msg.sender, 6);
+	function resetPoints() public {
+		points[tx.origin] = 0;
+	}
+
+	function claimPoints() public {
+		require(points[tx.origin] == 0, "Already claimed points");
+		(bool success, ) = msg.sender.call("");
+		require(success, "External call failed");
+
+		points[tx.origin] += 1;
+	}
+
+	function mintFlag() public {
+		require(points[tx.origin] >= POINTS_TO_MINT, "Not enough points");
+		points[tx.origin] -= POINTS_TO_MINT;
+		INFTFlags(nftContract).mint(tx.origin, 6);
 	}
 }

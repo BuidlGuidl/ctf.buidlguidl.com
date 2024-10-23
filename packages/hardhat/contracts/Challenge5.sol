@@ -1,47 +1,39 @@
 //SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
+import "@openzeppelin/contracts/utils/Strings.sol";
+
 import "./INFTFlags.sol";
 
-contract Challenge5Delegate {
-	address public owner;
-	event OwnerChange(address indexed owner);
-
-	constructor(address _owner) {
-		owner = _owner;
-		emit OwnerChange(_owner);
-	}
-
-	function claimOwnership() public {
-		owner = msg.sender;
-		emit OwnerChange(msg.sender);
-	}
+interface IContract5Solution {
+    function name() external view returns (string memory);
 }
 
 contract Challenge5 {
-	address public owner;
-	Challenge5Delegate delegate;
-	address public nftContract;
+    using Strings for uint256;
 
-	constructor(
-		address _nftContract,
-		address _delegateAddress,
-		address _owner
-	) {
-		nftContract = _nftContract;
-		delegate = Challenge5Delegate(_delegateAddress);
-		owner = _owner;
-	}
+    address public nftContract;
+    uint256 public count;
 
-	function mintFlag() public {
-		require(msg.sender == owner, "Only owner");
-		INFTFlags(nftContract).mint(msg.sender, 5);
-	}
+    constructor(address _nftContract) {
+        nftContract = _nftContract;
+    }
 
-	fallback() external {
-		(bool result, ) = address(delegate).delegatecall(msg.data);
-		if (result) {
-			this;
-		}
-	}
+    function mintFlag(uint256 code) public {
+        require(code == count << 8, "Wrong code");
+        require(
+            keccak256(
+                abi.encodePacked(IContract5Solution(msg.sender).name())
+            ) == keccak256("BG CTF Challenge 5 Solution"),
+            "Wrong name"
+        );
+        uint256 gas = gasleft();
+        require(
+            gas > 190_000 && gas < 200_000,
+            string.concat("Wrong gas: ", gas.toString())
+        );
+
+        INFTFlags(nftContract).mint(tx.origin, 5);
+        count += 1;
+    }
 }

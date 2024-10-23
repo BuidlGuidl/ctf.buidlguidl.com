@@ -163,9 +163,9 @@ contract NFTFlags is ERC721, IERC721Receiver, Ownable {
         );
 
         require(tokenIdToChallengeId[tokenId] == 1, "Not the right token 1!");
-        require(tokenIdToChallengeId[anotherTokenId] == 6, "Not the right token 6!");
+        require(tokenIdToChallengeId[anotherTokenId] == 9, "Not the right token 9!");
 
-        _mintToken(from, 7);
+        _mintToken(from, 10);
 
         safeTransferFrom(address(this), from, tokenId);
 
