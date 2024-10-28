@@ -25,8 +25,12 @@ export async function generateMetadata({ params }: ChallengePageProps) {
 }
 
 export default async function ChallengePage({ params }: ChallengePageProps) {
-  const { number } = params;
-  const challengePath = path.join(process.cwd(), "data", "challenges", `${number}.md`);
+  const { number: challengeNumberString } = params;
+  const challengeNumber = Number(challengeNumberString);
+  const challengesDir = path.join(process.cwd(), "data", "challenges");
+  const challengePath = path.join(challengesDir, `${challengeNumber}.md`);
+
+  const totalChallenges = (await fs.promises.readdir(challengesDir)).length;
 
   let content;
   try {
@@ -35,19 +39,17 @@ export default async function ChallengePage({ params }: ChallengePageProps) {
     notFound();
   }
 
-  const numberAsNumber = Number(number);
-
   return (
     <div className="py-20 px-6 min-h-screen bg-[url(/dot-texture.svg)]">
       <div className="max-w-3xl mx-auto bg-base-100 border-2 border-t-4 border-l-4 border-green-700 border-t-green-600 border-l-green-500">
         <div className="flex justify-between px-6 py-2 bg-green-600/30 border-b border-green-600">
           <h1 className="mt-[3px] text-white text-xl leading-none font-bold font-dotGothic tracking-wide">
-            &gt; Challenge #{number}
+            &gt; Challenge #{challengeNumber}
           </h1>
           <div className="relative">
-            <FlagIcon className={clsx("w-8 h-8", getFlagColor(numberAsNumber))} />
+            <FlagIcon className={clsx("w-8 h-8", getFlagColor(challengeNumber))} />
             <p className="absolute top-[5px] left-[6px] m-0 p-0 leading-none text-xs text-white font-semibold [text-shadow:_1px_1px_1px_rgb(0_0_0_/_40%)]">
-              {number}
+              {challengeNumber}
             </p>
           </div>
         </div>
@@ -72,15 +74,18 @@ export default async function ChallengePage({ params }: ChallengePageProps) {
       </div>
       <div className="max-w-3xl mx-auto mt-8">
         <div className="flex justify-between">
-          {number !== "1" && (
-            <Link className="btn btn-sm btn-primary btn-outline rounded-none" href={`/challenge/${numberAsNumber - 1}`}>
+          {challengeNumber > 1 && (
+            <Link
+              className="btn btn-sm btn-primary btn-outline rounded-none"
+              href={`/challenge/${challengeNumber - 1}`}
+            >
               &larr; Previous Challenge
             </Link>
           )}
-          {number !== "12" && (
+          {challengeNumber < totalChallenges && (
             <Link
               className="ml-auto btn btn-sm btn-primary btn-outline rounded-none"
-              href={`/challenge/${numberAsNumber + 1}`}
+              href={`/challenge/${challengeNumber + 1}`}
             >
               Next Challenge &rarr;
             </Link>
