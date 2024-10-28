@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import clsx from "clsx";
 import fs from "fs";
@@ -34,6 +35,8 @@ export default async function ChallengePage({ params }: ChallengePageProps) {
     notFound();
   }
 
+  const numberAsNumber = Number(number);
+
   return (
     <div className="py-20 px-6 min-h-screen bg-[url(/dot-texture.svg)]">
       <div className="max-w-3xl mx-auto bg-base-100 border-2 border-t-4 border-l-4 border-green-700 border-t-green-600 border-l-green-500">
@@ -42,7 +45,7 @@ export default async function ChallengePage({ params }: ChallengePageProps) {
             &gt; Challenge #{number}
           </h1>
           <div className="relative">
-            <FlagIcon className={clsx("w-8 h-8", getFlagColor(Number(number)))} />
+            <FlagIcon className={clsx("w-8 h-8", getFlagColor(numberAsNumber))} />
             <p className="absolute top-[5px] left-[6px] m-0 p-0 leading-none text-xs text-white font-semibold [text-shadow:_1px_1px_1px_rgb(0_0_0_/_40%)]">
               {number}
             </p>
@@ -65,6 +68,23 @@ export default async function ChallengePage({ params }: ChallengePageProps) {
               <Address address="0x0000000000000000000000000000000000000000" />
             </div>
           </div>
+        </div>
+      </div>
+      <div className="max-w-3xl mx-auto mt-8">
+        <div className="flex justify-between">
+          {number !== "1" && (
+            <Link className="btn btn-sm btn-primary btn-outline rounded-none" href={`/challenge/${numberAsNumber - 1}`}>
+              &larr; Previous Challenge
+            </Link>
+          )}
+          {number !== "12" && (
+            <Link
+              className="ml-auto btn btn-sm btn-primary btn-outline rounded-none"
+              href={`/challenge/${numberAsNumber + 1}`}
+            >
+              Next Challenge &rarr;
+            </Link>
+          )}
         </div>
       </div>
     </div>
