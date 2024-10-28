@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { NextPage } from "next";
-import { ClockIcon, FlagIcon, RocketLaunchIcon } from "@heroicons/react/24/outline";
+import { ClockIcon, FlagIcon, RocketLaunchIcon, UserGroupIcon } from "@heroicons/react/24/outline";
 import { FlagArt } from "~~/components/FlagArt";
 import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
@@ -11,13 +11,20 @@ const rules = [
     icon: FlagIcon,
   },
   {
-    name: "Time Limit: X Hours",
-    description: "The game will last for X hours. The player with the most flags at the end of game will win.",
-    icon: ClockIcon,
+    name: "Team Play",
+    description:
+      "Form a team of 1-4 players to tackle the challenges. Make sure to use the same address for all the challenges.",
+    icon: UserGroupIcon,
   },
   {
+    name: "Time Limit: 3 Hours",
+    description: "The game will last for 3 hours. The team with the most flags at the end of game will win.",
+    icon: ClockIcon,
+  },
+
+  {
     name: "Tie Breaker",
-    description: "If two or more players have the same number of flags, the player who captured the flag earlier wins.",
+    description: "If two or more teams have the same number of flags, the team who captured the flag earlier wins.",
     icon: RocketLaunchIcon,
   },
 ];
@@ -38,9 +45,9 @@ const Home: NextPage = () => {
               <span className="block text-3xl md:text-4xl">BuidlGuidl Capture The Flag</span>
             </h1>
             <p className="mt-6 leading-relaxed md:leading-8 text-gray-50">
-              Greetings Player. Welcome to the BuidlGuidl CTF (Capture The Flag) Game. There will be a total of XX
-              coding challenges to test your Ethereum development skills. Upon completion of a challenge, you shall
-              receive a NFT flag. The player with the most flags wins. Good Luck...
+              Greetings Player. Welcome to the BuidlGuidl CTF Game.<br></br> Test your Ethereum development skills
+              through 12 solidity challenges - participate solo or with a team of up to 4 members. <br></br>Upon
+              completion of a challenge, you shall receive a NFT flag. The team with the most flags wins. Good Luck...
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <Link href="/challenge/1" className="btn btn-primary rounded-md">
@@ -73,12 +80,12 @@ const Home: NextPage = () => {
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+            <dl className="grid max-w-xl grid-cols-1 gap-x-24 gap-y-16 lg:max-w-none lg:grid-cols-4">
               {rules.map(rule => (
                 <div key={rule.name} className="flex flex-col">
                   <dt className="text-base font-semibold leading-7 text-white">
-                    <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-green-800">
-                      <rule.icon aria-hidden="true" className="h-6 w-6 text-white" />
+                    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-green-800">
+                      <rule.icon aria-hidden="true" className="h-8 w-8 text-white" />
                     </div>
                     {rule.name}
                   </dt>

@@ -174,9 +174,9 @@ For more details on deployment, including configuring deployer accounts or the n
 This is the frontend of the game. Main pages:
 
 - _"Challenges"_ shows the Challenges descriptions, Goals and Hints.
-- _"Leaderboard"_ shows the current top players in the game.
+- _"Leaderboard"_ shows the current top teams in the game.
 - _"Debug Contracts"_ lists all the deployed contracts and allows you to interact with them.
-- _"Profile"_ shows your player profile and the flags you have minted.
+- _"Profile"_ shows the team profile and the flags they have minted.
 
 Key folders and files:
 
