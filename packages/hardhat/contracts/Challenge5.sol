@@ -22,16 +22,12 @@ contract Challenge5 {
     function mintFlag(uint256 code) public {
         require(code == count << 8, "Wrong code");
         require(
-            keccak256(
-                abi.encodePacked(IContract5Solution(msg.sender).name())
-            ) == keccak256("BG CTF Challenge 5 Solution"),
+            keccak256(abi.encodePacked(IContract5Solution(msg.sender).name())) ==
+                keccak256("BG CTF Challenge 5 Solution"),
             "Wrong name"
         );
         uint256 gas = gasleft();
-        require(
-            gas > 190_000 && gas < 200_000,
-            string.concat("Wrong gas: ", gas.toString())
-        );
+        require(gas > 190_000 && gas < 200_000, string.concat("Wrong gas: ", gas.toString()));
 
         INFTFlags(nftContract).mint(tx.origin, 5);
         count += 1;

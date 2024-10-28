@@ -2,7 +2,7 @@ export type Tuple<T, MaxLength extends number = 10, Current extends T[] = []> = 
   ? Current
   : Current | Tuple<T, MaxLength, [T, ...Current]>;
 
-export type UserChallenge = {
+export type TeamChallenge = {
   id: string;
   challengeId: number;
   tokenURI: string;
@@ -10,14 +10,15 @@ export type UserChallenge = {
   points: number;
 };
 
-export type User = {
+export type Team = {
   id: string;
   name: string;
+  size: number;
   points: number;
   updated: number;
-  challenges?: { items: UserChallenge[] };
+  challenges?: { items: TeamChallenge[] };
 };
 
-export type UsersData = { users: { items: User[] } };
+export type TeamsData = { teams: { items: Team[] } };
 
-export type UserChallengesData = { challenges: { items: UserChallenge[] } };
+export type TeamChallengesData = { challenges: { items: TeamChallenge[] } };

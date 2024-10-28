@@ -46,16 +46,17 @@ const challenge1Contract = getContract({
 
 async function main() {
   // Writing to a contract
-  const txHash = await challenge1Contract.write.registerMe(["Bob"]);
+  const txHash = await challenge1Contract.write.registerTeam(["Bob", 1]);
   console.log(
-    `📝 Called 'registerMe' function with address ${myWalletAccount.address} and name 'Bob', txHash: ${txHash}`,
+    `📝 Called 'registerTeam' function with address ${myWalletAccount.address} and name 'Bob', txHash: ${txHash}`,
   );
 
   // Reading from a contract
-  const builderName = await challenge1Contract.read.builderNames([
+  const teamInfo = await challenge1Contract.read.teamInfo([
     myWalletAccount.address,
   ]);
-  console.log("👷 Builder name is:", builderName);
+  console.log("👤Team name is:", teamInfo[0]);
+  console.log("👤Team size is:", teamInfo[1]);
 
   // Reading blockchain state
   const blockNumber = await publicClient.getBlockNumber();

@@ -2,7 +2,7 @@ import { ponder } from "@/generated";
 
 ponder.on("NFTFlags:FlagMinted", async ({ event, context }) => {
   const { client } = context;
-  const { Challenge, User } = context.db;
+  const { Challenge, Team } = context.db;
   const { NFTFlags } = context.contracts;
 
   const pointsPerChallenge = 100;
@@ -14,7 +14,7 @@ ponder.on("NFTFlags:FlagMinted", async ({ event, context }) => {
     args: [event.args.tokenId],
   });
 
-  await User.upsert({
+  await Team.upsert({
     id: event.args.minter,
     create: {
       points: pointsPerChallenge,

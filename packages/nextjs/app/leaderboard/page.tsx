@@ -8,7 +8,7 @@ import type { NextPage } from "next";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { FlagIcon } from "~~/components/FlagIcon";
 import { Address } from "~~/components/scaffold-eth";
-import { User, UserChallenge, UsersData } from "~~/types/utils";
+import { Team, TeamChallenge, TeamsData } from "~~/types/utils";
 import { getFormattedDateTime } from "~~/utils/date";
 import { getFlagColor } from "~~/utils/flagColor";
 
@@ -16,13 +16,14 @@ const thStyles = "whitespace-nowrap px-3 py-3.5";
 const tdStyles = "whitespace-nowrap px-3 py-4";
 
 const Leaderboard: NextPage = () => {
-  const fetchUsers = async () => {
-    const UsersQuery = gql`
-      query Users {
-        users(orderBy: "sortOrder", orderDirection: "desc") {
+  const fetchTeams = async () => {
+    const TeamsQuery = gql`
+      query Teams {
+        teams(orderBy: "sortOrder", orderDirection: "desc") {
           items {
             id
             name
+            size
             points
             challenges {
               items {
@@ -35,16 +36,16 @@ const Leaderboard: NextPage = () => {
         }
       }
     `;
-    const data = await request<UsersData>(process.env.NEXT_PUBLIC_PONDER_URL || "http://localhost:42069", UsersQuery);
+    const data = await request<TeamsData>(process.env.NEXT_PUBLIC_PONDER_URL || "http://localhost:42069", TeamsQuery);
     return data;
   };
 
-  const { data: usersData } = useQuery<UsersData>({
-    queryKey: ["users"],
-    queryFn: fetchUsers,
+  const { data: teamsData } = useQuery<TeamsData>({
+    queryKey: ["teams"],
+    queryFn: fetchTeams,
   });
 
-  if (!usersData) {
+  if (!teamsData) {
     return (
       <div className="flex items-center flex-col flex-grow pt-20">
         <div className="loading loading-dots loading-md"></div>
@@ -52,7 +53,7 @@ const Leaderboard: NextPage = () => {
     );
   }
 
-  if (!usersData.users.items.length) {
+  if (!teamsData.teams.items.length) {
     return (
       <div className="flex items-center flex-col flex-grow pt-20">
         <h1 className="text-3xl font-dotGothic tracking-wide md:text-4xl">No Players Found</h1>
@@ -75,7 +76,7 @@ const Leaderboard: NextPage = () => {
                         Rank
                       </th>
                       <th scope="col" className={thStyles}>
-                        Player Name
+                        Team Name
                       </th>
                       <th scope="col" className={thStyles}>
                         Address
@@ -89,12 +90,17 @@ const Leaderboard: NextPage = () => {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-700 bg-base-100 md:text-xl">
-                    {usersData.users.items.map((user: User, index: number) => (
-                      <tr key={user.id}>
+                    {teamsData.teams.items.map((team: Team, index: number) => (
+                      <tr key={team.id}>
                         <td className={tdStyles}>{index + 1}</td>
                         <td className={tdStyles}>
-                          <Link href={`/profile/${user.id}`}>
-                            {user.name}
+                          <Link href={`/profile/${team.id}`}>
+                            <span>{team.name}</span>
+                            <span className="ml-2">
+                              {[...Array(team.size)].map(() => (
+                                <>👤</>
+                              ))}
+                            </span>
                             <ArrowTopRightOnSquareIcon
                               className="ml-2 mb-[2px] inline-block h-4 w-4"
                               aria-hidden="true"
@@ -102,13 +108,13 @@ const Leaderboard: NextPage = () => {
                           </Link>
                         </td>
                         <td className={tdStyles}>
-                          <Address address={user.id} size="lg" />
+                          <Address address={team.id} size="lg" />
                         </td>
-                        <td className={tdStyles}>{user.points}</td>
+                        <td className={tdStyles}>{team.points}</td>
                         <td className={tdStyles}>
                           <div className="flex item-center gap-2">
-                            {user.challenges?.items &&
-                              user.challenges.items.map((challenge: UserChallenge) => (
+                            {team.challenges?.items &&
+                              team.challenges.items.map((challenge: TeamChallenge) => (
                                 <div
                                   key={challenge.id}
                                   className="relative tooltip"

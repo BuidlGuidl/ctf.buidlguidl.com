@@ -6,17 +6,18 @@ import { useQuery } from "@tanstack/react-query";
 import { gql, request } from "graphql-request";
 import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 import { Address } from "~~/components/scaffold-eth";
-import { UsersData } from "~~/types/utils";
+import { TeamsData } from "~~/types/utils";
 import { getFormattedDateTime } from "~~/utils/date";
 
-export const UserData = ({ address }: { address: string }) => {
-  const fetchUser = async (userId: string) => {
-    const UserQuery = gql`
-      query Users($userId: String!) {
-        users(where: { id: $userId }) {
+export const TeamData = ({ address }: { address: string }) => {
+  const fetchTeam = async (teamId: string) => {
+    const TeamQuery = gql`
+      query Teams($teamId: String!) {
+        teams(where: { id: $teamId }) {
           items {
             id
             name
+            size
             points
             updated
             challenges(orderBy: "challengeId", orderDirection: "asc") {
@@ -32,19 +33,19 @@ export const UserData = ({ address }: { address: string }) => {
         }
       }
     `;
-    const data = await request<UsersData>(process.env.NEXT_PUBLIC_PONDER_URL || "http://localhost:42069", UserQuery, {
-      userId,
+    const data = await request<TeamsData>(process.env.NEXT_PUBLIC_PONDER_URL || "http://localhost:42069", TeamQuery, {
+      teamId,
     });
     return data;
   };
 
-  const { data: usersData } = useQuery<UsersData>({
-    queryKey: ["user", address],
-    queryFn: () => fetchUser(address || ""),
+  const { data: teamsData } = useQuery<TeamsData>({
+    queryKey: ["team", address],
+    queryFn: () => fetchTeam(address || ""),
     enabled: !!address,
   });
 
-  if (usersData?.users.items.length === 0) {
+  if (teamsData?.teams.items.length === 0) {
     return (
       <div role="alert" className="md:p-6 alert border border-green-600 rounded-none">
         <ExclamationTriangleIcon className="w-6 h-6" />
@@ -60,7 +61,7 @@ export const UserData = ({ address }: { address: string }) => {
 
   return (
     <>
-      {address && usersData?.users.items[0] && (
+      {address && teamsData?.teams.items[0] && (
         <div>
           <div className="mt-8 grid md:grid-cols-2 gap-6">
             <div>
@@ -69,24 +70,31 @@ export const UserData = ({ address }: { address: string }) => {
             </div>
             <div>
               <p className="mb-1 md:mb-3 font-dotGothic tracking-wide">Name:</p>
-              <p className="mt-0 mb-0 text-xl md:text-2xl">{usersData.users.items[0].name}</p>
+              <p className="mt-0 mb-0 text-xl md:text-2xl">
+                <span>{teamsData.teams.items[0].name}</span>
+                <span className="ml-2">
+                  {[...Array(teamsData.teams.items[0].size)].map(() => (
+                    <>👤</>
+                  ))}
+                </span>
+              </p>
             </div>
             <div>
               <p className="mb-1 md:mb-3 font-dotGothic tracking-wide">Points:</p>
-              <p className="mt-0 mb-0 text-xl md:text-2xl">{usersData.users.items[0].points}</p>
+              <p className="mt-0 mb-0 text-xl md:text-2xl">{teamsData.teams.items[0].points}</p>
             </div>
             <div>
               <p className="mb-1 md:mb-3 font-dotGothic tracking-wide">Last Updated:</p>
               <p className="mt-0 mb-0 text-xl md:text-2xl">
-                {getFormattedDateTime(new Date(usersData.users.items[0].updated * 1000))}
+                {getFormattedDateTime(new Date(teamsData.teams.items[0].updated * 1000))}
               </p>
             </div>
           </div>
           <div className="mt-12">
             <h3 className="font-dotGothic text-xl md:text-2xl tracking-wide">Flags Captured</h3>
-            {usersData.users.items[0].challenges?.items && usersData.users.items[0].challenges?.items?.length > 0 ? (
+            {teamsData.teams.items[0].challenges?.items && teamsData.teams.items[0].challenges?.items?.length > 0 ? (
               <div className="mx-auto mt-12 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4">
-                {usersData.users.items[0].challenges?.items.map(challenge => (
+                {teamsData.teams.items[0].challenges?.items.map(challenge => (
                   <div key={challenge.id}>
                     <div className="h-64 p-8 flex bg-gray-100 border-4 border-green-600">
                       <Image

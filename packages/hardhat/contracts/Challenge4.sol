@@ -35,9 +35,7 @@ contract Challenge4 is Ownable {
     function mintFlag(address _minter, bytes memory signature) public {
         require(isMinter[_minter], "Not a minter");
 
-        bytes32 message = keccak256(
-            abi.encode("BG CTF Challenge 4", msg.sender)
-        );
+        bytes32 message = keccak256(abi.encode("BG CTF Challenge 4", msg.sender));
         bytes32 hash = message.toEthSignedMessageHash();
 
         address recoveredSigner = hash.recover(signature);
