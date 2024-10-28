@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ChallengeContractAddress } from "../_components/ChallengeContractAddress";
 import clsx from "clsx";
 import fs from "fs";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import path from "path";
 import { FlagIcon } from "~~/components/FlagIcon";
-import { Address } from "~~/components/scaffold-eth";
 import { getFlagColor } from "~~/utils/flagColor";
 import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
@@ -14,8 +14,6 @@ interface ChallengePageProps {
     number: string;
   };
 }
-
-const borderStyles = "absolute border-green-400 h-3 w-3";
 
 export async function generateMetadata({ params }: ChallengePageProps) {
   return getMetadata({
@@ -54,22 +52,11 @@ export default async function ChallengePage({ params }: ChallengePageProps) {
           </div>
         </div>
         <div className="px-6 py-8">
-          {/* Format the Markdown (bold, titles, etc) */}
           <div className="prose max-w-none text-gray-50 prose-headings:font-dotGothic prose-headings:tracking-wide prose-h1:text-3xl">
             <MDXRemote source={content} />
           </div>
 
-          <h3 className="mt-12 mb-8 font-dotGothic tracking-wide text-2xl">Contract Address</h3>
-          <div className="flex justify-between items-center">
-            <div className="p-2 relative w-60 flex justify-center items-center font-dotGothic">
-              <div className={clsx(borderStyles, "top-0 left-0 border-t border-l")}></div>
-              <div className={clsx(borderStyles, "top-0 right-0 border-t border-r")}></div>
-              <div className={clsx(borderStyles, "bottom-0 left-0 border-b border-l")}></div>
-              <div className={clsx(borderStyles, "bottom-0 right-0 border-b border-r")}></div>
-              {/* TODO: fetch the contract address (some challenges might not have one (e.g. offchain backend challenges)) */}
-              <Address address="0x0000000000000000000000000000000000000000" />
-            </div>
-          </div>
+          <ChallengeContractAddress challengeNumber={challengeNumber} />
         </div>
       </div>
       <div className="max-w-3xl mx-auto mt-8">
