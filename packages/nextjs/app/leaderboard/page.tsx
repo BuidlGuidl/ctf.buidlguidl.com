@@ -63,7 +63,7 @@ const Leaderboard: NextPage = () => {
 
   return (
     <div className="py-20 px-6 min-h-screen bg-[url(/dot-texture.svg)]">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-screen-2xl mx-auto">
         <h1 className="text-3xl font-dotGothic tracking-wide md:text-4xl">Leaderboard</h1>
         <div className="mt-8 flow-root">
           <div className="overflow-x-auto">
@@ -94,8 +94,8 @@ const Leaderboard: NextPage = () => {
                       <tr key={team.id}>
                         <td className={tdStyles}>{index + 1}</td>
                         <td className={tdStyles}>
-                          <Link href={`/profile/${team.id}`}>
-                            <span>{team.name}</span>
+                          <Link className="flex items-center" href={`/profile/${team.id}`}>
+                            <span className="truncate inline-block max-w-72">{team.name}</span>
                             <span className="ml-2">
                               {[...Array(team.size)].map(() => (
                                 <>👤</>
