@@ -6,15 +6,16 @@ import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
 const rules = [
   {
-    name: "NFT Flags",
-    description: "A NFT flag will be minted to your connected wallet when a challenge is completed.",
-    icon: FlagIcon,
-  },
-  {
     name: "Team Play",
     description:
       "Form a team of 1-4 players to tackle the challenges. Make sure to use the same address for all the challenges.",
     icon: UserGroupIcon,
+  },
+  {
+    name: "NFT Flags",
+    description:
+      "A NFT flag will be minted to your account when a challenge is completed. Points are assigned only during the minting process and are non-transferrable.",
+    icon: FlagIcon,
   },
   {
     name: "Time Limit: 3 Hours",
@@ -47,7 +48,8 @@ const Home: NextPage = () => {
             <p className="mt-6 leading-relaxed md:leading-8 text-gray-50">
               Greetings Player. Welcome to the BuidlGuidl CTF Game.<br></br> Test your Ethereum development skills
               through 12 solidity challenges - participate solo or with a team of up to 4 members. <br></br>Upon
-              completion of a challenge, you shall receive a NFT flag. The team with the most flags wins. Good Luck...
+              completion of a challenge, you will mint a NFT flag and receive points. The team that mints the most flags
+              wins. Good Luck...
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <Link href="/challenge/1" className="btn btn-primary rounded-md">
@@ -75,8 +77,11 @@ const Home: NextPage = () => {
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-3xl font-dotGothic tracking-wide text-white md:text-4xl">Choose Your Own Adventure</h2>
             <p className="mt-6 leading-relaxed text-gray-100 md:leading-8 md:text-lg">
-              Challenges will become more difficult as you progress. Beginners are encouraged to use this Scaffold ETH 2
-              repository to solve the challenges. Advanced players may use any means necessary to progress.
+              Challenges will become more difficult as you progress. Beginners are encouraged to use this{" "}
+              <a className="link" href="https://github.com/buidlguidl/ctf-devcon/" target="_blank">
+                Scaffold-ETH 2 repository
+              </a>{" "}
+              to solve the challenges. Advanced players may use any means necessary to progress.
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
