@@ -10,17 +10,19 @@ export const TransactionsTable = ({ blocks, transactionReceipts }: TransactionsT
 
   return (
     <div className="flex justify-center px-4 md:px-0">
-      <div className="overflow-x-auto w-full shadow-2xl rounded-xl">
+      <div className="overflow-x-auto w-full border-2 border-green-600">
         <table className="table text-xl bg-base-100 table-zebra w-full md:table-md table-sm">
           <thead>
-            <tr className="rounded-xl text-sm text-base-content">
-              <th className="bg-primary">Transaction Hash</th>
-              <th className="bg-primary">Function Called</th>
-              <th className="bg-primary">Block Number</th>
-              <th className="bg-primary">Time Mined</th>
-              <th className="bg-primary">From</th>
-              <th className="bg-primary">To</th>
-              <th className="bg-primary text-end">Value ({targetNetwork.nativeCurrency.symbol})</th>
+            <tr className="text-lg text-white font-dotGothic tracking-wide">
+              <th className="border-b border-green-600 bg-green-600/30">Transaction Hash</th>
+              <th className="border-b border-green-600 bg-green-600/30">Function Called</th>
+              <th className="border-b border-green-600 bg-green-600/30">Block Number</th>
+              <th className="border-b border-green-600 bg-green-600/30">Time Mined</th>
+              <th className="border-b border-green-600 bg-green-600/30">From</th>
+              <th className="border-b border-green-600 bg-green-600/30">To</th>
+              <th className="border-b border-green-600 bg-green-600/30 text-end">
+                Value ({targetNetwork.nativeCurrency.symbol})
+              </th>
             </tr>
           </thead>
           <tbody>

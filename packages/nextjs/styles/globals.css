@@ -30,3 +30,7 @@ p {
 .btn.btn-ghost {
   @apply shadow-none;
 }
+
+.tab {
+  --tab-border-color: rgb(21 128 61);
+}
