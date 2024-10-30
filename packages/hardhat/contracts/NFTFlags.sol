@@ -48,6 +48,7 @@ contract NFTFlags is ERC721, IERC721Receiver, Ownable {
 
     function _mintToken(address _recipient, uint256 _challengeId) internal {
         require(enabled, "Minting is not enabled");
+        require(_challengeId == 1 || hasMinted[_recipient][1], "Address is not registered");
         require(!hasMinted[_recipient][_challengeId], "Address has already minted for this challenge");
 
         tokenIdCounter++;
