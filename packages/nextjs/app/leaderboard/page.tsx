@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import clsx from "clsx";
 import { gql, request } from "graphql-request";
@@ -16,6 +18,9 @@ const thStyles = "whitespace-nowrap px-3 py-3.5";
 const tdStyles = "whitespace-nowrap px-3 py-4";
 
 const Leaderboard: NextPage = () => {
+  const searchParams = useSearchParams();
+  const isBigScreen = searchParams.has("bigscreen");
+
   const fetchTeams = async () => {
     const TeamsQuery = gql`
       query Teams {
@@ -43,11 +48,33 @@ const Leaderboard: NextPage = () => {
   const { data: teamsData } = useQuery<TeamsData>({
     queryKey: ["teams"],
     queryFn: fetchTeams,
+    refetchInterval: 20000,
   });
+
+  const joinGameBanner = isBigScreen && (
+    <div className="mb-12 p-4 border-2 border-green-500 bg-base-300/80 font-mono">
+      <div className="flex items-center gap-8">
+        <div className="flex items-center gap-2">
+          <div className="flex relative w-10 h-10">
+            <Image alt="CTF logo" className="cursor-pointer" fill src="/logo.svg" />
+          </div>
+          <div className="flex flex-col">
+            <span className="font-dotGothic tracking-wide">BuidlGuidl CTF</span>
+            <span className="text-xs">Devcon SEA 2024</span>
+          </div>
+        </div>
+        <div className="flex-grow text-xl md:text-3xl font-bold tracking-wider text-center">
+          <span className="text-green-500">&gt;</span> JOIN THE GAME:{" "}
+          <span className="text-green-400 md:text-4xl">ctf.buidlguidl.com</span>
+        </div>
+      </div>
+    </div>
+  );
 
   if (!teamsData) {
     return (
       <div className="flex items-center flex-col flex-grow pt-20">
+        {joinGameBanner}
         <div className="loading loading-dots loading-md"></div>
       </div>
     );
@@ -56,14 +83,16 @@ const Leaderboard: NextPage = () => {
   if (!teamsData.teams.items.length) {
     return (
       <div className="flex items-center flex-col flex-grow pt-20">
+        {joinGameBanner}
         <h1 className="text-3xl font-dotGothic tracking-wide md:text-4xl">No Players Found</h1>
       </div>
     );
   }
 
   return (
-    <div className="py-20 px-6 min-h-screen bg-[url(/dot-texture.svg)]">
+    <div className="py-4 px-6 min-h-screen bg-[url(/dot-texture.svg)]">
       <div className="max-w-screen-2xl mx-auto">
+        {joinGameBanner}
         <h1 className="text-3xl font-dotGothic tracking-wide md:text-4xl">Leaderboard</h1>
         <div className="mt-8 flow-root">
           <div className="overflow-x-auto">

@@ -3,6 +3,7 @@
 import { ReactNode, useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
@@ -11,12 +12,19 @@ import { useOutsideClick } from "~~/hooks/scaffold-eth";
  * Site header
  */
 export const HeaderClient = ({ menuLinks }: { menuLinks: ReactNode }) => {
+  const searchParams = useSearchParams();
+  const isBigScreen = searchParams.has("bigscreen");
+
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const burgerMenuRef = useRef<HTMLDivElement>(null);
   useOutsideClick(
     burgerMenuRef,
     useCallback(() => setIsDrawerOpen(false), []),
   );
+
+  if (isBigScreen) {
+    return null;
+  }
 
   return (
     <div className="sticky lg:static top-0 navbar bg-base-100 min-h-0 flex-shrink-0 justify-between z-20 shadow-lg shadow-primary/10 px-0 sm:px-2">

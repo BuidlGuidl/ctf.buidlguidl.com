@@ -6,14 +6,14 @@ Welcome to the BuidlGuidl CTF - Devcon SEA 2024!
 
 This repository was built with [Scaffold-ETH 2](https://github.com/scaffold-eth/scaffold-eth-2) and it contains 2 things:
 
-- The website with the challenges, which is live at https://ctf-devcon.buidlguidl.com/
+- The website with the challenges, which is live at https://ctf.buidlguidl.com/
 - All the tools that you need to play (& win!) the CTF.
 
 You can choose to hack with your own stack, or use this repo as your hacking environment.
 
 ### Hack with your own stack
 
-Go directly to https://ctf-devcon.buidlguidl.com/ and start hacking.
+Go directly to https://ctf.buidlguidl.com/ and start hacking.
 
 You can also find:
 

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { hardhat } from "viem/chains";
 import { CurrencyDollarIcon, HeartIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { BuidlGuidlLogo } from "~~/components/assets/BuidlGuidlLogo";
@@ -13,10 +14,17 @@ import { useGlobalState } from "~~/services/store/store";
  * Site footer
  */
 export const Footer = () => {
+  const searchParams = useSearchParams();
+  const isBigScreen = searchParams.has("bigscreen");
+
   useInitializeNativeCurrencyPrice();
   const nativeCurrencyPrice = useGlobalState(state => state.nativeCurrency.price);
   const { targetNetwork } = useTargetNetwork();
   const isLocalNetwork = targetNetwork.id === hardhat.id;
+
+  if (isBigScreen) {
+    return null;
+  }
 
   return (
     <div className="min-h-0 py-5 px-1 mb-11 lg:mb-0">
@@ -47,7 +55,7 @@ export const Footer = () => {
         <ul className="menu menu-horizontal w-full">
           <div className="flex justify-center items-center gap-2 text-sm w-full">
             <div className="text-center">
-              <a href="https://github.com/scaffold-eth/se-2" target="_blank" rel="noreferrer" className="link">
+              <a href="https://github.com/buidlguidl/ctf-devcon" target="_blank" rel="noreferrer" className="link">
                 Fork me
               </a>
             </div>
