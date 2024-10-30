@@ -10,7 +10,7 @@ import { Contract, Mnemonic } from "ethers";
  */
 const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployer } = await hre.getNamedAccounts();
-  const { deploy } = hre.deployments;
+  const { deploy, save } = hre.deployments;
 
   // :: NFT Flags ::
   await deploy("NFTFlags", {
@@ -134,6 +134,8 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   const txResponse = await deployerSigner.sendTransaction(rawTx);
   const txReceipt = await txResponse.wait();
   const challenge8Address = txReceipt?.contractAddress;
+
+  if (challenge8Address) await save("Challenge8", { address: challenge8Address, abi: [] });
 
   console.log("🚩 Challenge #8 deployed at:", challenge8Address);
 

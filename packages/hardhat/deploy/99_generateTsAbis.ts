@@ -87,7 +87,7 @@ function getContractDataFromDeployments() {
       const { abi, address, metadata } = JSON.parse(
         fs.readFileSync(`${DEPLOYMENTS_DIR}/${chainName}/${contractName}.json`).toString(),
       );
-      const inheritedFunctions = getInheritedFunctions(JSON.parse(metadata).sources, contractName);
+      const inheritedFunctions = metadata ? getInheritedFunctions(JSON.parse(metadata).sources, contractName) : {};
       contracts[contractName] = { address, abi, inheritedFunctions };
     }
     output[chainId] = contracts;

@@ -8,10 +8,8 @@ import { ContractName } from "~~/utils/scaffold-eth/contract";
 export const ChallengeContractAddress = ({ challengeNumber }: { challengeNumber: number }) => {
   let contractName = `Challenge${challengeNumber}` as ContractName;
 
-  // hardcoded for some challenges
-  if (challengeNumber === 8) {
-    // TODO: We need to add the contract address (not ABI) for challenge 8
-  } else if (challengeNumber === 10) {
+  // hardcoded for Challenge 10
+  if (challengeNumber === 10) {
     contractName = "NFTFlags";
   }
 
