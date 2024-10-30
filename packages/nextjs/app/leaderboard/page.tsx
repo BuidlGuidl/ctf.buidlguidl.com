@@ -7,9 +7,11 @@ import { useQuery } from "@tanstack/react-query";
 import clsx from "clsx";
 import { gql, request } from "graphql-request";
 import type { NextPage } from "next";
+import Countdown from "react-countdown";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { FlagIcon } from "~~/components/FlagIcon";
 import { Address } from "~~/components/scaffold-eth";
+import { useScaffoldReadContract } from "~~/hooks/scaffold-eth";
 import { Team, TeamChallenge, TeamsData } from "~~/types/utils";
 import { getFormattedDateTime } from "~~/utils/date";
 import { getFlagColor } from "~~/utils/flagColor";
@@ -20,6 +22,11 @@ const tdStyles = "whitespace-nowrap px-3 py-4";
 const Leaderboard: NextPage = () => {
   const searchParams = useSearchParams();
   const isBigScreen = searchParams.has("bigscreen");
+
+  const { data: enabledAt } = useScaffoldReadContract({
+    contractName: "NFTFlags",
+    functionName: "enabledAt",
+  });
 
   const fetchTeams = async () => {
     const TeamsQuery = gql`
@@ -53,7 +60,7 @@ const Leaderboard: NextPage = () => {
 
   const joinGameBanner = isBigScreen && (
     <div className="mb-12 p-4 border-2 border-green-500 bg-base-300/80 font-mono">
-      <div className="flex items-center gap-8">
+      <div className="flex items-center gap-20">
         <div className="flex items-center gap-2">
           <div className="flex relative w-10 h-10">
             <Image alt="CTF logo" className="cursor-pointer" fill src="/logo.svg" />
@@ -67,6 +74,15 @@ const Leaderboard: NextPage = () => {
           <span className="text-green-500">&gt;</span> JOIN THE GAME:{" "}
           <span className="text-green-400 md:text-4xl">ctf.buidlguidl.com</span>
         </div>
+        {enabledAt && (
+          <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 md:text-4xl">
+              <Countdown date={new Date(parseInt(enabledAt.toString()) * 1000 + 10800000)} daysInHours={true}>
+                <span className="text-red-500">Game Over</span>
+              </Countdown>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

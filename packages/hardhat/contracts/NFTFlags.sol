@@ -18,6 +18,7 @@ contract NFTFlags is ERC721, IERC721Receiver, Ownable {
     mapping(uint256 => uint256) public tokenIdToChallengeId;
     mapping(address => mapping(uint256 => bool)) public hasMinted;
     bool public enabled = false;
+    uint256 public enabledAt;
 
     string[15] public flagColors = [
         "#4b5563", // Default Gray
@@ -117,6 +118,7 @@ contract NFTFlags is ERC721, IERC721Receiver, Ownable {
 
     function enable() external onlyOwner {
         enabled = true;
+        enabledAt = block.timestamp;
 
         emit Enabled(msg.sender);
     }
