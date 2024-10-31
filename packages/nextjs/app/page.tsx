@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { NextPage } from "next";
 import { ClockIcon, FlagIcon, RocketLaunchIcon, UserGroupIcon } from "@heroicons/react/24/outline";
 import { FlagArt } from "~~/components/FlagArt";
+import { Prizes } from "~~/components/Prizes";
 import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
 const rules = [
@@ -22,7 +23,6 @@ const rules = [
     description: "The game will last for 3 hours. The team with the most flags at the end of game will win.",
     icon: ClockIcon,
   },
-
   {
     name: "Tie Breaker",
     description: "If two or more teams have the same number of flags, the team who captured the flag earlier wins.",
@@ -101,6 +101,22 @@ const Home: NextPage = () => {
               ))}
             </dl>
           </div>
+        </div>
+      </div>
+      <div className="flex flex-col">
+        <div className="bg-green-600 h-8 w-[100%] opacity-90"></div>
+        <div className="bg-green-600 h-8 w-[80%] opacity-80"></div>
+        <div className="bg-green-600 h-8 w-[60%] opacity-60"></div>
+        <div className="bg-green-600 h-8 w-[40%] opacity-40"></div>
+        <div className="bg-green-600 h-8 w-[20%] opacity-20"></div>
+      </div>
+      <div className="my-28">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <h2 className="text-3xl font-dotGothic tracking-wide text-white md:text-4xl">Prizes</h2>
+          <p className="mt-6 leading-relaxed text-gray-100 md:leading-8 md:text-lg">
+            Top 10 winners will receive $50 USD and awesome BuidlGuidl swag!
+          </p>
+          <Prizes />
         </div>
       </div>
     </>
