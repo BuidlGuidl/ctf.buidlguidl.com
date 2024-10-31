@@ -12,7 +12,6 @@ export const HeaderMenuLinksClient = ({ menuLinks }: { menuLinks: MenuLink[] }) 
   const { address: connectedAddress } = useAccount();
 
   const finalMenuLinks = [
-    ...menuLinks,
     // Add profile link if there is a connected address
     ...(connectedAddress
       ? [
@@ -23,6 +22,7 @@ export const HeaderMenuLinksClient = ({ menuLinks }: { menuLinks: MenuLink[] }) 
           },
         ]
       : []),
+    ...menuLinks,
   ] as MenuLink[];
 
   return (

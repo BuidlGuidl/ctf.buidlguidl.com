@@ -20,10 +20,6 @@ export const HeaderMenuLinks = async () => {
 
   const menuLinks: MenuLink[] = [
     {
-      label: "Home",
-      href: "/",
-    },
-    {
       label: "Challenges",
       href: "#",
       icon: <BellAlertIcon className="h-4 w-4" />,
