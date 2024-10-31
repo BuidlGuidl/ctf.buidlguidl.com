@@ -5,7 +5,7 @@ import trophy3 from "~~/public/trophy-3.svg";
 
 export function Prizes() {
   return (
-    <div className="isolate mx-auto mt-16 grid max-w-md grid-cols-1 gap-y-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+    <div className="isolate mx-auto mt-12 grid max-w-md grid-cols-1 gap-y-8 sm:mt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
       <div className="relative flex flex-col justify-between rounded-md bg-base-300 p-8 ring-2 ring-gray-600 lg:z-10 lg:rounded-b-none lg:order-2 xl:p-10">
         <div>
           <Image src={trophy1} alt="1st Place Trophy" className="w-52 h-52 mx-auto mb-6 lg:mb-10" />

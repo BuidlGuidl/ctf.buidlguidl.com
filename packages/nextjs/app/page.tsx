@@ -83,6 +83,9 @@ const Home: NextPage = () => {
               </a>{" "}
               to solve the challenges. Advanced players may use any means necessary to progress.
             </p>
+            <a href="#prizes" className="btn btn-outline text-white border-white rounded-md">
+              View Prizes
+            </a>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
             <dl className="grid max-w-xl grid-cols-1 gap-x-24 gap-y-16 lg:max-w-none lg:grid-cols-4">
@@ -110,13 +113,13 @@ const Home: NextPage = () => {
         <div className="bg-green-600 h-8 w-[40%] opacity-40"></div>
         <div className="bg-green-600 h-8 w-[20%] opacity-20"></div>
       </div>
-      <div className="my-28">
+      <div id="prizes" className="py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="text-3xl font-dotGothic tracking-wide text-white md:text-4xl">Prizes</h2>
-          <p className="mt-6 leading-relaxed text-gray-100 md:leading-8 md:text-lg">
+          <Prizes />
+          <p className="mt-12 leading-relaxed text-gray-100 text-lg md:leading-8 md:text-xl">
             Top 10 winners will receive $50 USD and awesome BuidlGuidl swag!
           </p>
-          <Prizes />
         </div>
       </div>
     </>
