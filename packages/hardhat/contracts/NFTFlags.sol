@@ -81,7 +81,6 @@ contract NFTFlags is ERC721, IERC721Receiver, Ownable {
         return string(abi.encodePacked("data:application/json;base64,", json));
     }
 
-    // TODO: Flag SVG
     function generateSVG(uint256 tokenId) internal view returns (string memory) {
         uint256 challengeId = tokenIdToChallengeId[tokenId];
         string memory fillColor = flagColors[challengeId];

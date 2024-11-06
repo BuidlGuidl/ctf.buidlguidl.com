@@ -8,7 +8,6 @@ const titleTemplate = "%s | BuidlGuidl CTF - Devcon SEA 2024";
 export const getMetadata = ({
   title,
   description,
-  // TODO: Add image
   imageRelativePath = "/thumbnail.jpg",
 }: {
   title: string;

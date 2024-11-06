@@ -4,11 +4,11 @@ import { HDNodeWallet } from "ethers";
 import { Contract, Mnemonic } from "ethers";
 
 /**
- * Deploys all the needd CTF contracts
+ * Deploys all the needed CTF contracts
  *
  * @param hre HardhatRuntimeEnvironment object.
  */
-const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
+const deployCtfContracts: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   const { deployer } = await hre.getNamedAccounts();
   const { deploy, save } = hre.deployments;
 
@@ -196,8 +196,8 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   console.log("Added allowed minters to NFTFlags");
 };
 
-export default deployYourContract;
+export default deployCtfContracts;
 
 // Tags are useful if you have multiple deploy files and only want to run one of them.
-// e.g. yarn deploy --tags YourContract
-deployYourContract.tags = ["CTF"];
+// e.g. yarn deploy --tags CTF
+deployCtfContracts.tags = ["CTF"];
