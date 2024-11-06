@@ -8,13 +8,8 @@ import { privateKeyToAccount } from "viem/accounts";
 import { hardhat } from "viem/chains";
 import deployedContracts from "../contracts/deployedContracts";
 
-import path from "path";
-import { fileURLToPath } from "url";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 import * as dotenv from "dotenv";
-// TODO: Use root .env or scripts/.env
-dotenv.config({ path: path.join(__dirname, "../../hardhat/.env") });
+dotenv.config();
 
 // We use the private key of account generated via `yarn generate`, if not present we use default hardhat last account
 const MY_WALLET_PK = (process.env.DEPLOYER_PRIVATE_KEY ??
@@ -48,7 +43,7 @@ async function main() {
   // Writing to a contract
   const txHash = await challenge1Contract.write.registerTeam(["Bob", 1]);
   console.log(
-    `📝 Called 'registerTeam' function with address ${myWalletAccount.address} and name 'Bob', txHash: ${txHash}`,
+    `📝 Called 'registerTeam' function with address ${myWalletAccount.address} and name 'Bob', txHash: ${txHash}`
   );
 
   // Reading from a contract
