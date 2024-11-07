@@ -9,6 +9,8 @@ import "solidity-coverage";
 import "@nomicfoundation/hardhat-verify";
 import "hardhat-deploy";
 import "hardhat-deploy-ethers";
+import { task } from "hardhat/config";
+import generateTsAbis from "./scripts/generateTsAbis";
 
 // If not set, it uses ours Alchemy's default API key.
 // You can get your own at https://dashboard.alchemyapi.io
@@ -133,5 +135,13 @@ const config: HardhatUserConfig = {
     enabled: false,
   },
 };
+
+// Extend the deploy task
+task("deploy").setAction(async (args, hre, runSuper) => {
+  // Run the original deploy task
+  await runSuper(args);
+  // Force run the generateTsAbis script
+  await generateTsAbis(hre);
+});
 
 export default config;
