@@ -18,9 +18,10 @@ export function Prizes() {
           <p className="mt-6 flex items-baseline gap-x-1">
             <span className="text-4xl font-semibold tracking-tight text-yellow-300">$1,000 USD</span>
           </p>
-          <p className="mt-5 text-yellow-300">
-            Winners also get a fully functional Ethereum hardware node and BuidlGuidl swag.
-          </p>
+          <ul className="mt-5 pl-5 text-yellow-300 list-disc">
+            <li className="text-xl font-semibold">A fully functional Ethereum hardware node</li>
+            <li className="mt-4">Awesome BuidlGuidl swag</li>
+          </ul>
         </div>
       </div>
       <div className="flex flex-col justify-between rounded-md lg:rounded-r-none lg:mt-8 lg:order-1 bg-base-300 p-8 ring-2 ring-gray-600 xl:p-10">
@@ -32,9 +33,10 @@ export function Prizes() {
           <p className="mt-6 flex items-baseline gap-x-1">
             <span className="text-4xl font-semibold tracking-tight text-slate-200">$500 USD</span>
           </p>
-          <p className="mt-5 text-slate-200">
-            Winners also get a USB drive with a &quot;Ethereum node starter kit&quot; and BuidlGuidl swag.
-          </p>
+          <ul className="mt-5 pl-5 text-slate-200 list-disc">
+            <li>A USB drive with an &quot;Ethereum node starter kit&quot;</li>
+            <li className="mt-4">Awesome BuidlGuidl swag</li>
+          </ul>
         </div>
       </div>
       <div className="flex flex-col justify-between rounded-md lg:rounded-l-none lg:mt-8 lg:order-3 bg-base-300 p-8 ring-2 ring-gray-600 xl:p-10">
@@ -46,9 +48,10 @@ export function Prizes() {
           <p className="mt-6 flex items-baseline gap-x-1">
             <span className="text-4xl font-semibold tracking-tight text-amber-500">$250 USD</span>
           </p>
-          <p className="mt-5 text-amber-500">
-            Winners also get a USB drive with a &quot;Ethereum node starter kit&quot; and BuidlGuidl swag.
-          </p>
+          <ul className="mt-5 pl-5 text-amber-500 list-disc">
+            <li>A USB drive with an &quot;Ethereum node starter kit&quot;</li>
+            <li className="mt-4">Awesome BuidlGuidl swag</li>
+          </ul>
         </div>
       </div>
     </div>
