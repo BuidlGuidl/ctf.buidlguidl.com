@@ -64,7 +64,7 @@ export const Balance = ({ address, className = "", usdMode }: BalanceProps) => {
           </>
         ) : (
           <>
-            <span>{formattedBalance.toFixed(4)}</span>
+            <span>{formattedBalance.toFixed(5)}</span>
             <span className="text-[0.8em] font-bold ml-1">{targetNetwork.nativeCurrency.symbol}</span>
           </>
         )}
