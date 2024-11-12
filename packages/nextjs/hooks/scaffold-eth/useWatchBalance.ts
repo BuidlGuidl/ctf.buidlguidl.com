@@ -13,11 +13,12 @@ export const useWatchBalance = (useBalanceParameters: UseBalanceParameters) => {
     onBlockNumber() {
       queryClient.invalidateQueries({ queryKey });
     },
-    ...(scaffoldConfig.targetNetworks[0].id !== (hardhat as Chain).id
+    ...((scaffoldConfig.targetNetworks[0].id as number) !== (hardhat as Chain).id
       ? {
           pollingInterval: 20_000,
         }
       : {}),
+    chainId: scaffoldConfig.targetNetworks[0].id,
     enabled: true,
   });
 

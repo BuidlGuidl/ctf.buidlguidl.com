@@ -68,7 +68,7 @@ export const HeaderClient = ({ menuLinks }: { menuLinks: ReactNode }) => {
       </div>
       <div className="navbar-end flex-grow mr-4">
         <RainbowKitCustomConnectButton />
-        {currentChain?.id === hardhat.id && <FaucetButton />}
+        {(currentChain?.id as number) === hardhat.id && <FaucetButton />}
       </div>
     </div>
   );
