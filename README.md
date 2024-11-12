@@ -113,7 +113,7 @@ It uses hardhat-deploy to deploy the contracts.
    - Run `yarn deploy --tags solution2` to deploy your solution contract locally. The `tags` make sure that your are only deploying the solution contract and not all the other challenges (that were deployed with `yarn deploy` or `yarn deploy --tags CTF`).
 
 4. When tested and ready, deploy your contract to Optimism (ask us for some funds if you need!):
-   - > Note: You need a private key to deploy the contracts. You can generate one with `yarn generate` or fill the `.env` file with your own private key.
+   - > Note: You need a private key to deploy the contracts. You can generate one with `yarn generate` or add your own private key in the `.env` files in `/packages/hardhat` and `packages/scripts` folders.
    - Run `yarn deploy --tags solution2 --network optimism` to deploy your solution contract to Optimism.
 
 For more details on deployment, including configuring deployer accounts or the network you want to deploy to, see the [Scaffold-ETH 2 deployment docs](https://docs.scaffoldeth.io/deploying/deploy-smart-contracts).
