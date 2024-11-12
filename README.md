@@ -18,7 +18,7 @@ In this repo we provide a full set of tools to help you with the challenges, inc
 - [Example scripts](./packages/scripts/src/example.ts) to interact with smart contracts via scripts.
 
 > [!NOTE]
-> If you prefer using Foundry for development, check out the [foundry branch](https://github.com/carletex/ctf-devcon/tree/foundry).
+> If you prefer using Foundry for development, check out the [foundry branch](https://github.com/buidlguidl/ctf-devcon/tree/foundry).
 
 ## Setting up the environment
 
