@@ -17,6 +17,9 @@ In this repo we provide a full set of tools to help you with the challenges, inc
 - A local blockchain and a block explorer for testing.
 - [Example scripts](./packages/scripts/src/example.ts) to interact with smart contracts via scripts.
 
+> [!NOTE]
+> If you prefer using Foundry for development, check out the [foundry branch](https://github.com/carletex/ctf-devcon/tree/foundry).
+
 ## Setting up the environment
 
 ### Requirements
@@ -77,7 +80,6 @@ This is a [yarn](https://yarnpkg.com/features/workspaces) monorepo with differen
 ctf-devcon/
 └── packages/
     ├── hardhat/
-    ├── foundry/
     ├── nextjs/
     ├── scripts/
     └── ponder/
@@ -113,36 +115,6 @@ It uses hardhat-deploy to deploy the contracts.
 4. When tested and ready, deploy your contract to Optimism (ask us for some funds if you need!):
    - > Note: You need a private key to deploy the contracts. You can generate one with `yarn generate` or fill the `.env` file with your own private key.
    - Run `yarn deploy --tags solution2 --network optimism` to deploy your solution contract to Optimism.
-
-For more details on deployment, including configuring deployer accounts or the network you want to deploy to, see the [Scaffold-ETH 2 deployment docs](https://docs.scaffoldeth.io/deploying/deploy-smart-contracts).
-
-</details>
-
-### foundry (ToDo in #44)
-
-Comes preconfigured with [Foundry](https://book.getfoundry.sh/) development environment and contains the smart contracts and deployment scripts for the CTF challenges.
-
-#### Key files in foundry
-
-- `contracts/`: The source directory where all your smart contracts should be. It already contains all the challenge contracts and the NFT Flag minter contract.
-- `script/`: Deployment scripts for the contracts.
-
-<details>
-<summary>Example (How to deploy your solution contracts)</summary>
-
-1. Create a deployment script:
-
-   - Add a new file (e.g., `ChallengesSolutions.s.sol`) in the `script/` directory.
-   - Write your deployment script, following examples in `DeployChallenges.s.sol`.
-
-2. Update the main deployment script:
-
-   - Open `Deploy.s.sol` in the `script/` directory.
-   - Import your `ChallengesSolutions.s.sol`.
-   - Add the deployment of your solutions in the `run()` function.
-
-3. Deploy your contracts:
-   - Run `yarn deploy` to deploy your contracts.
 
 For more details on deployment, including configuring deployer accounts or the network you want to deploy to, see the [Scaffold-ETH 2 deployment docs](https://docs.scaffoldeth.io/deploying/deploy-smart-contracts).
 
