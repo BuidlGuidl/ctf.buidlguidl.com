@@ -32,7 +32,7 @@ const rules = [
 
 export const metadata = getMetadata({
   title: "BuidlGuidl CTF",
-  description: "Devcon SEA 2024",
+  description: "Devcon SEA 2024 - Wednesday, November 13 in Breakout 3",
 });
 
 const Home: NextPage = () => {
