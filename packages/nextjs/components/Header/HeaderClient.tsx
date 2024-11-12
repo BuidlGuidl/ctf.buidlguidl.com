@@ -4,14 +4,18 @@ import { ReactNode, useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { hardhat } from "viem/chains";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
+import scaffoldConfig from "~~/scaffold.config";
 
 /**
  * Site header
  */
 export const HeaderClient = ({ menuLinks }: { menuLinks: ReactNode }) => {
+  const currentChain = scaffoldConfig.targetNetworks[0];
+
   const searchParams = useSearchParams();
   const isBigScreen = searchParams.has("bigscreen");
 
@@ -64,7 +68,7 @@ export const HeaderClient = ({ menuLinks }: { menuLinks: ReactNode }) => {
       </div>
       <div className="navbar-end flex-grow mr-4">
         <RainbowKitCustomConnectButton />
-        <FaucetButton />
+        {currentChain?.id === hardhat.id && <FaucetButton />}
       </div>
     </div>
   );

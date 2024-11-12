@@ -26,6 +26,13 @@ const Leaderboard: NextPage = () => {
   const { data: enabledAt } = useScaffoldReadContract({
     contractName: "NFTFlags",
     functionName: "enabledAt",
+    watch: false,
+  });
+
+  const { data: enabled } = useScaffoldReadContract({
+    contractName: "NFTFlags",
+    functionName: "enabled",
+    watch: false,
   });
 
   const fetchTeams = async () => {
@@ -74,7 +81,7 @@ const Leaderboard: NextPage = () => {
           <span className="text-green-500">&gt;</span> JOIN THE GAME:{" "}
           <span className="text-green-400 md:text-4xl">ctf.buidlguidl.com</span>
         </div>
-        {enabledAt && (
+        {enabled && enabledAt && (
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-2 md:text-4xl">
               <Countdown date={new Date(parseInt(enabledAt.toString()) * 1000 + 10800000)} daysInHours={true}>

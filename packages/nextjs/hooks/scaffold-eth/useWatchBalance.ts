@@ -1,21 +1,25 @@
-import { useEffect } from "react";
-import { useTargetNetwork } from "./useTargetNetwork";
 import { useQueryClient } from "@tanstack/react-query";
-import { UseBalanceParameters, useBalance, useBlockNumber } from "wagmi";
+import { Chain, hardhat } from "viem/chains";
+import { UseBalanceParameters, useBalance, useWatchBlockNumber } from "wagmi";
+import scaffoldConfig from "~~/scaffold.config";
 
 /**
  * Wrapper around wagmi's useBalance hook. Updates data on every block change.
  */
 export const useWatchBalance = (useBalanceParameters: UseBalanceParameters) => {
-  const { targetNetwork } = useTargetNetwork();
   const queryClient = useQueryClient();
-  const { data: blockNumber } = useBlockNumber({ watch: true, chainId: targetNetwork.id });
   const { queryKey, ...restUseBalanceReturn } = useBalance(useBalanceParameters);
-
-  useEffect(() => {
-    queryClient.invalidateQueries({ queryKey });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [blockNumber]);
+  useWatchBlockNumber({
+    onBlockNumber() {
+      queryClient.invalidateQueries({ queryKey });
+    },
+    ...(scaffoldConfig.targetNetworks[0].id !== (hardhat as Chain).id
+      ? {
+          pollingInterval: 20_000,
+        }
+      : {}),
+    enabled: true,
+  });
 
   return restUseBalanceReturn;
 };
