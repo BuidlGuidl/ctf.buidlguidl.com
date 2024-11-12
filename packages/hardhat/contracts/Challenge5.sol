@@ -1,35 +1,32 @@
 //SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
-import "@openzeppelin/contracts/utils/Strings.sol";
-
 import "./INFTFlags.sol";
 
-interface IContract5Solution {
-    function name() external view returns (string memory);
-}
-
 contract Challenge5 {
-    using Strings for uint256;
-
     address public nftContract;
-    uint256 public count;
+    mapping(address => uint256) public points;
+    uint256 public constant POINTS_TO_MINT = 10;
 
     constructor(address _nftContract) {
         nftContract = _nftContract;
     }
 
-    function mintFlag(uint256 code) public {
-        require(code == count << 8, "Wrong code");
-        require(
-            keccak256(abi.encodePacked(IContract5Solution(msg.sender).name())) ==
-                keccak256("BG CTF Challenge 5 Solution"),
-            "Wrong name"
-        );
-        uint256 gas = gasleft();
-        require(gas > 190_000 && gas < 200_000, string.concat("Wrong gas: ", gas.toString()));
+    function resetPoints() public {
+        points[tx.origin] = 0;
+    }
 
+    function claimPoints() public {
+        require(points[tx.origin] == 0, "Already claimed points");
+        (bool success, ) = msg.sender.call("");
+        require(success, "External call failed");
+
+        points[tx.origin] += 1;
+    }
+
+    function mintFlag() public {
+        require(points[tx.origin] >= POINTS_TO_MINT, "Not enough points");
+        points[tx.origin] -= POINTS_TO_MINT;
         INFTFlags(nftContract).mint(tx.origin, 5);
-        count += 1;
     }
 }
