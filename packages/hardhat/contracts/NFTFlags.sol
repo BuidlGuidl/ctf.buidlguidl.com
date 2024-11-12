@@ -49,8 +49,8 @@ contract NFTFlags is ERC721, IERC721Receiver, Ownable {
 
     function _mintToken(address _recipient, uint256 _challengeId) internal {
         require(enabled, "Minting is not enabled");
-        require(_challengeId == 1 || hasMinted[_recipient][1], "Address is not registered");
-        require(!hasMinted[_recipient][_challengeId], "Address has already minted for this challenge");
+        require(_challengeId == 1 || hasMinted[_recipient][1], "Team address is not registered");
+        require(!hasMinted[_recipient][_challengeId], "Team address has already minted for this challenge");
 
         tokenIdCounter++;
         uint256 newTokenId = tokenIdCounter;
@@ -64,13 +64,17 @@ contract NFTFlags is ERC721, IERC721Receiver, Ownable {
         require(ownerOf(tokenId) != address(0), "ERC721Metadata: URI query for nonexistent token");
 
         string memory svg = generateSVG(tokenId);
+        uint256 challengeId = tokenIdToChallengeId[tokenId];
         string memory json = Base64.encode(
             bytes(
                 string(
                     abi.encodePacked(
-                        '{"name": "Flag #',
+                        '{"name": "Challenge #',
+                        challengeId.toString(),
+                        " flag (tokenId = ",
                         tokenId.toString(),
-                        '", "description": "A simple flag NFT", "image": "data:image/svg+xml;base64,',
+                        ")",
+                        '", "description": "A NFT flag for the BuidlGuidl CTF at Devcon SEA 2024", "image": "data:image/svg+xml;base64,',
                         Base64.encode(bytes(svg)),
                         '"}'
                     )
