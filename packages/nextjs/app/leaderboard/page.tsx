@@ -38,7 +38,7 @@ const Leaderboard: NextPage = () => {
   const fetchTeams = async () => {
     const TeamsQuery = gql`
       query Teams {
-        teams(orderBy: "sortOrder", orderDirection: "desc") {
+        teams(orderBy: "sortOrder", orderDirection: "desc", limit: 200) {
           items {
             id
             name
