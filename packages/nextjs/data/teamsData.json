@@ -1,0 +1,3152 @@
+{
+  "0xcf3633cc8520f57b7d610f0be8641f29e4aea1c3": {
+    "id": "0xcf3633cc8520f57b7d610f0be8641f29e4aea1c3",
+    "name": "Bill x Paco x Bchen x ret2basic",
+    "size": 4,
+    "points": 1200,
+    "updated": 1731486241,
+    "challenges": [
+      {
+        "id": 26,
+        "challengeId": 1,
+        "timestamp": 1731483729,
+        "points": 100
+      },
+      {
+        "id": 31,
+        "challengeId": 8,
+        "timestamp": 1731483781,
+        "points": 100
+      },
+      {
+        "id": 33,
+        "challengeId": 7,
+        "timestamp": 1731483803,
+        "points": 100
+      },
+      {
+        "id": 38,
+        "challengeId": 2,
+        "timestamp": 1731483825,
+        "points": 100
+      },
+      {
+        "id": 41,
+        "challengeId": 5,
+        "timestamp": 1731483845,
+        "points": 100
+      },
+      {
+        "id": 57,
+        "challengeId": 3,
+        "timestamp": 1731484007,
+        "points": 100
+      },
+      {
+        "id": 66,
+        "challengeId": 6,
+        "timestamp": 1731484105,
+        "points": 100
+      },
+      {
+        "id": 100,
+        "challengeId": 9,
+        "timestamp": 1731484687,
+        "points": 100
+      },
+      {
+        "id": 117,
+        "challengeId": 10,
+        "timestamp": 1731484853,
+        "points": 100
+      },
+      {
+        "id": 130,
+        "challengeId": 4,
+        "timestamp": 1731485047,
+        "points": 100
+      },
+      {
+        "id": 161,
+        "challengeId": 11,
+        "timestamp": 1731485491,
+        "points": 100
+      },
+      {
+        "id": 189,
+        "challengeId": 12,
+        "timestamp": 1731486241,
+        "points": 100
+      }
+    ]
+  },
+  "0x4591792c21634040f94b8fcdce1cbed84ae31361": {
+    "id": "0x4591792c21634040f94b8fcdce1cbed84ae31361",
+    "name": "PadThaiPremium",
+    "size": 4,
+    "points": 1200,
+    "updated": 1731486253,
+    "challenges": [
+      {
+        "id": 1,
+        "challengeId": 1,
+        "timestamp": 1731483563,
+        "points": 100
+      },
+      {
+        "id": 47,
+        "challengeId": 2,
+        "timestamp": 1731483927,
+        "points": 100
+      },
+      {
+        "id": 61,
+        "challengeId": 3,
+        "timestamp": 1731484055,
+        "points": 100
+      },
+      {
+        "id": 71,
+        "challengeId": 9,
+        "timestamp": 1731484257,
+        "points": 100
+      },
+      {
+        "id": 87,
+        "challengeId": 7,
+        "timestamp": 1731484477,
+        "points": 100
+      },
+      {
+        "id": 106,
+        "challengeId": 8,
+        "timestamp": 1731484713,
+        "points": 100
+      },
+      {
+        "id": 109,
+        "challengeId": 4,
+        "timestamp": 1731484773,
+        "points": 100
+      },
+      {
+        "id": 138,
+        "challengeId": 5,
+        "timestamp": 1731485177,
+        "points": 100
+      },
+      {
+        "id": 157,
+        "challengeId": 6,
+        "timestamp": 1731485451,
+        "points": 100
+      },
+      {
+        "id": 172,
+        "challengeId": 11,
+        "timestamp": 1731485757,
+        "points": 100
+      },
+      {
+        "id": 174,
+        "challengeId": 10,
+        "timestamp": 1731485839,
+        "points": 100
+      },
+      {
+        "id": 193,
+        "challengeId": 12,
+        "timestamp": 1731486253,
+        "points": 100
+      }
+    ]
+  },
+  "0xb2fbcf2fb1eb86464d60f04bed4065404cd67e18": {
+    "id": "0xb2fbcf2fb1eb86464d60f04bed4065404cd67e18",
+    "name": "CitrusMaximus",
+    "size": 4,
+    "points": 1200,
+    "updated": 1731489657,
+    "challenges": [
+      {
+        "id": 10,
+        "challengeId": 1,
+        "timestamp": 1731483583,
+        "points": 100
+      },
+      {
+        "id": 53,
+        "challengeId": 2,
+        "timestamp": 1731483983,
+        "points": 100
+      },
+      {
+        "id": 94,
+        "challengeId": 3,
+        "timestamp": 1731484573,
+        "points": 100
+      },
+      {
+        "id": 123,
+        "challengeId": 5,
+        "timestamp": 1731484949,
+        "points": 100
+      },
+      {
+        "id": 144,
+        "challengeId": 6,
+        "timestamp": 1731485241,
+        "points": 100
+      },
+      {
+        "id": 192,
+        "challengeId": 7,
+        "timestamp": 1731486251,
+        "points": 100
+      },
+      {
+        "id": 201,
+        "challengeId": 8,
+        "timestamp": 1731486359,
+        "points": 100
+      },
+      {
+        "id": 218,
+        "challengeId": 9,
+        "timestamp": 1731486867,
+        "points": 100
+      },
+      {
+        "id": 252,
+        "challengeId": 10,
+        "timestamp": 1731487905,
+        "points": 100
+      },
+      {
+        "id": 270,
+        "challengeId": 11,
+        "timestamp": 1731488547,
+        "points": 100
+      },
+      {
+        "id": 287,
+        "challengeId": 4,
+        "timestamp": 1731488977,
+        "points": 100
+      },
+      {
+        "id": 305,
+        "challengeId": 12,
+        "timestamp": 1731489657,
+        "points": 100
+      }
+    ]
+  },
+  "0xa5763f454d027bef98e0b6bd8e2ac1146c0b5aec": {
+    "id": "0xa5763f454d027bef98e0b6bd8e2ac1146c0b5aec",
+    "name": "V_V",
+    "size": 2,
+    "points": 1200,
+    "updated": 1731490633,
+    "challenges": [
+      {
+        "id": 3,
+        "challengeId": 1,
+        "timestamp": 1731483567,
+        "points": 100
+      },
+      {
+        "id": 39,
+        "challengeId": 2,
+        "timestamp": 1731483829,
+        "points": 100
+      },
+      {
+        "id": 43,
+        "challengeId": 3,
+        "timestamp": 1731483867,
+        "points": 100
+      },
+      {
+        "id": 75,
+        "challengeId": 5,
+        "timestamp": 1731484299,
+        "points": 100
+      },
+      {
+        "id": 99,
+        "challengeId": 6,
+        "timestamp": 1731484667,
+        "points": 100
+      },
+      {
+        "id": 118,
+        "challengeId": 4,
+        "timestamp": 1731484863,
+        "points": 100
+      },
+      {
+        "id": 126,
+        "challengeId": 7,
+        "timestamp": 1731485019,
+        "points": 100
+      },
+      {
+        "id": 143,
+        "challengeId": 9,
+        "timestamp": 1731485231,
+        "points": 100
+      },
+      {
+        "id": 188,
+        "challengeId": 8,
+        "timestamp": 1731486229,
+        "points": 100
+      },
+      {
+        "id": 230,
+        "challengeId": 10,
+        "timestamp": 1731487163,
+        "points": 100
+      },
+      {
+        "id": 232,
+        "challengeId": 11,
+        "timestamp": 1731487193,
+        "points": 100
+      },
+      {
+        "id": 329,
+        "challengeId": 12,
+        "timestamp": 1731490633,
+        "points": 100
+      }
+    ]
+  },
+  "0x878bb995c26ab3c085af006ba2f311c107cac7ad": {
+    "id": "0x878bb995c26ab3c085af006ba2f311c107cac7ad",
+    "name": "minaminao",
+    "size": 1,
+    "points": 1200,
+    "updated": 1731491213,
+    "challenges": [
+      {
+        "id": 12,
+        "challengeId": 1,
+        "timestamp": 1731483589,
+        "points": 100
+      },
+      {
+        "id": 32,
+        "challengeId": 2,
+        "timestamp": 1731483801,
+        "points": 100
+      },
+      {
+        "id": 45,
+        "challengeId": 3,
+        "timestamp": 1731483899,
+        "points": 100
+      },
+      {
+        "id": 78,
+        "challengeId": 5,
+        "timestamp": 1731484317,
+        "points": 100
+      },
+      {
+        "id": 107,
+        "challengeId": 6,
+        "timestamp": 1731484719,
+        "points": 100
+      },
+      {
+        "id": 131,
+        "challengeId": 7,
+        "timestamp": 1731485049,
+        "points": 100
+      },
+      {
+        "id": 145,
+        "challengeId": 8,
+        "timestamp": 1731485285,
+        "points": 100
+      },
+      {
+        "id": 159,
+        "challengeId": 9,
+        "timestamp": 1731485467,
+        "points": 100
+      },
+      {
+        "id": 180,
+        "challengeId": 11,
+        "timestamp": 1731486045,
+        "points": 100
+      },
+      {
+        "id": 274,
+        "challengeId": 12,
+        "timestamp": 1731488643,
+        "points": 100
+      },
+      {
+        "id": 321,
+        "challengeId": 10,
+        "timestamp": 1731490149,
+        "points": 100
+      },
+      {
+        "id": 343,
+        "challengeId": 4,
+        "timestamp": 1731491213,
+        "points": 100
+      }
+    ]
+  },
+  "0x7e33581eba580a4777cef589594d62f038880ca0": {
+    "id": "0x7e33581eba580a4777cef589594d62f038880ca0",
+    "name": "rage",
+    "size": 1,
+    "points": 1200,
+    "updated": 1731492771,
+    "challenges": [
+      {
+        "id": 6,
+        "challengeId": 1,
+        "timestamp": 1731483577,
+        "points": 100
+      },
+      {
+        "id": 25,
+        "challengeId": 2,
+        "timestamp": 1731483721,
+        "points": 100
+      },
+      {
+        "id": 37,
+        "challengeId": 3,
+        "timestamp": 1731483823,
+        "points": 100
+      },
+      {
+        "id": 104,
+        "challengeId": 4,
+        "timestamp": 1731484697,
+        "points": 100
+      },
+      {
+        "id": 111,
+        "challengeId": 5,
+        "timestamp": 1731484787,
+        "points": 100
+      },
+      {
+        "id": 132,
+        "challengeId": 6,
+        "timestamp": 1731485065,
+        "points": 100
+      },
+      {
+        "id": 146,
+        "challengeId": 7,
+        "timestamp": 1731485303,
+        "points": 100
+      },
+      {
+        "id": 149,
+        "challengeId": 8,
+        "timestamp": 1731485389,
+        "points": 100
+      },
+      {
+        "id": 170,
+        "challengeId": 9,
+        "timestamp": 1731485737,
+        "points": 100
+      },
+      {
+        "id": 190,
+        "challengeId": 10,
+        "timestamp": 1731486247,
+        "points": 100
+      },
+      {
+        "id": 219,
+        "challengeId": 11,
+        "timestamp": 1731486873,
+        "points": 100
+      },
+      {
+        "id": 369,
+        "challengeId": 12,
+        "timestamp": 1731492771,
+        "points": 100
+      }
+    ]
+  },
+  "0xd3f1b5d73749f2dc0824eedf3e09562b3a82ae39": {
+    "id": "0xd3f1b5d73749f2dc0824eedf3e09562b3a82ae39",
+    "name": "Statemind",
+    "size": 4,
+    "points": 1100,
+    "updated": 1731491445,
+    "challenges": [
+      {
+        "id": 9,
+        "challengeId": 1,
+        "timestamp": 1731483583,
+        "points": 100
+      },
+      {
+        "id": 62,
+        "challengeId": 2,
+        "timestamp": 1731484055,
+        "points": 100
+      },
+      {
+        "id": 133,
+        "challengeId": 3,
+        "timestamp": 1731485067,
+        "points": 100
+      },
+      {
+        "id": 184,
+        "challengeId": 5,
+        "timestamp": 1731486097,
+        "points": 100
+      },
+      {
+        "id": 196,
+        "challengeId": 7,
+        "timestamp": 1731486287,
+        "points": 100
+      },
+      {
+        "id": 241,
+        "challengeId": 6,
+        "timestamp": 1731487431,
+        "points": 100
+      },
+      {
+        "id": 250,
+        "challengeId": 9,
+        "timestamp": 1731487833,
+        "points": 100
+      },
+      {
+        "id": 253,
+        "challengeId": 8,
+        "timestamp": 1731487911,
+        "points": 100
+      },
+      {
+        "id": 284,
+        "challengeId": 11,
+        "timestamp": 1731488915,
+        "points": 100
+      },
+      {
+        "id": 301,
+        "challengeId": 4,
+        "timestamp": 1731489597,
+        "points": 100
+      },
+      {
+        "id": 346,
+        "challengeId": 10,
+        "timestamp": 1731491445,
+        "points": 100
+      }
+    ]
+  },
+  "0xe6a313819cf56f457e88c05f20ddc41143f17f58": {
+    "id": "0xe6a313819cf56f457e88c05f20ddc41143f17f58",
+    "name": "zakizaki",
+    "size": 4,
+    "points": 1100,
+    "updated": 1731492063,
+    "challenges": [
+      {
+        "id": 63,
+        "challengeId": 1,
+        "timestamp": 1731484059,
+        "points": 100
+      },
+      {
+        "id": 85,
+        "challengeId": 2,
+        "timestamp": 1731484445,
+        "points": 100
+      },
+      {
+        "id": 156,
+        "challengeId": 3,
+        "timestamp": 1731485449,
+        "points": 100
+      },
+      {
+        "id": 160,
+        "challengeId": 4,
+        "timestamp": 1731485475,
+        "points": 100
+      },
+      {
+        "id": 171,
+        "challengeId": 5,
+        "timestamp": 1731485745,
+        "points": 100
+      },
+      {
+        "id": 179,
+        "challengeId": 7,
+        "timestamp": 1731486041,
+        "points": 100
+      },
+      {
+        "id": 194,
+        "challengeId": 6,
+        "timestamp": 1731486255,
+        "points": 100
+      },
+      {
+        "id": 223,
+        "challengeId": 9,
+        "timestamp": 1731486969,
+        "points": 100
+      },
+      {
+        "id": 249,
+        "challengeId": 10,
+        "timestamp": 1731487807,
+        "points": 100
+      },
+      {
+        "id": 263,
+        "challengeId": 11,
+        "timestamp": 1731488179,
+        "points": 100
+      },
+      {
+        "id": 356,
+        "challengeId": 8,
+        "timestamp": 1731492063,
+        "points": 100
+      }
+    ]
+  },
+  "0xa6b3912b6966b9a88ffc13dafd76dc59b3fcb4dd": {
+    "id": "0xa6b3912b6966b9a88ffc13dafd76dc59b3fcb4dd",
+    "name": "spicydefi",
+    "size": 4,
+    "points": 1100,
+    "updated": 1731492625,
+    "challenges": [
+      {
+        "id": 73,
+        "challengeId": 1,
+        "timestamp": 1731484275,
+        "points": 100
+      },
+      {
+        "id": 84,
+        "challengeId": 2,
+        "timestamp": 1731484431,
+        "points": 100
+      },
+      {
+        "id": 97,
+        "challengeId": 3,
+        "timestamp": 1731484621,
+        "points": 100
+      },
+      {
+        "id": 135,
+        "challengeId": 5,
+        "timestamp": 1731485133,
+        "points": 100
+      },
+      {
+        "id": 195,
+        "challengeId": 7,
+        "timestamp": 1731486273,
+        "points": 100
+      },
+      {
+        "id": 207,
+        "challengeId": 8,
+        "timestamp": 1731486503,
+        "points": 100
+      },
+      {
+        "id": 247,
+        "challengeId": 9,
+        "timestamp": 1731487627,
+        "points": 100
+      },
+      {
+        "id": 254,
+        "challengeId": 10,
+        "timestamp": 1731487927,
+        "points": 100
+      },
+      {
+        "id": 334,
+        "challengeId": 11,
+        "timestamp": 1731490833,
+        "points": 100
+      },
+      {
+        "id": 348,
+        "challengeId": 4,
+        "timestamp": 1731491551,
+        "points": 100
+      },
+      {
+        "id": 364,
+        "challengeId": 6,
+        "timestamp": 1731492625,
+        "points": 100
+      }
+    ]
+  },
+  "0x27496894bccd7b4c34346c4e2ca02819a2494065": {
+    "id": "0x27496894bccd7b4c34346c4e2ca02819a2494065",
+    "name": "0xad1",
+    "size": 1,
+    "points": 1100,
+    "updated": 1731493129,
+    "challenges": [
+      {
+        "id": 19,
+        "challengeId": 1,
+        "timestamp": 1731483631,
+        "points": 100
+      },
+      {
+        "id": 44,
+        "challengeId": 2,
+        "timestamp": 1731483897,
+        "points": 100
+      },
+      {
+        "id": 55,
+        "challengeId": 3,
+        "timestamp": 1731483989,
+        "points": 100
+      },
+      {
+        "id": 134,
+        "challengeId": 5,
+        "timestamp": 1731485073,
+        "points": 100
+      },
+      {
+        "id": 154,
+        "challengeId": 7,
+        "timestamp": 1731485429,
+        "points": 100
+      },
+      {
+        "id": 162,
+        "challengeId": 8,
+        "timestamp": 1731485549,
+        "points": 100
+      },
+      {
+        "id": 267,
+        "challengeId": 4,
+        "timestamp": 1731488335,
+        "points": 100
+      },
+      {
+        "id": 312,
+        "challengeId": 6,
+        "timestamp": 1731489845,
+        "points": 100
+      },
+      {
+        "id": 324,
+        "challengeId": 9,
+        "timestamp": 1731490295,
+        "points": 100
+      },
+      {
+        "id": 361,
+        "challengeId": 11,
+        "timestamp": 1731492515,
+        "points": 100
+      },
+      {
+        "id": 370,
+        "challengeId": 10,
+        "timestamp": 1731493129,
+        "points": 100
+      }
+    ]
+  },
+  "0xae3c0c7bfa2e1f986e57fddc5b1dcabe55458f0f": {
+    "id": "0xae3c0c7bfa2e1f986e57fddc5b1dcabe55458f0f",
+    "name": "teamManMan",
+    "size": 1,
+    "points": 1000,
+    "updated": 1731491857,
+    "challenges": [
+      {
+        "id": 167,
+        "challengeId": 1,
+        "timestamp": 1731485701,
+        "points": 100
+      },
+      {
+        "id": 204,
+        "challengeId": 2,
+        "timestamp": 1731486453,
+        "points": 100
+      },
+      {
+        "id": 209,
+        "challengeId": 3,
+        "timestamp": 1731486593,
+        "points": 100
+      },
+      {
+        "id": 259,
+        "challengeId": 4,
+        "timestamp": 1731488123,
+        "points": 100
+      },
+      {
+        "id": 298,
+        "challengeId": 6,
+        "timestamp": 1731489491,
+        "points": 100
+      },
+      {
+        "id": 310,
+        "challengeId": 7,
+        "timestamp": 1731489793,
+        "points": 100
+      },
+      {
+        "id": 313,
+        "challengeId": 8,
+        "timestamp": 1731489877,
+        "points": 100
+      },
+      {
+        "id": 326,
+        "challengeId": 9,
+        "timestamp": 1731490347,
+        "points": 100
+      },
+      {
+        "id": 336,
+        "challengeId": 10,
+        "timestamp": 1731490863,
+        "points": 100
+      },
+      {
+        "id": 352,
+        "challengeId": 5,
+        "timestamp": 1731491857,
+        "points": 100
+      }
+    ]
+  },
+  "0x283fe7cd52cc9d5b50c2c0f59ea69c0610e80e1c": {
+    "id": "0x283fe7cd52cc9d5b50c2c0f59ea69c0610e80e1c",
+    "name": "WebThree5p1d3rs/",
+    "size": 4,
+    "points": 1000,
+    "updated": 1731493661,
+    "challenges": [
+      {
+        "id": 168,
+        "challengeId": 1,
+        "timestamp": 1731485723,
+        "points": 100
+      },
+      {
+        "id": 202,
+        "challengeId": 3,
+        "timestamp": 1731486363,
+        "points": 100
+      },
+      {
+        "id": 203,
+        "challengeId": 2,
+        "timestamp": 1731486389,
+        "points": 100
+      },
+      {
+        "id": 265,
+        "challengeId": 5,
+        "timestamp": 1731488315,
+        "points": 100
+      },
+      {
+        "id": 295,
+        "challengeId": 4,
+        "timestamp": 1731489251,
+        "points": 100
+      },
+      {
+        "id": 333,
+        "challengeId": 7,
+        "timestamp": 1731490751,
+        "points": 100
+      },
+      {
+        "id": 340,
+        "challengeId": 8,
+        "timestamp": 1731491063,
+        "points": 100
+      },
+      {
+        "id": 358,
+        "challengeId": 6,
+        "timestamp": 1731492219,
+        "points": 100
+      },
+      {
+        "id": 360,
+        "challengeId": 9,
+        "timestamp": 1731492485,
+        "points": 100
+      },
+      {
+        "id": 377,
+        "challengeId": 11,
+        "timestamp": 1731493661,
+        "points": 100
+      }
+    ]
+  },
+  "0x4276bf06aebd8a1f3d89a1fd5bf84bfa1b7d03ce": {
+    "id": "0x4276bf06aebd8a1f3d89a1fd5bf84bfa1b7d03ce",
+    "name": "DeFiHackLabs",
+    "size": 4,
+    "points": 1000,
+    "updated": 1731493917,
+    "challenges": [
+      {
+        "id": 4,
+        "challengeId": 1,
+        "timestamp": 1731483571,
+        "points": 100
+      },
+      {
+        "id": 96,
+        "challengeId": 9,
+        "timestamp": 1731484609,
+        "points": 100
+      },
+      {
+        "id": 124,
+        "challengeId": 2,
+        "timestamp": 1731484985,
+        "points": 100
+      },
+      {
+        "id": 148,
+        "challengeId": 3,
+        "timestamp": 1731485375,
+        "points": 100
+      },
+      {
+        "id": 231,
+        "challengeId": 8,
+        "timestamp": 1731487165,
+        "points": 100
+      },
+      {
+        "id": 304,
+        "challengeId": 4,
+        "timestamp": 1731489645,
+        "points": 100
+      },
+      {
+        "id": 331,
+        "challengeId": 5,
+        "timestamp": 1731490655,
+        "points": 100
+      },
+      {
+        "id": 350,
+        "challengeId": 7,
+        "timestamp": 1731491649,
+        "points": 100
+      },
+      {
+        "id": 376,
+        "challengeId": 6,
+        "timestamp": 1731493621,
+        "points": 100
+      },
+      {
+        "id": 380,
+        "challengeId": 10,
+        "timestamp": 1731493917,
+        "points": 100
+      }
+    ]
+  },
+  "0x3b3a9150a07889947421408eaf8b91d7efc46a30": {
+    "id": "0x3b3a9150a07889947421408eaf8b91d7efc46a30",
+    "name": "El 10",
+    "size": 3,
+    "points": 900,
+    "updated": 1731491565,
+    "challenges": [
+      {
+        "id": 206,
+        "challengeId": 1,
+        "timestamp": 1731486485,
+        "points": 100
+      },
+      {
+        "id": 210,
+        "challengeId": 2,
+        "timestamp": 1731486651,
+        "points": 100
+      },
+      {
+        "id": 212,
+        "challengeId": 3,
+        "timestamp": 1731486667,
+        "points": 100
+      },
+      {
+        "id": 234,
+        "challengeId": 5,
+        "timestamp": 1731487273,
+        "points": 100
+      },
+      {
+        "id": 302,
+        "challengeId": 6,
+        "timestamp": 1731489601,
+        "points": 100
+      },
+      {
+        "id": 311,
+        "challengeId": 9,
+        "timestamp": 1731489803,
+        "points": 100
+      },
+      {
+        "id": 322,
+        "challengeId": 7,
+        "timestamp": 1731490169,
+        "points": 100
+      },
+      {
+        "id": 337,
+        "challengeId": 8,
+        "timestamp": 1731490867,
+        "points": 100
+      },
+      {
+        "id": 349,
+        "challengeId": 10,
+        "timestamp": 1731491565,
+        "points": 100
+      }
+    ]
+  },
+  "0x65e9d8b6069eec1ef3b8bfae57326008b7aec2c9": {
+    "id": "0x65e9d8b6069eec1ef3b8bfae57326008b7aec2c9",
+    "name": "singha",
+    "size": 3,
+    "points": 900,
+    "updated": 1731492649,
+    "challenges": [
+      {
+        "id": 42,
+        "challengeId": 1,
+        "timestamp": 1731483849,
+        "points": 100
+      },
+      {
+        "id": 81,
+        "challengeId": 2,
+        "timestamp": 1731484365,
+        "points": 100
+      },
+      {
+        "id": 86,
+        "challengeId": 3,
+        "timestamp": 1731484473,
+        "points": 100
+      },
+      {
+        "id": 169,
+        "challengeId": 5,
+        "timestamp": 1731485731,
+        "points": 100
+      },
+      {
+        "id": 273,
+        "challengeId": 7,
+        "timestamp": 1731488637,
+        "points": 100
+      },
+      {
+        "id": 285,
+        "challengeId": 8,
+        "timestamp": 1731488959,
+        "points": 100
+      },
+      {
+        "id": 339,
+        "challengeId": 9,
+        "timestamp": 1731491051,
+        "points": 100
+      },
+      {
+        "id": 357,
+        "challengeId": 10,
+        "timestamp": 1731492087,
+        "points": 100
+      },
+      {
+        "id": 365,
+        "challengeId": 11,
+        "timestamp": 1731492649,
+        "points": 100
+      }
+    ]
+  },
+  "0x371f9013bd7b29399d15bb073a7c8152bfe87df5": {
+    "id": "0x371f9013bd7b29399d15bb073a7c8152bfe87df5",
+    "name": "BananaBaht",
+    "size": 4,
+    "points": 900,
+    "updated": 1731493571,
+    "challenges": [
+      {
+        "id": 28,
+        "challengeId": 1,
+        "timestamp": 1731483751,
+        "points": 100
+      },
+      {
+        "id": 141,
+        "challengeId": 2,
+        "timestamp": 1731485209,
+        "points": 100
+      },
+      {
+        "id": 208,
+        "challengeId": 3,
+        "timestamp": 1731486551,
+        "points": 100
+      },
+      {
+        "id": 292,
+        "challengeId": 5,
+        "timestamp": 1731489165,
+        "points": 100
+      },
+      {
+        "id": 335,
+        "challengeId": 7,
+        "timestamp": 1731490855,
+        "points": 100
+      },
+      {
+        "id": 342,
+        "challengeId": 6,
+        "timestamp": 1731491107,
+        "points": 100
+      },
+      {
+        "id": 353,
+        "challengeId": 8,
+        "timestamp": 1731491957,
+        "points": 100
+      },
+      {
+        "id": 366,
+        "challengeId": 11,
+        "timestamp": 1731492677,
+        "points": 100
+      },
+      {
+        "id": 375,
+        "challengeId": 4,
+        "timestamp": 1731493571,
+        "points": 100
+      }
+    ]
+  },
+  "0xb06a64615842cba9b3bdb7e6f726f3a5bd20dac2": {
+    "id": "0xb06a64615842cba9b3bdb7e6f726f3a5bd20dac2",
+    "name": "apoorv.eth",
+    "size": 1,
+    "points": 800,
+    "updated": 1731490655,
+    "challenges": [
+      {
+        "id": 20,
+        "challengeId": 1,
+        "timestamp": 1731483641,
+        "points": 100
+      },
+      {
+        "id": 51,
+        "challengeId": 2,
+        "timestamp": 1731483943,
+        "points": 100
+      },
+      {
+        "id": 59,
+        "challengeId": 3,
+        "timestamp": 1731484043,
+        "points": 100
+      },
+      {
+        "id": 121,
+        "challengeId": 5,
+        "timestamp": 1731484925,
+        "points": 100
+      },
+      {
+        "id": 185,
+        "challengeId": 8,
+        "timestamp": 1731486127,
+        "points": 100
+      },
+      {
+        "id": 294,
+        "challengeId": 9,
+        "timestamp": 1731489223,
+        "points": 100
+      },
+      {
+        "id": 300,
+        "challengeId": 7,
+        "timestamp": 1731489555,
+        "points": 100
+      },
+      {
+        "id": 330,
+        "challengeId": 4,
+        "timestamp": 1731490655,
+        "points": 100
+      }
+    ]
+  },
+  "0x021584e57b2219957784951639385027607266e6": {
+    "id": "0x021584e57b2219957784951639385027607266e6",
+    "name": "Wonderpanas",
+    "size": 3,
+    "points": 600,
+    "updated": 1731490045,
+    "challenges": [
+      {
+        "id": 65,
+        "challengeId": 1,
+        "timestamp": 1731484101,
+        "points": 100
+      },
+      {
+        "id": 98,
+        "challengeId": 2,
+        "timestamp": 1731484659,
+        "points": 100
+      },
+      {
+        "id": 112,
+        "challengeId": 3,
+        "timestamp": 1731484803,
+        "points": 100
+      },
+      {
+        "id": 251,
+        "challengeId": 4,
+        "timestamp": 1731487869,
+        "points": 100
+      },
+      {
+        "id": 255,
+        "challengeId": 5,
+        "timestamp": 1731487939,
+        "points": 100
+      },
+      {
+        "id": 316,
+        "challengeId": 7,
+        "timestamp": 1731490045,
+        "points": 100
+      }
+    ]
+  },
+  "0x86f012bc12b986fcf58ad672f03817cd210528ed": {
+    "id": "0x86f012bc12b986fcf58ad672f03817cd210528ed",
+    "name": "frens",
+    "size": 4,
+    "points": 600,
+    "updated": 1731491971,
+    "challenges": [
+      {
+        "id": 2,
+        "challengeId": 1,
+        "timestamp": 1731483565,
+        "points": 100
+      },
+      {
+        "id": 129,
+        "challengeId": 2,
+        "timestamp": 1731485045,
+        "points": 100
+      },
+      {
+        "id": 147,
+        "challengeId": 3,
+        "timestamp": 1731485307,
+        "points": 100
+      },
+      {
+        "id": 205,
+        "challengeId": 9,
+        "timestamp": 1731486457,
+        "points": 100
+      },
+      {
+        "id": 244,
+        "challengeId": 5,
+        "timestamp": 1731487551,
+        "points": 100
+      },
+      {
+        "id": 354,
+        "challengeId": 6,
+        "timestamp": 1731491971,
+        "points": 100
+      }
+    ]
+  },
+  "0x6279436a2a8a96cc85731939bfdbc2d57f3d6e30": {
+    "id": "0x6279436a2a8a96cc85731939bfdbc2d57f3d6e30",
+    "name": "jojomojo",
+    "size": 1,
+    "points": 600,
+    "updated": 1731494139,
+    "challenges": [
+      {
+        "id": 246,
+        "challengeId": 1,
+        "timestamp": 1731487621,
+        "points": 100
+      },
+      {
+        "id": 289,
+        "challengeId": 2,
+        "timestamp": 1731489051,
+        "points": 100
+      },
+      {
+        "id": 293,
+        "challengeId": 3,
+        "timestamp": 1731489215,
+        "points": 100
+      },
+      {
+        "id": 351,
+        "challengeId": 5,
+        "timestamp": 1731491661,
+        "points": 100
+      },
+      {
+        "id": 362,
+        "challengeId": 4,
+        "timestamp": 1731492517,
+        "points": 100
+      },
+      {
+        "id": 381,
+        "challengeId": 6,
+        "timestamp": 1731494139,
+        "points": 100
+      }
+    ]
+  },
+  "0x1b37b1ec6b7faacbb9addcca4043824f36fb88d8": {
+    "id": "0x1b37b1ec6b7faacbb9addcca4043824f36fb88d8",
+    "name": "supernovahs",
+    "size": 1,
+    "points": 500,
+    "updated": 1731490259,
+    "challenges": [
+      {
+        "id": 178,
+        "challengeId": 1,
+        "timestamp": 1731485983,
+        "points": 100
+      },
+      {
+        "id": 214,
+        "challengeId": 2,
+        "timestamp": 1731486685,
+        "points": 100
+      },
+      {
+        "id": 220,
+        "challengeId": 3,
+        "timestamp": 1731486929,
+        "points": 100
+      },
+      {
+        "id": 283,
+        "challengeId": 9,
+        "timestamp": 1731488865,
+        "points": 100
+      },
+      {
+        "id": 323,
+        "challengeId": 5,
+        "timestamp": 1731490259,
+        "points": 100
+      }
+    ]
+  },
+  "0x33c31d941564c7fbf36a744c2fb79fcd7e3ff6d4": {
+    "id": "0x33c31d941564c7fbf36a744c2fb79fcd7e3ff6d4",
+    "name": "deewhy",
+    "size": 1,
+    "points": 500,
+    "updated": 1731490945,
+    "challenges": [
+      {
+        "id": 77,
+        "challengeId": 1,
+        "timestamp": 1731484309,
+        "points": 100
+      },
+      {
+        "id": 187,
+        "challengeId": 2,
+        "timestamp": 1731486197,
+        "points": 100
+      },
+      {
+        "id": 217,
+        "challengeId": 3,
+        "timestamp": 1731486823,
+        "points": 100
+      },
+      {
+        "id": 318,
+        "challengeId": 4,
+        "timestamp": 1731490083,
+        "points": 100
+      },
+      {
+        "id": 338,
+        "challengeId": 5,
+        "timestamp": 1731490945,
+        "points": 100
+      }
+    ]
+  },
+  "0x222da5f13d800ff94947c20e8714e103822ff716": {
+    "id": "0x222da5f13d800ff94947c20e8714e103822ff716",
+    "name": "d1ce",
+    "size": 1,
+    "points": 500,
+    "updated": 1731491985,
+    "challenges": [
+      {
+        "id": 79,
+        "challengeId": 1,
+        "timestamp": 1731484319,
+        "points": 100
+      },
+      {
+        "id": 101,
+        "challengeId": 2,
+        "timestamp": 1731484687,
+        "points": 100
+      },
+      {
+        "id": 199,
+        "challengeId": 3,
+        "timestamp": 1731486345,
+        "points": 100
+      },
+      {
+        "id": 266,
+        "challengeId": 4,
+        "timestamp": 1731488323,
+        "points": 100
+      },
+      {
+        "id": 355,
+        "challengeId": 5,
+        "timestamp": 1731491985,
+        "points": 100
+      }
+    ]
+  },
+  "0xf33c7ddf676e7bc589d7ab052a9739fa1354aa92": {
+    "id": "0xf33c7ddf676e7bc589d7ab052a9739fa1354aa92",
+    "name": "Edoardo",
+    "size": 1,
+    "points": 500,
+    "updated": 1731492403,
+    "challenges": [
+      {
+        "id": 17,
+        "challengeId": 1,
+        "timestamp": 1731483627,
+        "points": 100
+      },
+      {
+        "id": 110,
+        "challengeId": 2,
+        "timestamp": 1731484777,
+        "points": 100
+      },
+      {
+        "id": 128,
+        "challengeId": 3,
+        "timestamp": 1731485043,
+        "points": 100
+      },
+      {
+        "id": 317,
+        "challengeId": 5,
+        "timestamp": 1731490049,
+        "points": 100
+      },
+      {
+        "id": 359,
+        "challengeId": 7,
+        "timestamp": 1731492403,
+        "points": 100
+      }
+    ]
+  },
+  "0x95e08fa8ac4301acc5b943f860cd8ac84433e3cf": {
+    "id": "0x95e08fa8ac4301acc5b943f860cd8ac84433e3cf",
+    "name": "devcon_nerdsftw",
+    "size": 3,
+    "points": 500,
+    "updated": 1731493349,
+    "challenges": [
+      {
+        "id": 7,
+        "challengeId": 1,
+        "timestamp": 1731483579,
+        "points": 100
+      },
+      {
+        "id": 268,
+        "challengeId": 2,
+        "timestamp": 1731488421,
+        "points": 100
+      },
+      {
+        "id": 272,
+        "challengeId": 3,
+        "timestamp": 1731488615,
+        "points": 100
+      },
+      {
+        "id": 371,
+        "challengeId": 5,
+        "timestamp": 1731493215,
+        "points": 100
+      },
+      {
+        "id": 372,
+        "challengeId": 6,
+        "timestamp": 1731493349,
+        "points": 100
+      }
+    ]
+  },
+  "0x6308f1c6f283583c8bf8e31da793b87718b051ed": {
+    "id": "0x6308f1c6f283583c8bf8e31da793b87718b051ed",
+    "name": "0xSolus",
+    "size": 1,
+    "points": 500,
+    "updated": 1731493801,
+    "challenges": [
+      {
+        "id": 23,
+        "challengeId": 1,
+        "timestamp": 1731483707,
+        "points": 100
+      },
+      {
+        "id": 228,
+        "challengeId": 2,
+        "timestamp": 1731487057,
+        "points": 100
+      },
+      {
+        "id": 245,
+        "challengeId": 3,
+        "timestamp": 1731487553,
+        "points": 100
+      },
+      {
+        "id": 347,
+        "challengeId": 5,
+        "timestamp": 1731491509,
+        "points": 100
+      },
+      {
+        "id": 379,
+        "challengeId": 6,
+        "timestamp": 1731493801,
+        "points": 100
+      }
+    ]
+  },
+  "0x035f506892e37502eb42151b2d75b41e98137d88": {
+    "id": "0x035f506892e37502eb42151b2d75b41e98137d88",
+    "name": "nphard",
+    "size": 1,
+    "points": 400,
+    "updated": 1731485669,
+    "challenges": [
+      {
+        "id": 34,
+        "challengeId": 1,
+        "timestamp": 1731483807,
+        "points": 100
+      },
+      {
+        "id": 76,
+        "challengeId": 2,
+        "timestamp": 1731484305,
+        "points": 100
+      },
+      {
+        "id": 90,
+        "challengeId": 3,
+        "timestamp": 1731484491,
+        "points": 100
+      },
+      {
+        "id": 165,
+        "challengeId": 5,
+        "timestamp": 1731485669,
+        "points": 100
+      }
+    ]
+  },
+  "0x50c08dcf48720bfd3cef79f6338c7ba44f143570": {
+    "id": "0x50c08dcf48720bfd3cef79f6338c7ba44f143570",
+    "name": "y1cunhui.eth",
+    "size": 1,
+    "points": 400,
+    "updated": 1731488701,
+    "challenges": [
+      {
+        "id": 215,
+        "challengeId": 1,
+        "timestamp": 1731486773,
+        "points": 100
+      },
+      {
+        "id": 227,
+        "challengeId": 2,
+        "timestamp": 1731487025,
+        "points": 100
+      },
+      {
+        "id": 229,
+        "challengeId": 3,
+        "timestamp": 1731487143,
+        "points": 100
+      },
+      {
+        "id": 277,
+        "challengeId": 5,
+        "timestamp": 1731488701,
+        "points": 100
+      }
+    ]
+  },
+  "0x2584fb4c8ff9cc6e6d7a5c5cd0de07d62686f2eb": {
+    "id": "0x2584fb4c8ff9cc6e6d7a5c5cd0de07d62686f2eb",
+    "name": "DeFiHackLabs",
+    "size": 4,
+    "points": 400,
+    "updated": 1731488851,
+    "challenges": [
+      {
+        "id": 50,
+        "challengeId": 1,
+        "timestamp": 1731483941,
+        "points": 100
+      },
+      {
+        "id": 80,
+        "challengeId": 2,
+        "timestamp": 1731484337,
+        "points": 100
+      },
+      {
+        "id": 88,
+        "challengeId": 3,
+        "timestamp": 1731484479,
+        "points": 100
+      },
+      {
+        "id": 282,
+        "challengeId": 5,
+        "timestamp": 1731488851,
+        "points": 100
+      }
+    ]
+  },
+  "0x7bfb073f2ad436f802269d2d6fef815c63ad1846": {
+    "id": "0x7bfb073f2ad436f802269d2d6fef815c63ad1846",
+    "name": "warthog",
+    "size": 1,
+    "points": 400,
+    "updated": 1731493423,
+    "challenges": [
+      {
+        "id": 197,
+        "challengeId": 1,
+        "timestamp": 1731486299,
+        "points": 100
+      },
+      {
+        "id": 261,
+        "challengeId": 2,
+        "timestamp": 1731488131,
+        "points": 100
+      },
+      {
+        "id": 288,
+        "challengeId": 3,
+        "timestamp": 1731489047,
+        "points": 100
+      },
+      {
+        "id": 374,
+        "challengeId": 5,
+        "timestamp": 1731493423,
+        "points": 100
+      }
+    ]
+  },
+  "0xf71ba5a440920ce3708efb8f2b9b298b6e8d7183": {
+    "id": "0xf71ba5a440920ce3708efb8f2b9b298b6e8d7183",
+    "name": "D.O.G.E",
+    "size": 1,
+    "points": 400,
+    "updated": 1731493663,
+    "challenges": [
+      {
+        "id": 29,
+        "challengeId": 1,
+        "timestamp": 1731483757,
+        "points": 100
+      },
+      {
+        "id": 108,
+        "challengeId": 2,
+        "timestamp": 1731484751,
+        "points": 100
+      },
+      {
+        "id": 142,
+        "challengeId": 3,
+        "timestamp": 1731485213,
+        "points": 100
+      },
+      {
+        "id": 378,
+        "challengeId": 5,
+        "timestamp": 1731493663,
+        "points": 100
+      }
+    ]
+  },
+  "0x4430edfbb4777b3f8e5b951803657703039d688b": {
+    "id": "0x4430edfbb4777b3f8e5b951803657703039d688b",
+    "name": "Messi",
+    "size": 3,
+    "points": 300,
+    "updated": 1731484399,
+    "challenges": [
+      {
+        "id": 15,
+        "challengeId": 1,
+        "timestamp": 1731483609,
+        "points": 100
+      },
+      {
+        "id": 69,
+        "challengeId": 2,
+        "timestamp": 1731484239,
+        "points": 100
+      },
+      {
+        "id": 82,
+        "challengeId": 3,
+        "timestamp": 1731484399,
+        "points": 100
+      }
+    ]
+  },
+  "0xf1a5fcc29da99790822234f59a8f76a92114c810": {
+    "id": "0xf1a5fcc29da99790822234f59a8f76a92114c810",
+    "name": "Valhalla",
+    "size": 3,
+    "points": 300,
+    "updated": 1731484487,
+    "challenges": [
+      {
+        "id": 8,
+        "challengeId": 1,
+        "timestamp": 1731483583,
+        "points": 100
+      },
+      {
+        "id": 49,
+        "challengeId": 2,
+        "timestamp": 1731483937,
+        "points": 100
+      },
+      {
+        "id": 89,
+        "challengeId": 3,
+        "timestamp": 1731484487,
+        "points": 100
+      }
+    ]
+  },
+  "0x26750470f82ba05892fb0088ebe48b1e19d30514": {
+    "id": "0x26750470f82ba05892fb0088ebe48b1e19d30514",
+    "name": "itsMeh",
+    "size": 1,
+    "points": 300,
+    "updated": 1731484893,
+    "challenges": [
+      {
+        "id": 46,
+        "challengeId": 1,
+        "timestamp": 1731483913,
+        "points": 100
+      },
+      {
+        "id": 95,
+        "challengeId": 2,
+        "timestamp": 1731484597,
+        "points": 100
+      },
+      {
+        "id": 120,
+        "challengeId": 3,
+        "timestamp": 1731484893,
+        "points": 100
+      }
+    ]
+  },
+  "0x3353d0672480d1eb6686c1a7123b5c63c9743186": {
+    "id": "0x3353d0672480d1eb6686c1a7123b5c63c9743186",
+    "name": "tinydawt",
+    "size": 1,
+    "points": 300,
+    "updated": 1731484995,
+    "challenges": [
+      {
+        "id": 54,
+        "challengeId": 1,
+        "timestamp": 1731483985,
+        "points": 100
+      },
+      {
+        "id": 102,
+        "challengeId": 2,
+        "timestamp": 1731484689,
+        "points": 100
+      },
+      {
+        "id": 125,
+        "challengeId": 3,
+        "timestamp": 1731484995,
+        "points": 100
+      }
+    ]
+  },
+  "0x6a80307070b4b7e4dea30276d2a52f7db52e160a": {
+    "id": "0x6a80307070b4b7e4dea30276d2a52f7db52e160a",
+    "name": "Astin",
+    "size": 1,
+    "points": 300,
+    "updated": 1731485147,
+    "challenges": [
+      {
+        "id": 14,
+        "challengeId": 1,
+        "timestamp": 1731483595,
+        "points": 100
+      },
+      {
+        "id": 116,
+        "challengeId": 2,
+        "timestamp": 1731484851,
+        "points": 100
+      },
+      {
+        "id": 137,
+        "challengeId": 3,
+        "timestamp": 1731485147,
+        "points": 100
+      }
+    ]
+  },
+  "0xefeca04e9c9d9f1aebd6e0241736e1e1d5bfef53": {
+    "id": "0xefeca04e9c9d9f1aebd6e0241736e1e1d5bfef53",
+    "name": "JokerStudio",
+    "size": 1,
+    "points": 300,
+    "updated": 1731485411,
+    "challenges": [
+      {
+        "id": 103,
+        "challengeId": 1,
+        "timestamp": 1731484689,
+        "points": 100
+      },
+      {
+        "id": 151,
+        "challengeId": 3,
+        "timestamp": 1731485395,
+        "points": 100
+      },
+      {
+        "id": 153,
+        "challengeId": 2,
+        "timestamp": 1731485411,
+        "points": 100
+      }
+    ]
+  },
+  "0xb23c9feb1a176b3c8ee0da69b096b9c1ac0aeac6": {
+    "id": "0xb23c9feb1a176b3c8ee0da69b096b9c1ac0aeac6",
+    "name": "buidlnewbie",
+    "size": 1,
+    "points": 300,
+    "updated": 1731485605,
+    "challenges": [
+      {
+        "id": 67,
+        "challengeId": 1,
+        "timestamp": 1731484123,
+        "points": 100
+      },
+      {
+        "id": 105,
+        "challengeId": 2,
+        "timestamp": 1731484705,
+        "points": 100
+      },
+      {
+        "id": 163,
+        "challengeId": 3,
+        "timestamp": 1731485605,
+        "points": 100
+      }
+    ]
+  },
+  "0x2188fa9817e8dd2de5e92940b64ce6cf55c2cc71": {
+    "id": "0x2188fa9817e8dd2de5e92940b64ce6cf55c2cc71",
+    "name": "@OHNOMonkeyBot",
+    "size": 1,
+    "points": 300,
+    "updated": 1731486049,
+    "challenges": [
+      {
+        "id": 113,
+        "challengeId": 1,
+        "timestamp": 1731484827,
+        "points": 100
+      },
+      {
+        "id": 152,
+        "challengeId": 2,
+        "timestamp": 1731485403,
+        "points": 100
+      },
+      {
+        "id": 181,
+        "challengeId": 3,
+        "timestamp": 1731486049,
+        "points": 100
+      }
+    ]
+  },
+  "0xbdd9e7c90cf0cfadef265e7efd4641a330350ea2": {
+    "id": "0xbdd9e7c90cf0cfadef265e7efd4641a330350ea2",
+    "name": "42Tokyo",
+    "size": 4,
+    "points": 300,
+    "updated": 1731486981,
+    "challenges": [
+      {
+        "id": 11,
+        "challengeId": 1,
+        "timestamp": 1731483587,
+        "points": 100
+      },
+      {
+        "id": 93,
+        "challengeId": 2,
+        "timestamp": 1731484555,
+        "points": 100
+      },
+      {
+        "id": 224,
+        "challengeId": 3,
+        "timestamp": 1731486981,
+        "points": 100
+      }
+    ]
+  },
+  "0x35ca17f540d93630c9fd792ca213e2dda539363f": {
+    "id": "0x35ca17f540d93630c9fd792ca213e2dda539363f",
+    "name": "kivous",
+    "size": 1,
+    "points": 300,
+    "updated": 1731486989,
+    "challenges": [
+      {
+        "id": 48,
+        "challengeId": 1,
+        "timestamp": 1731483937,
+        "points": 100
+      },
+      {
+        "id": 211,
+        "challengeId": 2,
+        "timestamp": 1731486653,
+        "points": 100
+      },
+      {
+        "id": 225,
+        "challengeId": 3,
+        "timestamp": 1731486989,
+        "points": 100
+      }
+    ]
+  },
+  "0x206c5915856ef684d9f816f3747224c853933115": {
+    "id": "0x206c5915856ef684d9f816f3747224c853933115",
+    "name": "but",
+    "size": 1,
+    "points": 300,
+    "updated": 1731487243,
+    "challenges": [
+      {
+        "id": 166,
+        "challengeId": 1,
+        "timestamp": 1731485685,
+        "points": 100
+      },
+      {
+        "id": 222,
+        "challengeId": 2,
+        "timestamp": 1731486957,
+        "points": 100
+      },
+      {
+        "id": 233,
+        "challengeId": 3,
+        "timestamp": 1731487243,
+        "points": 100
+      }
+    ]
+  },
+  "0x87f603924309889b39687ac0a1669b1e5a506e74": {
+    "id": "0x87f603924309889b39687ac0a1669b1e5a506e74",
+    "name": "tricodex",
+    "size": 1,
+    "points": 300,
+    "updated": 1731487325,
+    "challenges": [
+      {
+        "id": 40,
+        "challengeId": 1,
+        "timestamp": 1731483843,
+        "points": 100
+      },
+      {
+        "id": 226,
+        "challengeId": 2,
+        "timestamp": 1731486991,
+        "points": 100
+      },
+      {
+        "id": 235,
+        "challengeId": 3,
+        "timestamp": 1731487325,
+        "points": 100
+      }
+    ]
+  },
+  "0xc9af4e56741f255743e8f4877d4cfa9971e910c2": {
+    "id": "0xc9af4e56741f255743e8f4877d4cfa9971e910c2",
+    "name": "monkfenix",
+    "size": 1,
+    "points": 300,
+    "updated": 1731487359,
+    "challenges": [
+      {
+        "id": 22,
+        "challengeId": 1,
+        "timestamp": 1731483693,
+        "points": 100
+      },
+      {
+        "id": 183,
+        "challengeId": 2,
+        "timestamp": 1731486087,
+        "points": 100
+      },
+      {
+        "id": 237,
+        "challengeId": 3,
+        "timestamp": 1731487359,
+        "points": 100
+      }
+    ]
+  },
+  "0x1fa8ba3b49181870ed997a53a7962d0aee6a4c3d": {
+    "id": "0x1fa8ba3b49181870ed997a53a7962d0aee6a4c3d",
+    "name": "straw hats",
+    "size": 4,
+    "points": 300,
+    "updated": 1731487369,
+    "challenges": [
+      {
+        "id": 158,
+        "challengeId": 1,
+        "timestamp": 1731485461,
+        "points": 100
+      },
+      {
+        "id": 198,
+        "challengeId": 2,
+        "timestamp": 1731486321,
+        "points": 100
+      },
+      {
+        "id": 238,
+        "challengeId": 3,
+        "timestamp": 1731487369,
+        "points": 100
+      }
+    ]
+  },
+  "0x985f554ceab743cdf91d2f0d08c8fca8871ed406": {
+    "id": "0x985f554ceab743cdf91d2f0d08c8fca8871ed406",
+    "name": "mengo",
+    "size": 1,
+    "points": 300,
+    "updated": 1731487383,
+    "challenges": [
+      {
+        "id": 72,
+        "challengeId": 1,
+        "timestamp": 1731484265,
+        "points": 100
+      },
+      {
+        "id": 221,
+        "challengeId": 2,
+        "timestamp": 1731486931,
+        "points": 100
+      },
+      {
+        "id": 239,
+        "challengeId": 3,
+        "timestamp": 1731487383,
+        "points": 100
+      }
+    ]
+  },
+  "0x8356d265646a397b2dacf0e05a4973e7676597f4": {
+    "id": "0x8356d265646a397b2dacf0e05a4973e7676597f4",
+    "name": "normie",
+    "size": 2,
+    "points": 300,
+    "updated": 1731487515,
+    "challenges": [
+      {
+        "id": 155,
+        "challengeId": 1,
+        "timestamp": 1731485431,
+        "points": 100
+      },
+      {
+        "id": 200,
+        "challengeId": 2,
+        "timestamp": 1731486347,
+        "points": 100
+      },
+      {
+        "id": 242,
+        "challengeId": 3,
+        "timestamp": 1731487515,
+        "points": 100
+      }
+    ]
+  },
+  "0x8b5e4ba136d3a483ac9988c20cbf0018cc687e6f": {
+    "id": "0x8b5e4ba136d3a483ac9988c20cbf0018cc687e6f",
+    "name": "dipanshuhappy",
+    "size": 1,
+    "points": 300,
+    "updated": 1731487527,
+    "challenges": [
+      {
+        "id": 173,
+        "challengeId": 1,
+        "timestamp": 1731485825,
+        "points": 100
+      },
+      {
+        "id": 191,
+        "challengeId": 2,
+        "timestamp": 1731486251,
+        "points": 100
+      },
+      {
+        "id": 243,
+        "challengeId": 3,
+        "timestamp": 1731487527,
+        "points": 100
+      }
+    ]
+  },
+  "0xbe84e32fa1e0882b5451e054dca4c4055aa1050b": {
+    "id": "0xbe84e32fa1e0882b5451e054dca4c4055aa1050b",
+    "name": "Deving.zone",
+    "size": 1,
+    "points": 300,
+    "updated": 1731487961,
+    "challenges": [
+      {
+        "id": 18,
+        "challengeId": 1,
+        "timestamp": 1731483629,
+        "points": 100
+      },
+      {
+        "id": 186,
+        "challengeId": 9,
+        "timestamp": 1731486187,
+        "points": 100
+      },
+      {
+        "id": 256,
+        "challengeId": 10,
+        "timestamp": 1731487961,
+        "points": 100
+      }
+    ]
+  },
+  "0x4afbff463c52ed0312934bcb69da63a51d69d19b": {
+    "id": "0x4afbff463c52ed0312934bcb69da63a51d69d19b",
+    "name": "new_bie",
+    "size": 1,
+    "points": 300,
+    "updated": 1731488145,
+    "challenges": [
+      {
+        "id": 56,
+        "challengeId": 1,
+        "timestamp": 1731483991,
+        "points": 100
+      },
+      {
+        "id": 248,
+        "challengeId": 2,
+        "timestamp": 1731487669,
+        "points": 100
+      },
+      {
+        "id": 262,
+        "challengeId": 3,
+        "timestamp": 1731488145,
+        "points": 100
+      }
+    ]
+  },
+  "0xd1d046ac719ad61330651ad2cd758a940a4ec2c0": {
+    "id": "0xd1d046ac719ad61330651ad2cd758a940a4ec2c0",
+    "name": "uphoria",
+    "size": 1,
+    "points": 300,
+    "updated": 1731488183,
+    "challenges": [
+      {
+        "id": 139,
+        "challengeId": 1,
+        "timestamp": 1731485185,
+        "points": 100
+      },
+      {
+        "id": 240,
+        "challengeId": 2,
+        "timestamp": 1731487391,
+        "points": 100
+      },
+      {
+        "id": 264,
+        "challengeId": 3,
+        "timestamp": 1731488183,
+        "points": 100
+      }
+    ]
+  },
+  "0xb04aef2a3d2d86b01006ccd4339a2e943d9c6480": {
+    "id": "0xb04aef2a3d2d86b01006ccd4339a2e943d9c6480",
+    "name": "rocknet.eth",
+    "size": 1,
+    "points": 300,
+    "updated": 1731489743,
+    "challenges": [
+      {
+        "id": 21,
+        "challengeId": 1,
+        "timestamp": 1731483649,
+        "points": 100
+      },
+      {
+        "id": 269,
+        "challengeId": 2,
+        "timestamp": 1731488447,
+        "points": 100
+      },
+      {
+        "id": 309,
+        "challengeId": 3,
+        "timestamp": 1731489743,
+        "points": 100
+      }
+    ]
+  },
+  "0x83aec9ea817ae9cf1817521150b0ff054bbff8ea": {
+    "id": "0x83aec9ea817ae9cf1817521150b0ff054bbff8ea",
+    "name": "Fil",
+    "size": 1,
+    "points": 300,
+    "updated": 1731490001,
+    "challenges": [
+      {
+        "id": 52,
+        "challengeId": 1,
+        "timestamp": 1731483943,
+        "points": 100
+      },
+      {
+        "id": 299,
+        "challengeId": 2,
+        "timestamp": 1731489493,
+        "points": 100
+      },
+      {
+        "id": 315,
+        "challengeId": 3,
+        "timestamp": 1731490001,
+        "points": 100
+      }
+    ]
+  },
+  "0xd0ccfeef904cce8e0c70014db37e5133a6a8aa1c": {
+    "id": "0xd0ccfeef904cce8e0c70014db37e5133a6a8aa1c",
+    "name": "j",
+    "size": 1,
+    "points": 300,
+    "updated": 1731490085,
+    "challenges": [
+      {
+        "id": 260,
+        "challengeId": 1,
+        "timestamp": 1731488123,
+        "points": 100
+      },
+      {
+        "id": 303,
+        "challengeId": 2,
+        "timestamp": 1731489641,
+        "points": 100
+      },
+      {
+        "id": 319,
+        "challengeId": 3,
+        "timestamp": 1731490085,
+        "points": 100
+      }
+    ]
+  },
+  "0x537afb1bb98386d41fe5f4472c505d6baec9e3d2": {
+    "id": "0x537afb1bb98386d41fe5f4472c505d6baec9e3d2",
+    "name": "Niniteers",
+    "size": 3,
+    "points": 300,
+    "updated": 1731490337,
+    "challenges": [
+      {
+        "id": 60,
+        "challengeId": 1,
+        "timestamp": 1731484047,
+        "points": 100
+      },
+      {
+        "id": 281,
+        "challengeId": 2,
+        "timestamp": 1731488831,
+        "points": 100
+      },
+      {
+        "id": 325,
+        "challengeId": 3,
+        "timestamp": 1731490337,
+        "points": 100
+      }
+    ]
+  },
+  "0xfea2b64eddda7fde794cb0511d4e90e56b86677d": {
+    "id": "0xfea2b64eddda7fde794cb0511d4e90e56b86677d",
+    "name": "faris",
+    "size": 1,
+    "points": 300,
+    "updated": 1731490501,
+    "challenges": [
+      {
+        "id": 258,
+        "challengeId": 1,
+        "timestamp": 1731488097,
+        "points": 100
+      },
+      {
+        "id": 297,
+        "challengeId": 2,
+        "timestamp": 1731489445,
+        "points": 100
+      },
+      {
+        "id": 328,
+        "challengeId": 3,
+        "timestamp": 1731490501,
+        "points": 100
+      }
+    ]
+  },
+  "0xaf3f2234c1c200d7c03ee3efeb1f28e9e9bbda76": {
+    "id": "0xaf3f2234c1c200d7c03ee3efeb1f28e9e9bbda76",
+    "name": "ngduo",
+    "size": 1,
+    "points": 300,
+    "updated": 1731490717,
+    "challenges": [
+      {
+        "id": 150,
+        "challengeId": 1,
+        "timestamp": 1731485395,
+        "points": 100
+      },
+      {
+        "id": 314,
+        "challengeId": 2,
+        "timestamp": 1731489999,
+        "points": 100
+      },
+      {
+        "id": 332,
+        "challengeId": 3,
+        "timestamp": 1731490717,
+        "points": 100
+      }
+    ]
+  },
+  "0x74a617b27b4bcb83b97794dff3b6d48611660b2a": {
+    "id": "0x74a617b27b4bcb83b97794dff3b6d48611660b2a",
+    "name": "ChiBe",
+    "size": 2,
+    "points": 300,
+    "updated": 1731491371,
+    "challenges": [
+      {
+        "id": 64,
+        "challengeId": 1,
+        "timestamp": 1731484077,
+        "points": 100
+      },
+      {
+        "id": 286,
+        "challengeId": 2,
+        "timestamp": 1731488961,
+        "points": 100
+      },
+      {
+        "id": 345,
+        "challengeId": 3,
+        "timestamp": 1731491371,
+        "points": 100
+      }
+    ]
+  },
+  "0x15b5e00801d4db959359a97b20c2f01170e8e159": {
+    "id": "0x15b5e00801d4db959359a97b20c2f01170e8e159",
+    "name": "__DobbyBee__",
+    "size": 1,
+    "points": 300,
+    "updated": 1731492571,
+    "challenges": [
+      {
+        "id": 58,
+        "challengeId": 1,
+        "timestamp": 1731484015,
+        "points": 100
+      },
+      {
+        "id": 341,
+        "challengeId": 2,
+        "timestamp": 1731491079,
+        "points": 100
+      },
+      {
+        "id": 363,
+        "challengeId": 3,
+        "timestamp": 1731492571,
+        "points": 100
+      }
+    ]
+  },
+  "0x792e391870fca980464663cb5035e8ff92ff124d": {
+    "id": "0x792e391870fca980464663cb5035e8ff92ff124d",
+    "name": "callum",
+    "size": 1,
+    "points": 300,
+    "updated": 1731492713,
+    "challenges": [
+      {
+        "id": 136,
+        "challengeId": 1,
+        "timestamp": 1731485143,
+        "points": 100
+      },
+      {
+        "id": 296,
+        "challengeId": 5,
+        "timestamp": 1731489271,
+        "points": 100
+      },
+      {
+        "id": 367,
+        "challengeId": 6,
+        "timestamp": 1731492713,
+        "points": 100
+      }
+    ]
+  },
+  "0xe20cadbf59f7774e1f60fe6d2533a5386740b2db": {
+    "id": "0xe20cadbf59f7774e1f60fe6d2533a5386740b2db",
+    "name": "Phoenix",
+    "size": 1,
+    "points": 300,
+    "updated": 1731493399,
+    "challenges": [
+      {
+        "id": 327,
+        "challengeId": 1,
+        "timestamp": 1731490471,
+        "points": 100
+      },
+      {
+        "id": 368,
+        "challengeId": 2,
+        "timestamp": 1731492727,
+        "points": 100
+      },
+      {
+        "id": 373,
+        "challengeId": 3,
+        "timestamp": 1731493399,
+        "points": 100
+      }
+    ]
+  },
+  "0xda1bcd56fbe3995ea83228738259c2582415968c": {
+    "id": "0xda1bcd56fbe3995ea83228738259c2582415968c",
+    "name": "April's Worshippers",
+    "size": 3,
+    "points": 200,
+    "updated": 1731484413,
+    "challenges": [
+      {
+        "id": 24,
+        "challengeId": 1,
+        "timestamp": 1731483707,
+        "points": 100
+      },
+      {
+        "id": 83,
+        "challengeId": 2,
+        "timestamp": 1731484413,
+        "points": 100
+      }
+    ]
+  },
+  "0xfd1b5426dcac80e78bbe36e2d3d3780ed848611c": {
+    "id": "0xfd1b5426dcac80e78bbe36e2d3d3780ed848611c",
+    "name": "holyfuchs",
+    "size": 1,
+    "points": 200,
+    "updated": 1731485957,
+    "challenges": [
+      {
+        "id": 127,
+        "challengeId": 1,
+        "timestamp": 1731485037,
+        "points": 100
+      },
+      {
+        "id": 176,
+        "challengeId": 2,
+        "timestamp": 1731485957,
+        "points": 100
+      }
+    ]
+  },
+  "0xdb4ba832c8d47a9bd4ec1d3ce8c07db471cd5ce2": {
+    "id": "0xdb4ba832c8d47a9bd4ec1d3ce8c07db471cd5ce2",
+    "name": "TFYTFM",
+    "size": 1,
+    "points": 200,
+    "updated": 1731486065,
+    "challenges": [
+      {
+        "id": 70,
+        "challengeId": 1,
+        "timestamp": 1731484241,
+        "points": 100
+      },
+      {
+        "id": 182,
+        "challengeId": 2,
+        "timestamp": 1731486065,
+        "points": 100
+      }
+    ]
+  },
+  "0xcf0e86c088a9f8a54cee0843d609ec134cdcd619": {
+    "id": "0xcf0e86c088a9f8a54cee0843d609ec134cdcd619",
+    "name": "swiss-knife.xyz",
+    "size": 1,
+    "points": 200,
+    "updated": 1731488687,
+    "challenges": [
+      {
+        "id": 275,
+        "challengeId": 1,
+        "timestamp": 1731488687,
+        "points": 100
+      },
+      {
+        "id": 276,
+        "challengeId": 7,
+        "timestamp": 1731488687,
+        "points": 100
+      }
+    ]
+  },
+  "0x7e71bd65c47303c169b60d4d41a2756b10bbfc3e": {
+    "id": "0x7e71bd65c47303c169b60d4d41a2756b10bbfc3e",
+    "name": "swiss-knife.xyz",
+    "size": 1,
+    "points": 200,
+    "updated": 1731488821,
+    "challenges": [
+      {
+        "id": 279,
+        "challengeId": 1,
+        "timestamp": 1731488821,
+        "points": 100
+      },
+      {
+        "id": 280,
+        "challengeId": 7,
+        "timestamp": 1731488821,
+        "points": 100
+      }
+    ]
+  },
+  "0x7e3036eb589fa3bbfa5a73bcf59971cc3b0466aa": {
+    "id": "0x7e3036eb589fa3bbfa5a73bcf59971cc3b0466aa",
+    "name": "hello22345",
+    "size": 1,
+    "points": 200,
+    "updated": 1731489703,
+    "challenges": [
+      {
+        "id": 306,
+        "challengeId": 1,
+        "timestamp": 1731489703,
+        "points": 100
+      },
+      {
+        "id": 307,
+        "challengeId": 10,
+        "timestamp": 1731489703,
+        "points": 100
+      }
+    ]
+  },
+  "0x56970438170222395dbf9c4ab8716118ba4b9c4f": {
+    "id": "0x56970438170222395dbf9c4ab8716118ba4b9c4f",
+    "name": "mingoya",
+    "size": 1,
+    "points": 200,
+    "updated": 1731489733,
+    "challenges": [
+      {
+        "id": 92,
+        "challengeId": 1,
+        "timestamp": 1731484525,
+        "points": 100
+      },
+      {
+        "id": 308,
+        "challengeId": 2,
+        "timestamp": 1731489733,
+        "points": 100
+      }
+    ]
+  },
+  "0x74b4b8c7cb9a594a6440965f982def10bb9570b9": {
+    "id": "0x74b4b8c7cb9a594a6440965f982def10bb9570b9",
+    "name": "cryptocomical",
+    "size": 1,
+    "points": 100,
+    "updated": 1731483573,
+    "challenges": [
+      {
+        "id": 5,
+        "challengeId": 1,
+        "timestamp": 1731483573,
+        "points": 100
+      }
+    ]
+  },
+  "0x912033adc266a7fb9208bba5f82598d043837940": {
+    "id": "0x912033adc266a7fb9208bba5f82598d043837940",
+    "name": "d",
+    "size": 1,
+    "points": 100,
+    "updated": 1731483595,
+    "challenges": [
+      {
+        "id": 13,
+        "challengeId": 1,
+        "timestamp": 1731483595,
+        "points": 100
+      }
+    ]
+  },
+  "0x48b6755c9d46d2df39fc7218e357314e200cfd6b": {
+    "id": "0x48b6755c9d46d2df39fc7218e357314e200cfd6b",
+    "name": "littlepony",
+    "size": 1,
+    "points": 100,
+    "updated": 1731483625,
+    "challenges": [
+      {
+        "id": 16,
+        "challengeId": 1,
+        "timestamp": 1731483625,
+        "points": 100
+      }
+    ]
+  },
+  "0xfe7b7d58fb369976b46599e561219342b4bf14f2": {
+    "id": "0xfe7b7d58fb369976b46599e561219342b4bf14f2",
+    "name": "sahteam",
+    "size": 1,
+    "points": 100,
+    "updated": 1731483739,
+    "challenges": [
+      {
+        "id": 27,
+        "challengeId": 1,
+        "timestamp": 1731483739,
+        "points": 100
+      }
+    ]
+  },
+  "0xb679be19cad0b2b5f3cfda3bc00e63372a150206": {
+    "id": "0xb679be19cad0b2b5f3cfda3bc00e63372a150206",
+    "name": "clamp",
+    "size": 1,
+    "points": 100,
+    "updated": 1731483761,
+    "challenges": [
+      {
+        "id": 30,
+        "challengeId": 1,
+        "timestamp": 1731483761,
+        "points": 100
+      }
+    ]
+  },
+  "0xffb8e29ed00ab3a9bfccbf7cabe927c5b2010124": {
+    "id": "0xffb8e29ed00ab3a9bfccbf7cabe927c5b2010124",
+    "name": "bitskwela.dev",
+    "size": 1,
+    "points": 100,
+    "updated": 1731483809,
+    "challenges": [
+      {
+        "id": 35,
+        "challengeId": 1,
+        "timestamp": 1731483809,
+        "points": 100
+      }
+    ]
+  },
+  "0x542b17350289b46dc1c4bb250ff1ba563708b4b5": {
+    "id": "0x542b17350289b46dc1c4bb250ff1ba563708b4b5",
+    "name": "Nullvoider",
+    "size": 1,
+    "points": 100,
+    "updated": 1731483823,
+    "challenges": [
+      {
+        "id": 36,
+        "challengeId": 1,
+        "timestamp": 1731483823,
+        "points": 100
+      }
+    ]
+  },
+  "0xadfe181d0dcb6d107e8bfc9343ee1fa016c9e14c": {
+    "id": "0xadfe181d0dcb6d107e8bfc9343ee1fa016c9e14c",
+    "name": "borntobewild",
+    "size": 1,
+    "points": 100,
+    "updated": 1731484191,
+    "challenges": [
+      {
+        "id": 68,
+        "challengeId": 1,
+        "timestamp": 1731484191,
+        "points": 100
+      }
+    ]
+  },
+  "0x41108f2eef4c941492d23e810a8613df8df44d60": {
+    "id": "0x41108f2eef4c941492d23e810a8613df8df44d60",
+    "name": "d0nut",
+    "size": 1,
+    "points": 100,
+    "updated": 1731484281,
+    "challenges": [
+      {
+        "id": 74,
+        "challengeId": 1,
+        "timestamp": 1731484281,
+        "points": 100
+      }
+    ]
+  },
+  "0x26a2bb04a28aac6ea22701d4b7eda0cf73b425f8": {
+    "id": "0x26a2bb04a28aac6ea22701d4b7eda0cf73b425f8",
+    "name": "MariellaXGandalf",
+    "size": 2,
+    "points": 100,
+    "updated": 1731484497,
+    "challenges": [
+      {
+        "id": 91,
+        "challengeId": 1,
+        "timestamp": 1731484497,
+        "points": 100
+      }
+    ]
+  },
+  "0x2c4eb26777cbdd64494c19dc3abbe610556177d1": {
+    "id": "0x2c4eb26777cbdd64494c19dc3abbe610556177d1",
+    "name": "DeFiHackLabs",
+    "size": 4,
+    "points": 100,
+    "updated": 1731484833,
+    "challenges": [
+      {
+        "id": 114,
+        "challengeId": 1,
+        "timestamp": 1731484833,
+        "points": 100
+      }
+    ]
+  },
+  "0x626a7976d5256d12b4e503c053b043eccc674ddf": {
+    "id": "0x626a7976d5256d12b4e503c053b043eccc674ddf",
+    "name": "DAPPSO",
+    "size": 1,
+    "points": 100,
+    "updated": 1731484851,
+    "challenges": [
+      {
+        "id": 115,
+        "challengeId": 1,
+        "timestamp": 1731484851,
+        "points": 100
+      }
+    ]
+  },
+  "0xe7a6f2a51de5ae0c6ea17b5ec3c44cecbdf2dadf": {
+    "id": "0xe7a6f2a51de5ae0c6ea17b5ec3c44cecbdf2dadf",
+    "name": "DeFiHackLabs",
+    "size": 4,
+    "points": 100,
+    "updated": 1731484885,
+    "challenges": [
+      {
+        "id": 119,
+        "challengeId": 1,
+        "timestamp": 1731484885,
+        "points": 100
+      }
+    ]
+  },
+  "0x4cbee7ad42d33e9d3b41e8b6faca2f6f173c8a94": {
+    "id": "0x4cbee7ad42d33e9d3b41e8b6faca2f6f173c8a94",
+    "name": "Kenil",
+    "size": 2,
+    "points": 100,
+    "updated": 1731484935,
+    "challenges": [
+      {
+        "id": 122,
+        "challengeId": 1,
+        "timestamp": 1731484935,
+        "points": 100
+      }
+    ]
+  },
+  "0x631088af5a770bee50ffa7dd5dc18994616dc1ff": {
+    "id": "0x631088af5a770bee50ffa7dd5dc18994616dc1ff",
+    "name": "Formula Zero",
+    "size": 1,
+    "points": 100,
+    "updated": 1731485209,
+    "challenges": [
+      {
+        "id": 140,
+        "challengeId": 1,
+        "timestamp": 1731485209,
+        "points": 100
+      }
+    ]
+  },
+  "0xfe2faff8c8968e4dec043c59d3d22715b4be30bc": {
+    "id": "0xfe2faff8c8968e4dec043c59d3d22715b4be30bc",
+    "name": "ysc",
+    "size": 3,
+    "points": 100,
+    "updated": 1731485639,
+    "challenges": [
+      {
+        "id": 164,
+        "challengeId": 1,
+        "timestamp": 1731485639,
+        "points": 100
+      }
+    ]
+  },
+  "0x4806cc31989632155dad026d86a44df1d126e1b4": {
+    "id": "0x4806cc31989632155dad026d86a44df1d126e1b4",
+    "name": "DeFiHackLabs",
+    "size": 4,
+    "points": 100,
+    "updated": 1731485947,
+    "challenges": [
+      {
+        "id": 175,
+        "challengeId": 1,
+        "timestamp": 1731485947,
+        "points": 100
+      }
+    ]
+  },
+  "0xced6b596d9c96e2c221b50fce0d0685f9d1c09b0": {
+    "id": "0xced6b596d9c96e2c221b50fce0d0685f9d1c09b0",
+    "name": "y1cunhui",
+    "size": 1,
+    "points": 100,
+    "updated": 1731485969,
+    "challenges": [
+      {
+        "id": 177,
+        "challengeId": 1,
+        "timestamp": 1731485969,
+        "points": 100
+      }
+    ]
+  },
+  "0xe1e85b0e63d7b0e0a4934cf5dcdc746761503655": {
+    "id": "0xe1e85b0e63d7b0e0a4934cf5dcdc746761503655",
+    "name": "kek1",
+    "size": 1,
+    "points": 100,
+    "updated": 1731486679,
+    "challenges": [
+      {
+        "id": 213,
+        "challengeId": 1,
+        "timestamp": 1731486679,
+        "points": 100
+      }
+    ]
+  },
+  "0xcb9bf83cc1276e681157783e0b2666680692a1ac": {
+    "id": "0xcb9bf83cc1276e681157783e0b2666680692a1ac",
+    "name": "DeFiHackLabs",
+    "size": 4,
+    "points": 100,
+    "updated": 1731486823,
+    "challenges": [
+      {
+        "id": 216,
+        "challengeId": 1,
+        "timestamp": 1731486823,
+        "points": 100
+      }
+    ]
+  },
+  "0xc1c4f7ad285bd55cb374926a9fdc18afd2fc48fd": {
+    "id": "0xc1c4f7ad285bd55cb374926a9fdc18afd2fc48fd",
+    "name": "KappaOne",
+    "size": 1,
+    "points": 100,
+    "updated": 1731487327,
+    "challenges": [
+      {
+        "id": 236,
+        "challengeId": 1,
+        "timestamp": 1731487327,
+        "points": 100
+      }
+    ]
+  },
+  "0xd810d7e59f37bd2de933016fd6aceda99c23487b": {
+    "id": "0xd810d7e59f37bd2de933016fd6aceda99c23487b",
+    "name": "jemmyleduck",
+    "size": 1,
+    "points": 100,
+    "updated": 1731488049,
+    "challenges": [
+      {
+        "id": 257,
+        "challengeId": 1,
+        "timestamp": 1731488049,
+        "points": 100
+      }
+    ]
+  },
+  "0xbe519970889ce4b0e8a943546b3d2ca9d0ffcab0": {
+    "id": "0xbe519970889ce4b0e8a943546b3d2ca9d0ffcab0",
+    "name": "DeFiHackLabs",
+    "size": 4,
+    "points": 100,
+    "updated": 1731488563,
+    "challenges": [
+      {
+        "id": 271,
+        "challengeId": 1,
+        "timestamp": 1731488563,
+        "points": 100
+      }
+    ]
+  },
+  "0x4d639cbbc15fe5db467dbf158a78a5fa3ac20877": {
+    "id": "0x4d639cbbc15fe5db467dbf158a78a5fa3ac20877",
+    "name": "🚩",
+    "size": 1,
+    "points": 100,
+    "updated": 1731488767,
+    "challenges": [
+      {
+        "id": 278,
+        "challengeId": 1,
+        "timestamp": 1731488767,
+        "points": 100
+      }
+    ]
+  },
+  "0x21e5cc65fa2fc79e0b02c25326780919b2025b96": {
+    "id": "0x21e5cc65fa2fc79e0b02c25326780919b2025b96",
+    "name": "QnR",
+    "size": 1,
+    "points": 100,
+    "updated": 1731489109,
+    "challenges": [
+      {
+        "id": 290,
+        "challengeId": 1,
+        "timestamp": 1731489109,
+        "points": 100
+      }
+    ]
+  },
+  "0xec01f45b1ea7b8d0d257d1e6daa3f056b2411894": {
+    "id": "0xec01f45b1ea7b8d0d257d1e6daa3f056b2411894",
+    "name": "mseong",
+    "size": 1,
+    "points": 100,
+    "updated": 1731489157,
+    "challenges": [
+      {
+        "id": 291,
+        "challengeId": 1,
+        "timestamp": 1731489157,
+        "points": 100
+      }
+    ]
+  },
+  "0xea09632324b9da19813abbf524e0cc3a69d9f2be": {
+    "id": "0xea09632324b9da19813abbf524e0cc3a69d9f2be",
+    "name": "hello22346",
+    "size": 1,
+    "points": 100,
+    "updated": 1731490149,
+    "challenges": [
+      {
+        "id": 320,
+        "challengeId": 1,
+        "timestamp": 1731490149,
+        "points": 100
+      }
+    ]
+  },
+  "0x94335fff22bfafd911c4d6f5b769edcb09c2491b": {
+    "id": "0x94335fff22bfafd911c4d6f5b769edcb09c2491b",
+    "name": "Wonderpanas2",
+    "size": 3,
+    "points": 100,
+    "updated": 1731491237,
+    "challenges": [
+      {
+        "id": 344,
+        "challengeId": 1,
+        "timestamp": 1731491237,
+        "points": 100
+      }
+    ]
+  }
+}

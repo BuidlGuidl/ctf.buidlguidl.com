@@ -2,7 +2,7 @@
 
 **Welcome to the BuidlGuidl CTF - Devcon SEA 2024!**
 
-⚡️ Live at https://ctf.buidlguidl.com
+⚡️ Live at https://ctf-devcon.buidlguidl.com
 
 **The goal of this CTF game is to mint as many NFT flags as possible from the `NFTFlags.sol` contract**. The allowed minters are each of the challenge contracts. Each flag gives you 100 points. We only track NFT minters, not NFT holders (i.e. transfers are not computed into the score).
 

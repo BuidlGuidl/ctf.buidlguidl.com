@@ -1,112 +1,23 @@
-"use client";
-
-import Image from "next/image";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
-import { useQuery } from "@tanstack/react-query";
 import clsx from "clsx";
-import { gql, request } from "graphql-request";
 import type { NextPage } from "next";
-import Countdown from "react-countdown";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { FlagIcon } from "~~/components/FlagIcon";
 import { Address } from "~~/components/scaffold-eth";
-import { useScaffoldReadContract } from "~~/hooks/scaffold-eth";
-import { Team, TeamChallenge, TeamsData } from "~~/types/utils";
+import teamsData from "~~/data/teamsData.json";
+import { Team, TeamChallenge, TeamsDataArray } from "~~/types/utils";
 import { getFormattedDateTime } from "~~/utils/date";
 import { getFlagColor } from "~~/utils/flagColor";
 
 const thStyles = "whitespace-nowrap px-3 py-3.5";
 const tdStyles = "whitespace-nowrap px-3 py-4";
 
+const teamsDataArray: TeamsDataArray = Object.values(teamsData);
+
 const Leaderboard: NextPage = () => {
-  const searchParams = useSearchParams();
-  const isBigScreen = searchParams.has("bigscreen");
-
-  const { data: enabledAt } = useScaffoldReadContract({
-    contractName: "NFTFlags",
-    functionName: "enabledAt",
-    watch: false,
-  });
-
-  const { data: enabled } = useScaffoldReadContract({
-    contractName: "NFTFlags",
-    functionName: "enabled",
-    watch: false,
-  });
-
-  const fetchTeams = async () => {
-    const TeamsQuery = gql`
-      query Teams {
-        teams(orderBy: "sortOrder", orderDirection: "desc", limit: 200) {
-          items {
-            id
-            name
-            size
-            points
-            challenges {
-              items {
-                id
-                challengeId
-                timestamp
-              }
-            }
-          }
-        }
-      }
-    `;
-    const data = await request<TeamsData>(process.env.NEXT_PUBLIC_PONDER_URL || "http://localhost:42069", TeamsQuery);
-    return data;
-  };
-
-  const { data: teamsData } = useQuery<TeamsData>({
-    queryKey: ["teams"],
-    queryFn: fetchTeams,
-    refetchInterval: 20000,
-  });
-
-  const joinGameBanner = isBigScreen && (
-    <div className="mb-12 p-4 border-2 border-green-500 bg-base-300/80 font-mono">
-      <div className="flex items-center gap-20">
-        <div className="flex items-center gap-2">
-          <div className="flex relative w-10 h-10">
-            <Image alt="CTF logo" className="cursor-pointer" fill src="/logo.svg" />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-dotGothic tracking-wide">BuidlGuidl CTF</span>
-            <span className="text-xs">Devcon SEA 2024</span>
-          </div>
-        </div>
-        <div className="flex-grow text-xl md:text-3xl font-bold tracking-wider text-center">
-          <span className="text-green-500">&gt;</span> JOIN THE GAME:{" "}
-          <span className="text-green-400 md:text-4xl">ctf.buidlguidl.com</span>
-        </div>
-        {enabled && enabledAt && (
-          <div className="flex items-center gap-2">
-            <div className="flex items-center gap-2 md:text-4xl">
-              <Countdown date={new Date(parseInt(enabledAt.toString()) * 1000 + 10800000)} daysInHours={true}>
-                <span className="text-red-500">Game Over</span>
-              </Countdown>
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-
-  if (!teamsData) {
+  if (!teamsDataArray.length) {
     return (
       <div className="flex items-center flex-col flex-grow pt-20">
-        {joinGameBanner}
-        <div className="loading loading-dots loading-md"></div>
-      </div>
-    );
-  }
-
-  if (!teamsData.teams.items.length) {
-    return (
-      <div className="flex items-center flex-col flex-grow pt-20">
-        {joinGameBanner}
         <h1 className="text-3xl font-dotGothic tracking-wide md:text-4xl">No Players Found</h1>
       </div>
     );
@@ -115,7 +26,6 @@ const Leaderboard: NextPage = () => {
   return (
     <div className="py-4 px-6 min-h-screen bg-[url(/dot-texture.svg)]">
       <div className="max-w-screen-2xl mx-auto">
-        {joinGameBanner}
         <h1 className="text-3xl font-dotGothic tracking-wide md:text-4xl">Leaderboard</h1>
         <div className="mt-8 flow-root">
           <div className="overflow-x-auto">
@@ -142,7 +52,7 @@ const Leaderboard: NextPage = () => {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-700 bg-base-100 md:text-xl">
-                    {teamsData.teams.items.map((team: Team, index: number) => (
+                    {teamsDataArray.map((team: Team, index: number) => (
                       <tr key={team.id}>
                         <td className={tdStyles}>{index + 1}</td>
                         <td className={tdStyles}>
@@ -165,19 +75,18 @@ const Leaderboard: NextPage = () => {
                         <td className={tdStyles}>{team.points}</td>
                         <td className={tdStyles}>
                           <div className="flex item-center gap-2">
-                            {team.challenges?.items &&
-                              team.challenges.items.map((challenge: TeamChallenge) => (
-                                <div
-                                  key={challenge.id}
-                                  className="relative tooltip"
-                                  data-tip={getFormattedDateTime(new Date(challenge.timestamp * 1000))}
-                                >
-                                  <FlagIcon className={clsx("w-8 h-8", getFlagColor(challenge.challengeId))} />
-                                  <p className="absolute top-[5px] left-[6px] m-0 p-0 leading-none text-xs text-white font-semibold [text-shadow:_1px_1px_1px_rgb(0_0_0_/_40%)]">
-                                    {challenge.challengeId}
-                                  </p>
-                                </div>
-                              ))}
+                            {team.challenges?.map((challenge: TeamChallenge) => (
+                              <div
+                                key={challenge.id}
+                                className="relative tooltip"
+                                data-tip={getFormattedDateTime(new Date(challenge.timestamp * 1000))}
+                              >
+                                <FlagIcon className={clsx("w-8 h-8", getFlagColor(challenge.challengeId))} />
+                                <p className="absolute top-[5px] left-[6px] m-0 p-0 leading-none text-xs text-white font-semibold [text-shadow:_1px_1px_1px_rgb(0_0_0_/_40%)]">
+                                  {challenge.challengeId}
+                                </p>
+                              </div>
+                            ))}
                           </div>
                         </td>
                       </tr>
