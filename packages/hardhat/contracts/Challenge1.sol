@@ -5,26 +5,19 @@ import "./INFTFlags.sol";
 
 contract Challenge1 {
     address public nftContract;
+    mapping(address => string) public builderNames;
 
-    struct TeamInfo {
-        string name;
-        uint8 teamSize;
-    }
-
-    mapping(address => TeamInfo) public teamInfo;
-
-    event TeamInit(address indexed team, string name, uint8 teamSize);
+    event BuilderInit(address indexed player, string name);
 
     constructor(address _nftContract) {
         nftContract = _nftContract;
     }
 
-    function registerTeam(string memory _name, uint8 _teamSize) public {
+    function registerMe(string memory _name) public {
         require(bytes(_name).length > 0, "Name cannot be empty");
-        require(_teamSize > 0 && _teamSize <= 4, "Team size must be between 1 and 4");
 
-        teamInfo[msg.sender] = TeamInfo(_name, _teamSize);
-        emit TeamInit(msg.sender, _name, _teamSize);
+        builderNames[msg.sender] = _name;
+        emit BuilderInit(msg.sender, _name);
         INFTFlags(nftContract).mint(msg.sender, 1);
     }
 }

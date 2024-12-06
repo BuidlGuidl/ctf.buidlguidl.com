@@ -1,24 +1,13 @@
-![BuidlGuidl CTF - Devcon](./packages/nextjs/public/readme-image.jpg?raw=true)
+![BuidlGuidl CTF](./packages/nextjs/public/readme-image.jpg?raw=true)
 
-**Welcome to the BuidlGuidl CTF - Devcon SEA 2024!**
+**Welcome to the BuidlGuidl CTF**
+(need to change this image)
 
 ⚡️ Live at https://ctf.buidlguidl.com
 
-**The goal of this CTF game is to mint as many NFT flags as possible from the `NFTFlags.sol` contract**. The allowed minters are each of the challenge contracts. Each flag gives you 100 points. We only track NFT minters, not NFT holders (i.e. transfers are not computed into the score).
+If you have your own stack already, go straight the CTF site and start playing.
 
-This repository was built with [Scaffold-ETH 2](https://github.com/scaffold-eth/scaffold-eth-2) and it contains **all the tools that you need to play (& win!) the CTF**. But you can also hack with your own stack.
-
----
-
-In this repo we provide a full set of tools to help you with the challenges, including:
-
-- A user-friendly frontend to interact with the contracts (`/debug` page)
-- Simplified workflow for [deploying new contracts](https://docs.scaffoldeth.io/deploying/deploy-smart-contracts)
-- A local blockchain and a block explorer for testing.
-- [Example scripts](./packages/scripts/src/example.ts) to interact with smart contracts via scripts.
-
-> [!NOTE]
-> If you prefer using Foundry for development, check out the [foundry branch](https://github.com/buidlguidl/ctf-devcon/tree/foundry).
+We have created a stack which contains all the tools that you need to play the CTF. Keep reading to learn how to set it up.
 
 ## Setting up the environment
 
@@ -32,15 +21,15 @@ You'll need to have the following tools installed in your machine:
 
 ### Setting up your local testing environment
 
-First, you'll need to clone this repository and install dependencies:
+First install the Scaffold-ETH 2 CTF extension with create-eth:
 
-```
-git clone https://github.com/buidlguidl/ctf-devcon.git
-cd ctf-devcon
-yarn install
+```bash
+npx create-eth@latest -e ctf-extension
 ```
 
-Now you will run the following commands in separate terminals:
+This will set up a new folder with all the tools you need to play the CTF.
+
+Go into the folder and run the following commands in separate terminals:
 
 1. Run a local blockchain:
 
@@ -77,7 +66,7 @@ Now your app on `http://localhost:3000` is running entirely locally. You can bre
 This is a [yarn](https://yarnpkg.com/features/workspaces) monorepo with different packages:
 
 ```
-ctf-devcon/
+ctf/
 └── packages/
     ├── hardhat/
     ├── nextjs/

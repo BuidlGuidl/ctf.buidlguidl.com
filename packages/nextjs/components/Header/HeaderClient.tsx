@@ -61,7 +61,7 @@ export const HeaderClient = ({ menuLinks }: { menuLinks: ReactNode }) => {
           </div>
           <div className="flex flex-col">
             <span className="font-dotGothic tracking-wide">BuidlGuidl CTF</span>
-            <span className="text-xs">Devcon SEA 2024</span>
+            <span className="text-xs">Test your skills!</span>
           </div>
         </Link>
         <ul className="hidden lg:flex lg:flex-nowrap menu menu-horizontal px-1 gap-2">{menuLinks}</ul>

@@ -49,8 +49,8 @@ contract NFTFlags is ERC721, IERC721Receiver, Ownable {
 
     function _mintToken(address _recipient, uint256 _challengeId) internal {
         require(enabled, "Minting is not enabled");
-        require(_challengeId == 1 || hasMinted[_recipient][1], "Team address is not registered");
-        require(!hasMinted[_recipient][_challengeId], "Team address has already minted for this challenge");
+        require(_challengeId == 1 || hasMinted[_recipient][1], "User address is not registered");
+        require(!hasMinted[_recipient][_challengeId], "User address has already minted for this challenge");
 
         tokenIdCounter++;
         uint256 newTokenId = tokenIdCounter;
@@ -74,7 +74,7 @@ contract NFTFlags is ERC721, IERC721Receiver, Ownable {
                         " flag (tokenId = ",
                         tokenId.toString(),
                         ")",
-                        '", "description": "A NFT flag for the BuidlGuidl CTF at Devcon SEA 2024", "image": "data:image/svg+xml;base64,',
+                        '", "description": "A NFT flag for the BuidlGuidl CTF", "image": "data:image/svg+xml;base64,',
                         Base64.encode(bytes(svg)),
                         '"}'
                     )
