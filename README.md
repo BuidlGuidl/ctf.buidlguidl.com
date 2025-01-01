@@ -18,13 +18,16 @@ You'll need to have the following tools installed in your machine:
 - [Node (>= v18.18)](https://nodejs.org/en/download/)
 - Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
 - [Git](https://git-scm.com/downloads)
+- [Foundryup](https://book.getfoundry.sh/getting-started/installation) (if foundry is selected)
+
+> **Note for Windows users**. Foundryup is not currently supported by Powershell or Cmd, and has issues with Git Bash. You will need to use [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) as your terminal.
 
 ### Setting up your local testing environment
 
 First install the Scaffold-ETH 2 CTF extension with create-eth:
 
 ```bash
-npx create-eth@latest -e ctf-extension
+npx create-eth@latest -e ctf
 ```
 
 This will set up a new folder with all the tools you need to play the CTF.
@@ -39,11 +42,31 @@ yarn chain
 
 2. Deploy the challenges contracts locally:
 
-```
-yarn deploy
-```
+  <details>
+  <summary>
+    hardhat
+  </summary>
 
-> Note: This command will update the `deployedContracts.ts` file (in the `scripts` and `nextjs` packages), which contains the deployed contracts addresses and ABIs.
+  ```
+  yarn deploy
+  ```
+
+  </details>
+
+
+  <details>
+  <summary>
+    foundry
+  </summary>
+
+  ```
+  yarn deploy --file DeployChallenges.s.sol
+  ```
+
+  </details>
+
+
+  > Note: This command will update the `deployedContracts.ts` file (in the `scripts` and `nextjs` packages), which contains the deployed contracts addresses and ABIs.
 
 3. Start Ponder (event indexer):
 
@@ -68,7 +91,7 @@ This is a [yarn](https://yarnpkg.com/features/workspaces) monorepo with differen
 ```
 ctf/
 └── packages/
-    ├── hardhat/
+    ├── {solidity-framework}/
     ├── nextjs/
     ├── scripts/
     └── ponder/
@@ -106,6 +129,46 @@ It uses hardhat-deploy to deploy the contracts.
    - Run `yarn deploy --tags solution2 --network optimism` to deploy your solution contract to Optimism.
 
 For more details on deployment, including configuring deployer accounts or the network you want to deploy to, see the [Scaffold-ETH 2 deployment docs](https://docs.scaffoldeth.io/deploying/deploy-smart-contracts).
+
+</details>
+
+### foundry
+
+Comes preconfigured with [Foundry](https://book.getfoundry.sh/) development environment and contains the smart contracts and deployment scripts for the CTF challenges.
+
+#### Key files in foundry
+
+- `contracts/`: The source directory where all your smart contracts should be. It already contains all the challenge contracts and the NFT Flag minter contract.
+- `script/`: This directory contains all your deployments scripts. When you run `yarn deploy` it defaults to `Deploy.s.sol`, but you can also deploy any other script from this directory (e.g., `yarn deploy --file DeploySolution2.s.sol`).
+
+<details>
+<summary>Example (How to deploy your solution contracts)</summary>
+
+1. Create the smart contract:
+
+   - Add your new contract file (e.g., `Challenge2Solution.sol`) in the `packages/foundry/contracts/` directory.
+
+2. Create a deployment script:
+
+   - Add a new file (or use the already created `DeploySolution2.s.sol` file as a starting point) in the `script/` directory.
+   - Write your deployment script as needed (you can use `DeployChallenges.s.sol` to guide you)
+
+3. Deploy your contract locally:
+
+   - Run `yarn deploy --file DeploySolution2.s.sol` to deploy your solution contract locally. `yarn deploy` by default runs `Deploy.s.sol` which is useful when deploying multiple solutions at once. Use the `--file` flag when you want to deploy a specific solution
+
+4. When tested and ready, deploy your contract to Optimism (ask us for some funds if you need!):
+
+   - > Note: You need a foundry keystore account to deploy. Either:
+
+     - Generate with random private key: Run `yarn generate` and update `ETH_KEYSTORE_ACCOUNT=scaffold-eth-custom` in `packages/foundry/.env`.
+     - Create one with existing private key: Run `yarn account:import`, enter your private key, and update `ETH_KEYSTORE_ACCOUNT=scaffold-eth-custom` in `packages/foundry/.env`.
+
+   - > TIP: You can check configured account balance with `yarn account`.
+
+   - Run `yarn deploy --file DeploySolution2.s.sol --network optimism` to deploy your solution contract to Optimism.
+
+   For more details on deployment, including configuring deployer accounts or the network you want to deploy to, see the [Scaffold-ETH 2 foundry deployment](https://github.com/scaffold-eth/scaffold-eth-2/tree/foundry?tab=readme-ov-file#deploying-to-live-networks).
 
 </details>
 
