@@ -68,15 +68,7 @@ yarn chain
 
   > Note: This command will update the `deployedContracts.ts` file (in the `scripts` and `nextjs` packages), which contains the deployed contracts addresses and ABIs.
 
-3. Start Ponder (event indexer):
-
-```
-yarn ponder:dev
-```
-
-> Note: This just runs the ponder indexer locally, which is used to keep track of all the events happening in the blockchain.
-
-4. Start the frontend (NextJS app):
+3. Start the frontend (NextJS app):
 
 ```
 yarn start
@@ -93,8 +85,7 @@ ctf/
 └── packages/
     ├── {solidity-framework}/
     ├── nextjs/
-    ├── scripts/
-    └── ponder/
+    └── scripts/
 ```
 
 ### hardhat
@@ -208,7 +199,3 @@ yarn tsx src/example.ts
 
 - You can generate a PK for the deployer account with `yarn generate` or fill the `.env` file with your own PK to run the transactions.
 - Check the `TARGET_CHAIN` variable in the example script to see how to deploy to the live network. (default is localhost)
-
-### Ponder
-
-No need to take a look here, since it's not part of the game. Just the indexer we use to keep track of all the contract events happening.
