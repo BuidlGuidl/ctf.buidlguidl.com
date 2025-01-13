@@ -6,9 +6,9 @@ import {
 } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { hardhat } from "viem/chains";
-import deployedContracts from "../contracts/deployedContracts";
-
 import * as dotenv from "dotenv";
+import { contractsData } from "../contracts/types";
+
 dotenv.config();
 
 // If you want to deploy to optimism:
@@ -16,9 +16,9 @@ dotenv.config();
 // 2. set TARGET_CHAIN = optimism;
 const TARGET_CHAIN = hardhat;
 
-// We use the private key of account generated via `yarn generate`, if not present we use default hardhat last account
+// We use the private key of account generated via `yarn generate`, if not present we use default hardhat/foundry 5th account
 const MY_WALLET_PK = (process.env.DEPLOYER_PRIVATE_KEY ??
-  "0xdf57089febbacf7ba0bc227dafbffa9fc08a93fdc68e1e42411a14efcf23656e") as `0x${string}`;
+  "0x8b3a350cf5c34c9194ca85829a2df0ec3153be0318b5e2d3348e872092edffba") as `0x${string}`;
 const myWalletAccount = privateKeyToAccount(MY_WALLET_PK);
 
 // We need wallet client to do write operations/send transactions
@@ -37,9 +37,9 @@ const publicClient = createPublicClient({
 // Viem contract instance helps you interact with deployed contract
 const challenge1Contract = getContract({
   // @ts-ignore will be defined after deployment of contract
-  address: deployedContracts[TARGET_CHAIN.id].Challenge1.address,
+  address: contractsData[TARGET_CHAIN.id].Challenge1.address,
   // @ts-ignore will be defined after deployment of contract
-  abi: deployedContracts[TARGET_CHAIN.id].Challenge1.abi,
+  abi: contractsData[TARGET_CHAIN.id].Challenge1.abi,
   // NOTE: Here walletClient is optional and only required for write operations
   client: { public: publicClient, wallet: walletClient },
 });
@@ -48,7 +48,7 @@ async function main() {
   // Writing to a contract
   const txHash = await challenge1Contract.write.registerMe(["Bob"]);
   console.log(
-    `📝 Called 'registerTeam' function with address ${myWalletAccount.address} and name 'Bob', txHash: ${txHash}`,
+    `📝 Called 'registerMe' function with address ${myWalletAccount.address} and name 'Bob', txHash: ${txHash}`,
   );
 
   // Reading from a contract

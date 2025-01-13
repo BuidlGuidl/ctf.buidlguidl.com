@@ -19,6 +19,10 @@ const generatedContractComment = `
  */`;
 
 function getDirectories(path) {
+  if (!existsSync(path)) {
+    return [];
+  }
+
   return readdirSync(path).filter(function (file) {
     return statSync(join(path, file)).isDirectory();
   });
@@ -254,7 +258,7 @@ function main() {
 
   writeFileSync(
     `${SCRIPTS_TARGET_DIR}deployedContracts.ts`,
-    format(fileTemplate("~~/utils/scaffold-eth/contract"), {
+    format(fileTemplate("./types"), {
       parser: "typescript",
     })
   );
