@@ -1,13 +1,12 @@
-![BuidlGuidl CTF](./packages/nextjs/public/readme-image.jpg?raw=true)
+![BuidlGuidl CTF](https://raw.githubusercontent.com/buidlguidl/ctf.buidlguidl.com/refs/heads/main/packages/nextjs/public/readme-image.jpg)
 
 **Welcome to the BuidlGuidl CTF**
-(need to change this image)
 
 ⚡️ Live at https://ctf.buidlguidl.com
 
 If you have your own stack already, go straight the CTF site and start playing.
 
-We have created a stack which contains all the tools that you need to play the CTF. Keep reading to learn how to set it up.
+We have created this stack which contains all the tools that you need to play the CTF. Keep reading to learn how to set it up.
 
 ## Setting up the environment
 
@@ -47,26 +46,24 @@ yarn chain
     hardhat
   </summary>
 
-  ```
-  yarn deploy
-  ```
+```
+yarn deploy
+```
 
   </details>
-
 
   <details>
   <summary>
     foundry
   </summary>
 
-  ```
-  yarn deploy --file DeployChallenges.s.sol
-  ```
+```
+yarn deploy --file DeployChallenges.s.sol
+```
 
   </details>
 
-
-  > Note: This command will update the `deployedContracts.ts` file (in the `scripts` and `nextjs` packages), which contains the deployed contracts addresses and ABIs.
+> Note: This command will update the `deployedContracts.ts` file (in the `scripts` and `nextjs` packages), which contains the deployed contracts addresses and ABIs.
 
 3. Start the frontend (NextJS app):
 
