@@ -25,6 +25,6 @@ contract DeploySolution2 is ScaffoldETHDeploy {
      *      - Export contract addresses & ABIs to nextjs & scripts packages
      */
     function run() external ScaffoldEthDeployerRunner {
-        // Challenge2Solution challenge2Solution = new Challenge2Solution(deployer);
+        // Challenge2Solution challenge2Solution = new Challenge2Solution();
     }
 }
