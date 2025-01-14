@@ -51,6 +51,9 @@ async function main() {
     `📝 Called 'registerMe' function with address ${myWalletAccount.address} and name 'Bob', txHash: ${txHash}`,
   );
 
+  // Waits for the Transaction to be included on a Block (one confirmation)
+  await publicClient.waitForTransactionReceipt({ hash: txHash });
+
   // Reading from a contract
   const builderInfo = await challenge1Contract.read.builderNames([
     myWalletAccount.address,
