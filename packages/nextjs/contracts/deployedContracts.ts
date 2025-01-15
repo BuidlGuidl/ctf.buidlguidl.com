@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 const deployedContracts = {
   10: {
     Challenge1: {
-      address: "0xa7B10E979c704ad5Fa20c45C221283fC3005dCD0",
+      address: "0xfa2Aad507B1Fa963A1fd6F8a491A7088Cd4538A5",
       abi: [
         {
           inputs: [
@@ -26,7 +26,7 @@ const deployedContracts = {
             {
               indexed: true,
               internalType: "address",
-              name: "team",
+              name: "player",
               type: "address",
             },
             {
@@ -35,15 +35,28 @@ const deployedContracts = {
               name: "name",
               type: "string",
             },
+          ],
+          name: "BuilderInit",
+          type: "event",
+        },
+        {
+          inputs: [
             {
-              indexed: false,
-              internalType: "uint8",
-              name: "teamSize",
-              type: "uint8",
+              internalType: "address",
+              name: "",
+              type: "address",
             },
           ],
-          name: "TeamInit",
-          type: "event",
+          name: "builderNames",
+          outputs: [
+            {
+              internalType: "string",
+              name: "",
+              type: "string",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
         },
         {
           inputs: [],
@@ -65,46 +78,17 @@ const deployedContracts = {
               name: "_name",
               type: "string",
             },
-            {
-              internalType: "uint8",
-              name: "_teamSize",
-              type: "uint8",
-            },
           ],
-          name: "registerTeam",
+          name: "registerMe",
           outputs: [],
           stateMutability: "nonpayable",
-          type: "function",
-        },
-        {
-          inputs: [
-            {
-              internalType: "address",
-              name: "",
-              type: "address",
-            },
-          ],
-          name: "teamInfo",
-          outputs: [
-            {
-              internalType: "string",
-              name: "name",
-              type: "string",
-            },
-            {
-              internalType: "uint8",
-              name: "teamSize",
-              type: "uint8",
-            },
-          ],
-          stateMutability: "view",
           type: "function",
         },
       ],
       inheritedFunctions: {},
     },
     Challenge11: {
-      address: "0x7ECA62F753aD6311243cC1879b25c2AEcf2A3B27",
+      address: "0x67392ea0A56075239988B8E1E96663DAC167eF54",
       abi: [
         {
           inputs: [
@@ -141,7 +125,7 @@ const deployedContracts = {
       inheritedFunctions: {},
     },
     Challenge12: {
-      address: "0x0660E2aE0C4E5f78d5859bd0F522CD22da5e9132",
+      address: "0x8c7A3c2c44aB16f693d1731b10C271C7d2967769",
       abi: [
         {
           inputs: [
@@ -242,7 +226,7 @@ const deployedContracts = {
       inheritedFunctions: {},
     },
     Challenge2: {
-      address: "0xf5B83881611cF10d1aB6959Adb938E4bF623bEF3",
+      address: "0x0b997E0a306c47EEc755Df75fad7F41977C5582d",
       abi: [
         {
           inputs: [
@@ -279,7 +263,7 @@ const deployedContracts = {
       inheritedFunctions: {},
     },
     Challenge3: {
-      address: "0x3e0a359430597B8FfdC58D0454c40be6d58F2953",
+      address: "0x03bF70f50fcF9420f27e31B47805bbd8f2f52571",
       abi: [
         {
           inputs: [
@@ -316,7 +300,7 @@ const deployedContracts = {
       inheritedFunctions: {},
     },
     Challenge4: {
-      address: "0x225192187ecCd772e1c09CDb222aea724952B090",
+      address: "0x9c4A48Dd70a3219877a252E9a0d45Fc1Db808a1D",
       abi: [
         {
           inputs: [
@@ -540,7 +524,7 @@ const deployedContracts = {
       },
     },
     Challenge5: {
-      address: "0x3F7b6F224c54010F431267650073660a5a60b688",
+      address: "0xB76AdFe9a791367A8fCBC2FDa44cB1a2c39D8F59",
       abi: [
         {
           inputs: [
@@ -623,7 +607,7 @@ const deployedContracts = {
       inheritedFunctions: {},
     },
     Challenge6: {
-      address: "0xd14692e239349F0FaFCA47191d202fE8e10704c7",
+      address: "0x75961D2da1DEeBaEC24cD0E180187E6D55F55840",
       abi: [
         {
           inputs: [
@@ -679,7 +663,7 @@ const deployedContracts = {
       inheritedFunctions: {},
     },
     Challenge7: {
-      address: "0xC63096b2Ff13c2170950ce033B2fa393f28806bA",
+      address: "0xC962D4f4E772415475AA46Eed06cb1F2D4010c0A",
       abi: [
         {
           inputs: [
@@ -743,7 +727,7 @@ const deployedContracts = {
       inheritedFunctions: {},
     },
     Challenge7Delegate: {
-      address: "0xe2Fd89413Bc582C66C4CFc57B3Cb51290059e89D",
+      address: "0x0189C48307594A4A542E4851789e9585198d7420",
       abi: [
         {
           inputs: [
@@ -793,12 +777,12 @@ const deployedContracts = {
       inheritedFunctions: {},
     },
     Challenge8: {
-      address: "0x68927fE4bf2076Ae4DEbdAb101363F1CCF22AD50",
+      address: "0x663145aA2918282A4F96af66320A5046C7009573",
       abi: [],
       inheritedFunctions: {},
     },
     Challenge9: {
-      address: "0x7B725DF0E96A0490b0541ebB70257c3a170122bB",
+      address: "0x1Fd913F2250ae5A4d9F8881ADf3153C6e5E2cBb1",
       abi: [
         {
           inputs: [
@@ -846,7 +830,7 @@ const deployedContracts = {
       inheritedFunctions: {},
     },
     NFTFlags: {
-      address: "0x201750186f1b7e434373475713d9bcba0dF75eD5",
+      address: "0xc1Ebd7a78FE7c075035c516B916A7FB3f33c26cE",
       abi: [
         {
           inputs: [
