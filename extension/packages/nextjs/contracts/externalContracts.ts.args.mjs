@@ -1,17 +1,4 @@
-import { GenericContractsDeclaration } from "./types";
-
-/**
- * @example
- * const externalContracts = {
- *   1: {
- *     DAI: {
- *       address: "0x...",
- *       abi: [...],
- *     },
- *   },
- * } as const;
- */
-const externalContracts = {
+export const externalContracts = {
   10: {
     Challenge1: {
       address: "0xfa2Aad507B1Fa963A1fd6F8a491A7088Cd4538A5",
@@ -1655,6 +1642,4 @@ const externalContracts = {
       },
     },
   },
-} as const;
-
-export default externalContracts satisfies GenericContractsDeclaration;
+}
