@@ -3167,6 +3167,7 @@ __metadata:
     next: ~14.0.4
     next-mdx-remote: ^5.0.0
     next-nprogress-bar: ^2.3.13
+    next-plausible: ^3.12.4
     next-themes: ~0.2.1
     postcss: ~8.4.16
     prettier: ~2.8.4
@@ -13128,6 +13129,17 @@ __metadata:
   dependencies:
     nprogress: ^0.2.0
   checksum: be217d4a28a4b8681f647b1baebae040949bb38824ae93ca83f11f037bc3e34c3ddae18a123878ebfda2eb6b7e42d9ae25468b23c2a80980aec6564101921d4d
+  languageName: node
+  linkType: hard
+
+"next-plausible@npm:^3.12.4":
+  version: 3.12.4
+  resolution: "next-plausible@npm:3.12.4"
+  peerDependencies:
+    next: "^11.1.0 || ^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0 "
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: f8ae32eae3b8f4f45e1bdf1ab1aaf6be9ff184468c90253f4920a0cca01b426610c7ac85d082970e614f6f05b3679b9e68aae13ee5081a3d5bd003baaf11005a
   languageName: node
   linkType: hard
 

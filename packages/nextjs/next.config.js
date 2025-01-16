@@ -1,7 +1,9 @@
 // @ts-check
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { withPlausibleProxy } = require("next-plausible");
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig = withPlausibleProxy()({
   reactStrictMode: true,
   typescript: {
     ignoreBuildErrors: process.env.NEXT_PUBLIC_IGNORE_BUILD_ERROR === "true",
@@ -14,6 +16,6 @@ const nextConfig = {
     config.externals.push("pino-pretty", "lokijs", "encoding");
     return config;
   },
-};
+});
 
 module.exports = nextConfig;
