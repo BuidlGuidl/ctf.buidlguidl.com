@@ -8,7 +8,7 @@ import { useFetchUserData } from "~~/hooks/useFetchUserData";
 import { getFormattedDateTime } from "~~/utils/date";
 
 export const UserData = ({ address, challenges }: { address: string; challenges: string[] }) => {
-  const { userData } = useFetchUserData();
+  const { userData } = useFetchUserData({ address });
 
   if (!userData) {
     return (

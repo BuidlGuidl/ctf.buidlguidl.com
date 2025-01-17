@@ -17,7 +17,7 @@ export function HeroInvaders() {
   const [rowThreeMove, setRowThreeMove] = useState("translate-x-0");
 
   const { address: connectedAddress } = useAccount();
-  const { hasCompletedChallenge1 } = useFetchUserData();
+  const { hasCompletedChallenge1 } = useFetchUserData({ address: connectedAddress });
 
   useEffect(() => {
     const interval = setInterval(() => {

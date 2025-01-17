@@ -2,10 +2,12 @@
 
 import { CheckIcon } from "./CheckIcon";
 import clsx from "clsx";
+import { useAccount } from "wagmi";
 import { useFetchUserData } from "~~/hooks/useFetchUserData";
 
 export function ChallengeHeading({ challengeId }: { challengeId: number }) {
-  const { userData } = useFetchUserData();
+  const { address } = useAccount();
+  const { userData } = useFetchUserData({ address });
 
   const isCaptured = userData?.challenges?.items.some(challenge => Number(challenge.challengeId) === challengeId);
 

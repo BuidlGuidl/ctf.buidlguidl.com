@@ -2,7 +2,6 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { gql, request } from "graphql-request";
-import { useAccount } from "wagmi";
 import { UsersData } from "~~/types/utils";
 
 const fetchUser = async (userId: string) => {
@@ -33,9 +32,7 @@ const fetchUser = async (userId: string) => {
   return data;
 };
 
-export const useFetchUserData = () => {
-  const { address } = useAccount();
-
+export const useFetchUserData = ({ address }: { address?: string }) => {
   const { data, isLoading, isError } = useQuery<UsersData>({
     queryKey: ["user", address],
     queryFn: () => fetchUser(address || ""),

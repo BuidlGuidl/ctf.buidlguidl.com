@@ -26,7 +26,7 @@ export const HeaderClient = ({ menuLinks }: { menuLinks: ReactNode }) => {
 
   const { address: connectedAddress } = useAccount();
 
-  const { userData } = useFetchUserData();
+  const { userData } = useFetchUserData({ address: connectedAddress });
 
   const flagsCaptured = userData?.challenges?.items.length || 0;
 
