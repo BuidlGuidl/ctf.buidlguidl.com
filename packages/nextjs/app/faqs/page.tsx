@@ -49,8 +49,8 @@ const faqs = [
 ];
 
 export const metadata = getMetadata({
-  title: "FAQ",
-  description: "Check out the FAQ for the BuidlGuidl CTF",
+  title: "FAQs",
+  description: "Check out the FAQs for the BuidlGuidl CTF",
 });
 
 export default function FaqsPage() {
