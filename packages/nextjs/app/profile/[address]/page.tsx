@@ -1,11 +1,21 @@
 import Image from "next/image";
 import { UserData } from "~~/components/UserData";
 import { getChallenges } from "~~/utils/getChallenges";
+import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
 interface ProfilePageProps {
   params: {
     address: string;
   };
+}
+
+export async function generateMetadata({ params }: ProfilePageProps) {
+  const { address } = params;
+  const displayAddress = address?.slice(0, 4) + "..." + address?.slice(-4);
+  return getMetadata({
+    title: `${displayAddress} Profile`,
+    description: `Check out ${address} progress in the BuidlGuidl CTF`,
+  });
 }
 
 export default async function ProfilePage({ params }: ProfilePageProps) {

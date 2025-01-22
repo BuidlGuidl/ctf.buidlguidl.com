@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
 // ToDo:
 // - Review the existing FAQs
@@ -50,6 +51,11 @@ const faqs = [
     link: "/stats",
   },
 ];
+
+export const metadata = getMetadata({
+  title: "FAQ",
+  description: "Check out the FAQ for the BuidlGuidl CTF",
+});
 
 export default function FaqsPage() {
   return (
