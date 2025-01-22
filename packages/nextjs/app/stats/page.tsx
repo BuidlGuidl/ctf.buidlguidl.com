@@ -2,15 +2,9 @@
 
 import { useQuery } from "@tanstack/react-query";
 import type { NextPage } from "next";
-import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
 const thStyles = "whitespace-nowrap px-3 py-3.5";
 const tdStyles = "whitespace-nowrap px-3 py-4";
-
-export const metadata = getMetadata({
-  title: "Stats",
-  description: "Check out the stats for the BuidlGuidl CTF",
-});
 
 const Stats: NextPage = () => {
   const {
