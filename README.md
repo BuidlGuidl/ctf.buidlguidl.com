@@ -23,10 +23,10 @@ You'll need to have the following tools installed in your machine:
 
 ### Setting up your local testing environment
 
-First install the Scaffold-ETH 2 CTF extension with create-eth:
+First, install the Scaffold-ETH 2 CTF extension with create-eth:
 
 ```bash
-npx create-eth@latest -e ctf
+npx create-eth@latest -e buidlguidl/ctf.buidlguidl.com:extension
 ```
 
 This will set up a new folder with all the tools you need to play the CTF.
