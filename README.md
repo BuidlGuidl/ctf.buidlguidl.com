@@ -10,7 +10,7 @@ This repository was built with [Scaffold-ETH 2](https://github.com/scaffold-eth/
 
 ---
 
-In this repo we provide a full set of tools to help you with the challenges, including:
+In this repository, we provide a full set of tools to help you with the challenges, including:
 
 - A user-friendly frontend to interact with the contracts (`/debug` page)
 - Simplified workflow for [deploying new contracts](https://docs.scaffoldeth.io/deploying/deploy-smart-contracts)
@@ -24,7 +24,7 @@ In this repo we provide a full set of tools to help you with the challenges, inc
 
 ### Requirements
 
-You'll need to have the following tools installed in your machine:
+You'll need to have the following tools installed on your machine:
 
 - [Node (>= v18.18)](https://nodejs.org/en/download/)
 - Yarn ([v1](https://classic.yarnpkg.com/en/docs/install/) or [v2+](https://yarnpkg.com/getting-started/install))
