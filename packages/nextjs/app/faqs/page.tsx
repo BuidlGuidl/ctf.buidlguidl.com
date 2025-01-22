@@ -1,9 +1,5 @@
-import Link from "next/link";
 import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
-// ToDo:
-// - Review the existing FAQs
-// - Talk about the deployed network (Optimism?) / real ETH
 const faqs = [
   {
     id: 1,
@@ -17,7 +13,7 @@ const faqs = [
     question: "How should I complete the challenges?",
     answer:
       "Advanced players may use any means necessary to progress through the challenges. We recommend that beginners use this Scaffold ETH extension that contains everything you need to play the game and test your solutions locally:",
-    link: "https://github.com/buidlguidl/ctf-devcon",
+    link: "https://github.com/buidlguidl/ctf.buidlguidl.com/tree/extension",
   },
   {
     id: 3,
@@ -29,7 +25,7 @@ const faqs = [
     id: 4,
     question: "What chain/network is this game on?",
     answer:
-      "The challenges are deployed on Optimism mainnet. You will need to use real ETH on Optimism in order to complete the challenges.",
+      "The challenges are deployed on Optimism mainnet. You will need to use real ETH on Optimism in order to complete the challenges. But you can always play locally!",
   },
   {
     id: 5,
@@ -71,9 +67,9 @@ export default function FaqsPage() {
               <dd className="mt-2 text-base/7 text-gray-200">
                 {faq.answer}{" "}
                 {faq.link && (
-                  <Link className="text-primary link" href={faq.link}>
+                  <a className="text-primary link" href={faq.link} target="_blank">
                     {faq.link}
-                  </Link>
+                  </a>
                 )}
               </dd>
             </div>
