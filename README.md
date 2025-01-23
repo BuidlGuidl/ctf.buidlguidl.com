@@ -4,9 +4,9 @@
 
 ⚡️ Live at https://ctf.buidlguidl.com
 
-If you have your own stack already, go straight the CTF site and start playing.
+If you have your own stack already, go straight to the CTF site and start playing.
 
-We have created this stack which contains all the tools that you need to play the CTF. Keep reading to learn how to set it up.
+We have created this stack, which contains all the tools you need to play the CTF. Keep reading to learn how to set it up.
 
 ## Setting up the environment
 
@@ -29,7 +29,7 @@ First, install the Scaffold-ETH 2 CTF extension with create-eth:
 npx create-eth@latest -e buidlguidl/ctf.buidlguidl.com:extension
 ```
 
-This will set up a new folder with all the tools you need to play the CTF.
+This will create a new folder with all the tools you need to play the CTF locally. Afterward, you’ll be able to deploy the solutions to Optimism and capture the flags in the [live game](https://ctf.buidlguidl.com).
 
 Go into the folder and run the following commands in separate terminals:
 
@@ -162,11 +162,9 @@ Comes preconfigured with [Foundry](https://book.getfoundry.sh/) development envi
 
 ### NextJS
 
-This is the frontend of the game. Main pages:
+This is the frontend to track your local progress in the CTF game and the UI to interact with the deployed contracts. Main pages:
 
-- _"Profile"_ shows the team profile and the flags they have minted.
-- _"Challenges"_ shows the Challenges descriptions, Goals and Hints.
-- _"Leaderboard"_ shows the current top teams in the game.
+- _"Homepage"_ shows your progress, with the flags you have minted and the pending flags.
 - _"Debug Contracts"_ lists all the deployed contracts and allows you to interact with them.
 
 Key folders and files:
