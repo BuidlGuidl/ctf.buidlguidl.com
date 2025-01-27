@@ -5,18 +5,17 @@ import { useScaffoldEventHistory } from "~~/hooks/scaffold-eth";
 
 export const FlagTracker = () => {
   const { address: connectedAddress } = useAccount();
-  const { data: flagEvents } = useScaffoldEventHistory({
+  const { data: userFlags } = useScaffoldEventHistory({
     contractName: "NFTFlags",
     eventName: "FlagMinted",
     fromBlock: 0n,
     watch: true,
+    filters: {
+      minter: connectedAddress,
+    },
   });
 
-  // Filter flags for the connected user
-  const userMintedFlags =
-    flagEvents?.filter(event => event.args.minter?.toLowerCase() === connectedAddress?.toLowerCase()) || [];
-
-  const userMintedChallengeIds = new Set(userMintedFlags.map(event => event.args.challengeId?.toString()));
+  const userMintedChallengeIds = new Set(userFlags?.map(event => event.args.challengeId?.toString()) || []);
 
   const allChallengeIds = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
 
@@ -31,8 +30,8 @@ export const FlagTracker = () => {
         <div>
           <h3 className="text-xl font-semibold mb-3">Your Captured Flags</h3>
           <div className="space-y-2">
-            {userMintedFlags.length > 0 ? (
-              userMintedFlags.map(event => (
+            {userFlags && userFlags.length > 0 ? (
+              userFlags.map(event => (
                 <div
                   key={event.args.tokenId?.toString()}
                   className="flex items-center space-x-2 bg-success/20 p-2 rounded"
