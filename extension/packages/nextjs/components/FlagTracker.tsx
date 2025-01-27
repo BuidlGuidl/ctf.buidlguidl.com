@@ -1,14 +1,17 @@
 "use client";
 
+import { hardhat } from "viem/chains";
 import { useAccount } from "wagmi";
 import { useScaffoldEventHistory } from "~~/hooks/scaffold-eth";
+import scaffoldConfig from "~~/scaffold.config";
 
 export const FlagTracker = () => {
   const { address: connectedAddress } = useAccount();
   const { data: userFlags } = useScaffoldEventHistory({
     contractName: "NFTFlags",
     eventName: "FlagMinted",
-    fromBlock: 0n,
+    // Set the block number to the first block of the network where the contract was deployed
+    fromBlock: (scaffoldConfig.targetNetworks[0].id as number) === hardhat.id ? 0n : 130627582n,
     watch: true,
     filters: {
       minter: connectedAddress,
