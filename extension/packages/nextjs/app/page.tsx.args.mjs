@@ -6,8 +6,16 @@ export const description = `
               This stack contains all the tools you need to play the CTF locally, from contract debugging to scripting
               and transaction tracking.
             </p>
+            <p className="text-base-content">
+              Once you're ready to capture real flags, you'll need to deploy your solutions to Optimism and track your
+              progress at{" "}
+              <a href="https://ctf.buidlguidl.com" target="_blank" rel="noopener noreferrer" className="link">
+                ctf.buidlguidl.com
+              </a>
+              .
+            </p>
             <p className="text-base text-base-content">
-              For detailed setup instructions and documentation, check out the{" "}
+              For detailed setup instructions and deployment documentation, check out the{" "}
               <a
                 href="https://github.com/BuidlGuidl/ctf.buidlguidl.com/tree/extension"
                 target="_blank"
@@ -34,6 +42,9 @@ export const description = `
                   2. Each challenge requires you to find a way to mint a flag NFT by solving smart contract puzzles
                 </p>
                 <p className="text-base">3. Track your progress below - there are 12 flags to capture!</p>
+                <p className="text-base">
+                  4. Apply your solutions to the live challenges on Optimism to capture real flags
+                </p>
               </div>
             </div>
             <FlagTracker />
