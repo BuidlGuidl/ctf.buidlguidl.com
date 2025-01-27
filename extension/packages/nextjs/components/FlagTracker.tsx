@@ -17,7 +17,7 @@ export const FlagTracker = () => {
 
   const userMintedChallengeIds = new Set(userFlags?.map(event => event.args.challengeId?.toString()) || []);
 
-  const allChallengeIds = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+  const allChallengeIds = Array.from({ length: 12 }, (_, i) => (i + 1).toString());
 
   const remainingFlags = allChallengeIds.filter(id => !userMintedChallengeIds.has(id));
 
