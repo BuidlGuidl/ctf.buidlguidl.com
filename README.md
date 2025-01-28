@@ -4,9 +4,15 @@
 
 ⚡️ Live at https://ctf.buidlguidl.com
 
-If you have your own stack already, go straight the CTF site and start playing.
+If you have your own stack already, go straight to the CTF site and start playing.
 
-We have created this stack which contains all the tools that you need to play the CTF. Keep reading to learn how to set it up.
+We have created this stack, which contains all the tools you need to play the CTF.
+
+Once you have solved a challenge locally, you can deploy your solution to Optimism, and then interact with the live contracts from the frontend by [switching the network to Optimism.](#nextjs) If you are using a script, make sure you are pointing it to the Optimism RPC.
+
+> Live challenges addresses and ABIs are already stored in your `externalContracts.ts` file.
+
+Keep reading to learn how to set everything up.
 
 ## Setting up the environment
 
@@ -29,7 +35,7 @@ First, install the Scaffold-ETH 2 CTF extension with create-eth:
 npx create-eth@latest -e buidlguidl/ctf.buidlguidl.com:extension
 ```
 
-This will set up a new folder with all the tools you need to play the CTF.
+This will create a new folder with all the tools you need to play the CTF locally. Afterward, you’ll be able to deploy the solutions to Optimism and capture the flags in the [live game](https://ctf.buidlguidl.com).
 
 Go into the folder and run the following commands in separate terminals:
 
@@ -162,11 +168,9 @@ Comes preconfigured with [Foundry](https://book.getfoundry.sh/) development envi
 
 ### NextJS
 
-This is the frontend of the game. Main pages:
+This is the frontend to track your local progress in the CTF game and the UI to interact with the deployed contracts. Main pages:
 
-- _"Profile"_ shows the team profile and the flags they have minted.
-- _"Challenges"_ shows the Challenges descriptions, Goals and Hints.
-- _"Leaderboard"_ shows the current top teams in the game.
+- _"Homepage"_ shows your progress, with the flags you have minted and the pending flags.
 - _"Debug Contracts"_ lists all the deployed contracts and allows you to interact with them.
 
 Key folders and files:
@@ -174,7 +178,7 @@ Key folders and files:
 - `app/`: Contains the Next.js pages and components (uses [app router](https://nextjs.org/docs/app)).
 - `contracts/`: Contains deployed contracts ABIs and addresses.
 - `package.json`: Dependencies and scripts for the Next.js app.
-- `scaffold.config.ts`: Configuration file, you can check the different settings in our [docs](https://docs.scaffoldeth.io/deploying/deploy-nextjs-app#scaffold-app-configuration)
+- `scaffold.config.ts`: Configuration file (you can switch between local and Optimism networks by changing `targetNetwork`). For extra info check our [docs](https://docs.scaffoldeth.io/deploying/deploy-nextjs-app#scaffold-app-configuration).
 
 ### scripts
 
