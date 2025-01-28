@@ -8,7 +8,13 @@ export const extraContents = `![BuidlGuidl CTF](https://raw.githubusercontent.co
 
 If you have your own stack already, go straight to the CTF site and start playing.
 
-We have created this stack, which contains all the tools you need to play the CTF. Keep reading to learn how to set it up.
+We have created this stack, which contains all the tools you need to play the CTF.
+
+Once you have solved a challenge locally, you can deploy your solution to Optimism, and then interact with the live contracts from the frontend by [switching the network to Optimism.](#nextjs)
+
+> Live challenges addresses and ABIs are already stored in your \`externalContracts.ts\` file.
+
+Keep reading to learn how to set it up.
 
 ## Setting up the environment
 
@@ -174,7 +180,7 @@ Key folders and files:
 - \`app/\`: Contains the Next.js pages and components (uses [app router](https://nextjs.org/docs/app)).
 - \`contracts/\`: Contains deployed contracts ABIs and addresses.
 - \`package.json\`: Dependencies and scripts for the Next.js app.
-- \`scaffold.config.ts\`: Configuration file, you can check the different settings in our [docs](https://docs.scaffoldeth.io/deploying/deploy-nextjs-app#scaffold-app-configuration)
+- \`scaffold.config.ts\`: Configuration file (you can switch between local and Optimism networks by changing \`targetNetwork\`). For extra info check our [docs](https://docs.scaffoldeth.io/deploying/deploy-nextjs-app#scaffold-app-configuration).
 
 ### scripts
 
