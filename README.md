@@ -8,7 +8,7 @@ If you have your own stack already, go straight to the CTF site and start playin
 
 We have created this stack, which contains all the tools you need to play the CTF.
 
-Once you have solved a challenge locally, you can deploy your solution to Optimism, and then interact with the live contracts from the frontend by [switching the network to Optimism.](#nextjs)
+Once you have solved a challenge locally, you can deploy your solution to Optimism, and then interact with the live contracts from the frontend by [switching the network to Optimism.](#nextjs) If you are using a script, make sure you are pointing it to the Optimism RPC.
 
 > Live challenges addresses and ABIs are already stored in your `externalContracts.ts` file.
 
