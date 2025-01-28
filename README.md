@@ -66,7 +66,11 @@ yarn ponder:dev
 yarn start
 ```
 
-Visit the CTF local website on: `http://localhost:3000`.
+Visit the CTF local website at: `http://localhost:3000`. Remember to switch to `hardhat` on `scaffold.config.ts`.
+
+
+> [!NOTE]
+> You can also test with the live data pointing to the Ponder live URL (update `NEXT_PUBLIC_PONDER_URL` env var)
 
 ## Documentation
 
