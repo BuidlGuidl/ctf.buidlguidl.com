@@ -3,8 +3,8 @@
 import { useQuery } from "@tanstack/react-query";
 import type { NextPage } from "next";
 
-const thStyles = "whitespace-nowrap px-3 py-3.5";
-const tdStyles = "whitespace-nowrap px-3 py-4";
+const thStyles = "whitespace-nowrap px-3 py-3.5 text-center";
+const tdStyles = "whitespace-nowrap px-3 py-4 text-center";
 
 type ChallengeStat = {
   challenge: number;
@@ -71,21 +71,21 @@ const Stats: NextPage = () => {
             </dl>
             <div className="mt-8 overflow-hidden bg-base-100 border-2 border-t-4 border-l-4 border-green-700 border-t-green-600 border-l-green-500">
               <table className="w-full divide-y divide-green-600">
-                <thead className="bg-green-600/30 font-dotGothic tracking-wide text-left text-gray-50 md:text-xl">
+                <thead className="bg-green-600/30 font-dotGothic tracking-wide text-center text-gray-50 md:text-xl">
                   <tr>
-                    <th scope="col" className={thStyles}>
+                    <th scope="col" className={`${thStyles} w-1/2`}>
                       Flag
                     </th>
-                    <th scope="col" className={thStyles}>
+                    <th scope="col" className={`${thStyles} w-1/2`}>
                       Total Minted
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-700 bg-base-100 md:text-xl">
+                <tbody className="divide-y divide-x divide-gray-700 bg-base-100 md:text-xl">
                   {stats.challenges.stats
                     .sort((a: ChallengeStat, b: ChallengeStat) => a.challenge - b.challenge)
                     .map((stat: ChallengeStat) => (
-                      <tr key={stat.challenge}>
+                      <tr key={stat.challenge} className="divide-x divide-gray-700">
                         <td className={tdStyles}>#{stat.challenge}</td>
                         <td className={tdStyles}>{stat.count}</td>
                       </tr>
@@ -111,21 +111,21 @@ const Stats: NextPage = () => {
             </dl>
             <div className="mt-8 overflow-hidden bg-base-100 border-2 border-t-4 border-l-4 border-green-700 border-t-green-600 border-l-green-500">
               <table className="w-full divide-y divide-green-600">
-                <thead className="bg-green-600/30 font-dotGothic tracking-wide text-left text-gray-50 md:text-xl">
+                <thead className="bg-green-600/30 font-dotGothic tracking-wide text-center text-gray-50 md:text-xl">
                   <tr>
-                    <th scope="col" className={thStyles}>
+                    <th scope="col" className={`${thStyles} w-1/2`}>
                       Flags captured
                     </th>
-                    <th scope="col" className={thStyles}>
+                    <th scope="col" className={`${thStyles} w-1/2`}>
                       Users
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-700 bg-base-100 md:text-xl">
+                <tbody className="divide-y divide-x divide-gray-700 bg-base-100 md:text-xl">
                   {stats.users.stats
                     .sort((a: UserStat, b: UserStat) => a.challengesCount - b.challengesCount)
                     .map((stat: UserStat) => (
-                      <tr key={stat.challengesCount}>
+                      <tr key={stat.challengesCount} className="divide-x divide-gray-700">
                         <td className={tdStyles}>{stat.challengesCount}</td>
                         <td className={tdStyles}>{stat.count}</td>
                       </tr>
