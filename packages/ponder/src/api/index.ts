@@ -8,7 +8,7 @@ ponder.get("/stats", async (c) => {
     const usersCount = await c.db.select({ value: count() }).from(c.tables.User);
     const challengesCount = await c.db.select({ value: count() }).from(c.tables.Challenge);
 
-    const lastMonth = (Date.now() - (30 * 24 * 60 * 60 * 1000)) / 1000;
+    const lastMonth = Math.floor(Date.now() / 1000) - (30 * 24 * 60 * 60);
 
     const usersCountLastMonth = await c.db.select({ value: count() }).from(c.tables.User).where(gte(c.tables.User.updated, lastMonth));
     const challengesCountLastMonth = await c.db.select({ value: count() }).from(c.tables.Challenge).where(gte(c.tables.Challenge.timestamp, lastMonth));

@@ -11,6 +11,11 @@ import { FlagIcon } from "~~/components/FlagIcon";
 import { getFlagColor } from "~~/utils/flagColor";
 import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
+// Custom components for MDX
+const components = {
+  a: (props: any) => <a {...props} target="_blank" rel="noopener noreferrer" />,
+};
+
 interface ChallengePageProps {
   params: {
     number: string;
@@ -64,7 +69,7 @@ export default async function ChallengePage({ params }: ChallengePageProps) {
         </div>
         <div className="px-6 py-8">
           <div className="prose max-w-none text-gray-50 prose-headings:font-dotGothic prose-headings:tracking-wide prose-h1:text-3xl">
-            <MDXRemote source={content} />
+            <MDXRemote source={content} components={components} />
           </div>
 
           <ChallengeContractAddress challengeNumber={challengeNumber} />
