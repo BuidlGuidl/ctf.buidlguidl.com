@@ -17,14 +17,9 @@ export const Footer = () => {
         <ul className="menu menu-horizontal w-full">
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-2 text-sm w-full">
             <div className="text-center">
-              <a
-                href="https://github.com/buidlguidl/ctf.buidlguidl.com"
-                target="_blank"
-                rel="noreferrer"
-                className="link"
-              >
-                Fork me
-              </a>
+              <Link href="/faqs" className="link">
+                FAQs
+              </Link>
             </div>
             <span className="hidden sm:inline">·</span>
             <div className="flex justify-center items-center gap-2">
@@ -43,9 +38,14 @@ export const Footer = () => {
             </div>
             <span className="hidden sm:inline">·</span>
             <div className="text-center">
-              <Link href="/faqs" className="link">
-                FAQs
-              </Link>
+              <a
+                href="https://github.com/buidlguidl/ctf.buidlguidl.com"
+                target="_blank"
+                rel="noreferrer"
+                className="link"
+              >
+                Fork me
+              </a>
             </div>
           </div>
         </ul>
