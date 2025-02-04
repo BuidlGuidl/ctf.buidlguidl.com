@@ -67,7 +67,7 @@ export default function FaqsPage() {
               <dd className="mt-2 text-base/7 text-gray-200">
                 {faq.answer}{" "}
                 {faq.link && (
-                  <a className="text-primary link" href={faq.link} target="_blank">
+                  <a className="text-primary link break-all lg:break-normal" href={faq.link} target="_blank">
                     {faq.link}
                   </a>
                 )}
