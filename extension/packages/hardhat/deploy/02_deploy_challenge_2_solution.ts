@@ -9,7 +9,7 @@ import { DeployFunction } from "hardhat-deploy/types";
 const deployChallengeSolution: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   // This is the deployer account:
   // - localhost: hardhat account 0
-  // - live network: PK in .env file (use `yarn generate` to generate one or fill the .env file with your own PK)
+  // - live network: encrypted PK in .env file (use `yarn generate` to generate one or `yarn account:import` to import your own PK)
   //
   //   const { deployer } = await hre.getNamedAccounts();
   //   const { deploy } = hre.deployments;

@@ -18,7 +18,7 @@ export const FlagTracker = () => {
     },
   });
 
-  const userMintedChallengeIds = new Set(userFlags?.map(event => event.args.challengeId?.toString()) || []);
+  const userMintedChallengeIds = new Set(userFlags?.map(event => event?.args?.challengeId?.toString()) || []);
 
   const allChallengeIds = Array.from({ length: 12 }, (_, i) => (i + 1).toString());
 
@@ -36,12 +36,12 @@ export const FlagTracker = () => {
             {userFlags && userFlags.length > 0 ? (
               userFlags.map(event => (
                 <div
-                  key={event.args.tokenId?.toString()}
+                  key={event?.args?.tokenId?.toString()}
                   className="flex items-center space-x-2 bg-success/20 p-2 rounded"
                 >
                   <span className="text-success">✓</span>
                   <span>
-                    Flag #{event.args.challengeId?.toString()} (Token ID: {event.args.tokenId?.toString()})
+                    Flag #{event?.args?.challengeId?.toString()} (Token ID: {event?.args?.tokenId?.toString()})
                   </span>
                 </div>
               ))
@@ -62,7 +62,7 @@ export const FlagTracker = () => {
                 </div>
               ))
             ) : (
-              <p className="text-sm text-base-content/70">Congratulations! You've captured all flags! 🎉</p>
+              <p className="text-sm text-base-content/70">Congratulations! You&apos;ve captured all flags! 🎉</p>
             )}
           </div>
         </div>

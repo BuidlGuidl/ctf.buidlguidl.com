@@ -1,14 +1,14 @@
 export const imports = `import { FlagTracker } from "~~/components/FlagTracker";`;
 
 export const description = `
-  <div className="mt-8 max-w-2xl mx-auto">
+          <div className="mt-8 max-w-2xl mx-auto">
             <p className="text-base-content mb-4">
               This stack contains all the tools you need to play the CTF locally, from contract debugging to scripting
               and transaction tracking.
             </p>
             <p className="text-base-content">
-              Once you're ready to capture real flags, you'll need to deploy your solutions to Optimism and track your
-              progress at{" "}
+              Once you&apos;re ready to capture real flags, you&apos;ll need to deploy your solutions to Optimism and
+              track your progress at{" "}
               <a href="https://ctf.buidlguidl.com" target="_blank" rel="noopener noreferrer" className="link">
                 ctf.buidlguidl.com
               </a>
