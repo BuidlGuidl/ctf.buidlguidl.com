@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
+    "with-proxy": "tsx proxy/index.ts",
     "start": "node dist/index.js",
-    "type-check": "tsc --noEmit",
-    "hardhat-script": "tsx proxy/hardhat.ts"
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@inquirer/password": "^4.0.13",
