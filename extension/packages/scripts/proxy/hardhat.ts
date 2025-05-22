@@ -6,7 +6,7 @@ import password from "@inquirer/password";
 import { spawn } from "child_process";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-dotenv.config({ path: resolve(__dirname, "../hardhat/.env") });
+dotenv.config({ path: resolve(__dirname, "../../hardhat/.env") });
 
 if (!process.argv[2]) {
   console.error("Usage: yarn tsx-with-pk src/yourScript.ts");
@@ -20,7 +20,7 @@ async function main() {
   const encryptedKey = process.env.DEPLOYER_PRIVATE_KEY_ENCRYPTED;
   if (!encryptedKey) {
     console.log(
-      "\nNo encrypted key found, make sure to generate (`yarn generate`) or import account (`yarn account:import`) first by going to root directory and running this commands\n"
+      "\nNo encrypted key found, make sure to generate (`yarn generate`) or import account (`yarn account:import`) first by going to root directory and running this commands\n",
     );
     return;
   }
