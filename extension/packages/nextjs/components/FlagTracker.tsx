@@ -16,6 +16,7 @@ export const FlagTracker = () => {
     filters: {
       minter: connectedAddress,
     },
+    enabled: !!connectedAddress,
   });
 
   const userMintedChallengeIds = new Set(userFlags?.map(event => event?.args?.challengeId?.toString()) || []);
@@ -23,6 +24,12 @@ export const FlagTracker = () => {
   const allChallengeIds = Array.from({ length: 12 }, (_, i) => (i + 1).toString());
 
   const remainingFlags = allChallengeIds.filter(id => !userMintedChallengeIds.has(id));
+
+  if (!connectedAddress) {
+    return (
+      <div className="bg-base-100 p-6 rounded-lg shadow-md">Connect your wallet to view your collected flags.</div>
+    );
+  }
 
   return (
     <div className="bg-base-100 p-6 rounded-lg shadow-md">
