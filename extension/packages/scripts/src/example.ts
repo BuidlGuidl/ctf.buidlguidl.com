@@ -16,9 +16,15 @@ dotenv.config();
 // 2. set TARGET_CHAIN = optimism;
 const TARGET_CHAIN = hardhat;
 
-// We use the private key of account generated via `yarn generate`, if not present we use default hardhat/foundry 5th account
-const MY_WALLET_PK = (process.env.DEPLOYER_PRIVATE_KEY ??
-  "0x8b3a350cf5c34c9194ca85829a2df0ec3153be0318b5e2d3348e872092edffba") as `0x${string}`;
+const LOCAL_CHAIN_5TH_ACCOUNT_PK =
+  "0x8b3a350cf5c34c9194ca85829a2df0ec3153be0318b5e2d3348e872092edffba" as const;
+// To run this script, use: yarn run script --file src/example.ts
+// This ensures the private key is loaded securely via the proxy script.
+// If TARGET_CHAIN is hardhat we use the local chain 5th account PK with loaded funds, otherwise we use the account generated via `yarn generate` or `yarn account:import`
+const MY_WALLET_PK =
+  (TARGET_CHAIN.id as number) === hardhat.id
+    ? LOCAL_CHAIN_5TH_ACCOUNT_PK
+    : (process.env.__RUNTIME_DEPLOYER_PRIVATE_KEY as `0x${string}`);
 const myWalletAccount = privateKeyToAccount(MY_WALLET_PK);
 
 // We need wallet client to do write operations/send transactions
@@ -48,7 +54,7 @@ async function main() {
   // Writing to a contract
   const txHash = await challenge1Contract.write.registerMe(["Bob"]);
   console.log(
-    `📝 Called 'registerMe' function with address ${myWalletAccount.address} and name 'Bob', txHash: ${txHash}`,
+    `📝 Called 'registerMe' function with address ${myWalletAccount.address} and name 'Bob', txHash: ${txHash}`
   );
 
   // Waits for the Transaction to be included on a Block (one confirmation)
