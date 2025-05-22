@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 if (!process.argv[2]) {
-  console.error("Usage: yarn with-proxy src/yourScript.ts");
+  console.error("Usage: yarn tsx-with-pk src/yourScript.ts");
   process.exit(1);
 }
 
