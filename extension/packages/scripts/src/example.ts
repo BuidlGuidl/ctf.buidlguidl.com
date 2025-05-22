@@ -19,8 +19,8 @@ const TARGET_CHAIN = hardhat;
 const LOCAL_CHAIN_5TH_ACCOUNT_PK =
   "0x8b3a350cf5c34c9194ca85829a2df0ec3153be0318b5e2d3348e872092edffba" as const;
 
-// If you run this script directly `yarn tsx src/example.ts` this will use local chain 5th account PK with loaded funds.
-// If you run this script with proxy `yarn with-generated-account --file src/example.ts` this will use the account generated via `yarn generate` or `yarn account:import`
+// Run this script directly `yarn tsx src/example.ts` in local chain (uses test account PK with loaded funds).
+// Run this script via `yarn tsx-with-pk --file src/example.ts` to use your own PK (generated via `yarn generate` or `yarn account:import`)
 const MY_WALLET_PK =
   (process.env.__RUNTIME_DEPLOYER_PRIVATE_KEY as `0x${string}`) ||
   LOCAL_CHAIN_5TH_ACCOUNT_PK;
