@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "tsx-with-pk": "tsx proxy/index.ts",
     "start": "node dist/index.js",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "tsx-with-pk": "tsx proxy/index.ts"
   },
   "dependencies": {
     "@inquirer/password": "^4.0.13",

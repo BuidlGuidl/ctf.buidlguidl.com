@@ -8,15 +8,13 @@ import { spawn } from "child_process";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: resolve(__dirname, "../hardhat/.env") });
 
-// Find the --file argument
-const fileArgIndex = process.argv.indexOf("--file");
-if (fileArgIndex === -1 || !process.argv[fileArgIndex + 1]) {
-  console.error("Usage: yarn tsx-with-pk --file src/yourScript.ts");
+if (!process.argv[2]) {
+  console.error("Usage: yarn tsx-with-pk src/yourScript.ts");
   process.exit(1);
 }
 
-const targetScript = process.argv[fileArgIndex + 1];
-const extraArgs = process.argv.slice(fileArgIndex + 2);
+const targetScript = process.argv[2];
+const extraArgs = process.argv.slice(3);
 
 async function main() {
   const encryptedKey = process.env.DEPLOYER_PRIVATE_KEY_ENCRYPTED;
