@@ -20,14 +20,8 @@ async function main() {
   const encryptedKey = process.env.DEPLOYER_PRIVATE_KEY_ENCRYPTED;
   if (!encryptedKey) {
     console.log(
-      "No encrypted key found, if target network is hardhat we will use the local chain 5th account PK\n"
+      "\nNo encrypted key found, make sure to generate (`yarn generate-pk`) or import account (`yarn account:import`) first by going to root directory and running this commands\n"
     );
-    const child = spawn("tsx", [targetScript, ...extraArgs], {
-      stdio: "inherit",
-      env: process.env,
-      shell: process.platform === "win32",
-    });
-    child.on("exit", (code) => process.exit(code || 0));
     return;
   }
 
