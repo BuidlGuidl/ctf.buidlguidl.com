@@ -5,16 +5,15 @@ import {
   http,
 } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
-import { hardhat } from "viem/chains";
+import * as chains from "viem/chains";
 import * as dotenv from "dotenv";
 import { contractsData } from "../contracts/types";
 
 dotenv.config();
 
 // If you want to deploy to optimism:
-// 1. import { optimism } from "viem/chains";
-// 2. set TARGET_CHAIN = optimism;
-const TARGET_CHAIN = hardhat;
+// set TARGET_CHAIN = chains.optimism;
+const TARGET_CHAIN = chains.hardhat;
 
 const LOCAL_CHAIN_5TH_ACCOUNT_PK =
   "0x8b3a350cf5c34c9194ca85829a2df0ec3153be0318b5e2d3348e872092edffba" as const;
