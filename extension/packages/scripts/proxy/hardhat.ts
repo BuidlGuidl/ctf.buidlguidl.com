@@ -20,7 +20,7 @@ async function main() {
   const encryptedKey = process.env.DEPLOYER_PRIVATE_KEY_ENCRYPTED;
   if (!encryptedKey) {
     console.log(
-      "\nNo encrypted key found, make sure to generate (`yarn generate-pk`) or import account (`yarn account:import`) first by going to root directory and running this commands\n"
+      "\nNo encrypted key found, make sure to generate (`yarn generate`) or import account (`yarn account:import`) first by going to root directory and running this commands\n"
     );
     return;
   }
