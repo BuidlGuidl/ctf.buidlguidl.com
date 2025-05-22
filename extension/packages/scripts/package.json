@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "with-proxy": "tsx proxy/index.ts",
+    "with-generated-account": "tsx proxy/index.ts",
     "start": "node dist/index.js",
     "type-check": "tsc --noEmit"
   },
