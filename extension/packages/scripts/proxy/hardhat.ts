@@ -11,7 +11,7 @@ dotenv.config({ path: resolve(__dirname, "../hardhat/.env") });
 // Find the --file argument
 const fileArgIndex = process.argv.indexOf("--file");
 if (fileArgIndex === -1 || !process.argv[fileArgIndex + 1]) {
-  console.error("Usage: yarn run script --file src/yourScript.ts");
+  console.error("Usage: yarn tsx-with-pk --file src/yourScript.ts");
   process.exit(1);
 }
 
