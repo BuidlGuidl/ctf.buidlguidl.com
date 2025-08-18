@@ -47,6 +47,12 @@ export const Footer = () => {
                 Fork me
               </a>
             </div>
+            <span className="hidden sm:inline">·</span>
+            <div className="text-center">
+              <a href="https://t.me/+dlt_wBcnoORhNzcy" target="_blank" rel="noreferrer" className="link">
+                Support
+              </a>
+            </div>
           </div>
         </ul>
       </div>
