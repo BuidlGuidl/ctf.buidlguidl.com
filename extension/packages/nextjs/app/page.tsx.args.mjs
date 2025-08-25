@@ -1,4 +1,4 @@
-export const imports = `import { FlagTracker } from "~~/components/FlagTracker";`;
+export const preContent = `import { FlagTracker } from "~~/components/FlagTracker";`;
 
 export const description = `
           <div className="mt-8 max-w-2xl mx-auto">
