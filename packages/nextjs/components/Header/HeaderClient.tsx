@@ -37,7 +37,7 @@ export const HeaderClient = () => {
               href={`/profile/${connectedAddress}`}
               className="text-white text-sm font-pressStart link-hover hover:text-primary"
             >
-              My Flags: {flagsCaptured}/12
+              My Flags: {flagsCaptured}/24
             </Link>
           )}
         </div>
