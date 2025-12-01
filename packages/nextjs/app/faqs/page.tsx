@@ -79,8 +79,8 @@ const faqs = [
     question: "What are the Seasons?",
     answer: (
       <>
-        Solidity Invaders is organized into seasons, each featuring a new set of challenges. Season 1 (Thailand)
-        includes the 12 challenges from{" "}
+        Solidity Invaders is organized into seasons, each featuring a new set of challenges. Season 1 (Bangkok) includes
+        the 12 challenges from{" "}
         <a
           className="text-primary link break-all lg:break-normal"
           href="https://ctf-devcon.buidlguidl.com/"
@@ -88,7 +88,7 @@ const faqs = [
         >
           Devcon SEA
         </a>
-        . Season 2 (Argentina) will include 12 challenges played at{" "}
+        . Season 2 (Buenos Aires) will include 12 challenges played at{" "}
         <a
           className="text-primary link break-all lg:break-normal"
           href="https://ctf-argentina.buidlguidl.com/"
