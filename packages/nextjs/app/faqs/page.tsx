@@ -88,7 +88,7 @@ const faqs = [
         >
           Devcon SEA
         </a>
-        . Season 2 (Buenos Aires) will include 12 challenges played at{" "}
+        . Season 2 (Buenos Aires) includes the 12 challenges played at{" "}
         <a
           className="text-primary link break-all lg:break-normal"
           href="https://ctf-argentina.buidlguidl.com/"
