@@ -6,9 +6,12 @@ import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 import { Address } from "~~/components/scaffold-eth";
 import { useFetchUserData } from "~~/hooks/useFetchUserData";
 import { getFormattedDateTime } from "~~/utils/date";
+import { CHALLENGE_NAMES, SEASON_NAMES } from "~~/utils/getChallenges";
 
-export const UserData = ({ address, challenges }: { address: string; challenges: string[] }) => {
+export const UserData = ({ address }: { address: string }) => {
   const { userData } = useFetchUserData({ address });
+
+  console.log(userData);
 
   if (!userData) {
     return (
@@ -16,7 +19,7 @@ export const UserData = ({ address, challenges }: { address: string; challenges:
         <ExclamationTriangleIcon className="w-6 h-6" />
         <span className="text-lg md:text-xl">No Flags Captured</span>
         <div>
-          <Link href="/challenge/1" className="btn btn-sm btn-primary rounded-md">
+          <Link href="/challenge/1/1" className="btn btn-sm btn-primary rounded-md">
             Start Challenges →
           </Link>
         </div>
@@ -24,22 +27,39 @@ export const UserData = ({ address, challenges }: { address: string; challenges:
     );
   }
 
-  const mergedChallengeData = challenges.map((challengeId: string) => {
-    const userChallenge = userData.challenges?.items.find(c => c.challengeId.toString() === challengeId);
+  const mergedChallengeDataBySeason = Object.entries(CHALLENGE_NAMES).reduce((acc, [seasonKey, challengesMap]) => {
+    const season = Number(seasonKey);
+    const challengeIds = Object.keys(challengesMap).sort((a, b) => Number(a) - Number(b));
 
-    if (userChallenge) {
+    acc[season] = challengeIds.map(challengeId => {
+      const userChallenge = userData.challenges?.items.find(c => {
+        const challengeIdNumber = Number(challengeId);
+        const cChallengeIdNumber = Number(c.challengeId);
+
+        // Challenge #1 is shared across seasons: if it's completed in any season, mark it as solved
+        if (challengeIdNumber === 1) {
+          return cChallengeIdNumber === 1;
+        }
+
+        return c.season === season && cChallengeIdNumber === challengeIdNumber;
+      });
+
+      if (userChallenge) {
+        return {
+          challengeId,
+          solved: true,
+          timestamp: userChallenge.timestamp,
+        };
+      }
+
       return {
         challengeId,
-        solved: true,
-        timestamp: userChallenge.timestamp,
+        solved: false,
       };
-    }
+    });
 
-    return {
-      challengeId,
-      solved: false,
-    };
-  });
+    return acc;
+  }, {} as Record<number, { challengeId: string; solved: boolean; timestamp?: number }[]>);
 
   return (
     <>
@@ -59,7 +79,18 @@ export const UserData = ({ address, challenges }: { address: string; challenges:
           </div>
         </div>
       )}
-      <ProgressInvaders challenges={mergedChallengeData} />
+      {Object.entries(mergedChallengeDataBySeason)
+        .sort(([a], [b]) => Number(a) - Number(b))
+        .map(([season, challenges]) => (
+          <div key={season} className="mt-6">
+            <div className="max-w-4xl mx-auto mb-2">
+              <p className="m-0 text-sm text-gray-400 font-pressStart">
+                {SEASON_NAMES[Number(season)] ?? `Season ${season}`}
+              </p>
+            </div>
+            <ProgressInvaders challenges={challenges} season={Number(season)} />
+          </div>
+        ))}
     </>
   );
 };

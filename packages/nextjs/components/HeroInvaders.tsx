@@ -7,6 +7,7 @@ import clsx from "clsx";
 import { useAccount } from "wagmi";
 import { PlayIcon } from "@heroicons/react/24/solid";
 import { useFetchUserData } from "~~/hooks/useFetchUserData";
+import { TOTAL_CHALLENGES } from "~~/utils/getChallenges";
 
 const invaderClass = "mx-auto w-10 h-10 md:w-12 md:h-12 cursor-crosshair";
 const gridClass = "mx-auto my-6 md:my-8 grid grid-cols-4 gap-4";
@@ -73,7 +74,7 @@ export function HeroInvaders() {
       </div>
       <div className="text-center my-12">
         {!hasCompletedChallenge1 && (
-          <Link href="/challenge/1" className="pl-8 pr-6 btn btn-primary btn-outline font-pressStart">
+          <Link href="/challenge/1/1" className="pl-8 pr-6 btn btn-primary btn-outline font-pressStart">
             Start <PlayIcon className="h-6 w-6" />
           </Link>
         )}
@@ -89,8 +90,8 @@ export function HeroInvaders() {
       <div className="mt-12 text-center">
         <h1 className="md:text-2xl font-pressStart tracking-wide leading-relaxed">Solidity Invaders</h1>
         <p className="mx-auto mt-6 text-lg md:text-xl/8">
-          ALERT! Invaders have taken 12 flags from the BuidlGuidl Fortress. Your mission is to complete Ethereum coding
-          challenges and take the flags back.
+          ALERT! Invaders have taken {TOTAL_CHALLENGES} flags from the BuidlGuidl Fortress. Your mission is to complete
+          Ethereum coding challenges and take the flags back.
         </p>
       </div>
     </>

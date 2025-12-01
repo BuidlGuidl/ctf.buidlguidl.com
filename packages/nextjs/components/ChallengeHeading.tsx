@@ -4,12 +4,20 @@ import { CheckIcon } from "./CheckIcon";
 import clsx from "clsx";
 import { useAccount } from "wagmi";
 import { useFetchUserData } from "~~/hooks/useFetchUserData";
+import { SEASON_NAMES } from "~~/utils/getChallenges";
 
-export function ChallengeHeading({ challengeId }: { challengeId: number }) {
+export function ChallengeHeading({ challengeId, season }: { challengeId: number; season: number }) {
   const { address } = useAccount();
   const { userData } = useFetchUserData({ address });
 
-  const isCaptured = userData?.challenges?.items.some(challenge => Number(challenge.challengeId) === challengeId);
+  const isCaptured = userData?.challenges?.items.some(challenge => {
+    const challengeIdNumber = Number(challenge.challengeId);
+    // Challenge #1 is shared across seasons: if it's completed in any season, mark it as captured
+    if (challengeId === 1) {
+      return challengeIdNumber === 1;
+    }
+    return challenge.season === season && challengeIdNumber === challengeId;
+  });
 
   return (
     <div className="flex items-center gap-4">
@@ -22,7 +30,7 @@ export function ChallengeHeading({ challengeId }: { challengeId: number }) {
           "text-primary": isCaptured,
         })}
       >
-        Challenge #{challengeId}
+        {SEASON_NAMES[season]} - Challenge #{challengeId}
       </h1>
     </div>
   );
