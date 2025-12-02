@@ -1,15 +1,15 @@
 import { ponder } from "@/generated";
 
-ponder.on("NFTFlags:FlagMinted", async ({ event, context }) => {
+ponder.on("Season1NFTFlags:FlagMinted", async ({ event, context }) => {
   const { client } = context;
   const { Challenge, User } = context.db;
-  const { NFTFlags } = context.contracts;
+  const { Season1NFTFlags } = context.contracts;
 
   const pointsPerChallenge = 100;
 
   const tokenUri = await client.readContract({
-    abi: NFTFlags.abi,
-    address: NFTFlags.address,
+    abi: Season1NFTFlags.abi,
+    address: Season1NFTFlags.address,
     functionName: "tokenURI",
     args: [event.args.tokenId],
   });

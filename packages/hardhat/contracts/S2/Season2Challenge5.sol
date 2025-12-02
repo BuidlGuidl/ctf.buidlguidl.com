@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
-import "./NFTFlags.sol";
+import "../INFTFlags.sol";
 
 contract Season2Challenge5 {
     address public nftContract;
@@ -11,7 +11,7 @@ contract Season2Challenge5 {
     }
 
     function mintFlag(uint[] memory data1, uint[] memory data2) public {
-        uint256 tokenIdCounter = NFTFlags(nftContract).tokenIdCounter();
+        uint256 tokenIdCounter = INFTFlags(nftContract).tokenIdCounter();
         uint256 counter1;
         uint256 counter2;
 
@@ -23,6 +23,6 @@ contract Season2Challenge5 {
         require(counter1 == tokenIdCounter, "Wrong counter1");
         require(counter2 == (tokenIdCounter % 0x80), "Wrong counter2");
 
-        NFTFlags(nftContract).mint(tx.origin, 5);
+        INFTFlags(nftContract).mint(tx.origin, 5);
     }
 }

@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Base64.sol";
-import "./INFTFlags.sol";
+import "../INFTFlags.sol";
 
 abstract contract GoldContract {
     function mint(address to) public virtual;

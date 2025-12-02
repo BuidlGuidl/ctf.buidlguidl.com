@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
-import "./NFTFlags.sol";
+import "../INFTFlags.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import { ERC721URIStorage, ERC721 } from "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
@@ -179,7 +179,7 @@ contract Season2Challenge12 {
             "Wrong allowance"
         );
 
-        NFTFlags(nftContract).mint(tx.origin, 12);
+        INFTFlags(nftContract).mint(tx.origin, 12);
     }
 
     function stringToUint(string memory _s) public pure returns (uint256) {

@@ -6,14 +6,11 @@ import { useDeployedContractInfo } from "~~/hooks/scaffold-eth/useDeployedContra
 import { ContractName } from "~~/utils/scaffold-eth/contract";
 
 export const ChallengeContractAddress = ({ challengeNumber, season }: { challengeNumber: number; season: number }) => {
-  let contractName = `Challenge${challengeNumber}` as ContractName;
-  if (season > 1) {
-    contractName = `Season${season}Challenge${challengeNumber}` as ContractName;
-  }
+  let contractName = `Season${season}Challenge${challengeNumber}` as ContractName;
 
   // hardcoded for Challenge 10
   if (challengeNumber === 10 && season === 1) {
-    contractName = "NFTFlags";
+    contractName = "Season1NFTFlags";
   }
 
   const { data: contractInfo } = useDeployedContractInfo(contractName);

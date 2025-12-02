@@ -1,9 +1,9 @@
 //SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
-import "./INFTFlags.sol";
+import "../INFTFlags.sol";
 
-contract Challenge7Delegate {
+contract Season1Challenge7Delegate {
     address public owner;
     event OwnerChange(address indexed owner);
 
@@ -18,14 +18,14 @@ contract Challenge7Delegate {
     }
 }
 
-contract Challenge7 {
+contract Season1Challenge7 {
     address public owner;
-    Challenge7Delegate delegate;
+    Season1Challenge7Delegate delegate;
     address public nftContract;
 
     constructor(address _nftContract, address _delegateAddress, address _owner) {
         nftContract = _nftContract;
-        delegate = Challenge7Delegate(_delegateAddress);
+        delegate = Season1Challenge7Delegate(_delegateAddress);
         owner = _owner;
     }
 

@@ -19,12 +19,17 @@ const deployCtfContracts: DeployFunction = async function (hre: HardhatRuntimeEn
   const { deployer } = await hre.getNamedAccounts();
   const { deploy, save } = hre.deployments;
 
-  const season1NftFlags = await hre.ethers.getContract<Contract>("NFTFlags", deployer);
+  // NFTFlags contract for Season 1 deployed to Optimism Mainnet
+  let season1NftFlagsAddress = "0xc1Ebd7a78FE7c075035c516B916A7FB3f33c26cE";
+  if (hre.network.name === "localhost") {
+    const season1NftFlags = await hre.ethers.getContract<Contract>("Season1NFTFlags", deployer);
+    season1NftFlagsAddress = await season1NftFlags.getAddress();
+  }
 
   // :: NFT Flags ::
   await deploy("Season2NFTFlags", {
     from: deployer,
-    args: [deployer, await season1NftFlags.getAddress()],
+    args: [deployer, season1NftFlagsAddress],
     log: true,
     autoMine: true,
   });

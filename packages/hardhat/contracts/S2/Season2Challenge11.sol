@@ -1,8 +1,8 @@
 //SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
-import "./RLPReader.sol";
-import "./INFTFlags.sol";
+import "../RLPReader.sol";
+import "../INFTFlags.sol";
 
 contract Season2Challenge11 {
     using RLPReader for RLPReader.RLPItem;
