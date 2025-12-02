@@ -30,11 +30,20 @@ export const CHALLENGE_NAMES: Record<number, Record<string, string>> = {
   },
 };
 
-export const SEASON_NAMES: Record<number, string> = {
-  1: "Season 1 - Bangkok",
-  2: "Season 2 - Buenos Aires",
+export const SEASONS: Record<number, { name: string; slug: string }> = {
+  1: { name: "Bangkok (S1)", slug: "bangkok" },
+  2: { name: "Buenos Aires (S2)", slug: "buenos-aires" },
+};
+
+export const getSeasonBySlug = (slug: string): number | undefined => {
+  const entry = Object.entries(SEASONS).find(([, season]) => season.slug === slug);
+  return entry ? Number(entry[0]) : undefined;
+};
+
+export const getSlugBySeason = (seasonNumber: number): string | undefined => {
+  return SEASONS[seasonNumber]?.slug;
 };
 
 export const TOTAL_CHALLENGES_PER_SEASON = 12;
 
-export const TOTAL_CHALLENGES = TOTAL_CHALLENGES_PER_SEASON * Object.keys(SEASON_NAMES).length;
+export const TOTAL_CHALLENGES = TOTAL_CHALLENGES_PER_SEASON * Object.keys(SEASONS).length;

@@ -7,7 +7,7 @@ import { useAccount } from "wagmi";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 import { useFetchUserData } from "~~/hooks/useFetchUserData";
 import scaffoldConfig from "~~/scaffold.config";
-import { SEASON_NAMES, TOTAL_CHALLENGES } from "~~/utils/getChallenges";
+import { SEASONS, TOTAL_CHALLENGES } from "~~/utils/getChallenges";
 
 /**
  * Site header
@@ -20,7 +20,7 @@ export const HeaderClient = () => {
   const { userData } = useFetchUserData({ address: connectedAddress });
 
   const baseFlagsCaptured = userData?.challenges?.items.length || 0;
-  const numberOfSeasons = Object.keys(SEASON_NAMES).length;
+  const numberOfSeasons = Object.keys(SEASONS).length;
 
   // If challenge #1 is completed, it counts for all seasons (add seasons - 1 to the count)
   const flagsCaptured = baseFlagsCaptured > 0 ? baseFlagsCaptured + (numberOfSeasons - 1) : baseFlagsCaptured;

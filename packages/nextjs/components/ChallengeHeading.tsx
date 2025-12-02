@@ -4,7 +4,7 @@ import { CheckIcon } from "./CheckIcon";
 import clsx from "clsx";
 import { useAccount } from "wagmi";
 import { useFetchUserData } from "~~/hooks/useFetchUserData";
-import { SEASON_NAMES } from "~~/utils/getChallenges";
+import { SEASONS } from "~~/utils/getChallenges";
 
 export function ChallengeHeading({ challengeId, season }: { challengeId: number; season: number }) {
   const { address } = useAccount();
@@ -30,7 +30,7 @@ export function ChallengeHeading({ challengeId, season }: { challengeId: number;
           "text-primary": isCaptured,
         })}
       >
-        {SEASON_NAMES[season]} - Challenge #{challengeId}
+        Challenge #{challengeId} - {SEASONS[season]?.name}
       </h1>
     </div>
   );

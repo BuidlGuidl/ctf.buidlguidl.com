@@ -3,14 +3,14 @@ import Link from "next/link";
 import { FlagIcon } from "./FlagIcon";
 import clsx from "clsx";
 import { getFlagBgColor, getFlagColor } from "~~/utils/flagColor";
-import { CHALLENGE_NAMES } from "~~/utils/getChallenges";
+import { CHALLENGE_NAMES, getSlugBySeason } from "~~/utils/getChallenges";
 
 const invaderClass = "mx-auto w-10 h-10 md:w-12 md:h-12";
 
 export function InvaderCard({ challengeId, season }: { challengeId: number; season: number }) {
   return (
     <div className="card flex items-center justify-center border border-gray-800 bg-gray-950 rounded-md aspect-square">
-      <Link href={`/challenge/${season}/${challengeId}`}>
+      <Link href={`/${getSlugBySeason(season)}/challenges/${challengeId}`}>
         <div className="invader mx-auto relative w-10 text-center">
           <Image
             width={96}

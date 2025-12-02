@@ -6,7 +6,7 @@ import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 import { Address } from "~~/components/scaffold-eth";
 import { useFetchUserData } from "~~/hooks/useFetchUserData";
 import { getFormattedDateTime } from "~~/utils/date";
-import { CHALLENGE_NAMES, SEASON_NAMES } from "~~/utils/getChallenges";
+import { CHALLENGE_NAMES, SEASONS } from "~~/utils/getChallenges";
 
 export const UserData = ({ address }: { address: string }) => {
   const { userData } = useFetchUserData({ address });
@@ -19,7 +19,7 @@ export const UserData = ({ address }: { address: string }) => {
         <ExclamationTriangleIcon className="w-6 h-6" />
         <span className="text-lg md:text-xl">No Flags Captured</span>
         <div>
-          <Link href="/challenge/1/1" className="btn btn-sm btn-primary rounded-md">
+          <Link href="/bangkok/challenges/1" className="btn btn-sm btn-primary rounded-md">
             Start Challenges →
           </Link>
         </div>
@@ -85,7 +85,7 @@ export const UserData = ({ address }: { address: string }) => {
           <div key={season} className="mt-6">
             <div className="max-w-4xl mx-auto mb-2">
               <p className="m-0 text-sm text-gray-400 font-pressStart">
-                {SEASON_NAMES[Number(season)] ?? `Season ${season}`}
+                {SEASONS[Number(season)]?.name ?? `Season ${season}`}
               </p>
             </div>
             <ProgressInvaders challenges={challenges} season={Number(season)} />

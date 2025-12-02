@@ -5,7 +5,7 @@ import { FlagIcon } from "./FlagIcon";
 import clsx from "clsx";
 import { getFormattedDateTime } from "~~/utils/date";
 import { getFlagColor } from "~~/utils/flagColor";
-import { CHALLENGE_NAMES } from "~~/utils/getChallenges";
+import { CHALLENGE_NAMES, getSlugBySeason } from "~~/utils/getChallenges";
 
 export function InvaderCardCaptured({
   challengeId,
@@ -26,7 +26,7 @@ export function InvaderCardCaptured({
           boxShadow: "0 0 30px rgba(245, 158, 11, 0.25)",
         }}
       >
-        <Link href={`/challenge/${season}/${challengeId}`}>
+        <Link href={`/${getSlugBySeason(season)}/challenges/${challengeId}`}>
           <div className="mx-auto relative w-10 text-center">
             <Image
               width={96}

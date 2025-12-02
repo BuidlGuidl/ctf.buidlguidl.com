@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChallengeContractAddress } from "../../_components/ChallengeContractAddress";
+import { ChallengeContractAddress } from "../../../../components/ChallengeContractAddress";
 import clsx from "clsx";
 import fs from "fs";
 import { MDXRemote } from "next-mdx-remote/rsc";
@@ -9,7 +9,7 @@ import path from "path";
 import { ChallengeHeading } from "~~/components/ChallengeHeading";
 import { FlagIcon } from "~~/components/FlagIcon";
 import { getFlagColor } from "~~/utils/flagColor";
-import { SEASON_NAMES } from "~~/utils/getChallenges";
+import { SEASONS, getSeasonBySlug, getSlugBySeason } from "~~/utils/getChallenges";
 import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
 // Custom components for MDX
@@ -22,13 +22,20 @@ const TOTAL_CHALLENGES_PER_SEASON = 12;
 interface ChallengePageProps {
   params: {
     number: string;
-    season: string;
+    seasonSlug: string;
   };
 }
 
 export async function generateMetadata({ params }: ChallengePageProps) {
+  const season = getSeasonBySlug(params.seasonSlug);
+  if (!season) {
+    return getMetadata({
+      title: `Challenge #${params.number}`,
+      description: "BuidlGuidl CTF",
+    });
+  }
   return getMetadata({
-    title: `Season ${params.season} - ${SEASON_NAMES[Number(params.season)]} - Challenge #${params.number}`,
+    title: `Season ${season} - ${SEASONS[season]?.name} - Challenge #${params.number}`,
     description: "BuidlGuidl CTF",
   });
 }
@@ -36,15 +43,19 @@ export async function generateMetadata({ params }: ChallengePageProps) {
 export default async function ChallengePage({ params }: ChallengePageProps) {
   const { number: challengeNumberString } = params;
   const challengeNumber = Number(challengeNumberString);
-  const season = Number(params.season);
+  const season = getSeasonBySlug(params.seasonSlug);
+
+  if (!season) {
+    notFound();
+  }
   const challengesRootDir = path.join(process.cwd(), "data", "challenges");
   const challengesDir = path.join(challengesRootDir, `season${season}`);
   const challengePath = path.join(challengesDir, `${challengeNumber}.md`);
 
   const totalChallenges = TOTAL_CHALLENGES_PER_SEASON;
 
-  // Determine available seasons from SEASON_NAMES config
-  const seasonNumbers = Object.keys(SEASON_NAMES)
+  // Determine available seasons from SEASONS config
+  const seasonNumbers = Object.keys(SEASONS)
     .map(Number)
     .sort((a, b) => a - b);
 
@@ -119,7 +130,7 @@ export default async function ChallengePage({ params }: ChallengePageProps) {
           {prevSeason !== null && prevChallengeNumber !== null && (
             <Link
               className="btn btn-sm btn-primary btn-outline rounded-none"
-              href={`/challenge/${prevSeason}/${prevChallengeNumber}`}
+              href={`/${getSlugBySeason(prevSeason)}/challenges/${prevChallengeNumber}`}
             >
               &larr; Previous Challenge
             </Link>
@@ -127,7 +138,7 @@ export default async function ChallengePage({ params }: ChallengePageProps) {
           {nextSeason !== null && nextChallengeNumber !== null && (
             <Link
               className="ml-auto btn btn-sm btn-primary btn-outline rounded-none"
-              href={`/challenge/${nextSeason}/${nextChallengeNumber}`}
+              href={`/${getSlugBySeason(nextSeason)}/challenges/${nextChallengeNumber}`}
             >
               Next Challenge &rarr;
             </Link>

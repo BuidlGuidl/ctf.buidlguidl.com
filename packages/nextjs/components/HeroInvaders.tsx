@@ -74,7 +74,7 @@ export function HeroInvaders() {
       </div>
       <div className="text-center my-12">
         {!hasCompletedChallenge1 && (
-          <Link href="/challenge/1/1" className="pl-8 pr-6 btn btn-primary btn-outline font-pressStart">
+          <Link href="/bangkok/challenges/1" className="pl-8 pr-6 btn btn-primary btn-outline font-pressStart">
             Start <PlayIcon className="h-6 w-6" />
           </Link>
         )}
