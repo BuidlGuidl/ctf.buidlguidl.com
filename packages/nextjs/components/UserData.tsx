@@ -10,7 +10,7 @@ export const UserData = ({ address, challenges }: { address: string; challenges:
   const { userData } = useFetchUserData({ address });
 
   const mergedChallengeData = challenges.map((challengeId: string) => {
-    const userChallenge = userData?.challenges?.items.find(c => c.challengeId.toString() === challengeId);
+    const userChallenge = userData?.challenges?.items?.find(c => c.challengeId.toString() === challengeId);
 
     if (userChallenge) {
       return {
