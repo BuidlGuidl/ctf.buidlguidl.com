@@ -82,7 +82,7 @@ export const UserData = ({ address }: { address: string }) => {
       {Object.entries(mergedChallengeDataBySeason)
         .sort(([a], [b]) => Number(a) - Number(b))
         .map(([season, challenges]) => (
-          <div key={season} className="mt-6">
+          <div key={season} className="mt-12">
             <div className="max-w-4xl mx-auto mb-2">
               <p className="m-0 text-sm text-gray-400 font-pressStart">
                 {SEASONS[Number(season)]?.name ?? `Season ${season}`}
