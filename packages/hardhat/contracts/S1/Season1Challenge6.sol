@@ -3,13 +3,13 @@ pragma solidity >=0.8.0 <0.9.0;
 
 import "@openzeppelin/contracts/utils/Strings.sol";
 
-import "./INFTFlags.sol";
+import "../INFTFlags.sol";
 
 interface IContract6Solution {
     function name() external view returns (string memory);
 }
 
-contract Challenge6 {
+contract Season1Challenge6 {
     using Strings for uint256;
 
     address public nftContract;

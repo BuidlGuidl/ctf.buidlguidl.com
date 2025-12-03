@@ -1,9 +1,9 @@
 //SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
-import "./INFTFlags.sol";
+import "../INFTFlags.sol";
 
-contract Challenge3 {
+contract Season1Challenge3 {
     address public nftContract;
 
     constructor(address _nftContract) {

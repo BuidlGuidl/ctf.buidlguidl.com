@@ -1,6 +1,6 @@
 import { ponder } from "@/generated";
 
-ponder.on("Challenge1:BuilderInit", async ({ event, context }) => {
+ponder.on("Season1Challenge1:BuilderInit", async ({ event, context }) => {
   const { User } = context.db;
 
   await User.upsert({
