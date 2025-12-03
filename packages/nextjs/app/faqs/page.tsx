@@ -39,43 +39,6 @@ const faqs = [
   },
   {
     id: 3,
-    question: "What are the flags?",
-    answer:
-      "Upon capturing a flag, you will mint a SVG NFT that represents the flag you captured. There are 12 flags in total, each corresponding to a different challenge.",
-  },
-  {
-    id: 4,
-    question: "What chain/network is this game on?",
-    answer:
-      "The challenges are deployed on Optimism mainnet. You will need to use real ETH on Optimism in order to complete the challenges. But you can always play locally!",
-  },
-  {
-    id: 5,
-    question: "How are points tracked?",
-    answer:
-      "You will also receive points for each flag you capture. Each flag must be minted to the same Ethereum address for the points to be counted properly.",
-  },
-  {
-    id: 6,
-    question: "How can I track my progress?",
-    answer:
-      "Check your progress by visiting `/profile/{YourRegisteredAddress}`. You may also connect your registered Ethereum address to this website and view your progress by clicking on 'My Flags'.",
-  },
-  {
-    id: 7,
-    question: "Is there a leaderboard?",
-    answer: (
-      <>
-        There isn&apos;t a leaderboard for this version of the game. Instead, there is a Stats page which can be found
-        at{" "}
-        <a className="text-primary link break-all lg:break-normal" href="/stats" target="_blank">
-          /stats
-        </a>
-      </>
-    ),
-  },
-  {
-    id: 8,
     question: "What are the Seasons?",
     answer: (
       <>
@@ -97,6 +60,43 @@ const faqs = [
           Devconnect ARG
         </a>
         .
+      </>
+    ),
+  },
+  {
+    id: 4,
+    question: "What are the flags?",
+    answer:
+      "Upon capturing a flag, you will mint a SVG NFT that represents the flag you captured. There are 12 flags in total, each corresponding to a different challenge.",
+  },
+  {
+    id: 5,
+    question: "What chain/network is this game on?",
+    answer:
+      "The challenges are deployed on Optimism mainnet. You will need to use real ETH on Optimism in order to complete the challenges. But you can always play locally!",
+  },
+  {
+    id: 6,
+    question: "How are points tracked?",
+    answer:
+      "You will also receive points for each flag you capture. Each flag must be minted to the same Ethereum address for the points to be counted properly.",
+  },
+  {
+    id: 7,
+    question: "How can I track my progress?",
+    answer:
+      "Check your progress by visiting `/profile/{YourRegisteredAddress}`. You may also connect your registered Ethereum address to this website and view your progress by clicking on 'My Flags'.",
+  },
+  {
+    id: 8,
+    question: "Is there a leaderboard?",
+    answer: (
+      <>
+        There isn&apos;t a leaderboard for this version of the game. Instead, there is a Stats page which can be found
+        at{" "}
+        <a className="text-primary link break-all lg:break-normal" href="/stats" target="_blank">
+          /stats
+        </a>
       </>
     ),
   },
