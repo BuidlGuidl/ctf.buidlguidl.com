@@ -54,7 +54,7 @@ export default async function ChallengePage({ params }: ChallengePageProps) {
               width={96}
               height={96}
               className="mx-auto w-10 h-10 md:w-12 md:h-12"
-              src={`/invader-${challengeNumber}.svg`}
+              src={`/season-1/invader-${challengeNumber}.svg`}
               alt=""
             />
             <div className="absolute top-0 -right-7">

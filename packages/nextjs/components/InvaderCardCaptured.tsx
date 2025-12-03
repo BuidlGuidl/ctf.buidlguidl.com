@@ -24,7 +24,7 @@ export function InvaderCardCaptured({ challengeId, timestamp }: { challengeId: n
               width={96}
               height={96}
               className="mx-auto w-10 h-10 md:w-12 md:h-12"
-              src={`/invader-${challengeId}.svg`}
+              src={`/season-1/invader-${challengeId}.svg`}
               alt={`Invader ${challengeId}`}
             />
             <div className="absolute top-0 -right-7">
