@@ -32,8 +32,8 @@ export function InvaderCardCaptured({
               width={96}
               height={96}
               className="mx-auto w-10 h-10 md:w-12 md:h-12"
-              src={`/season-1/invader-${challengeId}.svg`}
-              alt={`Invader ${challengeId}`}
+              src={`/season-${season}/invader-${challengeId}.svg`}
+              alt={`Invader Season ${season} - Challenge ${challengeId}`}
             />
             <div className="absolute top-0 -right-7">
               <div className="relative rotate-12">
