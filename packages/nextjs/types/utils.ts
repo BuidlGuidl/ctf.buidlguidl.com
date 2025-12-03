@@ -4,6 +4,7 @@ export type Tuple<T, MaxLength extends number = 10, Current extends T[] = []> = 
 
 export type UserChallenge = {
   id: string;
+  season?: number;
   challengeId: number;
   tokenURI: string;
   timestamp: number;

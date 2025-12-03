@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/Base64.sol";
 
-contract NFTFlags is ERC721, IERC721Receiver, Ownable {
+contract Season1NFTFlags is ERC721, IERC721Receiver, Ownable {
     using Strings for uint256;
 
     event Enabled(address indexed caller);
