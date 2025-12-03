@@ -48,7 +48,7 @@ export const UserData = ({ address }: { address: string }) => {
     <>
       {!userData && (
         <div className="flex justify-center my-4">
-          <Link href="/bangkok/challenges/1" className="btn btn-sm btn-primary rounded-md">
+          <Link href="/bangkok/challenges/1" className="btn btn-primary rounded-md">
             Start Challenges →
           </Link>
         </div>
