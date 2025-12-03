@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { UserData } from "~~/components/UserData";
-import { getChallenges } from "~~/utils/getChallenges";
 import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
 
 interface ProfilePageProps {
@@ -20,7 +19,6 @@ export async function generateMetadata({ params }: ProfilePageProps) {
 
 export default async function ProfilePage({ params }: ProfilePageProps) {
   const { address } = params;
-  const challenges = await getChallenges();
 
   return (
     <div className="py-20 px-6">
@@ -32,7 +30,7 @@ export default async function ProfilePage({ params }: ProfilePageProps) {
           <h1 className="md:text-2xl font-pressStart tracking-wide leading-relaxed">Player Progress</h1>
         </div>
         <div className="mt-8 md:mt-12">
-          <UserData address={address} challenges={challenges} />
+          <UserData address={address} />
         </div>
       </div>
     </div>

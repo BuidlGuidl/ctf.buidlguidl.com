@@ -1,9 +1,9 @@
 //SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
-import "./INFTFlags.sol";
+import "../INFTFlags.sol";
 
-contract Challenge5 {
+contract Season1Challenge5 {
     address public nftContract;
     mapping(address => uint256) public points;
     uint256 public constant POINTS_TO_MINT = 10;

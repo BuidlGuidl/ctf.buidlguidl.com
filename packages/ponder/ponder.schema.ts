@@ -15,7 +15,8 @@ export default createSchema((p) => ({
     challengesCountIndex: p.index("challengesCount"),
   }),
   Challenge: p.createTable({
-    id: p.bigint(),
+    id: p.string(),
+    season: p.int(),
     challengeId: p.bigint(),
     tokenURI: p.string(),
     points: p.int(),
@@ -24,8 +25,9 @@ export default createSchema((p) => ({
 
     owner: p.one("ownerId"),
   }, {
-    // Index the `challengeId` and `timestamp` column to speed up stats
-    challengeIdIndex: p.index("challengeId"),
+    // Index the `challengeId` and `timestamp` and `season` column to speed up stats
+    challengeIdSeasonIndex: p.index(["challengeId", "season"]),
     timestampIndex: p.index("timestamp"),
+    seasonIndex: p.index("season"),
   }),
 }));
