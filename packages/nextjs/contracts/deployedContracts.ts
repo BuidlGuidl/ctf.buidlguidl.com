@@ -6,7 +6,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
 const deployedContracts = {
   10: {
-    Challenge1: {
+    Season1Challenge1: {
       address: "0xfa2Aad507B1Fa963A1fd6F8a491A7088Cd4538A5",
       abi: [
         {
@@ -87,7 +87,7 @@ const deployedContracts = {
       ],
       inheritedFunctions: {},
     },
-    Challenge11: {
+    Season1Challenge11: {
       address: "0x67392ea0A56075239988B8E1E96663DAC167eF54",
       abi: [
         {
@@ -124,7 +124,7 @@ const deployedContracts = {
       ],
       inheritedFunctions: {},
     },
-    Challenge12: {
+    Season1Challenge12: {
       address: "0x8c7A3c2c44aB16f693d1731b10C271C7d2967769",
       abi: [
         {
@@ -225,7 +225,7 @@ const deployedContracts = {
       ],
       inheritedFunctions: {},
     },
-    Challenge2: {
+    Season1Challenge2: {
       address: "0x0b997E0a306c47EEc755Df75fad7F41977C5582d",
       abi: [
         {
@@ -262,7 +262,7 @@ const deployedContracts = {
       ],
       inheritedFunctions: {},
     },
-    Challenge3: {
+    Season1Challenge3: {
       address: "0x03bF70f50fcF9420f27e31B47805bbd8f2f52571",
       abi: [
         {
@@ -299,7 +299,7 @@ const deployedContracts = {
       ],
       inheritedFunctions: {},
     },
-    Challenge4: {
+    Season1Challenge4: {
       address: "0x9c4A48Dd70a3219877a252E9a0d45Fc1Db808a1D",
       abi: [
         {
@@ -523,7 +523,7 @@ const deployedContracts = {
         transferOwnership: "@openzeppelin/contracts/access/Ownable.sol",
       },
     },
-    Challenge5: {
+    Season1Challenge5: {
       address: "0xB76AdFe9a791367A8fCBC2FDa44cB1a2c39D8F59",
       abi: [
         {
@@ -606,7 +606,7 @@ const deployedContracts = {
       ],
       inheritedFunctions: {},
     },
-    Challenge6: {
+    Season1Challenge6: {
       address: "0x75961D2da1DEeBaEC24cD0E180187E6D55F55840",
       abi: [
         {
@@ -662,7 +662,7 @@ const deployedContracts = {
       ],
       inheritedFunctions: {},
     },
-    Challenge7: {
+    Season1Challenge7: {
       address: "0xC962D4f4E772415475AA46Eed06cb1F2D4010c0A",
       abi: [
         {
@@ -726,7 +726,7 @@ const deployedContracts = {
       ],
       inheritedFunctions: {},
     },
-    Challenge7Delegate: {
+    Season1Challenge7Delegate: {
       address: "0x0189C48307594A4A542E4851789e9585198d7420",
       abi: [
         {
@@ -776,12 +776,12 @@ const deployedContracts = {
       ],
       inheritedFunctions: {},
     },
-    Challenge8: {
+    Season1Challenge8: {
       address: "0x663145aA2918282A4F96af66320A5046C7009573",
       abi: [],
       inheritedFunctions: {},
     },
-    Challenge9: {
+    Season1Challenge9: {
       address: "0x1Fd913F2250ae5A4d9F8881ADf3153C6e5E2cBb1",
       abi: [
         {
@@ -829,7 +829,7 @@ const deployedContracts = {
       ],
       inheritedFunctions: {},
     },
-    NFTFlags: {
+    Season1NFTFlags: {
       address: "0xc1Ebd7a78FE7c075035c516B916A7FB3f33c26cE",
       abi: [
         {

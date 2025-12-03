@@ -13,14 +13,14 @@ const deployCtfContracts: DeployFunction = async function (hre: HardhatRuntimeEn
   const { deploy, save } = hre.deployments;
 
   // :: NFT Flags ::
-  await deploy("NFTFlags", {
+  await deploy("Season1NFTFlags", {
     from: deployer,
     args: [deployer],
     log: true,
     autoMine: true,
   });
 
-  const nftFlags = await hre.ethers.getContract<Contract>("NFTFlags", deployer);
+  const nftFlags = await hre.ethers.getContract<Contract>("Season1NFTFlags", deployer);
   console.log("🚩 NFT Flag contract deployed");
 
   if (hre.network.name === "localhost") {
@@ -29,7 +29,7 @@ const deployCtfContracts: DeployFunction = async function (hre: HardhatRuntimeEn
   }
 
   // :: Challenge 1 ::
-  await deploy("Challenge1", {
+  await deploy("Season1Challenge1", {
     from: deployer,
     args: [await nftFlags.getAddress()],
     log: true,
@@ -39,7 +39,7 @@ const deployCtfContracts: DeployFunction = async function (hre: HardhatRuntimeEn
   console.log("🚩 Challenge #1 deployed");
 
   // :: Challenge 2 ::
-  await deploy("Challenge2", {
+  await deploy("Season1Challenge2", {
     from: deployer,
     args: [await nftFlags.getAddress()],
     log: true,
@@ -49,7 +49,7 @@ const deployCtfContracts: DeployFunction = async function (hre: HardhatRuntimeEn
   console.log("🚩 Challenge #2 deployed");
 
   // :: Challenge 3 ::
-  await deploy("Challenge3", {
+  await deploy("Season1Challenge3", {
     from: deployer,
     args: [await nftFlags.getAddress()],
     log: true,
@@ -59,7 +59,7 @@ const deployCtfContracts: DeployFunction = async function (hre: HardhatRuntimeEn
   console.log("🚩 Challenge #3 deployed");
 
   // :: Challenge 4 ::
-  await deploy("Challenge4", {
+  await deploy("Season1Challenge4", {
     from: deployer,
     args: [await nftFlags.getAddress()],
     log: true,
@@ -69,7 +69,7 @@ const deployCtfContracts: DeployFunction = async function (hre: HardhatRuntimeEn
   console.log("🚩 Challenge #4 deployed");
 
   // -> Set allowed minter for Challenge 4
-  const challenge4Contract = await hre.ethers.getContract<Contract>("Challenge4", deployer);
+  const challenge4Contract = await hre.ethers.getContract<Contract>("Season1Challenge4", deployer);
   const hAccounts = hre.config.networks.hardhat.accounts as HardhatNetworkHDAccountsConfig;
   const derivationPath = "m/44'/60'/0'/0/12";
   const challenge4Account = HDNodeWallet.fromMnemonic(Mnemonic.fromPhrase(hAccounts.mnemonic), derivationPath);
@@ -77,7 +77,7 @@ const deployCtfContracts: DeployFunction = async function (hre: HardhatRuntimeEn
   await challenge4Contract.addMinter(challenge4Account.address);
 
   // :: Challenge 5 ::
-  await deploy("Challenge5", {
+  await deploy("Season1Challenge5", {
     from: deployer,
     args: [await nftFlags.getAddress()],
     log: true,
@@ -87,7 +87,7 @@ const deployCtfContracts: DeployFunction = async function (hre: HardhatRuntimeEn
   console.log("🚩 Challenge #5 deployed");
 
   // :: Challenge 6 ::
-  await deploy("Challenge6", {
+  await deploy("Season1Challenge6", {
     from: deployer,
     args: [await nftFlags.getAddress()],
     log: true,
@@ -97,14 +97,14 @@ const deployCtfContracts: DeployFunction = async function (hre: HardhatRuntimeEn
   console.log("🚩 Challenge #6 deployed");
 
   // :: Challenge 7 ::
-  const challenge7Delegate = await deploy("Challenge7Delegate", {
+  const challenge7Delegate = await deploy("Season1Challenge7Delegate", {
     from: deployer,
     args: [deployer],
     log: true,
     autoMine: true,
   });
 
-  await deploy("Challenge7", {
+  await deploy("Season1Challenge7", {
     from: deployer,
     args: [await nftFlags.getAddress(), challenge7Delegate.address, deployer],
     log: true,
@@ -137,12 +137,12 @@ const deployCtfContracts: DeployFunction = async function (hre: HardhatRuntimeEn
   const txReceipt = await txResponse.wait();
   const challenge8Address = txReceipt?.contractAddress;
 
-  if (challenge8Address) await save("Challenge8", { address: challenge8Address, abi: [] });
+  if (challenge8Address) await save("Season1Challenge8", { address: challenge8Address, abi: [] });
 
   console.log("🚩 Challenge #8 deployed at:", challenge8Address);
 
   // :: Challenge 9 ::
-  await deploy("Challenge9", {
+  await deploy("Season1Challenge9", {
     from: deployer,
     args: [await nftFlags.getAddress(), hre.ethers.randomBytes(32)],
     log: true,
@@ -155,7 +155,7 @@ const deployCtfContracts: DeployFunction = async function (hre: HardhatRuntimeEn
   // No contract to deploy for this one. Check the NFTFlag contract.
 
   // :: Challenge 11 ::
-  await deploy("Challenge11", {
+  await deploy("Season1Challenge11", {
     from: deployer,
     args: [await nftFlags.getAddress()],
     log: true,
@@ -165,7 +165,7 @@ const deployCtfContracts: DeployFunction = async function (hre: HardhatRuntimeEn
   console.log("🚩 Challenge #11 deployed");
 
   // :: Challenge 12 ::
-  await deploy("Challenge12", {
+  await deploy("Season1Challenge12", {
     from: deployer,
     args: [await nftFlags.getAddress()],
     log: true,
@@ -176,18 +176,18 @@ const deployCtfContracts: DeployFunction = async function (hre: HardhatRuntimeEn
 
   // Set addAllowedMinterMultiple in NFTFlags
   const challengeAddresses = [
-    await (await hre.ethers.getContract<Contract>("Challenge1", deployer)).getAddress(),
-    await (await hre.ethers.getContract<Contract>("Challenge2", deployer)).getAddress(),
-    await (await hre.ethers.getContract<Contract>("Challenge3", deployer)).getAddress(),
-    await (await hre.ethers.getContract<Contract>("Challenge4", deployer)).getAddress(),
-    await (await hre.ethers.getContract<Contract>("Challenge5", deployer)).getAddress(),
-    await (await hre.ethers.getContract<Contract>("Challenge6", deployer)).getAddress(),
-    await (await hre.ethers.getContract<Contract>("Challenge7", deployer)).getAddress(),
+    await (await hre.ethers.getContract<Contract>("Season1Challenge1", deployer)).getAddress(),
+    await (await hre.ethers.getContract<Contract>("Season1Challenge2", deployer)).getAddress(),
+    await (await hre.ethers.getContract<Contract>("Season1Challenge3", deployer)).getAddress(),
+    await (await hre.ethers.getContract<Contract>("Season1Challenge4", deployer)).getAddress(),
+    await (await hre.ethers.getContract<Contract>("Season1Challenge5", deployer)).getAddress(),
+    await (await hre.ethers.getContract<Contract>("Season1Challenge6", deployer)).getAddress(),
+    await (await hre.ethers.getContract<Contract>("Season1Challenge7", deployer)).getAddress(),
     challenge8Address,
-    await (await hre.ethers.getContract<Contract>("Challenge9", deployer)).getAddress(),
+    await (await hre.ethers.getContract<Contract>("Season1Challenge9", deployer)).getAddress(),
     // skip challenge 10
-    await (await hre.ethers.getContract<Contract>("Challenge11", deployer)).getAddress(),
-    await (await hre.ethers.getContract<Contract>("Challenge12", deployer)).getAddress(),
+    await (await hre.ethers.getContract<Contract>("Season1Challenge11", deployer)).getAddress(),
+    await (await hre.ethers.getContract<Contract>("Season1Challenge12", deployer)).getAddress(),
   ];
 
   const tx = await nftFlags.addAllowedMinterMultiple(challengeAddresses);
@@ -199,5 +199,5 @@ const deployCtfContracts: DeployFunction = async function (hre: HardhatRuntimeEn
 export default deployCtfContracts;
 
 // Tags are useful if you have multiple deploy files and only want to run one of them.
-// e.g. yarn deploy --tags CTF
-deployCtfContracts.tags = ["CTF"];
+// e.g. yarn deploy --tags season1
+deployCtfContracts.tags = ["season1"];

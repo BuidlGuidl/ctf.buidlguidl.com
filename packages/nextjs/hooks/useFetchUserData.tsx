@@ -16,6 +16,7 @@ const fetchUser = async (userId: string) => {
           challenges(orderBy: "challengeId", orderDirection: "asc") {
             items {
               id
+              season
               challengeId
               tokenURI
               timestamp
@@ -40,6 +41,7 @@ export const useFetchUserData = ({ address }: { address?: string }) => {
     refetchInterval: 10000,
   });
 
+  // challenge1 only exists in season 1
   const hasCompletedChallenge1 = data?.users?.items[0]?.challenges?.items.some(
     challenge => Number(challenge.challengeId) === 1,
   );

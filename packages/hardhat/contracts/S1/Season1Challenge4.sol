@@ -4,9 +4,9 @@ pragma solidity >=0.8.0 <0.9.0;
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol";
 import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
-import "./INFTFlags.sol";
+import "../INFTFlags.sol";
 
-contract Challenge4 is Ownable {
+contract Season1Challenge4 is Ownable {
     using ECDSA for bytes32;
     using MessageHashUtils for bytes32;
 
