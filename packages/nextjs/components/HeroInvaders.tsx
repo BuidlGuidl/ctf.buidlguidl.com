@@ -54,22 +54,22 @@ export function HeroInvaders() {
     <>
       <div>
         <div className={clsx(gridClass, rowOneMove)}>
-          <Image width={96} height={96} className={invaderClass} src="/invader-1.svg" alt="" />
-          <Image width={96} height={96} className={invaderClass} src="/invader-2.svg" alt="" />
-          <Image width={96} height={96} className={invaderClass} src="/invader-3.svg" alt="" />
-          <Image width={96} height={96} className={invaderClass} src="/invader-4.svg" alt="" />
+          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-1.svg" alt="" />
+          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-2.svg" alt="" />
+          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-3.svg" alt="" />
+          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-4.svg" alt="" />
         </div>
         <div className={clsx(gridClass, rowTwoMove)}>
-          <Image width={96} height={96} className={invaderClass} src="/invader-5.svg" alt="" />
-          <Image width={96} height={96} className={invaderClass} src="/invader-6.svg" alt="" />
-          <Image width={96} height={96} className={invaderClass} src="/invader-7.svg" alt="" />
-          <Image width={96} height={96} className={invaderClass} src="/invader-8.svg" alt="" />
+          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-5.svg" alt="" />
+          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-6.svg" alt="" />
+          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-7.svg" alt="" />
+          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-8.svg" alt="" />
         </div>
         <div className={clsx(gridClass, rowThreeMove)}>
-          <Image width={96} height={96} className={invaderClass} src="/invader-9.svg" alt="" />
-          <Image width={96} height={96} className={invaderClass} src="/invader-10.svg" alt="" />
-          <Image width={96} height={96} className={invaderClass} src="/invader-11.svg" alt="" />
-          <Image width={96} height={96} className={invaderClass} src="/invader-12.svg" alt="" />
+          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-9.svg" alt="" />
+          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-10.svg" alt="" />
+          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-11.svg" alt="" />
+          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-12.svg" alt="" />
         </div>
       </div>
       <div className="text-center my-12">

@@ -16,7 +16,7 @@ export function InvaderCard({ challengeId, season }: { challengeId: number; seas
             width={96}
             height={96}
             className={invaderClass}
-            src={`/invader-${challengeId}.svg`}
+            src={`/season-${season}/invader-${challengeId}.svg`}
             alt={`Invader Season ${season} - Challenge ${challengeId}`}
           />
           <div className="absolute top-0 -right-7">
