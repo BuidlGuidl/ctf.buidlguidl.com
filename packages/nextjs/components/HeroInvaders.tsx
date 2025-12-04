@@ -90,8 +90,9 @@ export function HeroInvaders() {
       <div className="mt-12 text-center">
         <h1 className="md:text-2xl font-pressStart tracking-wide leading-relaxed">Solidity Invaders</h1>
         <p className="mx-auto mt-6 text-lg md:text-xl/8">
-          ALERT! Invaders have taken {TOTAL_CHALLENGES} flags from the BuidlGuidl Fortress. Your mission is to complete
-          Ethereum coding challenges and take the flags back.
+          ALERT! Invaders have taken {TOTAL_CHALLENGES} flags from the BuidlGuidl Fortress across multiple seasons. Your
+          mission is to complete Ethereum coding challenges and reclaim all of the flags. Each season brings new
+          invaders and tougher challenges!
         </p>
       </div>
     </>
