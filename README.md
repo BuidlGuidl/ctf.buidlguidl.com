@@ -64,7 +64,7 @@ yarn deploy
   </summary>
 
 ```
-yarn deploy --file DeployChallenges.s.sol
+yarn deploy --file DeploySeason1Challenges.s.sol && yarn deploy --file DeploySeason2Challenges.s.sol && yarn deploy --file DeploySeason2Challenge12.s.sol
 ```
 
   </details>

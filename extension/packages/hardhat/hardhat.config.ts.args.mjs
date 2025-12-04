@@ -1,1 +1,1 @@
-export const imports = `import "./tasks/generateTsAbisCTFTask";`;
+export const preContent = `import "./tasks/generateTsAbisCTFTask";`;

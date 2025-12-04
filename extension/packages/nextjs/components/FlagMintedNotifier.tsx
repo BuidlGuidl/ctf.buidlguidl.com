@@ -75,43 +75,55 @@ export const FlagMintedNotifier = ({ children }: { children: React.ReactNode }) 
     });
   };
 
+  // Shared handler for processing FlagMinted events
+  const handleFlagMinted = (logs: any[], season: number) => {
+    if (!connectedAddress) return;
+
+    logs.forEach(log => {
+      const { minter, tokenId, challengeId } = log.args as {
+        minter: string;
+        tokenId: bigint;
+        challengeId: bigint;
+      };
+
+      const eventKey = `season${season}-${minter}-${challengeId}-${tokenId}`;
+
+      if (
+        minter.toLowerCase() === connectedAddress.toLowerCase() &&
+        !isEventProcessed(eventKey, configuredChainId, log.blockHash)
+      ) {
+        notification.success(
+          <div>
+            <p className="font-bold mb-0">Flag Captured! 🚩</p>
+            <p className="mt-0">
+              You have captured flag #{challengeId?.toString()} (Token ID: {tokenId?.toString()})
+            </p>
+          </div>,
+        );
+
+        storeProcessedEvent(eventKey, configuredChainId, {
+          blockNumber: log.blockNumber.toString(),
+          blockHash: log.blockHash,
+          transactionHash: log.transactionHash,
+        });
+      }
+    });
+  };
+
+  // Watch Season 1 NFT Flags
   useScaffoldWatchContractEvent({
-    contractName: "NFTFlags",
+    contractName: "Season1NFTFlags",
     eventName: "FlagMinted",
     enabled: !!connectedAddress,
-    onLogs: logs => {
-      if (!connectedAddress) return;
+    onLogs: logs => handleFlagMinted(logs, 1),
+  });
 
-      logs.forEach(log => {
-        const { minter, tokenId, challengeId } = log.args as {
-          minter: string;
-          tokenId: bigint;
-          challengeId: bigint;
-        };
-
-        const eventKey = `${minter}-${challengeId}-${tokenId}`;
-
-        if (
-          minter.toLowerCase() === connectedAddress.toLowerCase() &&
-          !isEventProcessed(eventKey, configuredChainId, log.blockHash)
-        ) {
-          notification.success(
-            <div>
-              <p className="font-bold mb-0">Flag Captured! 🚩</p>
-              <p className="mt-0">
-                You have captured flag #{challengeId?.toString()} (Token ID: {tokenId?.toString()})
-              </p>
-            </div>,
-          );
-
-          storeProcessedEvent(eventKey, configuredChainId, {
-            blockNumber: log.blockNumber.toString(),
-            blockHash: log.blockHash,
-            transactionHash: log.transactionHash,
-          });
-        }
-      });
-    },
+  // Watch Season 2 NFT Flags
+  useScaffoldWatchContractEvent({
+    contractName: "Season2NFTFlags",
+    eventName: "FlagMinted",
+    enabled: !!connectedAddress,
+    onLogs: logs => handleFlagMinted(logs, 2),
   });
 
   return children;

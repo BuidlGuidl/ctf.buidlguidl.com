@@ -1,4 +1,4 @@
-export const imports = `import { FlagTracker } from "~~/components/FlagTracker";`;
+export const preContent = `import { FlagTracker } from "~~/components/FlagTracker";`;
 
 export const description = `
           <div className="mt-8 max-w-2xl mx-auto">
@@ -41,7 +41,7 @@ export const description = `
                 <p className="text-base">
                   2. Each challenge requires you to find a way to mint a flag NFT by solving smart contract puzzles
                 </p>
-                <p className="text-base">3. Track your progress below - there are 12 flags to capture!</p>
+                <p className="text-base">3. Track your progress below - there are 24 flags to capture!</p>
                 <p className="text-base">
                   4. Apply your solutions to the live challenges on Optimism to capture real flags
                 </p>
