@@ -174,7 +174,7 @@ contract Season2NFTFlags is ERC721, IERC721Receiver, Ownable {
 
         require(ownerOf(anotherTokenId) == from, "Not owner!");
 
-        require(tokenIdToChallengeId[anotherTokenId] == 1, "Not the right token 1!");
+        require(tokenIdToChallengeId[anotherTokenId] == 2, "Not the right token 2!");
 
         require(!tokensClaimed[tokenId], "Token already used to claim!");
 
