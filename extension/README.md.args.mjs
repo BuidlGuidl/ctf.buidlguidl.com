@@ -34,7 +34,7 @@ You'll need to have the following tools installed in your machine:
 First, install the Scaffold-ETH 2 CTF extension with create-eth:
 
 \`\`\`bash
-npx create-eth@latest -e buidlguidl/ctf.buidlguidl.com:extension
+npx create-eth@2.0.2 -e buidlguidl/ctf.buidlguidl.com:extension
 \`\`\`
 
 This will create a new folder with all the tools you need to play the CTF locally. Afterward, you'll be able to deploy the solutions to Optimism and capture the flags in the [live game](https://ctf.buidlguidl.com).
