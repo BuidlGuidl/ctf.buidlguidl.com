@@ -81,10 +81,6 @@ export const FlagTracker = () => {
                 <div className="text-lg font-semibold mb-2">Season 2</div>
                 <div className="space-y-2">
                   <>
-                    <div className="flex items-center space-x-2 bg-success/20 p-2 rounded">
-                      <span className="text-success">✓</span>
-                      <span> Flag #1</span>
-                    </div>
                     {userFlagsSeason2?.map(event => {
                       return <div
                         key={event?.args?.tokenId?.toString()}
@@ -96,6 +92,10 @@ export const FlagTracker = () => {
                         </span>
                       </div>
                     })}
+                    <div className="flex items-center space-x-2 bg-success/20 p-2 rounded">
+                      <span className="text-success">✓</span>
+                      <span> Flag #1</span>
+                    </div>
                   </>
                 </div>
               </div>
