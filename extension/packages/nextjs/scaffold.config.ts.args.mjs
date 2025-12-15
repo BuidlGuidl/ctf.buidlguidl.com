@@ -10,5 +10,5 @@ export type ${extraConfigTypeName} = {
 
 export const configOverrides = {
   startBlockSeason1: 130627582,
-  startBlockSeason2: 130627582,
+  startBlockSeason2: 145105165,
 };
