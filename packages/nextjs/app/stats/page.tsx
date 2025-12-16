@@ -2,11 +2,13 @@
 
 import { useQuery } from "@tanstack/react-query";
 import type { NextPage } from "next";
+import { SEASONS } from "~~/utils/getChallenges";
 
 const thStyles = "whitespace-nowrap px-3 py-3.5 text-center";
 const tdStyles = "whitespace-nowrap px-3 py-4 text-center";
 
 type ChallengeStat = {
+  season: number;
   challenge: number;
   count: number;
 };
@@ -69,30 +71,42 @@ const Stats: NextPage = () => {
                 </dd>
               </div>
             </dl>
-            <div className="mt-8 overflow-hidden bg-base-100 border-2 border-t-4 border-l-4 border-green-700 border-t-green-600 border-l-green-500">
-              <table className="w-full divide-y divide-green-600">
-                <thead className="bg-green-600/30 font-dotGothic tracking-wide text-center text-gray-50 md:text-xl">
-                  <tr>
-                    <th scope="col" className={`${thStyles} w-1/2`}>
-                      Flag
-                    </th>
-                    <th scope="col" className={`${thStyles} w-1/2`}>
-                      Total Minted
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-x divide-gray-700 bg-base-100 md:text-xl">
-                  {stats.challenges.stats
-                    .sort((a: ChallengeStat, b: ChallengeStat) => a.challenge - b.challenge)
-                    .map((stat: ChallengeStat) => (
-                      <tr key={stat.challenge} className="divide-x divide-gray-700">
-                        <td className={tdStyles}>#{stat.challenge}</td>
-                        <td className={tdStyles}>{stat.count}</td>
+            {Object.entries(SEASONS).map(([seasonKey, seasonMeta]) => {
+              const seasonNumber = Number(seasonKey);
+              const seasonStats = stats.challenges.stats
+                .filter((stat: ChallengeStat) => stat.season === seasonNumber)
+                .sort((a: ChallengeStat, b: ChallengeStat) => a.challenge - b.challenge);
+
+              if (seasonStats.length === 0) return null;
+
+              return (
+                <div
+                  key={seasonNumber}
+                  className="mt-8 overflow-hidden bg-base-100 border-2 border-t-4 border-l-4 border-green-700 border-t-green-600 border-l-green-500"
+                >
+                  <table className="w-full divide-y divide-green-600">
+                    <thead className="bg-green-600/30 font-dotGothic tracking-wide text-center text-gray-50 md:text-xl">
+                      <tr>
+                        <th scope="col" className={`${thStyles} w-1/2`}>
+                          {seasonMeta.name} - Flag
+                        </th>
+                        <th scope="col" className={`${thStyles} w-1/2`}>
+                          Total Minted
+                        </th>
                       </tr>
-                    ))}
-                </tbody>
-              </table>
-            </div>
+                    </thead>
+                    <tbody className="divide-y divide-x divide-gray-700 bg-base-100 md:text-xl">
+                      {seasonStats.map((stat: ChallengeStat) => (
+                        <tr key={`${seasonNumber}-${stat.challenge}`} className="divide-x divide-gray-700">
+                          <td className={tdStyles}>#{stat.challenge}</td>
+                          <td className={tdStyles}>{stat.count}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              );
+            })}
           </div>
 
           <h2 className="mt-24 text-center font-pressStart tracking-wide leading-relaxed md:text-2xl">Users</h2>
