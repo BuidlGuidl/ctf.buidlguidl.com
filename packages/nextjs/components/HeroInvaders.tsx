@@ -108,18 +108,6 @@ export function HeroInvaders() {
           <Image width={96} height={96} className={invaderClass} src="/season-1/invader-12.svg" alt="" />
         </div>
       </div>
-      <div className="text-center my-12">
-        {!hasCompletedChallenge1 && (
-          <Link href="/bangkok/challenges/1" className="pl-8 pr-6 btn btn-primary btn-outline font-pressStart">
-            Start <PlayIcon className="h-6 w-6" />
-          </Link>
-        )}
-        {hasCompletedChallenge1 && (
-          <Link href={`/profile/${connectedAddress}`} className="pl-8 pr-6 btn btn-primary btn-outline font-pressStart">
-            Continue <PlayIcon className="h-6 w-6" />
-          </Link>
-        )}
-      </div>
       <div className="mx-auto px-12 max-w-60">
         <Image width={112} height={80} className="w-full h-auto" src="/fortress-noflag.svg" alt="" />
       </div>
@@ -146,6 +134,33 @@ export function HeroInvaders() {
               <ProgressInvaders challenges={challenges} season={Number(season)} />
             </div>
           ))}
+      </div>
+
+      {/* Start/Continue Button */}
+      <div className="text-center mt-12">
+        {!hasCompletedChallenge1 && (
+          <Link href="/bangkok/challenges/1" className="pl-8 pr-6 btn btn-primary btn-outline font-pressStart">
+            Start <PlayIcon className="h-6 w-6" />
+          </Link>
+        )}
+        {hasCompletedChallenge1 && (
+          <Link href={`/profile/${connectedAddress}`} className="pl-8 pr-6 btn btn-primary btn-outline font-pressStart">
+            Continue <PlayIcon className="h-6 w-6" />
+          </Link>
+        )}
+      </div>
+
+      {/* Telegram CTA */}
+      <div className="mt-16 text-center">
+        <p className="text-gray-400 mb-4">Got questions or need help?</p>
+        <a
+          href="https://t.me/+B9dXIETeXBswOWYy"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-outline btn-sm"
+        >
+          Join our Telegram
+        </a>
       </div>
     </>
   );
