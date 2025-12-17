@@ -5,7 +5,7 @@ import { FlagIcon } from "./FlagIcon";
 import clsx from "clsx";
 import { getFormattedDateTime } from "~~/utils/date";
 import { getFlagColor } from "~~/utils/flagColor";
-import { CHALLENGE_NAMES, getSlugBySeason } from "~~/utils/getChallenges";
+import { CHALLENGE_DESCRIPTIONS, CHALLENGE_NAMES, getSlugBySeason } from "~~/utils/getChallenges";
 
 export function InvaderCardCaptured({
   challengeId,
@@ -17,9 +17,11 @@ export function InvaderCardCaptured({
   timestamp?: number;
 }) {
   const timeCaptured = timestamp ? getFormattedDateTime(new Date(timestamp * 1000)) : "";
+  const description = CHALLENGE_DESCRIPTIONS[season]?.[challengeId.toString()] ?? "";
+  const tooltipText = `${description}${timeCaptured ? ` • Captured: ${timeCaptured}` : ""}`;
 
   return (
-    <div className="tooltip" data-tip={`Captured: ${timeCaptured}`}>
+    <div className="tooltip tooltip-bottom" data-tip={tooltipText}>
       <div
         className="relative flex items-center justify-center border border-slate-400 bg-gray-950 rounded-md aspect-square overflow-hidden"
         style={{

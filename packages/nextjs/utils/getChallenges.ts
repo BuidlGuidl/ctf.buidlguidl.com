@@ -30,6 +30,38 @@ export const CHALLENGE_NAMES: Record<number, Record<string, string>> = {
   },
 };
 
+// Challenge descriptions (short teasers) organized by season, then challengeId
+export const CHALLENGE_DESCRIPTIONS: Record<number, Record<string, string>> = {
+  1: {
+    "1": "Interact with the Challenge #1 contract and register yourself as a player.",
+    "2": "Interact with the Challenge #2 contract. In this case, not all calls are allowed.",
+    "3": "Mint your flag using a contract with no deployed code.",
+    "4": "Mint your flag using the right signature.",
+    "5": "Obtain this flag by first getting 10 points.",
+    "6": "Mint your flag meeting all the conditions.",
+    "7": "Only the owner of the contract may mint this flag.",
+    "8": "Mint your flag in this unverified contract.",
+    "9": "You only need a password to mint your flag.",
+    "10": "There is no contract for this challenge, it's already on the Season1NFTFlags contract.",
+    "11": "Interact with the Challenge #11 contract. In this case, not all calls are allowed.",
+    "12": "Mint your flag using the right block.",
+  },
+  2: {
+    "1": "Complete Challenge #1 in Season 1 to automatically complete this challenge.",
+    "2": "Provide the right key to the contract to mint your flag.",
+    "3": "You just have to ask the right way.",
+    "4": "Pay me! (but not directly)",
+    "5": "Set the right parameters to meet the counter's requirements.",
+    "6": "Obtain this flag by getting points and upgrading levels.",
+    "7": "Sometimes, the calldata is the only way to talk to a contract.",
+    "8": "This flag is protected behind a triple lock.",
+    "9": "Mint your flag in this unverified contract.",
+    "10": "Interact with the Challenge #10 contract. In this case, not all calls are allowed.",
+    "11": "Mint your flag using the right block (if you are lucky).",
+    "12": "Unlock the achievements, win the game, and capture the flag.",
+  },
+};
+
 export const SEASONS: Record<number, { name: string; slug: string }> = {
   1: { name: "Bangkok (S1)", slug: "bangkok" },
   2: { name: "Buenos Aires (S2)", slug: "buenos-aires" },
