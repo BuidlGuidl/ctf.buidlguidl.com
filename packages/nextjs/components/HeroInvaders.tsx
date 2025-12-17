@@ -88,40 +88,64 @@ export function HeroInvaders() {
 
   return (
     <>
-      <div>
-        <div className={clsx(gridClass, rowOneMove)}>
-          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-1.svg" alt="" />
-          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-2.svg" alt="" />
-          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-3.svg" alt="" />
-          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-4.svg" alt="" />
+      {/* Hero Section with Background Invaders */}
+      <div className="relative min-h-[400px] flex flex-col items-center justify-center py-12">
+        {/* Animated Invaders Background */}
+        <div className="absolute inset-0 opacity-20 pointer-events-none overflow-hidden">
+          <div className={clsx(gridClass, rowOneMove)}>
+            <Image width={96} height={96} className={invaderClass} src="/season-1/invader-1.svg" alt="" />
+            <Image width={96} height={96} className={invaderClass} src="/season-1/invader-2.svg" alt="" />
+            <Image width={96} height={96} className={invaderClass} src="/season-1/invader-3.svg" alt="" />
+            <Image width={96} height={96} className={invaderClass} src="/season-1/invader-4.svg" alt="" />
+          </div>
+          <div className={clsx(gridClass, rowTwoMove)}>
+            <Image width={96} height={96} className={invaderClass} src="/season-1/invader-5.svg" alt="" />
+            <Image width={96} height={96} className={invaderClass} src="/season-1/invader-6.svg" alt="" />
+            <Image width={96} height={96} className={invaderClass} src="/season-1/invader-7.svg" alt="" />
+            <Image width={96} height={96} className={invaderClass} src="/season-1/invader-8.svg" alt="" />
+          </div>
+          <div className={clsx(gridClass, rowThreeMove)}>
+            <Image width={96} height={96} className={invaderClass} src="/season-1/invader-9.svg" alt="" />
+            <Image width={96} height={96} className={invaderClass} src="/season-1/invader-10.svg" alt="" />
+            <Image width={96} height={96} className={invaderClass} src="/season-1/invader-11.svg" alt="" />
+            <Image width={96} height={96} className={invaderClass} src="/season-1/invader-12.svg" alt="" />
+          </div>
         </div>
-        <div className={clsx(gridClass, rowTwoMove)}>
-          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-5.svg" alt="" />
-          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-6.svg" alt="" />
-          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-7.svg" alt="" />
-          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-8.svg" alt="" />
+
+        {/* Hero Content */}
+        <div className="relative z-10">
+          <div className="mx-auto px-12 max-w-60">
+            <Image width={112} height={80} className="w-full h-auto" src="/fortress-noflag.svg" alt="" />
+          </div>
+          <div className="mt-8 text-center">
+            <h1 className="md:text-2xl font-pressStart tracking-wide leading-relaxed">Solidity Invaders</h1>
+            <p className="mx-auto mt-6 text-lg md:text-xl/8 max-w-2xl">
+              ALERT! Invaders have taken {TOTAL_CHALLENGES} flags from the BuidlGuidl Fortress across multiple seasons.
+              Your mission is to complete Ethereum coding challenges and reclaim all of the flags. Each season brings
+              new invaders and tougher challenges!
+            </p>
+          </div>
+          {/* Start/Continue Button */}
+          <div className="text-center mt-8">
+            {!hasCompletedChallenge1 && (
+              <Link href="/bangkok/challenges/1" className="pl-8 pr-6 btn btn-primary btn-outline font-pressStart">
+                Start <PlayIcon className="h-6 w-6" />
+              </Link>
+            )}
+            {hasCompletedChallenge1 && (
+              <Link
+                href={`/profile/${connectedAddress}`}
+                className="pl-8 pr-6 btn btn-primary btn-outline font-pressStart"
+              >
+                Continue <PlayIcon className="h-6 w-6" />
+              </Link>
+            )}
+          </div>
         </div>
-        <div className={clsx(gridClass, rowThreeMove)}>
-          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-9.svg" alt="" />
-          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-10.svg" alt="" />
-          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-11.svg" alt="" />
-          <Image width={96} height={96} className={invaderClass} src="/season-1/invader-12.svg" alt="" />
-        </div>
-      </div>
-      <div className="mx-auto px-12 max-w-60">
-        <Image width={112} height={80} className="w-full h-auto" src="/fortress-noflag.svg" alt="" />
-      </div>
-      <div className="mt-12 text-center">
-        <h1 className="md:text-2xl font-pressStart tracking-wide leading-relaxed">Solidity Invaders</h1>
-        <p className="mx-auto mt-6 text-lg md:text-xl/8">
-          ALERT! Invaders have taken {TOTAL_CHALLENGES} flags from the BuidlGuidl Fortress across multiple seasons. Your
-          mission is to complete Ethereum coding challenges and reclaim all of the flags. Each season brings new
-          invaders and tougher challenges!
-        </p>
       </div>
 
       {/* Challenge Grid by Season */}
-      <div className="mt-16">
+      <div className="mt-2">
         {Object.entries(mergedChallengeDataBySeason)
           .sort(([a], [b]) => Number(a) - Number(b))
           .map(([season, challenges]) => (
@@ -134,20 +158,6 @@ export function HeroInvaders() {
               <ProgressInvaders challenges={challenges} season={Number(season)} />
             </div>
           ))}
-      </div>
-
-      {/* Start/Continue Button */}
-      <div className="text-center mt-12">
-        {!hasCompletedChallenge1 && (
-          <Link href="/bangkok/challenges/1" className="pl-8 pr-6 btn btn-primary btn-outline font-pressStart">
-            Start <PlayIcon className="h-6 w-6" />
-          </Link>
-        )}
-        {hasCompletedChallenge1 && (
-          <Link href={`/profile/${connectedAddress}`} className="pl-8 pr-6 btn btn-primary btn-outline font-pressStart">
-            Continue <PlayIcon className="h-6 w-6" />
-          </Link>
-        )}
       </div>
 
       {/* Telegram CTA */}
