@@ -14,11 +14,12 @@ ponder.get("/stats", async (c) => {
     const challengesCountLastMonth = await c.db.select({ value: count() }).from(c.tables.Challenge).where(gte(c.tables.Challenge.timestamp, lastMonth));
 
     const challengesStats = await c.db.select({
+        season: c.tables.Challenge.season,
         challenge: c.tables.Challenge.challengeId,
         count: sql<number>`cast(count(${c.tables.Challenge}.id) as int)`,
     })
         .from(c.tables.Challenge)
-        .groupBy(c.tables.Challenge.challengeId);
+        .groupBy(c.tables.Challenge.season, c.tables.Challenge.challengeId);
 
     const usersStats = await c.db.select({
         challengesCount: c.tables.User.challengesCount,
@@ -37,6 +38,7 @@ ponder.get("/stats", async (c) => {
             total: challengesCount[0]?.value || 0,
             lastMonth: challengesCountLastMonth[0]?.value || 0,
             stats: challengesStats.map((stat) => ({
+                season: stat.season,
                 challenge: Number(stat.challenge),
                 count: stat.count,
             })),
