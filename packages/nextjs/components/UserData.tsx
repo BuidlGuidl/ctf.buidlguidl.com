@@ -5,44 +5,10 @@ import { ProgressInvaders } from "./ProgressInvaders";
 import { Address } from "~~/components/scaffold-eth";
 import { useFetchUserData } from "~~/hooks/useFetchUserData";
 import { getFormattedDateTime } from "~~/utils/date";
-import { CHALLENGE_NAMES, SEASONS } from "~~/utils/getChallenges";
+import { SEASONS } from "~~/utils/getChallenges";
 
 export const UserData = ({ address }: { address: string }) => {
-  const { userData } = useFetchUserData({ address });
-
-  const mergedChallengeDataBySeason = Object.entries(CHALLENGE_NAMES).reduce((acc, [seasonKey, challengesMap]) => {
-    const season = Number(seasonKey);
-    const challengeIds = Object.keys(challengesMap).sort((a, b) => Number(a) - Number(b));
-
-    acc[season] = challengeIds.map(challengeId => {
-      const userChallenge = userData?.challenges?.items.find(c => {
-        const challengeIdNumber = Number(challengeId);
-        const cChallengeIdNumber = Number(c.challengeId);
-
-        // Challenge #1 is shared across seasons: if it's completed in any season, mark it as solved
-        if (challengeIdNumber === 1) {
-          return cChallengeIdNumber === 1;
-        }
-
-        return c.season === season && cChallengeIdNumber === challengeIdNumber;
-      });
-
-      if (userChallenge) {
-        return {
-          challengeId,
-          solved: true,
-          timestamp: userChallenge.timestamp,
-        };
-      }
-
-      return {
-        challengeId,
-        solved: false,
-      };
-    });
-
-    return acc;
-  }, {} as Record<number, { challengeId: string; solved: boolean; timestamp?: number }[]>);
+  const { userData, challengesBySeasons } = useFetchUserData({ address });
 
   return (
     <>
@@ -71,7 +37,7 @@ export const UserData = ({ address }: { address: string }) => {
           </div>
         </div>
       )}
-      {Object.entries(mergedChallengeDataBySeason)
+      {Object.entries(challengesBySeasons)
         .sort(([a], [b]) => Number(a) - Number(b))
         .map(([season, challenges]) => (
           <div key={season} className="mt-12">

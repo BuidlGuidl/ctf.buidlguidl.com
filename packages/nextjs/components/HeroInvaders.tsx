@@ -18,42 +18,7 @@ export function HeroInvaders() {
   const [rowThreeMove, setRowThreeMove] = useState("translate-x-0");
 
   const { address: connectedAddress } = useAccount();
-  const { userData, hasCompletedChallenge1 } = useFetchUserData({ address: connectedAddress });
-
-  // Merge challenge data with user progress (same logic as UserData)
-  const mergedChallengeDataBySeason = Object.entries(CHALLENGE_NAMES).reduce((acc, [seasonKey, challengesMap]) => {
-    const season = Number(seasonKey);
-    const challengeIds = Object.keys(challengesMap).sort((a, b) => Number(a) - Number(b));
-
-    acc[season] = challengeIds.map(challengeId => {
-      const userChallenge = userData?.challenges?.items.find(c => {
-        const challengeIdNumber = Number(challengeId);
-        const cChallengeIdNumber = Number(c.challengeId);
-
-        // Challenge #1 is shared across seasons: if it's completed in any season, mark it as solved
-        if (challengeIdNumber === 1) {
-          return cChallengeIdNumber === 1;
-        }
-
-        return c.season === season && cChallengeIdNumber === challengeIdNumber;
-      });
-
-      if (userChallenge) {
-        return {
-          challengeId,
-          solved: true,
-          timestamp: userChallenge.timestamp,
-        };
-      }
-
-      return {
-        challengeId,
-        solved: false,
-      };
-    });
-
-    return acc;
-  }, {} as Record<number, { challengeId: string; solved: boolean; timestamp?: number }[]>);
+  const { hasCompletedChallenge1, challengesBySeasons } = useFetchUserData({ address: connectedAddress });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -145,7 +110,7 @@ export function HeroInvaders() {
 
       {/* Challenge Grid - 2 Columns (1 per season) */}
       <div className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-3xl">
-        {Object.entries(mergedChallengeDataBySeason)
+        {Object.entries(challengesBySeasons)
           .sort(([a], [b]) => Number(a) - Number(b))
           .map(([season, challenges]) => (
             <div key={season}>
