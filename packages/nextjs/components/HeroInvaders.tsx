@@ -3,12 +3,11 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ProgressInvaders } from "./ProgressInvaders";
 import clsx from "clsx";
 import { useAccount } from "wagmi";
 import { PlayIcon } from "@heroicons/react/24/solid";
 import { useFetchUserData } from "~~/hooks/useFetchUserData";
-import { CHALLENGE_NAMES, SEASONS, TOTAL_CHALLENGES } from "~~/utils/getChallenges";
+import { CHALLENGE_DESCRIPTIONS, CHALLENGE_NAMES, SEASONS, TOTAL_CHALLENGES } from "~~/utils/getChallenges";
 
 const invaderClass = "mx-auto w-10 h-10 md:w-12 md:h-12 cursor-crosshair";
 const gridClass = "mx-auto my-6 md:my-8 grid grid-cols-4 gap-4";
@@ -89,7 +88,7 @@ export function HeroInvaders() {
   return (
     <>
       {/* Hero Section with Background Invaders */}
-      <div className="relative min-h-[400px] flex flex-col items-center justify-center py-12">
+      <div className="relative min-h-[400px] flex flex-col items-center justify-center py-12 w-full max-w-3xl">
         {/* Animated Invaders Background */}
         <div className="absolute inset-0 opacity-20 pointer-events-none overflow-hidden">
           <div className={clsx(gridClass, rowOneMove)}>
@@ -119,7 +118,7 @@ export function HeroInvaders() {
           </div>
           <div className="mt-8 text-center">
             <h1 className="md:text-2xl font-pressStart tracking-wide leading-relaxed">Solidity Invaders</h1>
-            <p className="mx-auto mt-6 text-lg md:text-xl/8 max-w-2xl">
+            <p className="mt-6 text-lg md:text-xl/8">
               ALERT! Invaders have taken {TOTAL_CHALLENGES} flags from the BuidlGuidl Fortress across multiple seasons.
               Your mission is to complete Ethereum coding challenges and reclaim all of the flags. Each season brings
               new invaders and tougher challenges!
@@ -144,18 +143,46 @@ export function HeroInvaders() {
         </div>
       </div>
 
-      {/* Challenge Grid by Season */}
-      <div className="mt-2">
+      {/* Challenge Grid - 2 Columns (1 per season) */}
+      <div className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-3xl">
         {Object.entries(mergedChallengeDataBySeason)
           .sort(([a], [b]) => Number(a) - Number(b))
           .map(([season, challenges]) => (
-            <div key={season} className="mt-12 first:mt-0">
-              <div className="max-w-4xl mx-auto mb-2">
-                <p className="m-0 text-sm text-gray-400 font-pressStart">
-                  {SEASONS[Number(season)]?.name ?? `Season ${season}`}
-                </p>
+            <div key={season}>
+              <p className="m-0 mb-4 text-sm text-gray-400 font-pressStart">
+                {SEASONS[Number(season)]?.name ?? `Season ${season}`}
+              </p>
+              <div className="space-y-2">
+                {challenges.map(challenge => {
+                  const seasonNum = Number(season);
+                  const challengeId = Number(challenge.challengeId);
+                  const slug = SEASONS[seasonNum]?.slug ?? "bangkok";
+                  const description = CHALLENGE_DESCRIPTIONS[seasonNum]?.[challenge.challengeId] ?? "";
+                  return (
+                    <div key={challenge.challengeId} className="tooltip tooltip-bottom w-full" data-tip={description}>
+                      <Link
+                        href={`/${slug}/challenges/${challengeId}`}
+                        className={clsx(
+                          "flex items-center gap-3 p-2 rounded-md hover:bg-gray-900 transition-colors",
+                          challenge.solved && "bg-gray-900/50",
+                        )}
+                      >
+                        <Image
+                          width={32}
+                          height={32}
+                          className="w-8 h-8 shrink-0"
+                          src={`/season-${season}/invader-${challengeId}.svg`}
+                          alt=""
+                        />
+                        <span className={clsx("text-sm", challenge.solved && "text-primary")}>
+                          {CHALLENGE_NAMES[seasonNum]?.[challenge.challengeId] ?? `Challenge ${challengeId}`}
+                        </span>
+                        {challenge.solved && <span className="text-primary text-xs ml-auto">✓</span>}
+                      </Link>
+                    </div>
+                  );
+                })}
               </div>
-              <ProgressInvaders challenges={challenges} season={Number(season)} />
             </div>
           ))}
       </div>
