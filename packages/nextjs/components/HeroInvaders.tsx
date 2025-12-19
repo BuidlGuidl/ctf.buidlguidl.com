@@ -109,7 +109,7 @@ export function HeroInvaders() {
       </div>
 
       {/* Challenge Grid - 2 Columns (1 per season) */}
-      <div className="mt-2 grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-3xl">
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-3xl">
         {Object.entries(challengesBySeasons)
           .sort(([a], [b]) => Number(a) - Number(b))
           .map(([season, challenges]) => (
@@ -124,7 +124,7 @@ export function HeroInvaders() {
                   const slug = SEASONS[seasonNum]?.slug ?? "bangkok";
                   const description = CHALLENGE_DESCRIPTIONS[seasonNum]?.[challenge.challengeId] ?? "";
                   return (
-                    <div key={challenge.challengeId} className="tooltip tooltip-bottom w-full" data-tip={description}>
+                    <div key={challenge.challengeId} className="tooltip tooltip-right w-full" data-tip={description}>
                       <Link
                         href={`/${slug}/challenges/${challengeId}`}
                         className={clsx(
