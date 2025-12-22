@@ -10,10 +10,8 @@ export const metadata = getMetadata({
 
 const Home: NextPage = () => {
   return (
-    <div className="pt-4 pb-20">
-      <div className="mx-auto max-w-4xl px-6">
-        <HeroInvaders />
-      </div>
+    <div className="flex flex-col items-center pt-4 pb-20 px-6">
+      <HeroInvaders />
     </div>
   );
 };
