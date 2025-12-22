@@ -124,7 +124,7 @@ export function HeroInvaders() {
                   const slug = SEASONS[seasonNum]?.slug ?? "bangkok";
                   const description = CHALLENGE_DESCRIPTIONS[seasonNum]?.[challenge.challengeId] ?? "";
                   return (
-                    <div key={challenge.challengeId} className="tooltip tooltip-right w-full" data-tip={description}>
+                    <div key={challenge.challengeId} className="tooltip tooltip-left w-full" data-tip={description}>
                       <Link
                         href={`/${slug}/challenges/${challengeId}`}
                         className={clsx(
