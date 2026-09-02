@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { NextPage } from "next";
 import { ClockIcon, FlagIcon, RocketLaunchIcon, UserGroupIcon } from "@heroicons/react/24/outline";
+import { EventGallery } from "~~/components/EventGallery";
 import { FlagArt } from "~~/components/FlagArt";
 import { Prizes } from "~~/components/Prizes";
 import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
@@ -112,6 +113,12 @@ const Home: NextPage = () => {
         <div className="bg-green-600 h-8 w-[60%] opacity-60"></div>
         <div className="bg-green-600 h-8 w-[40%] opacity-40"></div>
         <div className="bg-green-600 h-8 w-[20%] opacity-20"></div>
+      </div>
+      <div id="live-event" className="pt-28">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <h2 className="text-3xl font-dotGothic tracking-wide text-white md:text-4xl">Live Event</h2>
+          <EventGallery />
+        </div>
       </div>
       <div id="prizes" className="py-28">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
