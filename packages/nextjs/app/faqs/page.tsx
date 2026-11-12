@@ -59,6 +59,14 @@ const faqs = [
         >
           Devconnect ARG
         </a>
+        . Season 3 (Mumbai) includes the challenges played at{" "}
+        <a
+          className="text-primary link break-all lg:break-normal"
+          href="https://ctf-mumbai.buidlguidl.com/"
+          target="_blank"
+        >
+          Devcon Mumbai
+        </a>
         .
       </>
     ),

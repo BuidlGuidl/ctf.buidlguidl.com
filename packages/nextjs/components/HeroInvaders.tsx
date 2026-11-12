@@ -108,8 +108,8 @@ export function HeroInvaders() {
         </div>
       </div>
 
-      {/* Challenge Grid - 2 Columns (1 per season) */}
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-3xl">
+      {/* Challenge Grid - 1 Column per season */}
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl">
         {Object.entries(challengesBySeasons)
           .sort(([a], [b]) => Number(a) - Number(b))
           .map(([season, challenges]) => (

@@ -7,4 +7,6 @@ interface INFTFlags {
     function hasMinted(address _recipient, uint256 _challengeId) external view returns (bool);
 
     function tokenIdCounter() external view returns (uint256);
+
+    function finalBossUnlocked(address _player) external view returns (bool);
 }

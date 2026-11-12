@@ -55,7 +55,7 @@ const config: HardhatUserConfig = {
       accounts: [deployerPrivateKey],
       verify: {
         etherscan: {
-          apiUrl: "https://api-optimistic.etherscan.io",
+          apiUrl: "https://api.etherscan.io/v2/api?chainid=10",
           apiKey: `${optimisticEtherscanApiKey}`,
         },
       },
