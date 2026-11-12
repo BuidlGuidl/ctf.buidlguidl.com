@@ -1,0 +1,251 @@
+{
+  "address": "0x4E12fE98eC5C3111af184D88011db7a367806fc2",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_nftContract",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_implementation",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "inputs": [],
+      "name": "admin",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_expectedAdmin",
+          "type": "address"
+        }
+      ],
+      "name": "approveNewAdmin",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "debitHeld",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "heldOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "implementation",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "mintFlag",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "nftContract",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "pendingAdmin",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_newAdmin",
+          "type": "address"
+        }
+      ],
+      "name": "proposeNewAdmin",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "solverOwner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "swapCreditLock",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "previous",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+  "transactionHash": "0xcd1b90aecba448510c27d5e571e1e5a55e5acbedb833055e7d1deb5cc4d14303",
+  "receipt": {
+    "to": null,
+    "from": "0xD42c3Ea936751Cc5642E4e568dCAF1423107fC9e",
+    "contractAddress": "0x4E12fE98eC5C3111af184D88011db7a367806fc2",
+    "transactionIndex": 5,
+    "gasUsed": "636641",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xddc210fe634189367d71aa246c75c45e7fd9ad37ca28f396a725d7925f4b5996",
+    "transactionHash": "0xcd1b90aecba448510c27d5e571e1e5a55e5acbedb833055e7d1deb5cc4d14303",
+    "logs": [],
+    "blockNumber": 159443865,
+    "cumulativeGasUsed": "1805403",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x4Cd1875f6413B44b28688C1dBdE869784573cf8C",
+    "0x27867A4ed08c57Fa4fC7051eb9e4FDf5E6faffd2"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "e9510f5922184b882c535edbe51cf64f",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_nftContract\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_implementation\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"stateMutability\":\"payable\",\"type\":\"fallback\"},{\"inputs\":[],\"name\":\"admin\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_expectedAdmin\",\"type\":\"address\"}],\"name\":\"approveNewAdmin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"debitHeld\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"heldOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"implementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"mintFlag\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"nftContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pendingAdmin\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newAdmin\",\"type\":\"address\"}],\"name\":\"proposeNewAdmin\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"solverOwner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"swapCreditLock\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"previous\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/S3/Season3Challenge11.sol\":\"Season3Challenge11\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/INFTFlags.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\npragma solidity >=0.8.0 <0.9.0;\\n\\ninterface INFTFlags {\\n    function mint(address _recipient, uint256 _challengeId) external;\\n\\n    function hasMinted(address _recipient, uint256 _challengeId) external view returns (bool);\\n\\n    function tokenIdCounter() external view returns (uint256);\\n\\n    function finalBossUnlocked(address _player) external view returns (bool);\\n}\\n\",\"keccak256\":\"0x4fc291ba5c8d831c1e684b955499b3ee523e611556b6de7cd83fced9de10d31e\",\"license\":\"MIT\"},\"contracts/S3/Season3Challenge11.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport \\\"../INFTFlags.sol\\\";\\n\\ninterface ISeason3Challenge11Ledger {\\n    function nftContract() external view returns (address);\\n\\n    function heldOf(address account) external view returns (uint256);\\n\\n    function debitHeld(address account, uint256 amount) external;\\n\\n    function swapCreditLock(uint256 value) external returns (uint256 previous);\\n}\\n\\ncontract Season3Challenge11Wallet {\\n    address public owner;\\n    uint256 public maxBalance;\\n    mapping(address => bool) public whitelisted;\\n    mapping(address => uint256) public balances;\\n\\n    modifier onlyWhitelisted() {\\n        require(whitelisted[msg.sender], \\\"Not whitelisted\\\");\\n        _;\\n    }\\n\\n    function setMaxBalance(uint256 _maxBalance) external onlyWhitelisted {\\n        require(ISeason3Challenge11Ledger(address(this)).heldOf(msg.sender) == 0, \\\"Withdraw your funds first\\\");\\n        maxBalance = _maxBalance;\\n    }\\n\\n    function addToWhitelist(address addr) external {\\n        require(msg.sender == owner, \\\"Not the owner\\\");\\n        whitelisted[addr] = true;\\n    }\\n\\n    function deposit() external payable onlyWhitelisted {\\n        balances[msg.sender] += msg.value;\\n    }\\n\\n    function execute(address to, uint256 value, bytes calldata data) external payable onlyWhitelisted {\\n        ISeason3Challenge11Ledger ledger = ISeason3Challenge11Ledger(address(this));\\n        require(to != address(this) && to != ledger.nftContract(), \\\"Forbidden target\\\");\\n        require(balances[msg.sender] >= value, \\\"Insufficient balance\\\");\\n        balances[msg.sender] -= value;\\n        ledger.debitHeld(msg.sender, value);\\n        uint256 previousLock = ledger.swapCreditLock(0);\\n        (bool success, ) = to.call{ value: value }(data);\\n        ledger.swapCreditLock(previousLock);\\n        require(success, \\\"Execution failed\\\");\\n    }\\n\\n    function multicall(bytes[] calldata data) external payable onlyWhitelisted {\\n        bool depositCalled = false;\\n        for (uint256 i = 0; i < data.length; i++) {\\n            bytes memory _data = data[i];\\n            bytes4 selector;\\n            assembly {\\n                selector := mload(add(_data, 32))\\n            }\\n            if (selector == this.deposit.selector) {\\n                require(!depositCalled, \\\"Deposit can only be called once\\\");\\n                depositCalled = true;\\n            }\\n            (bool success, ) = address(this).delegatecall(data[i]);\\n            require(success, \\\"Error while delegating call\\\");\\n        }\\n    }\\n}\\n\\ncontract Season3Challenge11 {\\n    bytes32 private constant LOCK_SLOT = keccak256(\\\"challenge11.proxy.lock\\\");\\n    bytes32 private constant HELD_SLOT = keccak256(\\\"challenge11.proxy.held\\\");\\n    bytes32 private constant SOLVER_SLOT = keccak256(\\\"challenge11.proxy.solver\\\");\\n\\n    address public pendingAdmin;\\n    address public admin;\\n    address public immutable implementation;\\n    address public immutable nftContract;\\n\\n    constructor(address _nftContract, address _implementation) {\\n        nftContract = _nftContract;\\n        implementation = _implementation;\\n        admin = msg.sender;\\n    }\\n\\n    modifier onlyAdmin() {\\n        require(msg.sender == admin, \\\"Caller is not the admin\\\");\\n        _;\\n    }\\n\\n    function proposeNewAdmin(address _newAdmin) external {\\n        pendingAdmin = _newAdmin;\\n    }\\n\\n    function approveNewAdmin(address _expectedAdmin) external onlyAdmin {\\n        require(pendingAdmin == _expectedAdmin, \\\"Expected new admin by the current admin is not the pending admin\\\");\\n        admin = pendingAdmin;\\n    }\\n\\n    function heldOf(address account) public view returns (uint256 amount) {\\n        bytes32 slot = _heldSlot(account);\\n        assembly {\\n            amount := sload(slot)\\n        }\\n    }\\n\\n    function debitHeld(address account, uint256 amount) external {\\n        require(msg.sender == address(this), \\\"Only the wallet\\\");\\n        uint256 current = heldOf(account);\\n        require(current >= amount, \\\"Insufficient funds\\\");\\n        _setHeld(account, current - amount);\\n    }\\n\\n    function swapCreditLock(uint256 value) external returns (uint256 previous) {\\n        require(msg.sender == address(this), \\\"Only the wallet\\\");\\n        bytes32 lockSlot = LOCK_SLOT;\\n        assembly {\\n            previous := sload(lockSlot)\\n            sstore(lockSlot, value)\\n        }\\n    }\\n\\n    function solverOwner(address account) public view returns (address owner) {\\n        bytes32 slot = keccak256(abi.encode(account, SOLVER_SLOT));\\n        assembly {\\n            owner := sload(slot)\\n        }\\n    }\\n\\n    function mintFlag() external onlyAdmin {\\n        _bindSolver();\\n        require(Season3Challenge11Wallet(payable(address(this))).balances(msg.sender) > 0, \\\"No balance\\\");\\n        require(heldOf(msg.sender) == 0, \\\"Funds still held\\\");\\n        INFTFlags(nftContract).mint(tx.origin, 11);\\n    }\\n\\n    function _bindSolver() private {\\n        if (msg.sender == tx.origin) return;\\n        address owner = solverOwner(msg.sender);\\n        if (owner == address(0)) {\\n            bytes32 slot = keccak256(abi.encode(msg.sender, SOLVER_SLOT));\\n            address agent = tx.origin;\\n            assembly {\\n                sstore(slot, agent)\\n            }\\n        } else {\\n            require(owner == tx.origin, \\\"Solver bound to another agent\\\");\\n        }\\n    }\\n\\n    fallback() external payable {\\n        _delegate();\\n    }\\n\\n    receive() external payable {\\n        _delegate();\\n    }\\n\\n    function _delegate() private {\\n        bytes32 lockSlot = LOCK_SLOT;\\n        uint256 locked;\\n        assembly {\\n            locked := sload(lockSlot)\\n        }\\n\\n        bool credit = msg.value > 0 && locked == 0;\\n        if (credit) {\\n            assembly {\\n                sstore(lockSlot, 1)\\n            }\\n            _setHeld(msg.sender, heldOf(msg.sender) + msg.value);\\n        }\\n\\n        (bool success, bytes memory result) = implementation.delegatecall(msg.data);\\n\\n        if (credit) {\\n            assembly {\\n                sstore(lockSlot, 0)\\n            }\\n        }\\n\\n        assembly {\\n            switch success\\n            case 0 {\\n                revert(add(result, 0x20), mload(result))\\n            }\\n            default {\\n                return(add(result, 0x20), mload(result))\\n            }\\n        }\\n    }\\n\\n    function _heldSlot(address account) private pure returns (bytes32) {\\n        return keccak256(abi.encode(account, HELD_SLOT));\\n    }\\n\\n    function _setHeld(address account, uint256 amount) private {\\n        bytes32 slot = _heldSlot(account);\\n        assembly {\\n            sstore(slot, amount)\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0x823d92f7c20814e840f835d11a922386cde51a20b95afc09122d7f61961aac3e\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x60c060405234801561001057600080fd5b50604051610af5380380610af583398101604081905261002f91610074565b6001600160a01b0391821660a05216608052600180546001600160a01b031916331790556100a7565b80516001600160a01b038116811461006f57600080fd5b919050565b6000806040838503121561008757600080fd5b61009083610058565b915061009e60208401610058565b90509250929050565b60805160a051610a1b6100da60003960008181610225015261075b01526000818161013401526102dc0152610a1b6000f3fe6080604052600436106100a05760003560e01c8063a02fcc0a11610064578063a02fcc0a14610196578063a6376746146101b6578063d2ac2d8a146101f3578063d56d229d14610213578063e00d023f14610247578063f851a4401461025c576100af565b806326782247146100b757806337c37a80146100f45780635c60da1b146101225780636d62b868146101565780637548b61d14610176576100af565b366100af576100ad61027c565b005b6100ad61027c565b3480156100c357600080fd5b506000546100d7906001600160a01b031681565b6040516001600160a01b0390911681526020015b60405180910390f35b34801561010057600080fd5b5061011461010f3660046108f9565b61037c565b6040519081526020016100eb565b34801561012e57600080fd5b506100d77f000000000000000000000000000000000000000000000000000000000000000081565b34801561016257600080fd5b506100ad61017136600461092e565b6103ee565b34801561018257600080fd5b506100d7610191366004610958565b610494565b3480156101a257600080fd5b506100ad6101b1366004610958565b6104ec565b3480156101c257600080fd5b506100ad6101d1366004610958565b600080546001600160a01b0319166001600160a01b0392909216919091179055565b3480156101ff57600080fd5b5061011461020e366004610958565b6105ea565b34801561021f57600080fd5b506100d77f000000000000000000000000000000000000000000000000000000000000000081565b34801561025357600080fd5b506100ad6105fe565b34801561026857600080fd5b506001546100d7906001600160a01b031681565b7fd7fa9b9d10c9664a81dda61af0c6aa34f2814a3385298654a06c66a78109e77a8054600034158015906102ae575081155b905080156102d757600183556102d733346102c8336105ea565b6102d29190610990565b6107c1565b6000807f00000000000000000000000000000000000000000000000000000000000000006001600160a01b03166000366040516103159291906109a9565b600060405180830381855af49150503d8060008114610350576040519150601f19603f3d011682016040523d82523d6000602084013e610355565b606091505b5091509150821561036557600085555b81801561037457815160208301f35b815160208301fd5b60003330146103c45760405162461bcd60e51b815260206004820152600f60248201526e13db9b1e481d1a19481dd85b1b195d608a1b60448201526064015b60405180910390fd5b507fd7fa9b9d10c9664a81dda61af0c6aa34f2814a3385298654a06c66a78109e77a805491905590565b33301461042f5760405162461bcd60e51b815260206004820152600f60248201526e13db9b1e481d1a19481dd85b1b195d608a1b60448201526064016103bb565b600061043a836105ea565b9050818110156104815760405162461bcd60e51b8152602060048201526012602482015271496e73756666696369656e742066756e647360701b60448201526064016103bb565b61048f836102d284846109b9565b505050565b604080516001600160a01b03929092166020808401919091527f57a950e4361b7c76818e391e59fae2e9d46fcd20470e9a88bc607a4b547bcc3d83830152815180840383018152606090930190915281519101205490565b6001546001600160a01b031633146105405760405162461bcd60e51b815260206004820152601760248201527621b0b63632b91034b9903737ba103a34329030b236b4b760491b60448201526064016103bb565b6000546001600160a01b038281169116146105c5576040805162461bcd60e51b81526020600482015260248101919091527f4578706563746564206e65772061646d696e206279207468652063757272656e60448201527f742061646d696e206973206e6f74207468652070656e64696e672061646d696e60648201526084016103bb565b50600054600180546001600160a01b0319166001600160a01b03909216919091179055565b6000806105f6836107d4565b549392505050565b6001546001600160a01b031633146106525760405162461bcd60e51b815260206004820152601760248201527621b0b63632b91034b9903737ba103a34329030b236b4b760491b60448201526064016103bb565b61065a61082b565b6040516327e235e360e01b815233600482015260009030906327e235e390602401602060405180830381865afa158015610698573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106bc91906109cc565b116106f65760405162461bcd60e51b815260206004820152600a6024820152694e6f2062616c616e636560b01b60448201526064016103bb565b6106ff336105ea565b1561073f5760405162461bcd60e51b815260206004820152601060248201526f119d5b991cc81cdd1a5b1b081a195b1960821b60448201526064016103bb565b6040516340c10f1960e01b8152326004820152600b60248201527f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316906340c10f1990604401600060405180830381600087803b1580156107a757600080fd5b505af11580156107bb573d6000803e3d6000fd5b50505050565b60006107cc836107d4565b919091555050565b604080516001600160a01b03929092166020808401919091527f83bb5a99343928503364227ad4d6c8342d3afe16355df8af1969af26552bb779838301528151808403830181526060909301909152815191012090565b32330361083457565b600061083f33610494565b90506001600160a01b03811661089e575060408051336020808301919091527f57a950e4361b7c76818e391e59fae2e9d46fcd20470e9a88bc607a4b547bcc3d8284015282518083038401815260609092019092528051910120329055565b6001600160a01b03811632146108f65760405162461bcd60e51b815260206004820152601d60248201527f536f6c76657220626f756e6420746f20616e6f74686572206167656e7400000060448201526064016103bb565b50565b60006020828403121561090b57600080fd5b5035919050565b80356001600160a01b038116811461092957600080fd5b919050565b6000806040838503121561094157600080fd5b61094a83610912565b946020939093013593505050565b60006020828403121561096a57600080fd5b61097382610912565b9392505050565b634e487b7160e01b600052601160045260246000fd5b808201808211156109a3576109a361097a565b92915050565b8183823760009101908152919050565b818103818111156109a3576109a361097a565b6000602082840312156109de57600080fd5b505191905056fea2646970667358221220952d7851f32ab241d81b1d0e038332de1ffdccd7e533fbada6eb6bc55807cffa64736f6c63430008140033",
+  "deployedBytecode": "0x6080604052600436106100a05760003560e01c8063a02fcc0a11610064578063a02fcc0a14610196578063a6376746146101b6578063d2ac2d8a146101f3578063d56d229d14610213578063e00d023f14610247578063f851a4401461025c576100af565b806326782247146100b757806337c37a80146100f45780635c60da1b146101225780636d62b868146101565780637548b61d14610176576100af565b366100af576100ad61027c565b005b6100ad61027c565b3480156100c357600080fd5b506000546100d7906001600160a01b031681565b6040516001600160a01b0390911681526020015b60405180910390f35b34801561010057600080fd5b5061011461010f3660046108f9565b61037c565b6040519081526020016100eb565b34801561012e57600080fd5b506100d77f000000000000000000000000000000000000000000000000000000000000000081565b34801561016257600080fd5b506100ad61017136600461092e565b6103ee565b34801561018257600080fd5b506100d7610191366004610958565b610494565b3480156101a257600080fd5b506100ad6101b1366004610958565b6104ec565b3480156101c257600080fd5b506100ad6101d1366004610958565b600080546001600160a01b0319166001600160a01b0392909216919091179055565b3480156101ff57600080fd5b5061011461020e366004610958565b6105ea565b34801561021f57600080fd5b506100d77f000000000000000000000000000000000000000000000000000000000000000081565b34801561025357600080fd5b506100ad6105fe565b34801561026857600080fd5b506001546100d7906001600160a01b031681565b7fd7fa9b9d10c9664a81dda61af0c6aa34f2814a3385298654a06c66a78109e77a8054600034158015906102ae575081155b905080156102d757600183556102d733346102c8336105ea565b6102d29190610990565b6107c1565b6000807f00000000000000000000000000000000000000000000000000000000000000006001600160a01b03166000366040516103159291906109a9565b600060405180830381855af49150503d8060008114610350576040519150601f19603f3d011682016040523d82523d6000602084013e610355565b606091505b5091509150821561036557600085555b81801561037457815160208301f35b815160208301fd5b60003330146103c45760405162461bcd60e51b815260206004820152600f60248201526e13db9b1e481d1a19481dd85b1b195d608a1b60448201526064015b60405180910390fd5b507fd7fa9b9d10c9664a81dda61af0c6aa34f2814a3385298654a06c66a78109e77a805491905590565b33301461042f5760405162461bcd60e51b815260206004820152600f60248201526e13db9b1e481d1a19481dd85b1b195d608a1b60448201526064016103bb565b600061043a836105ea565b9050818110156104815760405162461bcd60e51b8152602060048201526012602482015271496e73756666696369656e742066756e647360701b60448201526064016103bb565b61048f836102d284846109b9565b505050565b604080516001600160a01b03929092166020808401919091527f57a950e4361b7c76818e391e59fae2e9d46fcd20470e9a88bc607a4b547bcc3d83830152815180840383018152606090930190915281519101205490565b6001546001600160a01b031633146105405760405162461bcd60e51b815260206004820152601760248201527621b0b63632b91034b9903737ba103a34329030b236b4b760491b60448201526064016103bb565b6000546001600160a01b038281169116146105c5576040805162461bcd60e51b81526020600482015260248101919091527f4578706563746564206e65772061646d696e206279207468652063757272656e60448201527f742061646d696e206973206e6f74207468652070656e64696e672061646d696e60648201526084016103bb565b50600054600180546001600160a01b0319166001600160a01b03909216919091179055565b6000806105f6836107d4565b549392505050565b6001546001600160a01b031633146106525760405162461bcd60e51b815260206004820152601760248201527621b0b63632b91034b9903737ba103a34329030b236b4b760491b60448201526064016103bb565b61065a61082b565b6040516327e235e360e01b815233600482015260009030906327e235e390602401602060405180830381865afa158015610698573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906106bc91906109cc565b116106f65760405162461bcd60e51b815260206004820152600a6024820152694e6f2062616c616e636560b01b60448201526064016103bb565b6106ff336105ea565b1561073f5760405162461bcd60e51b815260206004820152601060248201526f119d5b991cc81cdd1a5b1b081a195b1960821b60448201526064016103bb565b6040516340c10f1960e01b8152326004820152600b60248201527f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316906340c10f1990604401600060405180830381600087803b1580156107a757600080fd5b505af11580156107bb573d6000803e3d6000fd5b50505050565b60006107cc836107d4565b919091555050565b604080516001600160a01b03929092166020808401919091527f83bb5a99343928503364227ad4d6c8342d3afe16355df8af1969af26552bb779838301528151808403830181526060909301909152815191012090565b32330361083457565b600061083f33610494565b90506001600160a01b03811661089e575060408051336020808301919091527f57a950e4361b7c76818e391e59fae2e9d46fcd20470e9a88bc607a4b547bcc3d8284015282518083038401815260609092019092528051910120329055565b6001600160a01b03811632146108f65760405162461bcd60e51b815260206004820152601d60248201527f536f6c76657220626f756e6420746f20616e6f74686572206167656e7400000060448201526064016103bb565b50565b60006020828403121561090b57600080fd5b5035919050565b80356001600160a01b038116811461092957600080fd5b919050565b6000806040838503121561094157600080fd5b61094a83610912565b946020939093013593505050565b60006020828403121561096a57600080fd5b61097382610912565b9392505050565b634e487b7160e01b600052601160045260246000fd5b808201808211156109a3576109a361097a565b92915050565b8183823760009101908152919050565b818103818111156109a3576109a361097a565b6000602082840312156109de57600080fd5b505191905056fea2646970667358221220952d7851f32ab241d81b1d0e038332de1ffdccd7e533fbada6eb6bc55807cffa64736f6c63430008140033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 14279,
+        "contract": "contracts/S3/Season3Challenge11.sol:Season3Challenge11",
+        "label": "pendingAdmin",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 14281,
+        "contract": "contracts/S3/Season3Challenge11.sol:Season3Challenge11",
+        "label": "admin",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_address"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      }
+    }
+  }
+}

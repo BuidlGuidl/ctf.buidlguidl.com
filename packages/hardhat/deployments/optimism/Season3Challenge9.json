@@ -1,0 +1,453 @@
+{
+  "address": "0xF07F3cD8c5D14BeD1aA4dafd09686ee73f56eA46",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_nftContract",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_signer",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "uint8",
+          "name": "v",
+          "type": "uint8"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "r",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "s",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "digest",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "v",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "r",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "s",
+          "type": "bytes32"
+        }
+      ],
+      "name": "VoucherIssued",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "digest",
+          "type": "bytes32"
+        }
+      ],
+      "name": "VoucherRedeemed",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "commitment",
+          "type": "bytes32"
+        }
+      ],
+      "name": "commit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "digest",
+          "type": "bytes32"
+        }
+      ],
+      "name": "commitmentFor",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "commitments",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "committedAt",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "nftContract",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "v",
+          "type": "uint8"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "r",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "s",
+          "type": "bytes32"
+        }
+      ],
+      "name": "redeem",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "digest",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint8",
+          "name": "v",
+          "type": "uint8"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "r",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "s",
+          "type": "bytes32"
+        }
+      ],
+      "name": "redeemPrehashed",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "redeemed",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "signer",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "usedDigests",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        }
+      ],
+      "name": "voucherDigest",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x180297753395c20ab54e9f2e3eb976561cb0d13608afbcd3c7c4455eeedc1b2f",
+  "receipt": {
+    "to": null,
+    "from": "0xD42c3Ea936751Cc5642E4e568dCAF1423107fC9e",
+    "contractAddress": "0xF07F3cD8c5D14BeD1aA4dafd09686ee73f56eA46",
+    "transactionIndex": 22,
+    "gasUsed": "532268",
+    "logsBloom": "0x00000000000000000000000000000001400000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000080000000000000000000000040000000000000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x793a5f2a17a35a57fbe462d73bc18d9221a200abfa0b7cec3551af2a0639054b",
+    "transactionHash": "0x180297753395c20ab54e9f2e3eb976561cb0d13608afbcd3c7c4455eeedc1b2f",
+    "logs": [
+      {
+        "transactionIndex": 22,
+        "blockNumber": 159443858,
+        "transactionHash": "0x180297753395c20ab54e9f2e3eb976561cb0d13608afbcd3c7c4455eeedc1b2f",
+        "address": "0xF07F3cD8c5D14BeD1aA4dafd09686ee73f56eA46",
+        "topics": [
+          "0xa4129afa87019857c20fe06003491e159e5098da66384775db6685635f6911e7",
+          "0x000000000000000000000000a13b3eb780e674cb8a9cf10b4041ff46ff8a1107"
+        ],
+        "data": "0x0fff34ecf5056fa6c8b7debc40c72f192ae008579920ee5d1a864fc1d2be3bdb000000000000000000000000000000000000000000000000000000000000001c9b9a05abc4232484fc0ca49cb470f4ab3ada5702cd5d6906a069e36451095a854a93c18415a898c94b75c6d9a95fc5dd70ebe54d5f15512c58d160b2f0ace2fe",
+        "logIndex": 54,
+        "blockHash": "0x793a5f2a17a35a57fbe462d73bc18d9221a200abfa0b7cec3551af2a0639054b"
+      }
+    ],
+    "blockNumber": 159443858,
+    "cumulativeGasUsed": "17612810",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x4Cd1875f6413B44b28688C1dBdE869784573cf8C",
+    "0x22153Aeb4933b35B419997694D98A8E53c02cb48",
+    "0xA13b3EB780e674CB8a9CF10b4041Ff46FF8A1107",
+    28,
+    "0x9b9a05abc4232484fc0ca49cb470f4ab3ada5702cd5d6906a069e36451095a85",
+    "0x4a93c18415a898c94b75c6d9a95fc5dd70ebe54d5f15512c58d160b2f0ace2fe"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "e9510f5922184b882c535edbe51cf64f",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_nftContract\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_signer\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_recipient\",\"type\":\"address\"},{\"internalType\":\"uint8\",\"name\":\"v\",\"type\":\"uint8\"},{\"internalType\":\"bytes32\",\"name\":\"r\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"s\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"digest\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"v\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"r\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"s\",\"type\":\"bytes32\"}],\"name\":\"VoucherIssued\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"digest\",\"type\":\"bytes32\"}],\"name\":\"VoucherRedeemed\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"commitment\",\"type\":\"bytes32\"}],\"name\":\"commit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"digest\",\"type\":\"bytes32\"}],\"name\":\"commitmentFor\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"commitments\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"committedAt\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"nftContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"v\",\"type\":\"uint8\"},{\"internalType\":\"bytes32\",\"name\":\"r\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"s\",\"type\":\"bytes32\"}],\"name\":\"redeem\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"digest\",\"type\":\"bytes32\"},{\"internalType\":\"uint8\",\"name\":\"v\",\"type\":\"uint8\"},{\"internalType\":\"bytes32\",\"name\":\"r\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"s\",\"type\":\"bytes32\"}],\"name\":\"redeemPrehashed\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"redeemed\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"signer\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"usedDigests\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"}],\"name\":\"voucherDigest\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/S3/Season3Challenge9.sol\":\"Season3Challenge9\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/INFTFlags.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\npragma solidity >=0.8.0 <0.9.0;\\n\\ninterface INFTFlags {\\n    function mint(address _recipient, uint256 _challengeId) external;\\n\\n    function hasMinted(address _recipient, uint256 _challengeId) external view returns (bool);\\n\\n    function tokenIdCounter() external view returns (uint256);\\n\\n    function finalBossUnlocked(address _player) external view returns (bool);\\n}\\n\",\"keccak256\":\"0x4fc291ba5c8d831c1e684b955499b3ee523e611556b6de7cd83fced9de10d31e\",\"license\":\"MIT\"},\"contracts/S3/Season3Challenge9.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport \\\"../INFTFlags.sol\\\";\\n\\ncontract Season3Challenge9 {\\n    address public nftContract;\\n    address public immutable signer;\\n\\n    mapping(bytes32 => bool) public usedDigests;\\n    mapping(address => bool) public redeemed;\\n    mapping(address => bytes32) public commitments;\\n    mapping(address => uint256) public committedAt;\\n\\n    event VoucherIssued(address indexed recipient, bytes32 digest, uint8 v, bytes32 r, bytes32 s);\\n    event VoucherRedeemed(address indexed recipient, bytes32 indexed digest);\\n\\n    constructor(address _nftContract, address _signer, address _recipient, uint8 v, bytes32 r, bytes32 s) {\\n        nftContract = _nftContract;\\n        signer = _signer;\\n\\n        bytes32 digest = voucherDigest(_recipient);\\n        require(ecrecover(digest, v, r, s) == _signer, \\\"Invalid voucher\\\");\\n        usedDigests[digest] = true;\\n        redeemed[_recipient] = true;\\n        emit VoucherIssued(_recipient, digest, v, r, s);\\n    }\\n\\n    function voucherDigest(address recipient) public view returns (bytes32) {\\n        return keccak256(abi.encodePacked(\\\"BG CTF VOUCHER\\\", block.chainid, address(this), recipient));\\n    }\\n\\n    function redeem(uint8 v, bytes32 r, bytes32 s) external {\\n        _redeem(voucherDigest(tx.origin), v, r, s);\\n    }\\n\\n    function commitmentFor(address recipient, bytes32 digest) public pure returns (bytes32) {\\n        return keccak256(abi.encode(recipient, digest));\\n    }\\n\\n    function commit(bytes32 commitment) external {\\n        commitments[tx.origin] = commitment;\\n        committedAt[tx.origin] = block.number;\\n    }\\n\\n    function redeemPrehashed(bytes32 digest, uint8 v, bytes32 r, bytes32 s) external {\\n        require(commitments[tx.origin] == commitmentFor(tx.origin, digest), \\\"Digest not committed\\\");\\n        require(block.number > committedAt[tx.origin], \\\"Commit too recent\\\");\\n        _redeem(digest, v, r, s);\\n    }\\n\\n    function _redeem(bytes32 digest, uint8 v, bytes32 r, bytes32 s) private {\\n        require(!redeemed[tx.origin], \\\"Already redeemed\\\");\\n        require(!usedDigests[digest], \\\"Voucher already used\\\");\\n        require(ecrecover(digest, v, r, s) == signer, \\\"Invalid signature\\\");\\n\\n        usedDigests[digest] = true;\\n        redeemed[tx.origin] = true;\\n        emit VoucherRedeemed(tx.origin, digest);\\n        INFTFlags(nftContract).mint(tx.origin, 9);\\n    }\\n}\\n\",\"keccak256\":\"0x38d12d96f41aa6ea3cc22e9802926f8ee78f72c942c284d6f36843c2447c3e91\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x60a060405234801561001057600080fd5b506040516109d13803806109d183398101604081905261002f91610220565b600080546001600160a01b0319166001600160a01b0388811691909117825586166080526100b9856040516d21239021aa23102b27aaa1a422a960911b602082015246602e8201526001600160601b031930606090811b8216604e84015283901b166062820152600090607601604051602081830303815290604052805190602001209050919050565b60408051600081526020810180835283905260ff87169181019190915260608101859052608081018490529091506001600160a01b0387169060019060a0016020604051602081039080840390855afa15801561011a573d6000803e3d6000fd5b505050602060405103516001600160a01b0316146101705760405162461bcd60e51b815260206004820152600f60248201526e24b73b30b634b2103b37bab1b432b960891b604482015260640160405180910390fd5b6000818152600160208181526040808420805460ff1990811685179091556001600160a01b038a1680865260028452948290208054909116909317909255815184815260ff881691810191909152908101859052606081018490527fa4129afa87019857c20fe06003491e159e5098da66384775db6685635f6911e79060800160405180910390a250505050505050610290565b80516001600160a01b038116811461021b57600080fd5b919050565b60008060008060008060c0878903121561023957600080fd5b61024287610204565b955061025060208801610204565b945061025e60408801610204565b9350606087015160ff8116811461027457600080fd5b809350506080870151915060a087015190509295509295509295565b6080516107206102b16000396000818160b3015261048701526107206000f3fe608060405234801561001057600080fd5b50600436106100a95760003560e01c8063d56d229d11610071578063d56d229d1461018b578063e757ee861461019e578063e8fcf723146101b1578063f14fcbc8146101d1578063f7da575a146101ff578063ff420e8c1461021257600080fd5b8063238ac933146100ae5780638fa34cf6146100f25780639f4568ef14610120578063a6bf80de14610153578063d39c4de714610168575b600080fd5b6100d57f000000000000000000000000000000000000000000000000000000000000000081565b6040516001600160a01b0390911681526020015b60405180910390f35b610112610100366004610606565b60046020526000908152604090205481565b6040519081526020016100e9565b61014361012e366004610606565b60026020526000908152604090205460ff1681565b60405190151581526020016100e9565b610166610161366004610639565b610225565b005b610143610176366004610674565b60016020526000908152604090205460ff1681565b6000546100d5906001600160a01b031681565b6101666101ac36600461068d565b6102ec565b6101126101bf366004610606565b60036020526000908152604090205481565b6101666101df366004610674565b326000908152600360209081526040808320939093556004905220439055565b61011261020d3660046106c0565b610305565b610112610220366004610606565b610342565b61022f3285610305565b32600090815260036020526040902054146102885760405162461bcd60e51b8152602060048201526014602482015273111a59d95cdd081b9bdd0818dbdb5b5a5d1d195960621b60448201526064015b60405180910390fd5b3260009081526004602052604090205443116102da5760405162461bcd60e51b815260206004820152601160248201527010dbdb5b5a5d081d1bdbc81c9958d95b9d607a1b604482015260640161027f565b6102e6848484846103a9565b50505050565b6103006102f832610342565b8484846103a9565b505050565b604080516001600160a01b038416602082015290810182905260009060600160405160208183030381529060405280519060200120905092915050565b6040516d21239021aa23102b27aaa1a422a960911b602082015246602e8201526bffffffffffffffffffffffff1930606090811b8216604e84015283901b166062820152600090607601604051602081830303815290604052805190602001209050919050565b3260009081526002602052604090205460ff16156103fc5760405162461bcd60e51b815260206004820152601060248201526f105b1c9958591e481c995919595b595960821b604482015260640161027f565b60008481526001602052604090205460ff16156104525760405162461bcd60e51b8152602060048201526014602482015273159bdd58da195c88185b1c9958591e481d5cd95960621b604482015260640161027f565b60408051600081526020810180835286905260ff85169181019190915260608101839052608081018290526001600160a01b037f0000000000000000000000000000000000000000000000000000000000000000169060019060a0016020604051602081039080840390855afa1580156104d0573d6000803e3d6000fd5b505050602060405103516001600160a01b0316146105245760405162461bcd60e51b8152602060048201526011602482015270496e76616c6964207369676e617475726560781b604482015260640161027f565b6000848152600160208181526040808420805460ff1990811685179091553280865260029093528185208054909116909317909255905186927f4c27452770493060a019e4a9ad20587013d25cb508082d2e8aa15e3c278827b591a36000546040516340c10f1960e01b8152326004820152600960248201526001600160a01b03909116906340c10f1990604401600060405180830381600087803b1580156105cc57600080fd5b505af11580156105e0573d6000803e3d6000fd5b5050505050505050565b80356001600160a01b038116811461060157600080fd5b919050565b60006020828403121561061857600080fd5b610621826105ea565b9392505050565b803560ff8116811461060157600080fd5b6000806000806080858703121561064f57600080fd5b8435935061065f60208601610628565b93969395505050506040820135916060013590565b60006020828403121561068657600080fd5b5035919050565b6000806000606084860312156106a257600080fd5b6106ab84610628565b95602085013595506040909401359392505050565b600080604083850312156106d357600080fd5b6106dc836105ea565b94602093909301359350505056fea2646970667358221220cbb0e5e737dfeea653b4d9d85ab63729a233a92b24298d8afa275a6bcd06096664736f6c63430008140033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100a95760003560e01c8063d56d229d11610071578063d56d229d1461018b578063e757ee861461019e578063e8fcf723146101b1578063f14fcbc8146101d1578063f7da575a146101ff578063ff420e8c1461021257600080fd5b8063238ac933146100ae5780638fa34cf6146100f25780639f4568ef14610120578063a6bf80de14610153578063d39c4de714610168575b600080fd5b6100d57f000000000000000000000000000000000000000000000000000000000000000081565b6040516001600160a01b0390911681526020015b60405180910390f35b610112610100366004610606565b60046020526000908152604090205481565b6040519081526020016100e9565b61014361012e366004610606565b60026020526000908152604090205460ff1681565b60405190151581526020016100e9565b610166610161366004610639565b610225565b005b610143610176366004610674565b60016020526000908152604090205460ff1681565b6000546100d5906001600160a01b031681565b6101666101ac36600461068d565b6102ec565b6101126101bf366004610606565b60036020526000908152604090205481565b6101666101df366004610674565b326000908152600360209081526040808320939093556004905220439055565b61011261020d3660046106c0565b610305565b610112610220366004610606565b610342565b61022f3285610305565b32600090815260036020526040902054146102885760405162461bcd60e51b8152602060048201526014602482015273111a59d95cdd081b9bdd0818dbdb5b5a5d1d195960621b60448201526064015b60405180910390fd5b3260009081526004602052604090205443116102da5760405162461bcd60e51b815260206004820152601160248201527010dbdb5b5a5d081d1bdbc81c9958d95b9d607a1b604482015260640161027f565b6102e6848484846103a9565b50505050565b6103006102f832610342565b8484846103a9565b505050565b604080516001600160a01b038416602082015290810182905260009060600160405160208183030381529060405280519060200120905092915050565b6040516d21239021aa23102b27aaa1a422a960911b602082015246602e8201526bffffffffffffffffffffffff1930606090811b8216604e84015283901b166062820152600090607601604051602081830303815290604052805190602001209050919050565b3260009081526002602052604090205460ff16156103fc5760405162461bcd60e51b815260206004820152601060248201526f105b1c9958591e481c995919595b595960821b604482015260640161027f565b60008481526001602052604090205460ff16156104525760405162461bcd60e51b8152602060048201526014602482015273159bdd58da195c88185b1c9958591e481d5cd95960621b604482015260640161027f565b60408051600081526020810180835286905260ff85169181019190915260608101839052608081018290526001600160a01b037f0000000000000000000000000000000000000000000000000000000000000000169060019060a0016020604051602081039080840390855afa1580156104d0573d6000803e3d6000fd5b505050602060405103516001600160a01b0316146105245760405162461bcd60e51b8152602060048201526011602482015270496e76616c6964207369676e617475726560781b604482015260640161027f565b6000848152600160208181526040808420805460ff1990811685179091553280865260029093528185208054909116909317909255905186927f4c27452770493060a019e4a9ad20587013d25cb508082d2e8aa15e3c278827b591a36000546040516340c10f1960e01b8152326004820152600960248201526001600160a01b03909116906340c10f1990604401600060405180830381600087803b1580156105cc57600080fd5b505af11580156105e0573d6000803e3d6000fd5b5050505050505050565b80356001600160a01b038116811461060157600080fd5b919050565b60006020828403121561061857600080fd5b610621826105ea565b9392505050565b803560ff8116811461060157600080fd5b6000806000806080858703121561064f57600080fd5b8435935061065f60208601610628565b93969395505050506040820135916060013590565b60006020828403121561068657600080fd5b5035919050565b6000806000606084860312156106a257600080fd5b6106ab84610628565b95602085013595506040909401359392505050565b600080604083850312156106d357600080fd5b6106dc836105ea565b94602093909301359350505056fea2646970667358221220cbb0e5e737dfeea653b4d9d85ab63729a233a92b24298d8afa275a6bcd06096664736f6c63430008140033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 17430,
+        "contract": "contracts/S3/Season3Challenge9.sol:Season3Challenge9",
+        "label": "nftContract",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 17436,
+        "contract": "contracts/S3/Season3Challenge9.sol:Season3Challenge9",
+        "label": "usedDigests",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_bytes32,t_bool)"
+      },
+      {
+        "astId": 17440,
+        "contract": "contracts/S3/Season3Challenge9.sol:Season3Challenge9",
+        "label": "redeemed",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_address,t_bool)"
+      },
+      {
+        "astId": 17444,
+        "contract": "contracts/S3/Season3Challenge9.sol:Season3Challenge9",
+        "label": "commitments",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_mapping(t_address,t_bytes32)"
+      },
+      {
+        "astId": 17448,
+        "contract": "contracts/S3/Season3Challenge9.sol:Season3Challenge9",
+        "label": "committedAt",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_mapping(t_address,t_uint256)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_bytes32": {
+        "encoding": "inplace",
+        "label": "bytes32",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_address,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_mapping(t_address,t_bytes32)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bytes32)",
+        "numberOfBytes": "32",
+        "value": "t_bytes32"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_mapping(t_bytes32,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_bytes32",
+        "label": "mapping(bytes32 => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "address": "0xd523DfA613b8c5fA352ED02D6cB2fE1ed83901CE",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_nftContract",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "KEY_VALUE",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "MIN_POWER_TO_MINT",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "POINTS_TO_UPGRADE",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "claimPoints",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "levels",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "mintFlag",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "nftContract",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "points",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "resetPoints",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "upgradeLevel",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x42b626f1c8d152f6e701bf50782cc7d632ac5d43fb6d5a822fb15589fc3d839b",
+  "receipt": {
+    "to": null,
+    "from": "0xD42c3Ea936751Cc5642E4e568dCAF1423107fC9e",
+    "contractAddress": "0xd523DfA613b8c5fA352ED02D6cB2fE1ed83901CE",
+    "transactionIndex": 53,
+    "gasUsed": "405928",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xf15b3192cd097ee70edc9cb76d7e36d44d0b08efeb4707bd12e4e49946e63658",
+    "transactionHash": "0x42b626f1c8d152f6e701bf50782cc7d632ac5d43fb6d5a822fb15589fc3d839b",
+    "logs": [],
+    "blockNumber": 145105186,
+    "cumulativeGasUsed": "17506753",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0xbBd5C94316AF56EcD2e31d6F48F037a5f75253aA"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "e41a2994a973614eb6a4322e6eb2790b",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_nftContract\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"KEY_VALUE\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MIN_POWER_TO_MINT\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"POINTS_TO_UPGRADE\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"claimPoints\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"levels\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"mintFlag\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"nftContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"points\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"resetPoints\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"upgradeLevel\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/S2/Season2Challenge6.sol\":\"Season2Challenge6\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/INFTFlags.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\npragma solidity >=0.8.0 <0.9.0;\\n\\ninterface INFTFlags {\\n    function mint(address _recipient, uint256 _challengeId) external;\\n\\n    function hasMinted(address _recipient, uint256 _challengeId) external view returns (bool);\\n\\n    function tokenIdCounter() external view returns (uint256);\\n}\\n\",\"keccak256\":\"0x4e13871643c7d094b9435d0d4a513518298a94dbb181ec31a498ad3a80e82207\",\"license\":\"MIT\"},\"contracts/S2/Season2Challenge6.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport \\\"../INFTFlags.sol\\\";\\n\\ncontract Season2Challenge6 {\\n    address public nftContract;\\n    mapping(address => uint8) public points;\\n    mapping(address => uint8) public levels;\\n    uint8 public constant POINTS_TO_UPGRADE = 10;\\n    uint8 public constant MIN_POWER_TO_MINT = 30;\\n    uint8 public constant KEY_VALUE = 32;\\n\\n    constructor(address _nftContract) {\\n        nftContract = _nftContract;\\n    }\\n\\n    function resetPoints() public {\\n        points[tx.origin] = 0;\\n    }\\n\\n    function claimPoints() public {\\n        require(points[tx.origin] == 0, \\\"Already claimed points\\\");\\n        (bool success, ) = msg.sender.call(\\\"\\\");\\n        require(success, \\\"External call failed\\\");\\n\\n        points[tx.origin] += 1;\\n    }\\n\\n    function upgradeLevel() public {\\n        require(points[tx.origin] >= POINTS_TO_UPGRADE, \\\"Not enough points\\\");\\n        points[tx.origin] -= POINTS_TO_UPGRADE;\\n        levels[tx.origin] += 1;\\n    }\\n\\n    function mintFlag() public {\\n        require(points[tx.origin] < POINTS_TO_UPGRADE, \\\"Upgrade first\\\");\\n        require(points[tx.origin] * levels[tx.origin] >= MIN_POWER_TO_MINT, \\\"Not enough powner to mint\\\");\\n        uint8 key = points[tx.origin] << levels[tx.origin];\\n        require(key == KEY_VALUE, \\\"Wrong key value\\\");\\n        INFTFlags(nftContract).mint(tx.origin, 6);\\n    }\\n}\\n\",\"keccak256\":\"0xa6d09e49f3fc0e7c4e94cbcff3321e09b5eecadf08be687c893a6bf08d14bb93\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060405161068338038061068383398101604081905261002f91610054565b600080546001600160a01b0319166001600160a01b0392909216919091179055610084565b60006020828403121561006657600080fd5b81516001600160a01b038116811461007d57600080fd5b9392505050565b6105f0806100936000396000f3fe608060405234801561001057600080fd5b506004361061009e5760003560e01c8063358b816611610066578063358b8166146100f857806347082db31461011b578063c8d634dd1461013e578063d56d229d14610146578063e00d023f1461017157600080fd5b806302dd3e52146100a357806304d092c7146100ad5780630a0acf9a146100b55780631e4696ae146100d45780632670f63b146100f0575b600080fd5b6100ab610179565b005b6100ab610251565b6100bd600a81565b60405160ff90911681526020015b60405180910390f35b6100ab326000908152600160205260409020805460ff19169055565b6100bd602081565b6100bd610106366004610519565b60016020526000908152604090205460ff1681565b6100bd610129366004610519565b60026020526000908152604090205460ff1681565b6100bd601e81565b600054610159906001600160a01b031681565b6040516001600160a01b0390911681526020016100cb565b6100ab610376565b32600090815260016020526040902054600a60ff90911610156101d75760405162461bcd60e51b81526020600482015260116024820152704e6f7420656e6f75676820706f696e747360781b60448201526064015b60405180910390fd5b3260009081526001602052604081208054600a92906101fa90849060ff1661055f565b82546101009290920a60ff81810219909316918316021790915532600090815260026020526040812080546001945090926102379185911661057e565b92506101000a81548160ff021916908360ff160217905550565b3260009081526001602052604090205460ff16156102aa5760405162461bcd60e51b8152602060048201526016602482015275416c726561647920636c61696d656420706f696e747360501b60448201526064016101ce565b60405160009033908281818181865af19150503d80600081146102e9576040519150601f19603f3d011682016040523d82523d6000602084013e6102ee565b606091505b50509050806103365760405162461bcd60e51b8152602060048201526014602482015273115e1d195c9b985b0818d85b1b0819985a5b195960621b60448201526064016101ce565b326000908152600160208190526040822080549192909161035b90849060ff1661057e565b92506101000a81548160ff021916908360ff16021790555050565b32600090815260016020526040902054600a60ff909116106103ca5760405162461bcd60e51b815260206004820152600d60248201526c155c19dc98591948199a5c9cdd609a1b60448201526064016101ce565b32600090815260026020908152604080832054600190925290912054601e916103f99160ff9182169116610597565b60ff16101561044a5760405162461bcd60e51b815260206004820152601960248201527f4e6f7420656e6f75676820706f776e657220746f206d696e740000000000000060448201526064016101ce565b326000908152600260209081526040808320546001835292205460ff9081169281169290921b918216146104b25760405162461bcd60e51b815260206004820152600f60248201526e57726f6e67206b65792076616c756560881b60448201526064016101ce565b6000546040516340c10f1960e01b8152326004820152600660248201526001600160a01b03909116906340c10f1990604401600060405180830381600087803b1580156104fe57600080fd5b505af1158015610512573d6000803e3d6000fd5b5050505050565b60006020828403121561052b57600080fd5b81356001600160a01b038116811461054257600080fd5b9392505050565b634e487b7160e01b600052601160045260246000fd5b60ff828116828216039081111561057857610578610549565b92915050565b60ff818116838216019081111561057857610578610549565b60ff81811683821602908116908181146105b3576105b3610549565b509291505056fea26469706673582212200371e78ba1906592127334d926da1e3dfd7a80b791c6bfee04e7f05a25a978f464736f6c63430008140033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061009e5760003560e01c8063358b816611610066578063358b8166146100f857806347082db31461011b578063c8d634dd1461013e578063d56d229d14610146578063e00d023f1461017157600080fd5b806302dd3e52146100a357806304d092c7146100ad5780630a0acf9a146100b55780631e4696ae146100d45780632670f63b146100f0575b600080fd5b6100ab610179565b005b6100ab610251565b6100bd600a81565b60405160ff90911681526020015b60405180910390f35b6100ab326000908152600160205260409020805460ff19169055565b6100bd602081565b6100bd610106366004610519565b60016020526000908152604090205460ff1681565b6100bd610129366004610519565b60026020526000908152604090205460ff1681565b6100bd601e81565b600054610159906001600160a01b031681565b6040516001600160a01b0390911681526020016100cb565b6100ab610376565b32600090815260016020526040902054600a60ff90911610156101d75760405162461bcd60e51b81526020600482015260116024820152704e6f7420656e6f75676820706f696e747360781b60448201526064015b60405180910390fd5b3260009081526001602052604081208054600a92906101fa90849060ff1661055f565b82546101009290920a60ff81810219909316918316021790915532600090815260026020526040812080546001945090926102379185911661057e565b92506101000a81548160ff021916908360ff160217905550565b3260009081526001602052604090205460ff16156102aa5760405162461bcd60e51b8152602060048201526016602482015275416c726561647920636c61696d656420706f696e747360501b60448201526064016101ce565b60405160009033908281818181865af19150503d80600081146102e9576040519150601f19603f3d011682016040523d82523d6000602084013e6102ee565b606091505b50509050806103365760405162461bcd60e51b8152602060048201526014602482015273115e1d195c9b985b0818d85b1b0819985a5b195960621b60448201526064016101ce565b326000908152600160208190526040822080549192909161035b90849060ff1661057e565b92506101000a81548160ff021916908360ff16021790555050565b32600090815260016020526040902054600a60ff909116106103ca5760405162461bcd60e51b815260206004820152600d60248201526c155c19dc98591948199a5c9cdd609a1b60448201526064016101ce565b32600090815260026020908152604080832054600190925290912054601e916103f99160ff9182169116610597565b60ff16101561044a5760405162461bcd60e51b815260206004820152601960248201527f4e6f7420656e6f75676820706f776e657220746f206d696e740000000000000060448201526064016101ce565b326000908152600260209081526040808320546001835292205460ff9081169281169290921b918216146104b25760405162461bcd60e51b815260206004820152600f60248201526e57726f6e67206b65792076616c756560881b60448201526064016101ce565b6000546040516340c10f1960e01b8152326004820152600660248201526001600160a01b03909116906340c10f1990604401600060405180830381600087803b1580156104fe57600080fd5b505af1158015610512573d6000803e3d6000fd5b5050505050565b60006020828403121561052b57600080fd5b81356001600160a01b038116811461054257600080fd5b9392505050565b634e487b7160e01b600052601160045260246000fd5b60ff828116828216039081111561057857610578610549565b92915050565b60ff818116838216019081111561057857610578610549565b60ff81811683821602908116908181146105b3576105b3610549565b509291505056fea26469706673582212200371e78ba1906592127334d926da1e3dfd7a80b791c6bfee04e7f05a25a978f464736f6c63430008140033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 7358,
+        "contract": "contracts/S2/Season2Challenge6.sol:Season2Challenge6",
+        "label": "nftContract",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 7362,
+        "contract": "contracts/S2/Season2Challenge6.sol:Season2Challenge6",
+        "label": "points",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_address,t_uint8)"
+      },
+      {
+        "astId": 7366,
+        "contract": "contracts/S2/Season2Challenge6.sol:Season2Challenge6",
+        "label": "levels",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_address,t_uint8)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_uint8)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint8)",
+        "numberOfBytes": "32",
+        "value": "t_uint8"
+      },
+      "t_uint8": {
+        "encoding": "inplace",
+        "label": "uint8",
+        "numberOfBytes": "1"
+      }
+    }
+  }
+}

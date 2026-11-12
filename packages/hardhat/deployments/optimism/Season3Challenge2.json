@@ -1,0 +1,210 @@
+{
+  "address": "0x65F2594E564F2A84caFa032ffA80B0DbAFbae572",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_nftContract",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "_password",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "createdAt",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "edition",
+      "outputs": [
+        {
+          "internalType": "uint64",
+          "name": "",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "yourKey",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "password",
+          "type": "bytes32"
+        }
+      ],
+      "name": "mintFlag",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "nftContract",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "open",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "passwordHash",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x33b7f1a7ef96564b2f4960c63b7768aa59f850f40544a39d3e840bca4f04867e",
+  "receipt": {
+    "to": null,
+    "from": "0xD42c3Ea936751Cc5642E4e568dCAF1423107fC9e",
+    "contractAddress": "0x65F2594E564F2A84caFa032ffA80B0DbAFbae572",
+    "transactionIndex": 25,
+    "gasUsed": "296745",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x79c3d73443989ee9173fff591b059cee4e0b28e6e96ad714cfd613bb77cec2e7",
+    "transactionHash": "0x33b7f1a7ef96564b2f4960c63b7768aa59f850f40544a39d3e840bca4f04867e",
+    "logs": [],
+    "blockNumber": 159443833,
+    "cumulativeGasUsed": "14195402",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x4Cd1875f6413B44b28688C1dBdE869784573cf8C",
+    "0x07c92040e5354eda5943d1244d1ef0a64ebc2aaba92be8fadcc4a648be451e14"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "e9510f5922184b882c535edbe51cf64f",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_nftContract\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"_password\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"createdAt\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"edition\",\"outputs\":[{\"internalType\":\"uint64\",\"name\":\"\",\"type\":\"uint64\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"yourKey\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"password\",\"type\":\"bytes32\"}],\"name\":\"mintFlag\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"nftContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"open\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"passwordHash\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/S3/Season3Challenge2.sol\":\"Season3Challenge2\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/INFTFlags.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\npragma solidity >=0.8.0 <0.9.0;\\n\\ninterface INFTFlags {\\n    function mint(address _recipient, uint256 _challengeId) external;\\n\\n    function hasMinted(address _recipient, uint256 _challengeId) external view returns (bool);\\n\\n    function tokenIdCounter() external view returns (uint256);\\n\\n    function finalBossUnlocked(address _player) external view returns (bool);\\n}\\n\",\"keccak256\":\"0x4fc291ba5c8d831c1e684b955499b3ee523e611556b6de7cd83fced9de10d31e\",\"license\":\"MIT\"},\"contracts/S3/Season3Challenge2.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport \\\"../INFTFlags.sol\\\";\\n\\ncontract Season3Challenge2 {\\n    uint32 public createdAt;\\n    bool public open;\\n    bytes11 private secret;\\n    uint64 public edition;\\n    address public nftContract;\\n    bytes32 public immutable passwordHash;\\n\\n    constructor(address _nftContract, bytes32 _password) {\\n        nftContract = _nftContract;\\n        createdAt = uint32(block.timestamp);\\n        open = true;\\n        edition = 2026;\\n        secret = bytes11(keccak256(abi.encodePacked(block.prevrandao, block.timestamp, msg.sender, address(this))));\\n        passwordHash = keccak256(abi.encodePacked(_password));\\n    }\\n\\n    function mintFlag(bytes32 yourKey, bytes32 password) external {\\n        require(open, \\\"closed\\\");\\n        require(keccak256(abi.encodePacked(password)) == passwordHash, \\\"wrong password\\\");\\n        bytes32 key = keccak256(abi.encode(tx.origin, secret, password, address(this)));\\n        require(yourKey == key, \\\"bad key :(\\\");\\n\\n        INFTFlags(nftContract).mint(tx.origin, 2);\\n    }\\n}\\n\",\"keccak256\":\"0x4a7809eb40a91bc3b3d2dc0448f3f55ebc7f527dc020cdadcabcb285e5287805\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x60a060405234801561001057600080fd5b506040516104f43803806104f483398101604081905261002f9161011c565b600180546001600160a01b0319166001600160a01b038416179055600080546401000000004263ffffffff811664ffffffffff199093169290921717600160801b600160c01b0319166103f560811b1790915560408051446020820152908101919091526001600160601b031933606090811b82168184015230901b16607482015260880160408051601f1981840301815282825280516020918201206000805460a89290921c6501000000000002600160281b600160801b031990921691909117905582018390520160408051601f198184030181529190528051602090910120608052506101569050565b6000806040838503121561012f57600080fd5b82516001600160a01b038116811461014657600080fd5b6020939093015192949293505050565b60805161037d61017760003960008181606c01526101a9015261037d6000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c80632f12313f146100675780638e98f86a146100a1578063b7dc3feb146100d5578063cf09e0d0146100ea578063d56d229d1461010f578063fcfff16f1461013a575b600080fd5b61008e7f000000000000000000000000000000000000000000000000000000000000000081565b6040519081526020015b60405180910390f35b6000546100bc90600160801b900467ffffffffffffffff1681565b60405167ffffffffffffffff9091168152602001610098565b6100e86100e3366004610325565b61015f565b005b6000546100fa9063ffffffff1681565b60405163ffffffff9091168152602001610098565b600154610122906001600160a01b031681565b6040516001600160a01b039091168152602001610098565b60005461014f90640100000000900460ff1681565b6040519015158152602001610098565b600054640100000000900460ff166101a75760405162461bcd60e51b815260206004820152600660248201526518db1bdcd95960d21b60448201526064015b60405180910390fd5b7f0000000000000000000000000000000000000000000000000000000000000000816040516020016101db91815260200190565b604051602081830303815290604052805190602001201461022f5760405162461bcd60e51b815260206004820152600e60248201526d1ddc9bdb99c81c185cdcdddbdc9960921b604482015260640161019e565b60008054604080513260208201526501000000000090920460a81b6001600160a81b031916908201526060810183905230608082015260a0016040516020818303038152906040528051906020012090508083146102bc5760405162461bcd60e51b815260206004820152600a6024820152690c4c2c840d6caf24074560b31b604482015260640161019e565b6001546040516340c10f1960e01b8152326004820152600260248201526001600160a01b03909116906340c10f1990604401600060405180830381600087803b15801561030857600080fd5b505af115801561031c573d6000803e3d6000fd5b50505050505050565b6000806040838503121561033857600080fd5b5050803592602090910135915056fea2646970667358221220aa58a977c940719982d768537bd1bdadd3943d901e0ee987570929126013ac9164736f6c63430008140033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c80632f12313f146100675780638e98f86a146100a1578063b7dc3feb146100d5578063cf09e0d0146100ea578063d56d229d1461010f578063fcfff16f1461013a575b600080fd5b61008e7f000000000000000000000000000000000000000000000000000000000000000081565b6040519081526020015b60405180910390f35b6000546100bc90600160801b900467ffffffffffffffff1681565b60405167ffffffffffffffff9091168152602001610098565b6100e86100e3366004610325565b61015f565b005b6000546100fa9063ffffffff1681565b60405163ffffffff9091168152602001610098565b600154610122906001600160a01b031681565b6040516001600160a01b039091168152602001610098565b60005461014f90640100000000900460ff1681565b6040519015158152602001610098565b600054640100000000900460ff166101a75760405162461bcd60e51b815260206004820152600660248201526518db1bdcd95960d21b60448201526064015b60405180910390fd5b7f0000000000000000000000000000000000000000000000000000000000000000816040516020016101db91815260200190565b604051602081830303815290604052805190602001201461022f5760405162461bcd60e51b815260206004820152600e60248201526d1ddc9bdb99c81c185cdcdddbdc9960921b604482015260640161019e565b60008054604080513260208201526501000000000090920460a81b6001600160a81b031916908201526060810183905230608082015260a0016040516020818303038152906040528051906020012090508083146102bc5760405162461bcd60e51b815260206004820152600a6024820152690c4c2c840d6caf24074560b31b604482015260640161019e565b6001546040516340c10f1960e01b8152326004820152600260248201526001600160a01b03909116906340c10f1990604401600060405180830381600087803b15801561030857600080fd5b505af115801561031c573d6000803e3d6000fd5b50505050505050565b6000806040838503121561033857600080fd5b5050803592602090910135915056fea2646970667358221220aa58a977c940719982d768537bd1bdadd3943d901e0ee987570929126013ac9164736f6c63430008140033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 15725,
+        "contract": "contracts/S3/Season3Challenge2.sol:Season3Challenge2",
+        "label": "createdAt",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_uint32"
+      },
+      {
+        "astId": 15727,
+        "contract": "contracts/S3/Season3Challenge2.sol:Season3Challenge2",
+        "label": "open",
+        "offset": 4,
+        "slot": "0",
+        "type": "t_bool"
+      },
+      {
+        "astId": 15729,
+        "contract": "contracts/S3/Season3Challenge2.sol:Season3Challenge2",
+        "label": "secret",
+        "offset": 5,
+        "slot": "0",
+        "type": "t_bytes11"
+      },
+      {
+        "astId": 15731,
+        "contract": "contracts/S3/Season3Challenge2.sol:Season3Challenge2",
+        "label": "edition",
+        "offset": 16,
+        "slot": "0",
+        "type": "t_uint64"
+      },
+      {
+        "astId": 15733,
+        "contract": "contracts/S3/Season3Challenge2.sol:Season3Challenge2",
+        "label": "nftContract",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_address"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_bytes11": {
+        "encoding": "inplace",
+        "label": "bytes11",
+        "numberOfBytes": "11"
+      },
+      "t_uint32": {
+        "encoding": "inplace",
+        "label": "uint32",
+        "numberOfBytes": "4"
+      },
+      "t_uint64": {
+        "encoding": "inplace",
+        "label": "uint64",
+        "numberOfBytes": "8"
+      }
+    }
+  }
+}

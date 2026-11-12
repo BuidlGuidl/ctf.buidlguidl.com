@@ -1,0 +1,95 @@
+{
+  "address": "0xFB4b32A60b975546Ed2959638B94259853F6a4b5",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_nftContract",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "yourKey",
+          "type": "bytes32"
+        }
+      ],
+      "name": "mintFlag",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "nftContract",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x25177f84d0f31650d79fa38cfdb91b4f5e6623f1faed64ad296ab655e077e81b",
+  "receipt": {
+    "to": null,
+    "from": "0xD42c3Ea936751Cc5642E4e568dCAF1423107fC9e",
+    "contractAddress": "0xFB4b32A60b975546Ed2959638B94259853F6a4b5",
+    "transactionIndex": 27,
+    "gasUsed": "173476",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xb71cd54579844d284aeeff2f68734bd12e8430d71dc5d96b9513e83e88ff34f1",
+    "transactionHash": "0x25177f84d0f31650d79fa38cfdb91b4f5e6623f1faed64ad296ab655e077e81b",
+    "logs": [],
+    "blockNumber": 145105168,
+    "cumulativeGasUsed": "6084196",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0xbBd5C94316AF56EcD2e31d6F48F037a5f75253aA"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "e41a2994a973614eb6a4322e6eb2790b",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_nftContract\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"yourKey\",\"type\":\"bytes32\"}],\"name\":\"mintFlag\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"nftContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/S2/Season2Challenge2.sol\":\"Season2Challenge2\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/INFTFlags.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\npragma solidity >=0.8.0 <0.9.0;\\n\\ninterface INFTFlags {\\n    function mint(address _recipient, uint256 _challengeId) external;\\n\\n    function hasMinted(address _recipient, uint256 _challengeId) external view returns (bool);\\n\\n    function tokenIdCounter() external view returns (uint256);\\n}\\n\",\"keccak256\":\"0x4e13871643c7d094b9435d0d4a513518298a94dbb181ec31a498ad3a80e82207\",\"license\":\"MIT\"},\"contracts/S2/Season2Challenge2.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport \\\"../INFTFlags.sol\\\";\\n\\ncontract Season2Challenge2 {\\n    address public nftContract;\\n\\n    constructor(address _nftContract) {\\n        nftContract = _nftContract;\\n    }\\n\\n    function mintFlag(bytes32 yourKey) external {\\n        bytes32 key = keccak256(abi.encodePacked(msg.sender, address(this)));\\n        require(yourKey == key, \\\"bad key :(\\\");\\n\\n        INFTFlags(nftContract).mint(tx.origin, 2);\\n    }\\n}\\n\",\"keccak256\":\"0x96e920ccb2dd3d848857422195c4fedcebc845b934c86a2fa691b96d0a5bf3fa\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060405161024e38038061024e83398101604081905261002f91610054565b600080546001600160a01b0319166001600160a01b0392909216919091179055610084565b60006020828403121561006657600080fd5b81516001600160a01b038116811461007d57600080fd5b9392505050565b6101bb806100936000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c8063d56d229d1461003b578063dfa0c2d61461006a575b600080fd5b60005461004e906001600160a01b031681565b6040516001600160a01b03909116815260200160405180910390f35b61007d61007836600461016c565b61007f565b005b6040516bffffffffffffffffffffffff1933606090811b8216602084015230901b1660348201526000906048016040516020818303038152906040528051906020012090508082146101045760405162461bcd60e51b815260206004820152600a6024820152690c4c2c840d6caf24074560b31b604482015260640160405180910390fd5b6000546040516340c10f1960e01b8152326004820152600260248201526001600160a01b03909116906340c10f1990604401600060405180830381600087803b15801561015057600080fd5b505af1158015610164573d6000803e3d6000fd5b505050505050565b60006020828403121561017e57600080fd5b503591905056fea2646970667358221220a3ab2add254b95f566b8d948adfb8b133be72085c4a42072027d0fb3d81acd6264736f6c63430008140033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c8063d56d229d1461003b578063dfa0c2d61461006a575b600080fd5b60005461004e906001600160a01b031681565b6040516001600160a01b03909116815260200160405180910390f35b61007d61007836600461016c565b61007f565b005b6040516bffffffffffffffffffffffff1933606090811b8216602084015230901b1660348201526000906048016040516020818303038152906040528051906020012090508082146101045760405162461bcd60e51b815260206004820152600a6024820152690c4c2c840d6caf24074560b31b604482015260640160405180910390fd5b6000546040516340c10f1960e01b8152326004820152600260248201526001600160a01b03909116906340c10f1990604401600060405180830381600087803b15801561015057600080fd5b505af1158015610164573d6000803e3d6000fd5b505050505050565b60006020828403121561017e57600080fd5b503591905056fea2646970667358221220a3ab2add254b95f566b8d948adfb8b133be72085c4a42072027d0fb3d81acd6264736f6c63430008140033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 7097,
+        "contract": "contracts/S2/Season2Challenge2.sol:Season2Challenge2",
+        "label": "nftContract",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      }
+    }
+  }
+}

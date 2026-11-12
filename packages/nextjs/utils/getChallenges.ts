@@ -28,6 +28,20 @@ export const CHALLENGE_NAMES: Record<number, Record<string, string>> = {
     "11": "Give Me The Block!",
     "12": "Conquer The Game",
   },
+  3: {
+    "1": "The Greeting",
+    "2": "Private Isn't Secret",
+    "3": "Two-Faced View",
+    "4": "Pay As You Climb",
+    "5": "Handmade Calldata",
+    "6": "Snapshot Heist",
+    "7": "Nobody's Timelock",
+    "8": "Hidden Entry Point",
+    "9": "Forged Voucher",
+    "10": "Code Golf",
+    "11": "Puzzle Wallet",
+    "12": "Final Boss",
+  },
 };
 
 // Challenge descriptions (short teasers) organized by season, then challengeId
@@ -60,11 +74,26 @@ export const CHALLENGE_DESCRIPTIONS: Record<number, Record<string, string>> = {
     "11": "Mint your flag using the right block (if you are lucky).",
     "12": "Unlock the achievements, win the game, and capture the flag.",
   },
+  3: {
+    "1": "Complete Challenge #1 in Season 1 to automatically complete this challenge.",
+    "2": "Provide the right key and the right password to mint your flag.",
+    "3": "You just have to ask the right way... twice.",
+    "4": "Climb all the levels, but don't overpay for the trip.",
+    "5": "The ABI encoder won't help you here. Build the calldata yourself.",
+    "6": "Governance is decided by those who hold the votes... right now.",
+    "7": "A timelock that nobody can schedule operations on. Or can they?",
+    "8": "Mint your flag in this unverified contract. There is no source code, only bytecode.",
+    "9": "Only one voucher was ever signed, and it has already been used. Get your own.",
+    "10": "Deploy a tiny solver that knows its roots. Every byte counts.",
+    "11": "Become the admin of this wallet proxy. Keep a balance, but don't leave any funds behind.",
+    "12": "Drain your own world's market and beat the final boss.",
+  },
 };
 
 export const SEASONS: Record<number, { name: string; slug: string }> = {
   1: { name: "Bangkok (S1)", slug: "bangkok" },
   2: { name: "Buenos Aires (S2)", slug: "buenos-aires" },
+  3: { name: "Mumbai (S3)", slug: "mumbai" },
 };
 
 export const getSeasonBySlug = (slug: string): number | undefined => {

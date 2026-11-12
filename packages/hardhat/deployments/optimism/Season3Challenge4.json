@@ -1,0 +1,319 @@
+{
+  "address": "0xc0A4Bfe288F5479Db8D39642003ce1095d672a3F",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_nftContract",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "KEY_VALUE",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "MIN_POWER",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "TARGET_LEVEL",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "active",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "climb",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "levels",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "power",
+          "type": "uint8"
+        }
+      ],
+      "name": "mintFlag",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "nftContract",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "paid",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "sessionSolver",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "solverOwner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x75d6b924e41feaf6aef787c7902fc446a3f33210548aec26880dd82678b071e4",
+  "receipt": {
+    "to": null,
+    "from": "0xD42c3Ea936751Cc5642E4e568dCAF1423107fC9e",
+    "contractAddress": "0xc0A4Bfe288F5479Db8D39642003ce1095d672a3F",
+    "transactionIndex": 30,
+    "gasUsed": "577144",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xa87f38818e5ec36de483960c6796839b99f58b301cc0c212f13b5c05d0f3478a",
+    "transactionHash": "0x75d6b924e41feaf6aef787c7902fc446a3f33210548aec26880dd82678b071e4",
+    "logs": [],
+    "blockNumber": 159443840,
+    "cumulativeGasUsed": "15823286",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x4Cd1875f6413B44b28688C1dBdE869784573cf8C"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "e9510f5922184b882c535edbe51cf64f",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_nftContract\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"KEY_VALUE\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"MIN_POWER\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"TARGET_LEVEL\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"active\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"climb\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"levels\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"power\",\"type\":\"uint8\"}],\"name\":\"mintFlag\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"nftContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"paid\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"sessionSolver\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"solverOwner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/S3/Season3Challenge4.sol\":\"Season3Challenge4\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/INFTFlags.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\npragma solidity >=0.8.0 <0.9.0;\\n\\ninterface INFTFlags {\\n    function mint(address _recipient, uint256 _challengeId) external;\\n\\n    function hasMinted(address _recipient, uint256 _challengeId) external view returns (bool);\\n\\n    function tokenIdCounter() external view returns (uint256);\\n\\n    function finalBossUnlocked(address _player) external view returns (bool);\\n}\\n\",\"keccak256\":\"0x4fc291ba5c8d831c1e684b955499b3ee523e611556b6de7cd83fced9de10d31e\",\"license\":\"MIT\"},\"contracts/S3/Season3Challenge4.sol\":{\"content\":\"//SPDX-License-Identifier: MIT\\npragma solidity >=0.8.0 <0.9.0;\\n\\nimport \\\"../INFTFlags.sol\\\";\\n\\ncontract Season3Challenge4 {\\n    address public nftContract;\\n\\n    uint8 public constant TARGET_LEVEL = 5;\\n    uint8 public constant KEY_VALUE = 64;\\n    uint8 public constant MIN_POWER = 150;\\n\\n    mapping(address => bool) public active;\\n    mapping(address => uint8) public levels;\\n    mapping(address => uint256) public paid;\\n    mapping(address => address) public solverOwner;\\n    mapping(address => address) public sessionSolver;\\n\\n    constructor(address _nftContract) {\\n        nftContract = _nftContract;\\n    }\\n\\n    function mintFlag(uint8 power) external {\\n        require(msg.sender != tx.origin, \\\"Must call from contract\\\");\\n        _bindSolver();\\n\\n        active[tx.origin] = true;\\n        levels[tx.origin] = 0;\\n        paid[tx.origin] = 0;\\n        sessionSolver[tx.origin] = msg.sender;\\n\\n        (bool ok, ) = msg.sender.call(\\\"\\\");\\n        require(ok, \\\"callback failed\\\");\\n\\n        active[tx.origin] = false;\\n\\n        uint8 level = levels[tx.origin];\\n        require(level == TARGET_LEVEL, \\\"Wrong level\\\");\\n        require(paid[tx.origin] == uint256(TARGET_LEVEL) * 1 gwei, \\\"Wrong total paid\\\");\\n        require(power * level >= MIN_POWER, \\\"Not enough power\\\");\\n        require(power << level == KEY_VALUE, \\\"Wrong key value\\\");\\n\\n        INFTFlags(nftContract).mint(tx.origin, 4);\\n    }\\n\\n    function climb() external payable {\\n        require(active[tx.origin], \\\"No active session\\\");\\n        require(msg.sender == sessionSolver[tx.origin], \\\"Wrong solver\\\");\\n        require(msg.value == (uint256(levels[tx.origin]) + 1) * 1 gwei, \\\"Wrong payment\\\");\\n        paid[tx.origin] += msg.value;\\n\\n        (bool ok, ) = msg.sender.call(\\\"\\\");\\n        require(ok, \\\"callback failed\\\");\\n\\n        levels[tx.origin] += 1;\\n    }\\n\\n    function _bindSolver() private {\\n        address owner = solverOwner[msg.sender];\\n        if (owner == address(0)) {\\n            solverOwner[msg.sender] = tx.origin;\\n        } else {\\n            require(owner == tx.origin, \\\"Solver bound to another agent\\\");\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0xe9ed804e1ac1bba845e7cf06557e97561e9a4c882c8c4feb341ed67aad83b04c\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060405161099c38038061099c83398101604081905261002f91610054565b600080546001600160a01b0319166001600160a01b0392909216919091179055610084565b60006020828403121561006657600080fd5b81516001600160a01b038116811461007d57600080fd5b9392505050565b610909806100936000396000f3fe60806040526004361061009c5760003560e01c80636cea1a76116100645780636cea1a76146101ad5780637548b61d146101c2578063a340cf79146101f8578063a5432fee14610233578063ad6728001461023b578063d56d229d1461025057600080fd5b80631a392ccc146100a15780632670f63b146100c357806340d76248146100ef57806347082db31461013d5780634ea713271461016d575b600080fd5b3480156100ad57600080fd5b506100c16100bc3660046107fe565b610270565b005b3480156100cf57600080fd5b506100d8604081565b60405160ff90911681526020015b60405180910390f35b3480156100fb57600080fd5b5061012561010a366004610828565b6005602052600090815260409020546001600160a01b031681565b6040516001600160a01b0390911681526020016100e6565b34801561014957600080fd5b506100d8610158366004610828565b60026020526000908152604090205460ff1681565b34801561017957600080fd5b5061019d610188366004610828565b60016020526000908152604090205460ff1681565b60405190151581526020016100e6565b3480156101b957600080fd5b506100d8600581565b3480156101ce57600080fd5b506101256101dd366004610828565b6004602052600090815260409020546001600160a01b031681565b34801561020457600080fd5b50610225610213366004610828565b60036020526000908152604090205481565b6040519081526020016100e6565b6100c1610567565b34801561024757600080fd5b506100d8609681565b34801561025c57600080fd5b50600054610125906001600160a01b031681565b3233036102c45760405162461bcd60e51b815260206004820152601760248201527f4d7573742063616c6c2066726f6d20636f6e747261637400000000000000000060448201526064015b60405180910390fd5b6102cc610763565b326000908152600160208181526040808420805460ff199081169094179055600282528084208054909316909255600381528183208390556005905280822080546001600160a01b0319163390811790915590518281818181865af19150503d8060008114610357576040519150601f19603f3d011682016040523d82523d6000602084013e61035c565b606091505b505090508061039f5760405162461bcd60e51b815260206004820152600f60248201526e18d85b1b189858dac819985a5b1959608a1b60448201526064016102bb565b326000908152600160209081526040808320805460ff19169055600290915290205460ff16600581146104025760405162461bcd60e51b815260206004820152600b60248201526a15dc9bdb99c81b195d995b60aa1b60448201526064016102bb565b6104116005633b9aca00610867565b32600090815260036020526040902054146104615760405162461bcd60e51b815260206004820152601060248201526f15dc9bdb99c81d1bdd185b081c185a5960821b60448201526064016102bb565b609661046d8285610884565b60ff1610156104b15760405162461bcd60e51b815260206004820152601060248201526f2737ba1032b737bab3b4103837bbb2b960811b60448201526064016102bb565b60ff8381168282161b166040146104fc5760405162461bcd60e51b815260206004820152600f60248201526e57726f6e67206b65792076616c756560881b60448201526064016102bb565b6000546040516340c10f1960e01b81523260048083019190915260248201526001600160a01b03909116906340c10f1990604401600060405180830381600087803b15801561054a57600080fd5b505af115801561055e573d6000803e3d6000fd5b50505050505050565b3260009081526001602052604090205460ff166105ba5760405162461bcd60e51b815260206004820152601160248201527027379030b1ba34bb329039b2b9b9b4b7b760791b60448201526064016102bb565b326000908152600560205260409020546001600160a01b031633146106105760405162461bcd60e51b815260206004820152600c60248201526b2bb937b7339039b7b63b32b960a11b60448201526064016102bb565b3260009081526002602052604090205461062e9060ff1660016108a7565b61063c90633b9aca00610867565b341461067a5760405162461bcd60e51b815260206004820152600d60248201526c15dc9bdb99c81c185e5b595b9d609a1b60448201526064016102bb565b32600090815260036020526040812080543492906106999084906108a7565b909155505060405160009033908281818181865af19150503d80600081146106dd576040519150601f19603f3d011682016040523d82523d6000602084013e6106e2565b606091505b50509050806107255760405162461bcd60e51b815260206004820152600f60248201526e18d85b1b189858dac819985a5b1959608a1b60448201526064016102bb565b32600090815260026020526040812080546001929061074890849060ff166108ba565b92506101000a81548160ff021916908360ff16021790555050565b336000908152600460205260409020546001600160a01b0316806107a35733600090815260046020526040902080546001600160a01b0319163217905550565b6001600160a01b03811632146107fb5760405162461bcd60e51b815260206004820152601d60248201527f536f6c76657220626f756e6420746f20616e6f74686572206167656e7400000060448201526064016102bb565b50565b60006020828403121561081057600080fd5b813560ff8116811461082157600080fd5b9392505050565b60006020828403121561083a57600080fd5b81356001600160a01b038116811461082157600080fd5b634e487b7160e01b600052601160045260246000fd5b808202811582820484141761087e5761087e610851565b92915050565b60ff81811683821602908116908181146108a0576108a0610851565b5092915050565b8082018082111561087e5761087e610851565b60ff818116838216019081111561087e5761087e61085156fea2646970667358221220e10923ce36387f7163d1daf22e4aba67d23c05ca5fa09231838437e2dc63cf4864736f6c63430008140033",
+  "deployedBytecode": "0x60806040526004361061009c5760003560e01c80636cea1a76116100645780636cea1a76146101ad5780637548b61d146101c2578063a340cf79146101f8578063a5432fee14610233578063ad6728001461023b578063d56d229d1461025057600080fd5b80631a392ccc146100a15780632670f63b146100c357806340d76248146100ef57806347082db31461013d5780634ea713271461016d575b600080fd5b3480156100ad57600080fd5b506100c16100bc3660046107fe565b610270565b005b3480156100cf57600080fd5b506100d8604081565b60405160ff90911681526020015b60405180910390f35b3480156100fb57600080fd5b5061012561010a366004610828565b6005602052600090815260409020546001600160a01b031681565b6040516001600160a01b0390911681526020016100e6565b34801561014957600080fd5b506100d8610158366004610828565b60026020526000908152604090205460ff1681565b34801561017957600080fd5b5061019d610188366004610828565b60016020526000908152604090205460ff1681565b60405190151581526020016100e6565b3480156101b957600080fd5b506100d8600581565b3480156101ce57600080fd5b506101256101dd366004610828565b6004602052600090815260409020546001600160a01b031681565b34801561020457600080fd5b50610225610213366004610828565b60036020526000908152604090205481565b6040519081526020016100e6565b6100c1610567565b34801561024757600080fd5b506100d8609681565b34801561025c57600080fd5b50600054610125906001600160a01b031681565b3233036102c45760405162461bcd60e51b815260206004820152601760248201527f4d7573742063616c6c2066726f6d20636f6e747261637400000000000000000060448201526064015b60405180910390fd5b6102cc610763565b326000908152600160208181526040808420805460ff199081169094179055600282528084208054909316909255600381528183208390556005905280822080546001600160a01b0319163390811790915590518281818181865af19150503d8060008114610357576040519150601f19603f3d011682016040523d82523d6000602084013e61035c565b606091505b505090508061039f5760405162461bcd60e51b815260206004820152600f60248201526e18d85b1b189858dac819985a5b1959608a1b60448201526064016102bb565b326000908152600160209081526040808320805460ff19169055600290915290205460ff16600581146104025760405162461bcd60e51b815260206004820152600b60248201526a15dc9bdb99c81b195d995b60aa1b60448201526064016102bb565b6104116005633b9aca00610867565b32600090815260036020526040902054146104615760405162461bcd60e51b815260206004820152601060248201526f15dc9bdb99c81d1bdd185b081c185a5960821b60448201526064016102bb565b609661046d8285610884565b60ff1610156104b15760405162461bcd60e51b815260206004820152601060248201526f2737ba1032b737bab3b4103837bbb2b960811b60448201526064016102bb565b60ff8381168282161b166040146104fc5760405162461bcd60e51b815260206004820152600f60248201526e57726f6e67206b65792076616c756560881b60448201526064016102bb565b6000546040516340c10f1960e01b81523260048083019190915260248201526001600160a01b03909116906340c10f1990604401600060405180830381600087803b15801561054a57600080fd5b505af115801561055e573d6000803e3d6000fd5b50505050505050565b3260009081526001602052604090205460ff166105ba5760405162461bcd60e51b815260206004820152601160248201527027379030b1ba34bb329039b2b9b9b4b7b760791b60448201526064016102bb565b326000908152600560205260409020546001600160a01b031633146106105760405162461bcd60e51b815260206004820152600c60248201526b2bb937b7339039b7b63b32b960a11b60448201526064016102bb565b3260009081526002602052604090205461062e9060ff1660016108a7565b61063c90633b9aca00610867565b341461067a5760405162461bcd60e51b815260206004820152600d60248201526c15dc9bdb99c81c185e5b595b9d609a1b60448201526064016102bb565b32600090815260036020526040812080543492906106999084906108a7565b909155505060405160009033908281818181865af19150503d80600081146106dd576040519150601f19603f3d011682016040523d82523d6000602084013e6106e2565b606091505b50509050806107255760405162461bcd60e51b815260206004820152600f60248201526e18d85b1b189858dac819985a5b1959608a1b60448201526064016102bb565b32600090815260026020526040812080546001929061074890849060ff166108ba565b92506101000a81548160ff021916908360ff16021790555050565b336000908152600460205260409020546001600160a01b0316806107a35733600090815260046020526040902080546001600160a01b0319163217905550565b6001600160a01b03811632146107fb5760405162461bcd60e51b815260206004820152601d60248201527f536f6c76657220626f756e6420746f20616e6f74686572206167656e7400000060448201526064016102bb565b50565b60006020828403121561081057600080fd5b813560ff8116811461082157600080fd5b9392505050565b60006020828403121561083a57600080fd5b81356001600160a01b038116811461082157600080fd5b634e487b7160e01b600052601160045260246000fd5b808202811582820484141761087e5761087e610851565b92915050565b60ff81811683821602908116908181146108a0576108a0610851565b5092915050565b8082018082111561087e5761087e610851565b60ff818116838216019081111561087e5761087e61085156fea2646970667358221220e10923ce36387f7163d1daf22e4aba67d23c05ca5fa09231838437e2dc63cf4864736f6c63430008140033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 16013,
+        "contract": "contracts/S3/Season3Challenge4.sol:Season3Challenge4",
+        "label": "nftContract",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 16026,
+        "contract": "contracts/S3/Season3Challenge4.sol:Season3Challenge4",
+        "label": "active",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_address,t_bool)"
+      },
+      {
+        "astId": 16030,
+        "contract": "contracts/S3/Season3Challenge4.sol:Season3Challenge4",
+        "label": "levels",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_address,t_uint8)"
+      },
+      {
+        "astId": 16034,
+        "contract": "contracts/S3/Season3Challenge4.sol:Season3Challenge4",
+        "label": "paid",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 16038,
+        "contract": "contracts/S3/Season3Challenge4.sol:Season3Challenge4",
+        "label": "solverOwner",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_mapping(t_address,t_address)"
+      },
+      {
+        "astId": 16042,
+        "contract": "contracts/S3/Season3Challenge4.sol:Season3Challenge4",
+        "label": "sessionSolver",
+        "offset": 0,
+        "slot": "5",
+        "type": "t_mapping(t_address,t_address)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_address,t_address)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => address)",
+        "numberOfBytes": "32",
+        "value": "t_address"
+      },
+      "t_mapping(t_address,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_mapping(t_address,t_uint8)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint8)",
+        "numberOfBytes": "32",
+        "value": "t_uint8"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      },
+      "t_uint8": {
+        "encoding": "inplace",
+        "label": "uint8",
+        "numberOfBytes": "1"
+      }
+    }
+  }
+}
