@@ -1,0 +1,11 @@
+# Pin the Node version for the Railway/Nixpacks build of the Ponder service.
+#
+# better-sqlite3@11.3.0 (transitive via @ponder/core) ships no prebuilt binary
+# for Node 24+, so Nixpacks' default Node (24) makes it compile from source,
+# which fails against the newer V8 API and breaks `yarn install`. Node 22 has a
+# prebuilt binary, so the install just downloads it.
+#
+# Overriding nixPkgs here forces Node 22 regardless of Nixpacks' .nvmrc/engines
+# version resolution (a root .nvmrc alone did not take effect).
+[phases.setup]
+nixPkgs = ["nodejs_22", "yarn-1_x", "openssl"]
