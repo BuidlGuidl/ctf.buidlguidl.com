@@ -20,8 +20,8 @@ artifacts
 artifacts-zk
 cache-zk
 
-# deployments
-deployments/localhost
+# deployments (generated; live addresses are committed in nextjs/contracts/deployedContracts.ts)
+deployments/
 
 # other
 temp
